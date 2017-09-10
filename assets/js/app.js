@@ -1,7 +1,4 @@
-$(window).on('scroll', function () {
 
-
-});
 $(document).ready(function ($) {
 
     $('.type-job-slider').slick({
@@ -18,10 +15,10 @@ $(document).ready(function ($) {
         arrows: false
     });
 
-    var header = $('header');
-    $(window).on('scroll', function(e){
-        header.css('top', $(this).scrollTop());
-    });
+    //var header = $('header');
+    //$(window).on('scroll', function(e){
+    //    header.css('top', $(this).scrollTop());
+    //});
 
     $(".tabs_menu li").click(function () {
         if (!$(this).hasClass("active")) {
@@ -32,6 +29,35 @@ $(document).ready(function ($) {
             $($(".tabs").children(".info")[i]).fadeIn(1000).addClass("active");
         }
     });
+
+    //$(document).ready( function() {
+    //    $(".file-upload input[type=file]").change(function(){
+    //        var filename = $(this).val().replace(/.*\\/, "");
+    //        $("#filename").val(filename);
+    //    });
+    //});
+
+
+    function readURL(input) {
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                //var t = $('.upload-file-container').clone(true);
+                //$(t).appendTo('.wrapper-add-foto')
+                $('#image').attr('src', e.target.result);
+
+            };
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#imgInput").change(function(){
+        readURL(this);
+    });
+
+
 
 
 
