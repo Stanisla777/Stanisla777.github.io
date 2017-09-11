@@ -18,6 +18,25 @@ $(document).ready(function ($) {
         arrows: false
     });
 
+
+    $('.slider-service-foto').slick({
+        slidesToShow: 1,
+        dots: true,
+        slidesToScroll: 1,
+        //fade: true,
+        infinite: true,
+        cssEase: 'linear',
+        speed:1000,
+        //centerMode: true,
+        //centerPadding: '30px',
+        focusOnSelect: true,
+        arrows: false
+    });
+
+
+
+
+
     /*Меню*/
     $('.menu-icon').on("click",function(e){
 
@@ -48,20 +67,25 @@ $(document).ready(function ($) {
 
 
     /*Прижатый хедер*/
-    var header = $('header');
-    $(window).on('scroll', function(e){
-        header.css('top', $(this).scrollTop());
-    });
 
-    $(".tabs_menu li").click(function () {
-        if (!$(this).hasClass("active")) {
-            var i = $(this).index();
-            $(".tabs_menu li.active").removeClass("active");
-            $(".tabs .active").hide().removeClass("active");
-            $(this).addClass("active");
-            $($(".tabs").children(".info")[i]).fadeIn(1000).addClass("active");
-        }
-    });
+    var height = $('header').height();
+    height = 20+height;
+    alert(height)
+
+    $(".main-content-page").css('marginTop',+height+'px');
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -73,7 +97,7 @@ $(document).ready(function ($) {
 
             reader.onload = function (e) {
                 //var t = $('.upload-file-container').clone(true);
-                //$(t).appendTo('.wrapper-add-foto')
+                //$(t).appendTo('.wrapper-add-foto');
                 $('#image').attr('src', e.target.result);
 
             };
@@ -135,6 +159,48 @@ $(document).ready(function ($) {
         closeOnDateSelect:true,
         closeOnWithoutClick :true
     });
+
+
+    ymaps.ready(init);
+
+    function init () {
+        var myMap = new ymaps.Map("map", {
+            // Центр карты, указываем коордианты
+            center:[55.752161956105276,37.61949517968746],
+            // Масштаб, тут все просто
+            zoom: 16,
+            // Отключаем все элементы управления
+            controls: []
+        });
+
+        var myGeoObjects = [];
+
+        // Наша метка, указываем коордианты
+        myGeoObjects = new ymaps.Placemark([55.800151390638646,37.61400201562497],{
+            balloonContentBody: 'Текст в балуне'
+        },{
+            iconLayout: 'default#image',
+            // Путь до нашей картинки
+            iconImageHref: 'assets/img/icon-tel.png',
+            // Размер по ширине и высоте
+            iconImageSize: [100, 100],
+            // Смещение левого верхнего угла иконки относительно
+            // её «ножки» (точки привязки).
+            iconImageOffset: [-35, -35]
+        });
+
+        var clusterer = new ymaps.Clusterer({
+            clusterDisableClickZoom: false,
+            clusterOpenBalloonOnClick: false
+        });
+
+        clusterer.add(myGeoObjects);
+        myMap.geoObjects.add(clusterer);
+        // Отлючаем возможность изменения масштаба
+        myMap.behaviors.disable('scrollZoom');
+
+    }
+
 
 
 
