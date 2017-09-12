@@ -1,5 +1,46 @@
 
+var height = $('header').height();
+height = 20+height;
+$(".main-content-page").css('marginTop',+height+'px');
+
+
+
+
+
 $(document).ready(function ($) {
+
+
+    /*Подстановка марки автомобиля*/
+    $('.brand-search').click(function(){
+        $('[class^="wrapper-create-task"], .footer-call-to-action').css('display','none');
+        $('.brand-machine').css('display','block');
+    });
+
+    $('.js-name-brand').on('click',function(){
+        var brand = $(this).text();
+        RegEx=/\s/g;
+
+        brand=brand.replace(RegEx,"");
+        $('.brand-machine').css('display','none');
+        $('[class^="wrapper-create-task"], .footer-call-to-action').css('display','block');
+        $('.js-input-subst').val(brand);
+
+    });
+
+
+    $(".tabs_menu li").click(function () {
+        if (!$(this).hasClass("active")) {
+            var i = $(this).index();
+            $(".tabs_menu li.active").removeClass("active");
+            $(".tabs .active-album").hide().removeClass("active-album");
+            $(this).addClass("active");
+            $($(".tabs").children(".info")[i]).fadeIn(1000).addClass("active-album");
+        }
+    });
+
+
+
+
 
 
 
@@ -65,14 +106,6 @@ $(document).ready(function ($) {
         $('.media-menu').css("display","none");
     });
 
-
-    /*Прижатый хедер*/
-
-    var height = $('header').height();
-    height = 20+height;
-    alert(height)
-
-    $(".main-content-page").css('marginTop',+height+'px');
 
 
 
@@ -160,7 +193,14 @@ $(document).ready(function ($) {
         closeOnWithoutClick :true
     });
 
+    /*Вернуться!!!!!!!!!!!!!!!*/
 
+    $('.js-icon-clear').on('click',function(){
+        $('.js-input-search').val('');
+    });
+
+
+    /*Яндекс карты*/
     ymaps.ready(init);
 
     function init () {
@@ -201,6 +241,14 @@ $(document).ready(function ($) {
 
     }
 
+
+
+
+    $('.step').each(function(i,elem) {
+        var height = $('header').height();
+        height = 20+height;
+        $(".main-content-page").css('marginTop',+height+'px');
+    });
 
 
 

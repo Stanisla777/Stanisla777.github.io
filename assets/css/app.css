@@ -54,15 +54,24 @@ section{
     margin: 0 auto;
     padding: 0 15px;
     position: relative;
-    border-right: 1px solid;
-    border-left: 1px solid;
+    /*border-right: 1px solid;*/
+    /*border-left: 1px solid;*/
 
 }
-.container:after,
-.container:before {
-    content: "";
-    display: table;
+.container-pad-0{
+    zoom: 1;
+    width: 100%;
+    max-width: 570px;
+    margin: 0 auto;
+    position: relative;
+    border-right: 1px solid;
+    border-left: 1px solid;
 }
+.container:after,
+/*.container:before {*/
+    /*content: "";*/
+    /*display: table;*/
+/*}*/
 .container:after {
     clear: both;
 }
@@ -92,6 +101,10 @@ h1 {
     font-weight: 700;
     text-align: center;
     /*margin-bottom: 25px;*/
+}
+h2{
+    font-size: 17px;
+    margin: 10px 0;
 }
 h2.title-wight{
     font-size: 20px;
@@ -142,6 +155,9 @@ a:hover {
 }
 .mar-top-20{
     margin-top: 20px;
+}
+.mar-top-10{
+    margin-top: 10px;
 }
 .mar-bot-30{
     margin-bottom: 30px;
@@ -242,12 +258,27 @@ input::-webkit-input-placeholder { color: #a2a5b2; }
     -ms-flex-align: center;
     align-items: center;
 }
+.flex-center{
+    display: flex;
+    justify-content: center;
+}
+.flex-center-screen{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    /*flex-direction: column;*/
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    align-items:center;
+}
+
 .header-inner-right{
     position: relative;
 }
-.main-content-page{
+.main-content-page, .main-content-brand{
     display: block;
-    margin-bottom:60px;
+    margin-bottom:100px;
     padding-top: 20px;
 }
 #menu-icon {
@@ -461,24 +492,20 @@ input[type="checkbox"]:checked + label::after {
 
 
 
-/*Что вы хоттите заказать*/
+/*Окошко Что вы хотите заказать*/
 .link-another-page{
     display: block;
     width: 91%;
     min-width: 230px;
     background-color: #f2f6fb;
     margin-top: 30px;
-    height: 40px;
-    line-height: 40px;
+    height: 50px;
+    line-height: 50px;
     font-size: 17px;
     padding-left: 25px;
     border-radius: 10px;
 }
-.item-service{
-    /*display: flex;*/
-    /*justify-content: space-around;*/
-    /*height: 40px;*/
-}
+
 .input-text{
     float: left;
     color: #77829e;
@@ -490,7 +517,7 @@ input[type="checkbox"]:checked + label::after {
     background: url(../img/magnifier.png)no-repeat center;
     background-size: contain;
     margin-right: 20px;
-    margin-top: 8px;
+    margin-top: 15px;
 }
 .wrapper-services{
     margin-top: 30px;
@@ -501,7 +528,10 @@ input[type="checkbox"]:checked + label::after {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    /*flex-wrap: wrap;*/
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 
 }
 .icon-service {
@@ -523,10 +553,20 @@ input[type="checkbox"]:checked + label::after {
     font-size: 17px;
     position: relative;
     width: 80%;
-    border-bottom: 1px solid #e3e7eb;
-    padding-bottom: 18px;
+    padding: 3px 0;
     margin: 0 auto;
 }
+.name-service:after{
+    display: block;
+    position: absolute;
+    top: 40px;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #d1d4df;
+}
+
+
 li:last-child .name-service{
     border: none;
 }
@@ -619,14 +659,7 @@ li:last-child .name-service{
 }
 
 .wrapper-tabs-criteria{
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    position: relative;
     margin-bottom: 10px;
     margin-top: 25px;
 }
@@ -649,7 +682,7 @@ ul.wrapper-tabs-criteria li.active:after {
     height: 3px;
     background-color: #06ae8f;
     position: absolute;
-    top: 31px;
+    top: 33px;
     left: 0;
 
 
@@ -724,13 +757,15 @@ ul.wrapper-tabs-criteria li.active:after {
 }
 
 /*Создание задания*/
+/*.main-content-creating-task{*/
+    /*margin-top: 120px;*/
+/*}*/
 .band-creating-task-1{
     position: relative;
     top: -23px;
     z-index: 11;
 }
 .creating-level-active{
-
     height: 3px;
     width: 100%;
     background-color: #06ae8f;
@@ -928,18 +963,20 @@ input.call-to-action{
     margin-right: 0;
 }
 
-/*Поиск 1*/
+/*Выбор услуги 1*/
 .wrapper-input-search{
     position: relative;
     width: 100%;
     border: 2px solid #06ae8f;
     border-radius: 9px;
     margin-top: 30px;
+
 }
 .wrapper-input-search input{
     width: 80%;
     margin-top: 0;
     border: none;
+    border-radius: 10px;
 }
 .icon-search{
     position: absolute;
@@ -951,8 +988,20 @@ input.call-to-action{
     background-size: contain;
 }
 .popular-service{
-    margin-left: 54px;
+
 }
+
+.list-server{
+    margin-bottom: 11px;
+    border-bottom: 1px solid #77829e;
+}
+.name-server{
+    font-size: 17px;
+    position: relative;
+    width: 80%;
+    padding: 12px 0;
+}
+
 /*Меню поп-ап*/
 .media-menu {
     position: fixed;
@@ -1227,21 +1276,148 @@ input.call-to-action{
 }
 
 
+/*Разводящий экран*/
+
+
+.wrapper-type-participant{
+}
+.type-participant-img{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.participant-motorist{
+    background: url("../img/intro_auto.svg")center no-repeat;
+    background-size: contain;
+}
+.participant-car-service{
+    background: url("../img/chastniy_master.svg")center no-repeat;
+    background-size: contain;
+}
+.container-grow-screen{
+    text-align: center;
+}
+.wraper-type-motorist:after{
+    position: relative;
+    display: block;
+    content: '';
+    width: 75px;
+    height: 1px;
+    background-color: #77829e;
+    margin: 35px auto;
+}
+/*Заполнение профиля*/
+.main-content-profile{
+    /*margin-top: 180px;*/
+}
+/*------------------------------------------------*/
+.wrapper-input-search-2 {
+    position: relative;
+    width: 100%;
+    border: 2px solid #b7bfd2;
+    border-radius: 9px;
+}
+
+.wrapper-inp-search input {
+    width: 80%;
+    margin-top: 0;
+    border: none;
+    border-radius: 10px;
+}
+.icon-search-x {
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    right: 16px;
+    width: 30px;
+    height: 30px;
+    background: url(../img/icon-close.png)center no-repeat;
+    background-size: contain;
+}
+
+.wrapper-bor-1px {
+    position: relative;
+    width: 100%;
+    border: 1px solid #b7bfd2;
+    border-radius: 9px;
+}
+.icon-search-carat {
+    position: absolute;
+    cursor: pointer;
+    top: 24px;
+    right: 12px;
+    width: 11px;
+    border: 6px solid transparent;
+    border-top: 8px solid #000;
+}
+
+.brand-machine{
+    margin-top: 20px;
+    display: none;
+}
+
+.js-name-brand{
+    cursor: pointer;
+}
+.brand-search, .brand-search input{
+    cursor: pointer;
+}
 
 
 
 
 
+/*---------------------------------------------------------------------*/
 
 
 
 
 
+/*Табы*/
+.tabs .info {
+    display: none;
+}
+.info.active-album{
+    display: block;
+}
 
+.wrapper-tabs-profile{
+    font-size: 0;
+    position: relative;
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+.wrapper-tabs-profile li{
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 5px;
+    /*display: inline-block;*/
+    width: 50%;
+    text-align: center;
+    font-size: 17px;
+}
+ul.wrapper-tabs-profile li.active:after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: #06ae8f;
+    position: absolute;
+    top: 36px;
+    left: 0;
+}
 
+/*Экран выбор модели*/
 
-
-
+.wrapper-search-brand, .wrapper-search-brand input{
+    position: relative;
+    width: 100%;
+    border-radius: 9px;
+    background-color: #f2f6fb;
+}
 
 
 
@@ -1272,12 +1448,11 @@ input.call-to-action{
 
 @media screen and (max-width: 430px){
     .complex-page-header .title-wight {
-        margin-top: 110px;
+        font-size: 14px;
     }
-    .work-card-img{
-        right: 0;
-        left: 50%;
-        margin-left: -66px;
+    .complex-card-img{
+        right: 9px;
+        top: 25px;
     }
     .header-inner{
         /*text-align: center;*/
@@ -1288,6 +1463,7 @@ input.call-to-action{
     .list-of-works{
         font-size: 12px;
     }
+
 
 }
 @media screen and (max-width: 390px){
@@ -1300,7 +1476,10 @@ input.call-to-action{
 }
 @media screen and (max-width: 470px){
     .main-work-card-img{
-        display: none;
+        top: 56px;
+        right: 11px;
+        width: 90px;
+        height: 90px;
     }
     .link-another-page{
         font-size: 13px;
@@ -1308,6 +1487,26 @@ input.call-to-action{
     }
     .name-service{
         width: 100%;
+    }
+    .slider-item h2.title-wight{
+        font-size: 14px;
+    }
+    .content-work-card{
+        font-size: 13px;
+    }
+    .slider-item button{
+        width: 100px;
+        padding: 6px 0;
+        font-size: 12px;
+    }
+    .work-card {
+
+        min-height: 140px;
+        padding-top: 4px;
+        padding-bottom: 25px;
+        padding-left: 20px;
+        padding-right: 10px;
+
     }
 }
 
