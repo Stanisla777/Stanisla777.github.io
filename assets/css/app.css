@@ -1463,6 +1463,10 @@ ul.wrapper-tabs-profile li.active:after {
     .list-of-works{
         font-size: 12px;
     }
+    .item-job-foto{
+        width: 50px;
+        height: 50px;
+    }
 
 
 }
