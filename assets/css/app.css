@@ -64,8 +64,8 @@ section{
     max-width: 570px;
     margin: 0 auto;
     position: relative;
-    border-right: 1px solid;
-    border-left: 1px solid;
+    /*border-right: 1px solid;*/
+    /*border-left: 1px solid;*/
 }
 .container:after,
 /*.container:before {*/
@@ -133,7 +133,7 @@ button {
 }
 
 header{
-    position: fixed;
+    /*position: fixed;*/
     width: 100%;
     padding-top: 20px;
     z-index: 10;
@@ -272,13 +272,16 @@ input::-webkit-input-placeholder { color: #a2a5b2; }
     -ms-flex-align:center;
     align-items:center;
 }
-
+.header-inner{
+    /*position: relative;*/
+    padding-bottom: 1px;
+}
 .header-inner-right{
     position: relative;
 }
 .main-content-page, .main-content-brand{
     display: block;
-    margin-bottom:100px;
+    margin-bottom:30px;
     padding-top: 20px;
 }
 #menu-icon {
@@ -397,6 +400,29 @@ input[type="checkbox"]:checked + label::after {
 /*///////////////////////////////////////////////////////////////////////*/
 
 /*ГЛАВНАЯ*/
+/*Экран загрузки*/
+.download-screen{
+    background: #28b9c7;
+    background: -moz-linear-gradient(top, #28b9c7 0%, #23b7bf 21%, #1fb6b8 49%, #17b4ab 81%, #13b2a4 100%);
+    background: -webkit-linear-gradient(top, #28b9c7 0%,#23b7bf 21%,#1fb6b8 49%,#17b4ab 81%,#13b2a4 100%);
+    background: linear-gradient(to bottom, #28b9c7 0%,#23b7bf 21%,#1fb6b8 49%,#17b4ab 81%,#13b2a4 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28b9c7', endColorstr='#13b2a4',GradientType=0 );
+    height: 100vh;
+}
+
+.logo-download-screen{
+    width: 200px;
+    height: 200px;
+    background: url("../img/logo)main.svg") center no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+}
+
+
+
+
+
+/**/
 /*хедер*/
 
 .mane-page .header-inner-right{
@@ -615,7 +641,7 @@ li:last-child .name-service{
 }
 .footer-call-to-action{
     background-color: #06ae8f;
-    position: fixed;
+    /*position: fixed;*/
     text-align: center;
     font-size: 18px;
     bottom: 0;
@@ -757,13 +783,13 @@ ul.wrapper-tabs-criteria li.active:after {
 }
 
 /*Создание задания*/
-/*.main-content-creating-task{*/
-    /*margin-top: 120px;*/
-/*}*/
+.header-creating-task-1{
+    /*position: relative;*/
+}
 .band-creating-task-1{
-    position: relative;
-    top: -23px;
-    z-index: 11;
+    /*position: relative;*/
+    /*top: -23px;*/
+    /*z-index: 11;*/
 }
 .creating-level-active{
     height: 3px;
@@ -992,8 +1018,10 @@ input.call-to-action{
 }
 
 .list-server{
-    margin-bottom: 11px;
     border-bottom: 1px solid #77829e;
+}
+.list-server:last-child{
+    border: none;
 }
 .name-server{
     font-size: 17px;
@@ -1343,7 +1371,7 @@ input.call-to-action{
     position: relative;
     width: 100%;
     border: 1px solid #b7bfd2;
-    border-radius: 9px;
+    border-radius: 3px;
 }
 .icon-search-carat {
     position: absolute;
@@ -1419,11 +1447,29 @@ ul.wrapper-tabs-profile li.active:after {
     background-color: #f2f6fb;
 }
 
+input.call-to-action{
+    cursor: pointer;
+}
 
+/*Автомобиль добавлен*/
+.icon-add-car{
+    width: 200px;
+    height: 200px;
+    background: url("../img/auto_final.svg")center no-repeat;
+    background-size: contain;
+    margin: 0 auto 20px;
+}
 
-
-
-
+.flex-center-screen-ty {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* flex-direction: column; */
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: calc(100vh - 65px);
+}
 
 
 
@@ -1510,13 +1556,14 @@ ul.wrapper-tabs-profile li.active:after {
         padding-bottom: 25px;
         padding-left: 20px;
         padding-right: 10px;
-
     }
 }
 
 
 
-
+.try{
+    display: block;
+}
 
 
 

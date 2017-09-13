@@ -1,7 +1,7 @@
 
-var height = $('header').height();
-height = 20+height;
-$(".main-content-page").css('marginTop',+height+'px');
+//var height = $('header').height();
+//height = 20+height;
+//$(".main-content-page").css('marginTop',+height+'px');
 
 
 
@@ -9,12 +9,22 @@ $(".main-content-page").css('marginTop',+height+'px');
 
 $(document).ready(function ($) {
 
+    //$('.then-remove').on('click',function(){
+    //    location.replace("car-added.html")
+    //});
+
 
     /*Подстановка марки автомобиля*/
     $('.brand-search').click(function(){
-        $('[class^="wrapper-create-task"], .footer-call-to-action').css('display','none');
+        $('.step-1, .footer-call-to-action').css('display','none');
         $('.brand-machine').css('display','block');
     });
+
+    $('.js-icon-close-brand').click(function(){
+        $('.brand-machine').css('display','none');
+        $('.step-1, .footer-call-to-action').css('display','block');
+    });
+
 
     $('.js-name-brand').on('click',function(){
         var brand = $(this).text();
@@ -22,10 +32,14 @@ $(document).ready(function ($) {
 
         brand=brand.replace(RegEx,"");
         $('.brand-machine').css('display','none');
-        $('[class^="wrapper-create-task"], .footer-call-to-action').css('display','block');
+        $('.step-1, .footer-call-to-action').css('display','block');
         $('.js-input-subst').val(brand);
 
     });
+
+    //Потом убрать, это пока чтобы показать редирект на другую страницу
+
+
 
 
     $(".tabs_menu li").click(function () {
@@ -45,6 +59,9 @@ $(document).ready(function ($) {
 
 
 /*Слайдер главного экрана*/
+
+
+
     $('.type-job-slider').slick({
         slidesToShow: 1,
         dots: true,
@@ -144,6 +161,34 @@ $(document).ready(function ($) {
 
     /*Смена экранов регистрации*/
 
+    //var steps = $("form").children(".step"); // находим все шаги формы
+    //$(steps[0]).show(); // показываем первый шаг
+    //var current_step = 0; // задаем текущий шаг
+    //$("a.next").click(function(){	// Событие клика на ссылку "Следующий шаг"
+    //    if (current_step == steps.length-2) { // проверяем, будет ли следующий шаг последним
+    //        $(this).hide(); // скрываем ссылку "Следующий шаг"
+    //        $("form input[type=submit]").show(); // показываем кнопку "Регистрация"
+    //    }
+    //    $("a.back").show(); // показываем ссылку "Назад"
+    //    current_step++; // увеличиваем счетчик текущего слайда
+    //    changeStep(current_step); // меняем шаг
+    //});
+    //
+    //$("a.back").click(function(){	// Событие клика на маленькое изображение
+    //    if (current_step == 1) { // проверяем, будет ли предыдущий шаг первым
+    //        $(this).hide(); // скрываем ссылку "Назад"
+    //    }
+    //    $("form input[type=submit]").hide(); // скрываем кнопку "Регистрация"
+    //    $("a.next").show(); // показываем ссылку "Следующий шаг"
+    //    current_step--; // уменьшаем счетчик текущего слайда
+    //    changeStep(current_step);// меняем шаг
+    //});
+    //
+    //function changeStep(i) { // функция смены шага
+    //    $(steps).hide(); // скрываем все шаги
+    //    $(steps[i]).show(); // показываем текущий
+    //}
+
     var steps = $("form").children(".step"); // находим все шаги формы
     $(steps[0]).show(); // показываем первый шаг
     var current_step = 0; // задаем текущий шаг
@@ -196,7 +241,7 @@ $(document).ready(function ($) {
     /*Вернуться!!!!!!!!!!!!!!!*/
 
     $('.js-icon-clear').on('click',function(){
-        $('.js-input-search').val('');
+        $(this).siblings('.js-input-search').val('');
     });
 
 
@@ -242,13 +287,13 @@ $(document).ready(function ($) {
     }
 
 
+    /*Доработать, вычисляет не каждый хедер*/
+    //$('.step').each(function(i,elem) {
+    //    var height = $('header').height();
+    //    height = 20+height;
+    //    $(".main-content-page").css('marginTop',+height+'px');
+    //});
 
-
-    $('.step').each(function(i,elem) {
-        var height = $('header').height();
-        height = 20+height;
-        $(".main-content-page").css('marginTop',+height+'px');
-    });
 
 
 
