@@ -28,6 +28,7 @@ body {
     background: #fff;
     height: auto;
     min-height: 100%;
+    overflow: hidden;
 }
 html {
     font-family: sans-serif;
