@@ -9,9 +9,7 @@
 
 $(document).ready(function ($) {
 
-    //$('.then-remove').on('click',function(){
-    //    location.replace("car-added.html")
-    //});
+
 
 
     /*Подстановка марки автомобиля*/
@@ -38,10 +36,13 @@ $(document).ready(function ($) {
     });
 
     //Потом убрать, это пока чтобы показать редирект на другую страницу
+    $('.then-remove').on('click',function(){
+        event.preventDefault();
+        location.replace("car-added.html")
+    });
 
 
-
-
+    //Переключение между табами
     $(".tabs_menu li").click(function () {
         if (!$(this).hasClass("active")) {
             var i = $(this).index();
@@ -49,6 +50,16 @@ $(document).ready(function ($) {
             $(".tabs .active-album").hide().removeClass("active-album");
             $(this).addClass("active");
             $($(".tabs").children(".info")[i]).fadeIn(1000).addClass("active-album");
+        }
+    });
+
+    $(".tabs_menu_2 li").click(function () {
+        if (!$(this).hasClass("active-type")) {
+            var i = $(this).index();
+            $(".tabs_menu_2 li.active-type").removeClass("active-type");
+            $(".tabs_2 .active-album").hide().removeClass("active-album");
+            $(this).addClass("active-type");
+            $($(".tabs_2").children(".info")[i]).fadeIn(1000).addClass("active-album");
         }
     });
 
@@ -60,8 +71,6 @@ $(document).ready(function ($) {
 
 /*Слайдер главного экрана*/
 
-
-
     $('.type-job-slider').slick({
         slidesToShow: 1,
         dots: true,
@@ -69,7 +78,7 @@ $(document).ready(function ($) {
         slidesToScroll: 1,
         infinite: true,
         cssEase: 'linear',
-        speed:1000,
+        speed:500,
         centerMode: true,
         centerPadding: '30px',
         focusOnSelect: true,
@@ -97,12 +106,14 @@ $(document).ready(function ($) {
 
     /*Меню*/
     $('.menu-icon').on("click",function(e){
+        $('header, section, footer').css('display','none');
 
         $('.media-menu').css("display","block");
         e.preventDefault();
     });
-    $(".icon-close").click(function(){
+    $(".media-close").click(function(){
         $('.media-menu').css("display","none");
+        $('header, section, footer').css('display','block');
     });
     $(".main-wrap").click(function(){
         $('.media-menu').css("display","none");

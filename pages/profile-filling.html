@@ -37,9 +37,7 @@
         <div class="container">
 
             <div class="flex-space-between">
-                <div class="header-inner-left">
-
-                </div>
+                <div class="header-inner-left"></div>
                 <div class="header-inner-center">
                     <h1>Марка</h1>
                 </div>
@@ -128,7 +126,7 @@
             </div>
 
         </header>
-        <div class="empty-block"></div>
+
         <section class="main-content-page main-content-profile">
             <div class="container color-grey">
 
@@ -218,15 +216,15 @@
             <div class="container">
 
 
-                <div class="flex-space-between">
-                    <div class="header-inner-left"></div>
-                    <div class="header-inner-center">
+                <div class="flex-space-between-center">
+                    <div class="header-inner-left">
                         <a href="#" class="back back-icon-to"></a>
-
+                    </div>
+                    <div class="header-inner-center">
                         <h1>Профиль</h1>
                     </div>
                     <div class="header-inner-right">
-                        <a class="close-icom" href="#"></a>
+                        <a class="close-icom" href="mane-page.html"></a>
                     </div>
                 </div>
                 <p class="registration-step">Шаг 2 из 3. Пробег</p>
@@ -257,35 +255,50 @@
             <div class="container color-grey">
 
 
-                <div class="flex-space-between">
-                    <div class="header-inner-left"></div>
-                    <div class="header-inner-center">
+                <div class="flex-space-between-center">
+                    <div class="header-inner-left">
                         <a href="#" class="back back-icon-to"></a>
-
+                    </div>
+                    <div class="header-inner-center">
                         <h1>Профиль</h1>
                     </div>
                     <div class="header-inner-right">
-                        <a class="close-icom" href="#"></a>
+                        <a class="close-icom" href="mane-page.html"></a>
                     </div>
                 </div>
                 <p class="registration-step">Шаг 3 из 3. Шины</p>
             </div>
             <div class="container-pad-0">
-                <ul class="color-grey  wrapper-tabs-profile tabs_menu flex-space-around">
-                    <li class="active">Зимние</li>
+                <ul class="color-grey  wrapper-tabs-profile tabs_menu_2 flex-space-around">
+                    <li class="active-type">Зимние</li>
                     <li>Летние</li>
                 </ul>
             </div>
 
         </header>
-        <div class="empty-block"></div>
+
         <section class="main-content-page main-content-profile">
             <div class="container">
+                <div class="tabs_2">
+                    <div class="wrapper-photo-archive info active-album">
 
-                <p class="color-grey">Дата последней замены</p>
-                <div class="wrapper-inp-search wrapper-input-search-2 mar-top-10">
-                    <input class="js-input-search input-search-disp-none" type="text" name="tire_replacement">
-                    <div class="js-icon-clear icon-search-x"></div>
+                        <p class="color-grey">Дата последней замены</p>
+
+                        <div class="wrapper-inp-search wrapper-input-search-2 mar-top-10">
+                            <input class="js-input-search input-search-disp-none" type="text" name="tire_replacement">
+                            <div class="js-icon-clear icon-search-x"></div>
+                        </div>
+                    </div>
+
+                    <div class="wrapper-photo-archive info">
+
+                        <p class="color-grey">Дата последней замены</p>
+
+                        <div class="wrapper-inp-search wrapper-input-search-2 mar-top-10">
+                            <input class="js-input-search input-search-disp-none" type="text" name="tire_replacement">
+                            <div class="js-icon-clear icon-search-x"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -297,7 +310,7 @@
         <a  href="#" class="call-to-action next">
             <p>Продолжить</p>
         </a>
-        <input onclick="window.location.href='car-added'" class="then-remove call-to-action" type="submit" value="Продолжить">
+        <input  class="then-remove call-to-action" type="submit" value="Продолжить">
 
     </div>
 </footer>
