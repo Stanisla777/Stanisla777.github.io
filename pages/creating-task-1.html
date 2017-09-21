@@ -26,6 +26,10 @@
     <!--<div class="menu-icon">-->
         <!--<img src="../assets/img/iconMenu.png" alt="">-->
     <!--</div>-->
+    
+
+    
+    
     <form action="#" class="form-services form-service">
 
         <div class="wrapper-create-task-1 step">
@@ -68,7 +72,7 @@
 
                         <div class="tabssss">
 
-                            <label for="type_service">Вид услуги</label>
+                            <p class="label">Вид услуги</p>
                                 <select id="type_service" class="dropdown" name="type_service">
                                     <option value="Замена масла" selected>Замена масла</option>
                                     <option value="Замена масла">Замена масла</option>
@@ -191,6 +195,16 @@
         </div>
 
         <div class="wrapper-create-task-3 step">
+            <!--Поп ап Заказ опубликован-->
+            <div class="wrapper-order-published">
+                <div class="container flex-center-center">
+                    <a href="#" class="pop-up-order-published">
+                        <div class="order-published-img"></div>
+                        <p class="fontweight700 text-center mar-top-30">Заказ опубликован</p>
+                    </a>
+                </div>
+
+            </div>
             <div class="wrap creating-task-1">
 
 
@@ -223,39 +237,36 @@
                 <section class="main-content-page main-content-creating-task">
                     <div class="container">
 
-                        <div class="tabssss">
-
-                            <div class="wrapper-select-engine-year flex-space-between">
-                                <div>
-                                    <label>Отдать машину
-                                        <input id="" name="date_give_car" class="datetimepicker"  placeholder="2.08.2017" type="text"/>
-                                    </label>
-                                </div>
-                                <div>
-                                    <label>Забрать машину
-                                        <input name="date_pick_up_car" class="datetimepicker"  placeholder="2.08.2017" type="text"/>
-                                    </label>
-                                </div>
+                        <div class="wrapper-select-engine-year flex-space-between">
+                            <div>
+                                <label>Отдать машину
+                                    <input id="" name="date_give_car" class="datetimepicker" placeholder="2.08.2017"
+                                           type="text"/>
+                                </label>
                             </div>
-
-                            <label>Желаемая стоимость
-                                <input name="desired-price" placeholder="Введите желаемую стоимость" type="text"/>
-                            </label>
-
-                            <label for="desire-parts">Пожелания по запчастям</label>
-                            <select id="desire-parts" class="dropdown" name="desire-parts">
-                                <option value="origine" selected>Только оригинальные</option>
-                                <option value="">Только оригинальные</option>
-                                <option value="">Только оригинальные</option>
-                                <option value="">Только оригинальные</option>
-                            </select>
-
-                            <label>Местоположение
-                                <input name="Location" placeholder="Проспект мира 10" type="text"/>
-                            </label>
-
-
+                            <div>
+                                <label>Забрать машину
+                                    <input name="date_pick_up_car" class="datetimepicker" placeholder="2.08.2017"
+                                           type="text"/>
+                                </label>
+                            </div>
                         </div>
+
+                        <label>Желаемая стоимость
+                            <input name="desired-price" placeholder="Введите желаемую стоимость" type="text"/>
+                        </label>
+
+                        <label for="desire-parts">Пожелания по запчастям</label>
+                        <select id="desire-parts" class="dropdown" name="desire-parts">
+                            <option value="origine" selected>Только оригинальные</option>
+                            <option value="">Только оригинальные</option>
+                            <option value="">Только оригинальные</option>
+                            <option value="">Только оригинальные</option>
+                        </select>
+
+                        <label>Местоположение
+                            <input name="Location" placeholder="Проспект мира 10" type="text"/>
+                        </label>
 
                     </div>
                 </section>
@@ -268,7 +279,7 @@
                 <a  href="#" class="call-to-action next">
                     <p>Продолжить</p>
                 </a>
-                <input class="call-to-action" type="submit" value="Зарегистрироваться">
+                <input id="js-call-published"  class="input-hide  then-remove-4 call-to-action" type="submit" value="Опубликовать">
             </div>
         </footer>
 

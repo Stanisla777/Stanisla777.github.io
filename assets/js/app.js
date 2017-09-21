@@ -10,9 +10,46 @@
 $(document).ready(function ($) {
 
 
+    //!!!!!!!!!!!Потом убрать, это пока чтобы показать редирект на другую страницу!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    $('.then-remove').on('click',function(){
+        event.preventDefault();
+        location.replace("car-added.html")
+    });
+
+    $('.then-remove-2').on('click',function(){
+        event.preventDefault();
+        location.replace("create-account-step2.html")
+    });
+    $('.then-remove-3').on('click',function(){
+        event.preventDefault();
+        location.replace("grow-screen.html")
+    });
 
 
-    /*Подстановка марки автомобиля*/
+
+    //Шаблонизатор
+    //var data = [
+    //    { name: "Замена масла"},
+    //    { name: "Замена масла"},
+    //    { name: "Замена масла"},
+    //    { name: "Замена масла"},
+    //    { name: "Замена масла"}
+    //];
+    //
+    //$("#clientTemplate").tmpl(data).appendTo( ".type_service" );
+    //
+    //$(".perform-action").on('click',function(){
+    //    var rt = '<select id="type_service" class="dropdown type_service" name="type_service"></select>';
+    //    $(rt).appendTo('.ry');
+    //    $("#clientTemplate").tmpl(data).appendTo( ".type_service" );
+    //});
+
+
+
+
+
+
+    /*Открытие окна с выбором марки автомобиля и Подстановка выбранной марки */
     $('.brand-search').click(function(){
         $('.step-1, .footer-call-to-action').css('display','none');
         $('.brand-machine').css('display','block');
@@ -35,11 +72,7 @@ $(document).ready(function ($) {
 
     });
 
-    //Потом убрать, это пока чтобы показать редирект на другую страницу
-    $('.then-remove').on('click',function(){
-        event.preventDefault();
-        location.replace("car-added.html")
-    });
+
 
 
     //Переключение между табами
@@ -134,6 +167,17 @@ $(document).ready(function ($) {
         $('.media-menu').css("display","none");
     });
 
+    //Вызов поп-ап Заказ опубликован
+
+    $("#js-call-published").on("click",function(){
+        event.preventDefault(); /*Это убрать, так как окощко о том, что задание выполнено будет вызываться через ajax*/
+        $(".wrapper-order-published").css("display","block")
+
+    });
+    $(".pop-up-order-published").on("click",function(){
+        $(".wrapper-order-published").css("display","none")
+    });
+
 
 
 
@@ -172,33 +216,7 @@ $(document).ready(function ($) {
 
     /*Смена экранов регистрации*/
 
-    //var steps = $("form").children(".step"); // находим все шаги формы
-    //$(steps[0]).show(); // показываем первый шаг
-    //var current_step = 0; // задаем текущий шаг
-    //$("a.next").click(function(){	// Событие клика на ссылку "Следующий шаг"
-    //    if (current_step == steps.length-2) { // проверяем, будет ли следующий шаг последним
-    //        $(this).hide(); // скрываем ссылку "Следующий шаг"
-    //        $("form input[type=submit]").show(); // показываем кнопку "Регистрация"
-    //    }
-    //    $("a.back").show(); // показываем ссылку "Назад"
-    //    current_step++; // увеличиваем счетчик текущего слайда
-    //    changeStep(current_step); // меняем шаг
-    //});
-    //
-    //$("a.back").click(function(){	// Событие клика на маленькое изображение
-    //    if (current_step == 1) { // проверяем, будет ли предыдущий шаг первым
-    //        $(this).hide(); // скрываем ссылку "Назад"
-    //    }
-    //    $("form input[type=submit]").hide(); // скрываем кнопку "Регистрация"
-    //    $("a.next").show(); // показываем ссылку "Следующий шаг"
-    //    current_step--; // уменьшаем счетчик текущего слайда
-    //    changeStep(current_step);// меняем шаг
-    //});
-    //
-    //function changeStep(i) { // функция смены шага
-    //    $(steps).hide(); // скрываем все шаги
-    //    $(steps[i]).show(); // показываем текущий
-    //}
+
 
     var steps = $("form").children(".step"); // находим все шаги формы
     $(steps[0]).show(); // показываем первый шаг
@@ -206,7 +224,7 @@ $(document).ready(function ($) {
     $("a.next").click(function(){	// Событие клика на ссылку "Следующий шаг"
         if (current_step == steps.length-2) { // проверяем, будет ли следующий шаг последним
             $(this).hide(); // скрываем ссылку "Следующий шаг"
-            $("form input[type=submit]").show(); // показываем кнопку "Регистрация"
+            $(".input-hide").show(); // показываем кнопку "Регистрация"
         }
         $("a.back").show(); // показываем ссылку "Назад"
         current_step++; // увеличиваем счетчик текущего слайда
@@ -217,7 +235,7 @@ $(document).ready(function ($) {
         if (current_step == 1) { // проверяем, будет ли предыдущий шаг первым
             $(this).hide(); // скрываем ссылку "Назад"
         }
-        $("form input[type=submit]").hide(); // скрываем кнопку "Регистрация"
+        $(".input-hide").hide(); // скрываем кнопку "Регистрация"
         $("a.next").show(); // показываем ссылку "Следующий шаг"
         current_step--; // уменьшаем счетчик текущего слайда
         changeStep(current_step);// меняем шаг
@@ -249,7 +267,7 @@ $(document).ready(function ($) {
         closeOnWithoutClick :true
     });
 
-    /*Вернуться!!!!!!!!!!!!!!!*/
+    /*Стирать поля ввода*/
 
     $('.js-icon-clear').on('click',function(){
         $(this).siblings('.js-input-search').val('');
@@ -297,18 +315,33 @@ $(document).ready(function ($) {
 
     }
 
+    //Формы отправки
+    /*Формы отправки*/
 
-    /*Доработать, вычисляет не каждый хедер*/
-    //$('.step').each(function(i,elem) {
-    //    var height = $('header').height();
-    //    height = 20+height;
-    //    $(".main-content-page").css('marginTop',+height+'px');
-    //});
+    $('.js-number').bind("change keyup input click", function() {
+        if (this.value.match(/[^0-9\(\)\+\s]/g)) {
+            this.value = this.value.replace(/[^0-9\(\)\.\+\s]/g, '');
+        }
+    });
+
+    $('.js-number-point').bind("change keyup input click", function() {
+        if (this.value.match(/[^0-9\(\)\.\+\s]/g)) {
+            this.value = this.value.replace(/[^0-9\(\)\.\+\s]/g, '');
+        }
+    });
+
+    $('.js-word, .js-input-search').bind("change keyup input click", function() {
+        if (this.value.match(/[^а-яА-Яa-zA-Z\s\"\'\0-9\.\,]/g)) {
+            this.value = this.value.replace(/[^а-яА-Яa-zA-Z\s\"\'\0-9\.\,]/g, '');
+        }
+    });
 
 
-
-
-
+    $('.js-email').bind("change keyup input click", function() {
+        if (this.value.match(/[^а-яА-Яa-zA-Z\s\"\'\0-9\.\,\@]/g)) {
+            this.value = this.value.replace(/[^а-яА-Яa-zA-Z\s\"\'\0-9\.\,\@]/g, '');
+        }
+    });
 
 
 
