@@ -176,7 +176,9 @@ a:hover {
 .in-block{
     display: inline-block;
 }
-
+.fonsize14px{
+    font-size: 14px;
+}
 .uppercase{
     text-transform: uppercase;
 }
@@ -1729,7 +1731,9 @@ input.call-to-action{
         width: 50px;
         height: 50px;
     }
-
+    .fonsize14px{
+        font-size: 13px;
+    }
 
 }
 @media screen and (max-width: 390px){
