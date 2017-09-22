@@ -173,9 +173,7 @@ a:hover {
 .pad-10{
     padding: 10px 0;
 }
-.in-block{
-    display: inline-block;
-}
+
 .fonsize14px{
     font-size: 14px;
 }
@@ -257,8 +255,22 @@ label {
     font-weight: 700;
 }
 /*Объкты на всех страницах*/
-.header{
-
+.display-inline-top{
+    display: inline-block;
+    vertical-align: top;
+}
+.display-inline-middle{
+    display: inline-block;
+    vertical-align: middle;
+}
+.in-block{
+    display: inline-block;
+}
+.float-right{
+    float: right;
+}
+.float-left{
+    float: left;
 }
 .flex-space-around{
     -webkit-justify-content: space-around;
@@ -1693,10 +1705,36 @@ input.call-to-action{
     background-size: contain;
     margin: 0 auto;
 }
+/*Заказы*/
+.wrapper-icon-car-order{
+    width: 40px;
+    height: 40px;
+    background: url("../img/icon-car-order.png")center no-repeat;
+    background-size: contain;
+    margin-right: 30px;
+}
+.wrapper-name-order{
+    width: 80%;
+    border-bottom: 1px solid #e3e7eb;
+    padding-bottom: 26px;
+}
+.name-order{
+    font-weight: 600;
+    font-size: 18px;
 
-
-
-
+}
+.wrapper-order-go-to {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    background: url(../img/arrow-right.png)center no-repeat;
+    background-size: contain;
+    margin-left: 30px;
+}
+.status-work{
+    color: #06ae8f;
+}
 
 
 
@@ -1734,6 +1772,14 @@ input.call-to-action{
     .fonsize14px{
         font-size: 13px;
     }
+    .wrapper-icon-car-order{
+        margin-right: 10px;
+    }
+    body, .name-order{
+        font-size: 13px;
+    }
+
+
 
 }
 @media screen and (max-width: 390px){
