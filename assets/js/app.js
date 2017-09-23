@@ -10,6 +10,53 @@
 $(document).ready(function ($) {
 
 
+
+
+
+/*Раскоментировать когда добавлю везде*/
+    $('#slider').slider({
+        min: 0,
+        max: 1000,
+        values: [0,1000],
+        range: true,
+        create: displaySliderValues,
+        slide: displaySliderValues,
+        stop: inputValue
+    });
+
+    function displaySliderValues() {
+        $('#lower').text($('#slider').slider("values", 0));
+        $('#upper').text($('#slider').slider("values", 1));
+    }
+
+    function inputValue(){
+        var price_low = $("#lower").text();
+        var price_top = $("#upper").text();
+        $(".js-input-range-low").val(price_low);
+        $(".js-input-range-top").val(price_top);
+    }
+
+    $('.name-server').click(function(){
+        var price_low = $("#lower").text();
+        var price_top = $("#upper").text();
+        $(".js-input-range-low").val(price_low);
+        $(".js-input-range-top").val(price_top);
+    });
+
+
+    //Резиновый input
+    var $input = $('.price-range input'),
+        $buffer = $('.input-buffer');
+
+    $input.on('change', function() {
+        $buffer.text($input.val());
+        $input.width($buffer.width());
+    });
+
+
+
+
+
     //!!!!!!!!!!!Потом убрать, это пока чтобы показать редирект на другую страницу!!!!!!!!!!!!!!!!!!!!!!!!!!!
     $('.then-remove').on('click',function(){
         event.preventDefault();
@@ -24,6 +71,11 @@ $(document).ready(function ($) {
         event.preventDefault();
         location.replace("grow-screen.html")
     });
+
+
+
+
+
 
 
 
@@ -43,6 +95,13 @@ $(document).ready(function ($) {
     //    $(rt).appendTo('.ry');
     //    $("#clientTemplate").tmpl(data).appendTo( ".type_service" );
     //});
+
+    /*Снять все чекбоксы*/
+
+    $(".js-pull-off-checbox").on("click",function () {
+            $(this).parents(".header").siblings(".main-content-brand").find(".list-filters input").prop('checked', false);
+    });
+
 
 
 
@@ -71,6 +130,18 @@ $(document).ready(function ($) {
         $('.js-input-subst').val(brand);
 
     });
+
+    /*Открытие окна с фильтром*/
+    $('.js-filtr-icon').click(function(){
+        $('.main-page-window, .footer').css('display','none');
+        $('.window-filtr').css('display','block');
+    });
+
+    $('.js-close').on('click',function(){
+        $('.window-filtr').css('display','none');
+        $('.main-page-window, .footer').css('display','block');
+    });
+
 
 
 
@@ -116,6 +187,21 @@ $(document).ready(function ($) {
         centerPadding: '30px',
         focusOnSelect: true,
         arrows: false
+    });
+
+    $('.slider-photos-order').slick({
+        slidesToShow: 3,
+        dots: true,
+        //variableWidth: true,/*именно благодаря этому кадров столько, сколько помещается на экране*/
+        slidesToScroll: 1,
+        infinite: true,
+        cssEase: 'linear',
+        speed:400,
+        centerMode: true,
+        centerPadding: '20px',
+        focusOnSelect: true,
+        arrows: false
+        //respondTo: 'min'
     });
 
 
@@ -273,47 +359,56 @@ $(document).ready(function ($) {
         $(this).siblings('.js-input-search').val('');
     });
 
+    /*Выбор количества звездочек для оценок*/
+
+
+    $('.item-rating').on('click',  function() {
+        $(this).toggleClass('item-rating-fill');
+    });
+
+
+
 
     /*Яндекс карты*/
-    ymaps.ready(init);
-
-    function init () {
-        var myMap = new ymaps.Map("map", {
-            // Центр карты, указываем коордианты
-            center:[55.752161956105276,37.61949517968746],
-            // Масштаб, тут все просто
-            zoom: 16,
-            // Отключаем все элементы управления
-            controls: []
-        });
-
-        var myGeoObjects = [];
-
-        // Наша метка, указываем коордианты
-        myGeoObjects = new ymaps.Placemark([55.800151390638646,37.61400201562497],{
-            balloonContentBody: 'Текст в балуне'
-        },{
-            iconLayout: 'default#image',
-            // Путь до нашей картинки
-            iconImageHref: 'assets/img/icon-tel.png',
-            // Размер по ширине и высоте
-            iconImageSize: [100, 100],
-            // Смещение левого верхнего угла иконки относительно
-            // её «ножки» (точки привязки).
-            iconImageOffset: [-35, -35]
-        });
-
-        var clusterer = new ymaps.Clusterer({
-            clusterDisableClickZoom: false,
-            clusterOpenBalloonOnClick: false
-        });
-
-        clusterer.add(myGeoObjects);
-        myMap.geoObjects.add(clusterer);
-        // Отлючаем возможность изменения масштаба
-        myMap.behaviors.disable('scrollZoom');
-
-    }
+    //ymaps.ready(init);
+    //
+    //function init () {
+    //    var myMap = new ymaps.Map("map", {
+    //        // Центр карты, указываем коордианты
+    //        center:[55.752161956105276,37.61949517968746],
+    //        // Масштаб, тут все просто
+    //        zoom: 16,
+    //        // Отключаем все элементы управления
+    //        controls: []
+    //    });
+    //
+    //    var myGeoObjects = [];
+    //
+    //    // Наша метка, указываем коордианты
+    //    myGeoObjects = new ymaps.Placemark([55.800151390638646,37.61400201562497],{
+    //        balloonContentBody: 'Текст в балуне'
+    //    },{
+    //        iconLayout: 'default#image',
+    //        // Путь до нашей картинки
+    //        iconImageHref: 'assets/img/icon-tel.png',
+    //        // Размер по ширине и высоте
+    //        iconImageSize: [100, 100],
+    //        // Смещение левого верхнего угла иконки относительно
+    //        // её «ножки» (точки привязки).
+    //        iconImageOffset: [-35, -35]
+    //    });
+    //
+    //    var clusterer = new ymaps.Clusterer({
+    //        clusterDisableClickZoom: false,
+    //        clusterOpenBalloonOnClick: false
+    //    });
+    //
+    //    clusterer.add(myGeoObjects);
+    //    myMap.geoObjects.add(clusterer);
+    //    // Отлючаем возможность изменения масштаба
+    //    myMap.behaviors.disable('scrollZoom');
+    //
+    //}
 
     //Формы отправки
     /*Формы отправки*/
