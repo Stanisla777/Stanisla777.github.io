@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
+<head lang="en">
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,15 +11,17 @@
     <meta content='yes' name='apple-mobile-web-app-capable'/>
     <meta name="google" value="notranslate">
     <meta name="theme-color" content="#ffffff">
-    <title>Главная - Ильинский рубеж 1941</title>
+    <title>CARMA</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link href="../assets/css/easydropdown.css" rel="stylesheet">
-    <link href="../assets/css/app.css" rel="stylesheet">
+    <link href="../assets/css/jquery-ui.min.css" rel="stylesheet">
     <link href="../assets/css/slick-slider.css" rel="stylesheet">
-    <link href="../assets/css/jquery.datetimepicker.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/slider.css"/>
-
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css"/>
+    <link href="../assets/css/tcal.css" rel="stylesheet">
+    <link href="../assets/css/app.css" rel="stylesheet">
+    <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
 </head>
 
 <body class="home">
@@ -52,10 +54,12 @@
     <section class="main-content-brand">
         <div class="container">
 
-            <div class="wrapper-inp-search wrapper-search-brand mar-top-10">
-                <input class="input-search-disp-none" type="text">
+            <div class="wrapper-input-search border-grey mar-top-10">
+                <input class="js-input-search " type="text">
                 <div class="icon-search"></div>
             </div>
+
+
 
 
 
@@ -155,47 +159,40 @@
                     <div class="wrapper-photo-archive info ">
 
 
-                        <p>Марка</p>
-                        <div class="wrapper-inp-search wrapper-bor-1px mar-top-10 brand-search">
-                            <input disabled placeholder="Ford" class="js-input-subst input-search-disp-none" type="text" name="vin">
-                            <div class="icon-search-carat"></div>
+                        <p class="label">Марка</p>
+                        <div class="js-modal wrapper-input-choice border-grey mar-top-10 cur-pointer">
+                            <input disabled class="marka" type="text" name="marka">
+                            <div class="icon-search-carat-2"></div>
                         </div>
 
+                        <p class="label">Модель</p>
+                        <div class="js-modal wrapper-input-choice border-grey mar-top-10 cur-pointer">
+                            <input disabled class="model" type="text" name="model">
+                            <div class="icon-search-carat-2"></div>
+                        </div>
 
-
-                        <label for="car_model">Модель</label>
-                        <select id="car_model" class="dropdown" name="car_model">
-                            <option value="Ford" selected>Focus</option>
-                            <option value="Жигули">73933</option>
-                            <option value="Москвич">73833S</option>
-                            <option value="Ferrari">F-50</option>
-                        </select>
-
-
-                        <div class="wrapper-select-engine-year flex-space-between">
-                            <div>
-                                <label>Год выпуска
-                                    <input name="year-issue" class="datetimepicker-year"  placeholder="2010" type="text"/>
-                                </label>
+                        <div class=" flex-space-between">
+                            <div class="col-left">
+                                <p class="label">Год выпуска</p>
+                                <div class="js-modal wrapper-input-choice border-grey mar-top-10 cur-pointer">
+                                    <input disabled class="year" type="text" name="year">
+                                    <div class="icon-search-carat-2"></div>
+                                </div>
                             </div>
-                            <div>
-                                <label for="engine">Двигатель</label>
-                                <select id="engine" class="dropdown" name="engine">
-                                    <option value="Бензин" selected>Бензин</option>
-                                    <option value="">Бензин</option>
-                                    <option value="">Бензин</option>
-                                    <option value="">Бензин</option>
-                                </select>
+                            <div class="col-right">
+                                <p class="label">Двигатель</p>
+                                <div class="js-modal wrapper-input-choice border-grey mar-top-10 cur-pointer">
+                                    <input disabled class="engine" type="text" name="engine">
+                                    <div class="icon-search-carat-2"></div>
+                                </div>
                             </div>
                         </div>
 
-                        <label for="transmission">Коробка передач</label>
-                        <select id="transmission" class="dropdown" name="transmission">
-                            <option value="Mechanics" selected>Механическая</option>
-                            <option value="Auto">Автомат</option><option value="Mechanics" selected>Механическая</option>
-                            <option value="Auto">Автомат</option><option value="Mechanics" selected>Механическая</option>
-                            <option value="Auto">Автомат</option>
-                        </select>
+                        <p class="label">Коробка передач</p>
+                        <div class="js-modal wrapper-input-choice border-grey mar-top-10 cur-pointer">
+                            <input disabled class="transmission" type="text" name="transmission">
+                            <div class="icon-search-carat-2"></div>
+                        </div>
 
                     </div>
 
@@ -315,20 +312,49 @@
     </div>
 </footer>
 
+<!--Модальное окно-->
+<div id="modal-characteristics" class="modal fade">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <!-- Заголовок модального окна -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <!-- Основное содержимое модального окна -->
+            <div class="modal-body">
 
+            </div>
+            <!-- Футер модального окна -->
+            <!--<div class="modal-footer">-->
+            <!--<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>-->
+            <!--</div>-->
+        </div>
+    </div>
+</div>
+
+<script id="clientTemplate" type="text/html">
+    <div class="modal-active-item flex-left-center">
+        <div class="modal-item-cheked"></div>
+        <p>${name}</p>
+    </div>
+</script>
 
 
 </form>
 
 <script src="../assets/js/jquery-3.1.1.min.js"></script>
+<script src="../assets/js/jquery-ui.min.js"></script>
+<script src="../assets/js/jquery.ui.touch-punch.js"></script>
 <script src="../assets/js/svg4everybody.min.js"></script>
-<script src="../assets/js/jquery.datetimepicker.full.min.js"></script>
 <script src="../assets/js/slick.min.js"></script>
 <script src="../assets/js/jquery.fancybox.min.js"></script>
 <script src="../assets/js/app.js"></script>
 <script src="../assets/js/jquery.easydropdown.js"></script>
 <script src="../assets/js/slider.js"></script>
-<script src="../assets/js/jquery-ui.min.js"></script>
+<script src="../assets/js/jquery.knob.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/jquery.tmpl.js"></script>
+<script src="../assets/js/tcal.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 
 </body>

@@ -9,7 +9,10 @@
 
 $(document).ready(function ($) {
 
-
+    $('.then-remove-2').on('click',function(){
+        event.preventDefault();
+        location.replace("create-account-step2.html")
+    });
 
 
 
@@ -101,11 +104,6 @@ $(document).ready(function ($) {
     $(".js-pull-off-checbox").on("click",function () {
             $(this).parents(".header").siblings(".main-content-brand").find(".list-filters input").prop('checked', false);
     });
-
-
-
-
-
 
 
     /*Открытие окна с выбором марки автомобиля и Подстановка выбранной марки */
@@ -265,21 +263,6 @@ $(document).ready(function ($) {
     });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     /*Функция для добавления картинки пользователем*/
     function readURL(input) {
 
@@ -333,25 +316,43 @@ $(document).ready(function ($) {
     }
 
 
-    for ( i = 1980; i < 2020; i++) {
-        $('<option value='+i+'>'+i+'</option>').appendTo('select#year-issue')
-    }
+
+
+    //$(function(){
+    //    $( "#date" ).datepicker();
+    //});
+
 
     /*Календарь*/
-    $('.datetimepicker').datetimepicker({
-        //datepicker:false
-        format:'d.m.Y',
-        timepicker:false,
-        lang:'ru'
-    });
-    $('.datetimepicker-year').datetimepicker({
-        format:'Y',
-        //datepicker:false,
-        timepicker:false,
-        lang:'ru',
-        closeOnDateSelect:true,
-        closeOnWithoutClick :true
-    });
+    //$('.datetimepicker').datetimepicker({
+    //    //datepicker:false
+    //    format:'d.m.Y',
+    //    timepicker:false,
+    //    lang:'ru'
+    //});
+    //$('.datetimepicker-year').datetimepicker({
+    //    format:'Y',
+    //    //datepicker:false,
+    //    timepicker:false,
+    //    lang:'ru',
+    //    closeOnDateSelect:true,
+    //    closeOnWithoutClick :true
+    //});
+
+
+    //$(function () {
+    //    $('#datetimepicker6').datetimepicker(
+    //        {language: 'ru'}
+    //    );
+    //});
+
+
+
+
+
+
+
+
 
     /*Стирать поля ввода*/
 
@@ -370,52 +371,52 @@ $(document).ready(function ($) {
 
 
     /*Яндекс карты*/
-    //ymaps.ready(init);
-    //
-    //function init () {
-    //    var myMap = new ymaps.Map("map", {
-    //        // Центр карты, указываем коордианты
-    //        center:[55.752161956105276,37.61949517968746],
-    //        // Масштаб, тут все просто
-    //        zoom: 16,
-    //        // Отключаем все элементы управления
-    //        controls: []
-    //    });
-    //
-    //    var myGeoObjects = [];
-    //
-    //    // Наша метка, указываем коордианты
-    //    myGeoObjects = new ymaps.Placemark([55.800151390638646,37.61400201562497],{
-    //        balloonContentBody: 'Текст в балуне'
-    //    },{
-    //        iconLayout: 'default#image',
-    //        // Путь до нашей картинки
-    //        iconImageHref: 'assets/img/icon-tel.png',
-    //        // Размер по ширине и высоте
-    //        iconImageSize: [100, 100],
-    //        // Смещение левого верхнего угла иконки относительно
-    //        // её «ножки» (точки привязки).
-    //        iconImageOffset: [-35, -35]
-    //    });
-    //
-    //    var clusterer = new ymaps.Clusterer({
-    //        clusterDisableClickZoom: false,
-    //        clusterOpenBalloonOnClick: false
-    //    });
-    //
-    //    clusterer.add(myGeoObjects);
-    //    myMap.geoObjects.add(clusterer);
-    //    // Отлючаем возможность изменения масштаба
-    //    myMap.behaviors.disable('scrollZoom');
-    //
-    //}
+    ymaps.ready(init);
 
-    //Формы отправки
-    /*Формы отправки*/
+    function init () {
+        var myMap = new ymaps.Map("map", {
+            // Центр карты, указываем коордианты
+            center:[55.752161956105276,37.61949517968746],
+            // Масштаб, тут все просто
+            zoom: 16,
+            // Отключаем все элементы управления
+            controls: []
+        });
 
-    $('.js-number').bind("change keyup input click", function() {
-        if (this.value.match(/[^0-9\(\)\+\s]/g)) {
-            this.value = this.value.replace(/[^0-9\(\)\.\+\s]/g, '');
+        var myGeoObjects = [];
+
+        // Наша метка, указываем коордианты
+        myGeoObjects = new ymaps.Placemark([55.800151390638646,37.61400201562497],{
+            balloonContentBody: 'Текст в балуне'
+        },{
+            iconLayout: 'default#image',
+            // Путь до нашей картинки
+            iconImageHref: 'assets/img/icon-tel.png',
+            // Размер по ширине и высоте
+            iconImageSize: [100, 100],
+            // Смещение левого верхнего угла иконки относительно
+            // её «ножки» (точки привязки).
+            iconImageOffset: [-35, -35]
+        });
+
+        var clusterer = new ymaps.Clusterer({
+            clusterDisableClickZoom: false,
+            clusterOpenBalloonOnClick: false
+        });
+
+        clusterer.add(myGeoObjects);
+        myMap.geoObjects.add(clusterer);
+        // Отлючаем возможность изменения масштаба
+        myMap.behaviors.disable('scrollZoom');
+
+    }
+    //
+    //
+    ///*Формы отправки регулярка на ввод символов*/
+    //
+    $('.js-number, input[name="tel"]').bind("change keyup input click", function() {
+        if (this.value.match(/[^0-9\(\)\+\-\s]/g)) {
+            this.value = this.value.replace(/[^0-9\(\)\.\+\-\s]/g, '');
         }
     });
 
@@ -425,18 +426,154 @@ $(document).ready(function ($) {
         }
     });
 
-    $('.js-word, .js-input-search').bind("change keyup input click", function() {
+    $('.js-word, .js-input-search, input[name="password"], textarea[name="text"]').bind("change keyup input click", function() {
         if (this.value.match(/[^а-яА-Яa-zA-Z\s\"\'\0-9\.\,]/g)) {
             this.value = this.value.replace(/[^а-яА-Яa-zA-Z\s\"\'\0-9\.\,]/g, '');
         }
     });
 
 
-    $('.js-email').bind("change keyup input click", function() {
+    $('.js-email, input[name="e-mail"]').bind("change keyup input click", function() {
         if (this.value.match(/[^а-яА-Яa-zA-Z\s\"\'\0-9\.\,\@]/g)) {
             this.value = this.value.replace(/[^а-яА-Яa-zA-Z\s\"\'\0-9\.\,\@]/g, '');
         }
     });
+
+
+    //Запускаю диаграмму
+
+    var c = $(".box input").val();
+    $(function() {
+
+        $(".dial").knob({
+
+        });
+        $({animatedVal: 0}).animate({animatedVal: c}, {
+            duration: 2000,
+            easing: "swing",
+            step: function() {
+                $(".dial").val(Math.ceil(this.animatedVal)).trigger("change");
+            }
+        });
+    });
+
+
+    /*Модальное окно*/
+
+    var text;
+
+    //Шаблонизатор templates Сейчас формируются от сюда модальные окна селектов марок авто итому подобного
+    var marka = [
+        { name: "Ford"},
+        { name: "Mercedes-Benz"},
+        { name: "Жигули"},
+        { name: "Москвич"}
+    ];
+    var model = [
+        { name: "Focus"},
+        { name: "Mercedes-Benz G"},
+        { name: "Ваз-2015"},
+        { name: "410H"}
+    ];
+    var engine = [
+        { name: "Бензин"},
+        { name: "Электродвигатель"},
+        { name: "Дизель"}
+    ];
+
+    var type_service = [
+        { name: "Замена масла"},
+        { name: "Замена шин"},
+        { name: "Замена магнитолы"}
+    ];
+
+    var transmission = [
+        { name: "Механическая"},
+        { name: "Автомат"},
+        { name: "Полуавтомат"}
+    ];
+    var wishes_spare = [
+        { name: "Только оригинальные"},
+        { name: "Неоригинальные"},
+        { name: "Полуавтомат"}
+    ];
+
+    /*А это статичная инфа о годах, её не убирать*/
+
+
+
+
+    //Получаю тикущий год
+    Data = new Date();
+    year = Data.getFullYear();
+
+    $(".js-modal").on("click",function(){
+
+
+        //Это потом убрать. Пока просто для подстановки каких-то данных и показа
+        if($(this).find("input").hasClass("marka")){
+            $("#clientTemplate").tmpl(marka).appendTo( "#modal-characteristics .modal-body" );
+        }
+        if($(this).find("input").hasClass("model")){
+            $("#clientTemplate").tmpl(model).appendTo( "#modal-characteristics .modal-body" );
+        }
+
+        if($(this).find("input").hasClass("engine")){
+            $("#clientTemplate").tmpl(engine).appendTo( "#modal-characteristics .modal-body" );
+        }
+
+        if($(this).find("input").hasClass("type-of-service")){
+            $("#clientTemplate").tmpl(type_service).appendTo( "#modal-characteristics .modal-body" );
+        }
+
+        if($(this).find("input").hasClass("transmission")){
+            $("#clientTemplate").tmpl(transmission).appendTo( "#modal-characteristics .modal-body" );
+        }
+
+        if($(this).find("input").hasClass("wishes-spare")){
+            $("#clientTemplate").tmpl(wishes_spare).appendTo( "#modal-characteristics .modal-body" );
+        }
+
+        /*А это статичная инфа о годах, её не убирать*/
+        if($(this).find("input").hasClass("year")){
+            for ( i = year; i > year-30; i--) {
+                $('<div class="modal-active-item flex-left-center">'+'<div class="modal-item-cheked"></div>'+'<p>'+i+'</p>'+'</div>').appendTo("#modal-characteristics .modal-body")
+            }
+        }
+
+
+
+
+        $(this).find("input").addClass("active-item-m");
+        $("#modal-characteristics").modal('show');
+        ret();
+
+        $("#modal-characteristics").on('hidden.bs.modal', function(){
+            $(".active-item-m").val(text);
+            $(".js-modal").find("input").removeClass("active-item-m");
+            $(this).find(".modal-body").html("");
+        });
+
+    });
+
+    function ret(){
+
+        $(".modal-active-item").on("click",function(){
+            $(this).siblings().find(".modal-item-cheked").css("backgroundColor","#fff");
+            $(this).siblings().find("p").removeClass("active-item-modal");
+            $(this).find(".modal-item-cheked").css("backgroundColor","#00dd1c").find("p").addClass("active-item-modal");
+            $(this).find("p").addClass("active-item-modal");
+            text =  $(this).find("p").text();
+            $("#modal-characteristics").modal('hide');
+
+
+
+
+        })
+    }
+
+
+
 
 
 
