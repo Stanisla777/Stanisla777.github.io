@@ -2391,7 +2391,8 @@ label.star:before{
 
 /*Моё*/
 .modal-active-item{
-
+    margin-bottom: 10px;
+    font-size: 17px;
 }
 .modal-item-cheked{
     content: "";
