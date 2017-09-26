@@ -2465,13 +2465,13 @@ label.star:before{
 /*Радиокнопки*/
 .icon-snowflake{
     position: absolute;
-    top: 60px;
-    right: 40px;
+    top: 35px;
+    right: 5px;
 }
 .icon-sun{
     position: absolute;
-    top: 100px;
-    right: 40px;
+    top: 85px;
+    right: 5px;
 }
 
 .radio {
@@ -2484,12 +2484,12 @@ label.star:before{
     cursor: pointer;
 }
 .radio-t:not(checked),.radio-y:not(checked)  {
-    position: absolute;
+    /*position: absolute;*/
     opacity: 0;
 }
 .radio:not(checked) + label {
     position: relative;
-    padding: 0 0 0 35px;
+    /*padding: 0 0 0 35px;*/
 }
 
 

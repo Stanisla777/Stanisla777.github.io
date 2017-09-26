@@ -448,13 +448,13 @@ $(document).ready(function ($) {
         $(".dial").knob({
 
         });
-        $({animatedVal: 0}).animate({animatedVal: c}, {
-            duration: 2000,
-            easing: "swing",
-            step: function() {
-                $(".dial").val(Math.ceil(this.animatedVal)).trigger("change");
-            }
-        });
+        //$({animatedVal: 0}).animate({animatedVal: c}, {
+        //    duration: 2000,
+        //    easing: "swing",
+        //    step: function() {
+        //        $(".dial").val(Math.ceil(this.animatedVal)).trigger("change");
+        //    }
+        //});
     });
 
 
