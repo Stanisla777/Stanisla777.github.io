@@ -9,6 +9,10 @@
 
 $(document).ready(function ($) {
 
+    /*Убрать класс из модального окна, чтобы всё было по центру после согласования убрать и изменть в шаблоне*/
+
+    $("#modal-characteristics").find(".modal-active-item").removeClass("flex-left-center");
+
     $('.then-remove-2').on('click',function(){
         event.preventDefault();
         location.replace("create-account-step2.html")
@@ -537,7 +541,7 @@ $(document).ready(function ($) {
         /*А это статичная инфа о годах, её не убирать*/
         if($(this).find("input").hasClass("year")){
             for ( i = year; i > year-30; i--) {
-                $('<div class="modal-active-item flex-left-center">'+'<div class="modal-item-cheked"></div>'+'<p>'+i+'</p>'+'</div>').appendTo("#modal-characteristics .modal-body")
+                $('<div class="modal-active-item <!--flex-left-center-->/">'+'<div class="modal-item-cheked"></div>'+'<p>'+i+'</p>'+'</div>').appendTo("#modal-characteristics .modal-body")
             }
         }
 

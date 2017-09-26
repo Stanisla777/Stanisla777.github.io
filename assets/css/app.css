@@ -96,8 +96,10 @@ a:active {
     outline: none;
     text-decoration: none;
 }
-
-
+a:hover{
+    text-decoration: none!important;
+}
+.call-to-action:hover{text-decoration: none!important;}
 
 
 h1 {
@@ -544,7 +546,7 @@ input.checkbox-green:checked + .stylized-checkbox::before {
 
 .wrapper-tabs-profile{
     position: relative;
-    margin-top: 25px;
+    margin-top: 15px;
 }
 .wrapper-tabs-profile li{
     position: relative;
@@ -1814,7 +1816,8 @@ input.call-to-action{
     margin-right: 30px;
 }
 .wrapper-name-order{
-    width: 80%;
+    /*width: 80%;*/
+    width: 100%;
     border-bottom: 1px solid #e3e7eb;
     padding-bottom: 26px;
 }
@@ -2392,9 +2395,11 @@ label.star:before{
 /*Моё*/
 .modal-active-item{
     margin-bottom: 10px;
-    font-size: 17px;
+    font-size: 19px;
+    text-align: center;
 }
 .modal-item-cheked{
+    display: none;
     content: "";
     width: 12px;
     height: 12px;
@@ -2537,12 +2542,12 @@ label.star:before{
 }
 .radio-t:focus + label:before {
 
-    background:url("../img/icon-snowflake-2.png")center no-repeat ;
+    background:url("../img/icon-snowflake.png")center no-repeat ;
     background-size: contain;
 }
 .radio-y:focus + label:before {
 
-    background:url("../img/icon-snowflake-2.png")center no-repeat ;
+    background:url("../img/icon-sun.png")center no-repeat ;
     background-size: contain;
 }
 
@@ -2551,10 +2556,80 @@ label.star:before{
 
 
 
+.stylized-checkbox{
+    cursor: pointer;
+    position: relative;
+    margin-left: 30px;
+}
+input[type="checkbox"] {
+    opacity: 0;
+}
+
+
+
+input[type="radio"] {
+    opacity: 0;
+}
 
 
 
 
+/*.radio-11::before{*/
+    /*content: "";*/
+    /*display: inline-block;*/
+    /*height: 22px;*/
+    /*width: 22px;*/
+    /*background: url("../img/icon-snowflake-2.png")center no-repeat;*/
+    /*background-size: contain;*/
+/*}*/
+/*.radio-22::before{*/
+    /*content: "";*/
+    /*display: inline-block;*/
+    /*height: 22px;*/
+    /*width: 22px;*/
+    /*background: url("../img/icon-sun-2.png")center no-repeat;*/
+    /*background-size: contain;*/
+/*}*/
+
+
+/*.stylized-checkbox::after {*/
+    /*content: "";*/
+    /*display: inline-block;*/
+    /*height: 7px;*/
+    /*width: 11px;*/
+    /*border-left: 2px solid #fff;*/
+    /*border-bottom: 2px solid #fff;*/
+    /*transform: rotate(-46deg);*/
+/*}*/
+
+
+.radio-1:checked + .radio-11{
+    width: 24px;
+    height: 24px;
+    background: url("../img/icon-sun.png")center no-repeat;
+    background-size: contain;
+}
+
+.radio-11 {
+    width: 24px;
+    height: 24px;
+    background: url("../img/icon-sun-2.png")center no-repeat;
+    background-size: contain;
+}
+
+.radio-2:checked + .radio-22{
+    width: 24px;
+    height: 24px;
+    background: url("../img/icon-snowflake-2.png")center no-repeat;
+    background-size: contain;
+}
+
+.radio-22 {
+    width: 24px;
+    height: 24px;
+    background: url("../img/icon-snowflake.png")center no-repeat;
+    background-size: contain;
+}
 
 
 
