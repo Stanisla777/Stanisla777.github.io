@@ -11,13 +11,13 @@ $(document).ready(function ($) {
 
     /*Убрать класс из модального окна, чтобы всё было по центру после согласования убрать и изменть в шаблоне*/
 
-    //$("#modal-characteristics").find(".modal-active-item").removeClass("flex-left-center");
+    $("#modal-characteristics").find(".modal-active-item").removeClass("flex-left-center");
 
 
 
 
 
-/*Раскоментировать когда добавлю везде*/
+    /*Раскоментировать когда добавлю везде*/
     $('#slider').slider({
         min: 0,
         max: 1000,
@@ -108,13 +108,34 @@ $(document).ready(function ($) {
     /*Снять все чекбоксы*/
 
     $(".js-pull-off-checbox").on("click",function () {
-            $(this).parents(".header").siblings(".main-content-brand").find(".list-filters input").prop('checked', false);
+        $(this).parents(".header").siblings(".main-content-brand").find(".list-filters input").prop('checked', false);
     });
 
 
 
 
+    /*Открытие окна с фильтром*/
+    $('.js-filtr-icon').click(function(){
+        $('.main-page-window, .footer').css('display','none');
+        $('.window-filtr').css('display','block');
+    });
 
+    $('.js-close').on('click',function(){
+        $('.window-filtr').css('display','none');
+        $('.main-page-window, .footer').css('display','block');
+    });
+
+    /*Открытие окна с подписками*/
+    $(".go-to-subscription").click(function(){
+        $("#modal-subscription").modal('show');
+    });
+
+    $('.wrapper-subscription').on('click',function(){
+        var price = $(this).find(".js-sub-price").text();
+        $("#modal-subscription").modal('hide');
+        $('.js-substitute-price').text(price);
+
+    });
 
     /*Убираю футер в  профиле "Тип автосервиса" исполнителя*/
     //var ind = $("ste")
@@ -157,7 +178,7 @@ $(document).ready(function ($) {
 
 
 
-/*Слайдер главного экрана*/
+    /*Слайдер главного экрана*/
 
     $('.type-job-slider').slick({
         slidesToShow: 1,
@@ -237,7 +258,16 @@ $(document).ready(function ($) {
         $('.media-menu').css("display","none");
     });
 
+    //Вызов поп-ап Заказ опубликован
 
+    $("#js-call-published").on("click",function(){
+        event.preventDefault(); /*Это убрать, так как окощко о том, что задание выполнено будет вызываться через ajax*/
+        $(".wrapper-order-published").css("display","block")
+
+    });
+    $(".pop-up-order-published").on("click",function(){
+        $(".wrapper-order-published").css("display","none")
+    });
 
 
     /*Функция для добавления картинки пользователем*/
@@ -293,13 +323,11 @@ $(document).ready(function ($) {
     function changeStep(i) { // функция смены шага
         $(steps).hide(); // скрываем все шаги
         $(steps[i]).show(); // показываем текущий
-
-        if($(".step-11").is(":visible") != true){
+        if($(".step-1").is(":visible") != true){
             $(".footer-call-to-action").show();
         }else{
             $(".footer-call-to-action").hide();
         }
-
     }
 
 
@@ -450,41 +478,40 @@ $(document).ready(function ($) {
     var text;
 
     //Шаблонизатор templates Сейчас формируются от сюда модальные окна селектов марок авто итому подобного
-    //var marka = [
-    //    {title: "Марка"},
-    //    { name: "Ford",ic_marka:"../../assets/img/icon-BMW.png"},
-    //    { name: "Mercedes-Benz"},
-    //    { name: "Жигули"},
-    //    { name: "Москвич"}
-    //];
-    //var model = [
-    //    { name: "Focus"},
-    //    { name: "Mercedes-Benz G"},
-    //    { name: "Ваз-2015"},
-    //    { name: "410H"}
-    //];
-    //var engine = [
-    //    { name: "Бензин"},
-    //    { name: "Электродвигатель"},
-    //    { name: "Дизель"}
-    //];
-    //
-    //var type_service = [
-    //    { name: "Замена масла"},
-    //    { name: "Замена шин"},
-    //    { name: "Замена магнитолы"}
-    //];
-    //
-    //var transmission = [
-    //    { name: "Механическая"},
-    //    { name: "Автомат"},
-    //    { name: "Полуавтомат"}
-    //];
-    //var wishes_spare = [
-    //    { name: "Только оригинальные"},
-    //    { name: "Неоригинальные"},
-    //    { name: "Полуавтомат"}
-    //];
+    var marka = [
+        { name: "Ford"},
+        { name: "Mercedes-Benz"},
+        { name: "Жигули"},
+        { name: "Москвич"}
+    ];
+    var model = [
+        { name: "Focus"},
+        { name: "Mercedes-Benz G"},
+        { name: "Ваз-2015"},
+        { name: "410H"}
+    ];
+    var engine = [
+        { name: "Бензин"},
+        { name: "Электродвигатель"},
+        { name: "Дизель"}
+    ];
+
+    var type_service = [
+        { name: "Замена масла"},
+        { name: "Замена шин"},
+        { name: "Замена магнитолы"}
+    ];
+
+    var transmission = [
+        { name: "Механическая"},
+        { name: "Автомат"},
+        { name: "Полуавтомат"}
+    ];
+    var wishes_spare = [
+        { name: "Только оригинальные"},
+        { name: "Неоригинальные"},
+        { name: "Полуавтомат"}
+    ];
 
     /*А это статичная инфа о годах, её не убирать*/
 
@@ -495,77 +522,77 @@ $(document).ready(function ($) {
     Data = new Date();
     year = Data.getFullYear();
 
-    //$(".js-modal").on("click",function(){
-    //
-    //
-    //    //Это потом убрать. Пока просто для подстановки каких-то данных и показа
-    //    if($(this).find("input").hasClass("marka")){
-    //        $("#clientTemplate").tmpl(marka).appendTo( "#modal-characteristics .modal-body" );
-    //    }
-    //    if($(this).find("input").hasClass("model")){
-    //        $("#clientTemplate").tmpl(model).appendTo( "#modal-characteristics .modal-body" );
-    //    }
-    //
-    //    if($(this).find("input").hasClass("engine")){
-    //        $("#clientTemplate").tmpl(engine).appendTo( "#modal-characteristics .modal-body" );
-    //    }
-    //
-    //    if($(this).find("input").hasClass("type-of-service")){
-    //        $("#clientTemplate").tmpl(type_service).appendTo( "#modal-characteristics .modal-body" );
-    //    }
-    //
-    //    if($(this).find("input").hasClass("transmission")){
-    //        $("#clientTemplate").tmpl(transmission).appendTo( "#modal-characteristics .modal-body" );
-    //    }
-    //
-    //    if($(this).find("input").hasClass("wishes-spare")){
-    //        $("#clientTemplate").tmpl(wishes_spare).appendTo( "#modal-characteristics .modal-body" );
-    //    }
-    //
-    //    /*А это статичная инфа о годах, её не убирать*/
-    //    if($(this).find("input").hasClass("year")){
-    //        for ( i = year; i > year-30; i--) {
-    //            $('<div class="modal-active-item <!--flex-left-center-->/">'+'<div class="modal-item-cheked"></div>'+'<p>'+i+'</p>'+'</div>').appendTo("#modal-characteristics .modal-body")
-    //        }
-    //    }
-    //
-    //    if($(this).find("input").hasClass("weekend")){
-    //
-    //        $('<div class="modal-active-item <!--flex-left-center-->/">'+'<div class="modal-item-cheked"></div>'+
-    //        '<p>Да</p>'+'</div>'+'<div class="modal-active-item <!--flex-left-center-->/">'+'<div class="modal-item-cheked"></div>'+'<p>Нет</p>'+'</div>').appendTo("#modal-characteristics .modal-body")
-    //
-    //    }
-    //
-    //
-    //
-    //
-    //    $(this).find("input").addClass("active-item-m");
-    //    $("#modal-characteristics").modal('show');
-    //    ret();
-    //
-    //    $("#modal-characteristics").on('hidden.bs.modal', function(){
-    //        $(".active-item-m").val(text);
-    //        $(".js-modal").find("input").removeClass("active-item-m");
-    //        $(this).find(".modal-body").html("");
-    //    });
-    //
-    //});
+    $(".js-modal").on("click",function(){
 
-    //function ret(){
-    //
-    //    $(".modal-active-item").on("click",function(){
-    //        $(this).siblings().find(".modal-item-cheked").css("backgroundColor","#fff");
-    //        $(this).siblings().find("p").removeClass("active-item-modal");
-    //        $(this).find(".modal-item-cheked").css("backgroundColor","#00dd1c").find("p").addClass("active-item-modal");
-    //        $(this).find("p").addClass("active-item-modal");
-    //        text =  $(this).find("p").text();
-    //        $("#modal-characteristics").modal('hide');
-    //
-    //
-    //
-    //
-    //    })
-    //}
+
+        //Это потом убрать. Пока просто для подстановки каких-то данных и показа
+        if($(this).find("input").hasClass("marka")){
+            $("#clientTemplate").tmpl(marka).appendTo( "#modal-characteristics .modal-body" );
+        }
+        if($(this).find("input").hasClass("model")){
+            $("#clientTemplate").tmpl(model).appendTo( "#modal-characteristics .modal-body" );
+        }
+
+        if($(this).find("input").hasClass("engine")){
+            $("#clientTemplate").tmpl(engine).appendTo( "#modal-characteristics .modal-body" );
+        }
+
+        if($(this).find("input").hasClass("type-of-service")){
+            $("#clientTemplate").tmpl(type_service).appendTo( "#modal-characteristics .modal-body" );
+        }
+
+        if($(this).find("input").hasClass("transmission")){
+            $("#clientTemplate").tmpl(transmission).appendTo( "#modal-characteristics .modal-body" );
+        }
+
+        if($(this).find("input").hasClass("wishes-spare")){
+            $("#clientTemplate").tmpl(wishes_spare).appendTo( "#modal-characteristics .modal-body" );
+        }
+
+        /*А это статичная инфа о годах, её не убирать*/
+        if($(this).find("input").hasClass("year")){
+            for ( i = year; i > year-30; i--) {
+                $('<div class="modal-active-item <!--flex-left-center-->/">'+'<div class="modal-item-cheked"></div>'+'<p>'+i+'</p>'+'</div>').appendTo("#modal-characteristics .modal-body")
+            }
+        }
+
+        if($(this).find("input").hasClass("weekend")){
+
+            $('<div class="modal-active-item <!--flex-left-center-->/">'+'<div class="modal-item-cheked"></div>'+
+            '<p>Да</p>'+'</div>'+'<div class="modal-active-item <!--flex-left-center-->/">'+'<div class="modal-item-cheked"></div>'+'<p>Нет</p>'+'</div>').appendTo("#modal-characteristics .modal-body")
+
+        }
+
+
+
+
+        $(this).find("input").addClass("active-item-m");
+        $("#modal-characteristics").modal('show');
+        ret();
+
+        $("#modal-characteristics").on('hidden.bs.modal', function(){
+            $(".active-item-m").val(text);
+            $(".js-modal").find("input").removeClass("active-item-m");
+            $(this).find(".modal-body").html("");
+        });
+
+    });
+
+    function ret(){
+
+        $(".modal-active-item").on("click",function(){
+            $(this).siblings().find(".modal-item-cheked").css("backgroundColor","#fff");
+            $(this).siblings().find("p").removeClass("active-item-modal");
+            $(this).find(".modal-item-cheked").css("backgroundColor","#00dd1c").find("p").addClass("active-item-modal");
+            $(this).find("p").addClass("active-item-modal");
+            text =  $(this).find("p").text();
+            $("#modal-characteristics").modal('hide');
+
+
+
+
+        })
+    }
 
     /*Тут надо переделывать. Оказывается окно марки автомобилей это и есть модальное окно с марками автомобилей
      Сейчай это у меня на двух страничках profile-filling.html и car-service-profile-performer.html Там сечас сделано на скорую руку
@@ -573,31 +600,31 @@ $(document).ready(function ($) {
      */
 
     /*Открытие окна с выбором марки автомобиля и Подстановка выбранной марки */
-    //$('.brand-search').click(function(){
-    //    $('.wrap, .step-1, .footer-call-to-action').css('display','none');
-    //    $('.brand-machine').css('display','block');
-    //});
-    //
-    //$('.js-icon-close-brand').click(function(){
-    //    $('.brand-machine').css('display','none');
-    //    $('.wrap, .step-1, .footer-call-to-action').css('display','block');
-    //});
-    //
-    //
-    //$('.js-name-brand').on('click',function(){
-    //    var brand = $(this).text();
-    //    RegEx=/\s/g;
-    //
-    //    brand=brand.replace(RegEx,"");
-    //    $('.brand-machine').css('display','none');
-    //    $('.wrap, .step-1, .footer-call-to-action').css('display','block');
-    //    $('.js-input-subst').val(brand);
-    //    $('.js-input-subst').text(brand);
-    //
-    //
-    //});
+    $('.brand-search').click(function(){
+        $('.wrap, .step-1, .footer-call-to-action').css('display','none');
+        $('.brand-machine').css('display','block');
+    });
 
-    /*Настройка Шаблона пользователя*/
+    $('.js-icon-close-brand').click(function(){
+        $('.brand-machine').css('display','none');
+        $('.wrap, .step-1, .footer-call-to-action').css('display','block');
+    });
+
+
+    $('.js-name-brand').on('click',function(){
+        var brand = $(this).text();
+        RegEx=/\s/g;
+
+        brand=brand.replace(RegEx,"");
+        $('.brand-machine').css('display','none');
+        $('.wrap, .step-1, .footer-call-to-action').css('display','block');
+        $('.js-input-subst').val(brand);
+        $('.js-input-subst').text(brand);
+
+
+    });
+
+    /*Шаблон*/
     $(document).ready(function(){
         $(".checkbox").change(function(){
             if ($(this).prop('checked')) {
@@ -614,201 +641,10 @@ $(document).ready(function ($) {
 
 
 
-    /*Открытие окна с фильтром*/
-    $('.js-filtr-icon').click(function(){
-        $('.main-page-window, .footer').css('display','none');
-        $('.window-filtr').css('display','block');
-    });
-
-    $('.js-close').on('click',function(){
-        $('.window-filtr').css('display','none');
-        $('.main-page-window, .footer').css('display','block');
-    });
-
-    /*Открытие окна с подписками*/
-    $(".go-to-subscription").click(function(){
-        $("#modal-subscription").modal('show');
-    });
-
-    $('.wrapper-subscription').on('click',function(){
-        var price = $(this).find(".js-sub-price").text();
-        $("#modal-subscription").modal('hide');
-        $('.js-substitute-price').text(price);
-
-    });
-
-    //Вызов поп-ап Заказ опубликован наверное вызывется в AJAX
-
-    $("#js-call-published").on("click",function(){
-
-        //event.preventDefault(); /*Это убрать, так как окощко о том, что задание выполнено будет вызываться через ajax*/
-        //$(".wrapper-order-published").css("display","block")
-
-        event.preventDefault(); /*Это убрать, так как окощко о том, что задание выполнено будет вызываться через ajax*/
-        $("#modal-order-published").modal('show');
-
-    });
-    //$(".pop-up-order-published").on("click",function(){
-    //    $(".wrapper-order-published").css("display","none")
-    //});
-
-    //Вызов поп ап Отклик отправлен у исполнителя наверное вызывется в AJAX
-    $("#js-call-response-sent").on("click",function(){
-        event.preventDefault(); /*Это убрать, так как окощко о том, что задание выполнено будет вызываться через ajax*/
-        $("#modal-response-sent").modal('show');
-
-
-    });
-
-    //Вызов поп ап Другие шаблоны
-    $(".select-another-template").on("click",function(){
-        event.preventDefault(); /*Это убрать, так как окощко о том, что задание выполнено будет вызываться через ajax*/
-        $("#another-template").modal('show');
-
-
-    });
-
-    //Вызов модалки селекты
-
-    //$(".js-modal").on("click",function(){
-    //    $("#modal-select").modal('show');
-    //});
-
-    var title= {
-        title_marka: "Марка",
-        title_model: "Модель",
-        title_engine: "Двигатель",
-        title_year: "Год выпуска",
-        title_transmission: "Коробка передач",
-        title_type_service: "Тип сервиса",
-        title_wishes_spare: "Пожелания по запчастям"
-
-
-
-
-    };
-
-
-    var model = [
-        { name: "Focus"},
-        { name: "Mercedes-Benz G"},
-        { name: "Ваз-2015"},
-        { name: "410H"}
-    ];
-
-    var marka = [
-        { name: "Ford",ic_marka:"../../assets/img/icon-BMW.png"},
-        { name: "Mercedes-Benz",ic_marka:"../../assets/img/icon-BMW.png"},
-        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"},
-        { name: "Москвич",ic_marka:"../../assets/img/icon-BMW.png"}
-    ];
-
-    var engine = [
-            { name: "Бензин"},
-            { name: "Электродвигатель"},
-            { name: "Дизель"}
-        ];
-
-        var type_service = [
-            { name: "Замена масла"},
-            { name: "Замена шин"},
-            { name: "Замена магнитолы"}
-        ];
-
-        var transmission = [
-            { name: "Механическая"},
-            { name: "Автомат"},
-            { name: "Полуавтомат"}
-        ];
-        var wishes_spare = [
-            { name: "Только оригинальные"},
-            { name: "Неоригинальные"},
-            { name: "Всё равно"}
-        ];
-
-    function ret(){
-
-        $(".modal-active-item").on("click",function(){
-            //$(this).removeClass("active-item-modal");
-            //$(this).find(".name-service").addClass("active-item-modal");
-            text =  $(this).find(".name-service").text();
-            $("#modal-select").modal('hide');
-
-        })
-    }
-
-    $(".js-modal").on("click",function(){
-        $("#modal-select").modal('show');
-
-        //Это потом убрать. Пока просто для подстановки каких-то данных и показа
-        if($(this).find("input").hasClass("marka")){
-            $("#modal-select .modal-header h1").text(title.title_marka);
-            $("#clientTemplate").tmpl(marka).appendTo("#modal-select .js-wrapper-services" );
-        }
-        if($(this).find("input").hasClass("model")){
-            $("#modal-select .modal-header h1").text(title.title_model);
-            $("#clientTemplate").tmpl(model).appendTo("#modal-select .js-wrapper-services" );
-        }
-
-        if($(this).find("input").hasClass("engine")){
-            $("#modal-select .modal-header h1").text(title.title_engine);
-            $("#clientTemplate").tmpl(engine).appendTo("#modal-select .js-wrapper-services" );
-        }
-
-        if($(this).find("input").hasClass("type-of-service")){
-            $("#modal-select .modal-header h1").text(title.title_type_service);
-            $("#clientTemplate").tmpl(type_service).appendTo("#modal-select .js-wrapper-services" );
-        }
-
-        if($(this).find("input").hasClass("transmission")){
-            $("#modal-select .modal-header h1").text(title.title_transmission);
-            $("#clientTemplate").tmpl(transmission).appendTo("#modal-select .js-wrapper-services" );
-        }
-
-        if($(this).find("input").hasClass("wishes-spare")){
-            $("#modal-select .modal-header h1").text(title.title_wishes_spare);
-            $("#clientTemplate").tmpl(wishes_spare).appendTo("#modal-select .js-wrapper-services" );
-        }
-
-        /*А это статичная инфа о годах, её не убирать*/
-        if($(this).find("input").hasClass("year")){
-            $("#modal-select .modal-header h1").text(title.title_year);
-            for ( i = year; i > year-30; i--) {
-                $('<li class="modal-active-item js-name-brand text-center">'
-                +'<span>'+i+'</span>').appendTo("#modal-select .js-wrapper-services")
-            }
-        }
-
-        if($(this).find("input").hasClass("weekend")){
-
-            $('<div class="modal-active-item <!--flex-left-center-->/">'+'<div class="modal-item-cheked"></div>'+
-            '<p>Да</p>'+'</div>'+'<div class="modal-active-item <!--flex-left-center-->/">'+'<div class="modal-item-cheked"></div>'+'<p>Нет</p>'+'</div>').appendTo("#modal-characteristics .modal-body")
-
-        }
-
-
-
-
-        $(this).find("input").addClass("active-item-m");
-
-
-        ret();
-
-        $("#modal-select").on('hidden.bs.modal', function(){
-            $(".active-item-m").val(text);
-            $(".js-modal").find("input").removeClass("active-item-m");
-            text = "";
-            $(this).find(".modal-body ul.js-wrapper-services").html("");
-        });
-
-
-    });
-
-
-
-
-
 
 });
 
 
+/**
+ * Created by User on 28.09.2017.
+ */

@@ -81,7 +81,7 @@ p{
 a {
     display: block;
     color: #1a213f;
-    text-decoration: none;
+    text-decoration: none !important;
     transition: all ease 0.3s;
     -webkit-transition: all ease 0.3s;
 }
@@ -93,8 +93,8 @@ a img {
 /*}*/
 a:focus,a:hover,a:link,
 a:active {
-    outline: none;
-    text-decoration: none;
+    outline: none!important;
+    text-decoration: none!important;
 }
 a:hover{
     text-decoration: none!important;
@@ -108,6 +108,9 @@ h1 {
     font-weight: 700;
     text-align: center;
     margin: 0;
+}
+h1.left{
+    text-align: left;
 }
 .header-inner.flex-space-between h1{
     line-height: 40px;
@@ -199,6 +202,9 @@ a:hover {
 .pad-top-10{
     padding-top: 10px;
 }
+.pad-bot-20{
+    padding-bottom: 20px;
+}
 .cur-pointer{
     cursor: pointer;
 
@@ -228,7 +234,7 @@ a:hover {
 .nunber-actions-icon{
     position: absolute;
     top: 0;
-    right: -7px;
+    right: -6px;
 }
 .color-grey{
     color: #a4a7ad;
@@ -319,9 +325,15 @@ label {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-
 }
-
+.flex-left-baseline{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+}
 .flex-left-center{
     display: -webkit-box;
     display: -webkit-flex;
@@ -391,10 +403,25 @@ label {
     justify-content: center;
 }
 .flex-center-center{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
+.flex-flex-end{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
 .flex-center-screen{
     /*display: -webkit-box;*/
     /*display: -ms-flexbox;*/
@@ -415,6 +442,16 @@ label {
 }
 .header-inner-right{
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+/*Доработать*/
+.header-inner-right, .header-inner-lef{
+    min-width: 40px;
 }
 .main-content-page, .main-content-brand{
     display: block;
@@ -639,6 +676,9 @@ input[type="checkbox"]:checked + label::after {
 }
 .wrap-chat{
     min-height: calc(100vh - 204px);
+}
+.wrapper-content-subscription{
+    min-height: calc(100vh - 215px);
 }
 footer{
     height: 65px;
@@ -1403,7 +1443,7 @@ input.call-to-action{
     /*cursor: pointer;*/
 /*}*/
 .media-menu {
-    padding-top: 40px;
+    padding-top: 20px;
     margin-bottom: 40px;
     position: relative;
     display: none;
@@ -1586,7 +1626,7 @@ input.call-to-action{
 .build-route{
     display: inline-block;
     font-size: 16px;
-    color: 06ae8f;
+    color: #06ae8f;
     font-weight: 600;
 }
 
@@ -1675,18 +1715,23 @@ input.call-to-action{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: 100px;
+    width: 200px;
     height: 100px;
     border-radius: 50%;
     margin: 0 auto;
 }
 .participant-motorist{
-    background: url("../img/intro_auto.svg")center no-repeat;
-    background-size: contain;
+    background-image: url("../img/intro_auto.svg");
 }
 .participant-car-service{
-    background: url("../img/chastniy_master.svg")center no-repeat;
-    background-size: contain;
+    background-image: url("../img/chastniy_master.svg");
+}
+.auto-service-company{
+    background-image: url("../img/auto-service-company.png");
+}
+
+.auto-service-company{
+
 }
 .container-grow-screen{
     text-align: center;
@@ -1796,7 +1841,7 @@ input.call-to-action{
 }
 .pop-up-order-published{
     width: 80%;
-    padding: 53px 0;
+    padding: 10px 0 20px;
     background-color: #fff;
     border-radius: 8px;
 }
@@ -1809,15 +1854,11 @@ input.call-to-action{
 }
 /*Заказы*/
 .wrapper-icon-car-order{
-    width: 40px;
-    height: 40px;
-    background: url("../img/icon-car-order.png")center no-repeat;
-    background-size: contain;
-    margin-right: 30px;
+    background-image: url("../img/icon-car-order.png");
 }
 .wrapper-name-order{
-    /*width: 80%;*/
-    width: 100%;
+    width: 80%;
+    /*width: 100%;*/
     border-bottom: 1px solid #e3e7eb;
     padding-bottom: 26px;
 }
@@ -2300,10 +2341,11 @@ label.star:before{
     /*background-size: contain;*/
 /*}*/
 
-.name-item{
-    color: #ffffff;
-    font-size: 17px;
-}
+
+
+
+
+
 .date-item{
     color: #77829e;
 }
@@ -2315,11 +2357,7 @@ label.star:before{
     cursor: pointer;
 }
 .wrapper-icon-clock-calendar{
-    width: 40px;
-    height: 40px;
-    background: url(../img/icon-clock-calendar.png)center no-repeat;
-    background-size: contain;
-    margin-right: 15px;
+    background-image: url(../img/icon-clock-calendar.png);
 }
 .page-profile-klient .wrapper-name-order{
     border-bottom: 1px solid #445372;
@@ -2353,15 +2391,46 @@ label.star:before{
     color: #fff;
 }
 
+
+
+.name-item{
+    font-size: 17px;
+}
+.name-item-link{
+    font-size: 17px;
+}
+.name-item-link:after{
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: url(../img/arrow-right-green.png)center no-repeat;
+    background-size: contain;
+}
+
+
 .icon-wash-car{
+    background-image: url("../img/icon_wash2.svg");
+}
+.icon-page{
     width: 40px;
     height: 40px;
     margin-right: 15px;
-    background-image: url("../img/icon_wash2.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 }
+.border-bot-dark{
+    border-bottom: 1px solid #445372;
+}
+.border-bot-grey{
+    border-bottom: 1px solid #e3e7eb;
+}
+
+.wrapper-col-right{
+    width: calc(100% - 55px);
+    padding-bottom: 20px;
+}
+
 
 .wrapper-price-distance{
     width: calc(100% - 40px);
@@ -2382,6 +2451,12 @@ label.star:before{
     margin-right: 18px;
     vertical-align: middle;
 }
+
+.wrapper-list-100 {
+    width: calc(100% - 55px);
+    border-bottom: 1px solid #e3e7eb;
+    padding-bottom: 26px;
+}
 /*Радиокнопки для модалок*/
 
 
@@ -2396,7 +2471,7 @@ label.star:before{
 .modal-active-item{
     margin-bottom: 10px;
     font-size: 19px;
-    text-align: center;
+    /*text-align: center;*/
 }
 .modal-item-cheked{
     display: none;
@@ -2563,6 +2638,7 @@ label.star:before{
 }
 input[type="checkbox"] {
     opacity: 0;
+    position: absolute;
 }
 
 
@@ -2632,6 +2708,204 @@ input[type="radio"] {
 }
 
 
+/*ИСПОЛНИТЕЛЬ*/
+
+/*Заполнение профиля*/
+.img-subscription{
+    width: 100px;
+    height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+}
+
+.wrapper-subscription{
+    width: 100%;
+    min-height: 60px;
+    background-color: #f2f6fb;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+/*.main-content-profile-js{*/
+    /*display: none;*/
+/*}*/
+.information-added{
+    width: 100px;
+    height: 100px;
+    background: url(../img/profile_done.svg)center no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+}
+.section-information-added {
+    display: -webkit-box;
+    display: flex;
+    height: calc(100vh - 80px);
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+/*Главный экран */
+
+.banner-card {
+    width: 100%;
+    margin: 0 auto;
+    background: #485671;
+    background: -moz-linear-gradient(left, #485671 0%, #4e5f7c 17%, #5a6e91 50%, #677fa8 83%, #6b83ad 100%);
+    background: -webkit-linear-gradient(left, #485671 0%,#4e5f7c 17%,#5a6e91 50%,#677fa8 83%,#6b83ad 100%);
+    background: linear-gradient(to right, #485671 0%,#4e5f7c 17%,#5a6e91 50%,#677fa8 83%,#6b83ad 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#485671', endColorstr='#6b83ad',GradientType=1 );
+}
+
+.title-service{
+    /*border-bottom: 1px solid;*/
+    width: 100%;
+    position: relative;
+}
+.title-service span {
+    position: absolute;
+    right: 8px;
+}
+.title-service:after {
+    display: block;
+    position: absolute;
+    top: 40px;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #d1d4df;
+}
+.item-count{
+    font-weight: 600;
+    font-size: 21px;
+
+}
+.wpapper-item-information-performer{
+    padding: 25px 0;
+    border-bottom: 1px solid #e3e7eb;
+    border-top: 1px solid #e3e7eb;
+}
+.icon-key-screwdriver{
+     background-image: url(../../assets/img/icon-key-screwdriver.png);
+ }
+
+/*Новые задания*/
+/*Задания*/
+.number-views:before{
+
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+    background: url(../img/number-views.png)center no-repeat;
+    background-size: contain;
+    margin: -4px 10px 0 0;
+}
+/*Отклик га задание*/
+.wrapper-name-task{
+
+}
+.wrapper-call-template{
+    display: none;
+}
+
+
+
+/*Стилизованный чекбокс*/
+
+/* Cначала обозначаем стили для IE8 и более старых версий
+т.е. здесь мы немного облагораживаем стандартный чекбокс. */
+.checkbox {
+    vertical-align: top;
+    margin: 0 3px 0 0;
+    width: 17px;
+    height: 17px;
+}
+/* Это для всех браузеров, кроме совсем старых, которые не поддерживают
+селекторы с плюсом. Показываем, что label кликабелен. */
+.checkbox + label {
+    cursor: pointer;
+}
+
+/* Далее идет оформление чекбокса в современных браузерах, а также IE9 и выше.
+Благодаря тому, что старые браузеры не поддерживают селекторы :not и :checked,
+в них все нижеследующие стили не сработают. */
+
+/* Прячем оригинальный чекбокс. */
+.checkbox:not(checked) {
+    position: absolute;
+    opacity: 0;
+}
+.checkbox:not(checked) + label {
+    position: relative; /* будем позиционировать псевдочекбокс относительно label */
+    padding: 0 0 0 60px; /* оставляем слева от label место под псевдочекбокс */
+}
+/* Оформление первой части чекбокса в выключенном состоянии (фон). */
+.checkbox:not(checked) + label:before {
+    content: '';
+    position: absolute;
+    top: -16px;
+    left: 0;
+    width: 50px;
+    height: 26px;
+    border-radius: 13px;
+    background: #CDD1DA;
+    box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+}
+/* Оформление второй части чекбокса в выключенном состоянии (переключатель). */
+.checkbox:not(checked) + label:after {
+    content: '';
+    position: absolute;
+    top: -14px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0 2px 5px rgba(0,0,0,.3);
+    transition: all .2s; /* анимация, чтобы чекбокс переключался плавно */
+}
+/* Меняем фон чекбокса, когда он включен. */
+.checkbox:checked + label:before {
+    background: #9FD468;
+}
+/* Сдвигаем переключатель чекбокса, когда он включен. */
+.checkbox:checked + label:after {
+    left: 26px;
+}
+/* Показываем получение фокуса. */
+.checkbox:focus + label:before {
+    /*box-shadow: 0 0 0 3px rgba(255,255,0,.5);*/
+}
+
+.wrapper-template{
+    padding:20px;
+    border: 1px solid #b7bfd2;
+}
+
+.select-another-template:before{
+    content: "";
+    display: inline-block;
+    margin-right: 15px;
+    vertical-align: middle;
+    width: 22px;
+    height: 22px;
+    background: url("../img/icon-another.png")center no-repeat;
+    background-size: contain;
+}
+
+.modal .modal-header{
+    border: none;
+}
+
+/*Настройк модального окна*/
+.modal-list{
+    margin-bottom: 15px;
+}
+.modal-windows .modal-header{
+    border: none;
+}
 
 
 
