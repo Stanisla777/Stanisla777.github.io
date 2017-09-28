@@ -732,7 +732,7 @@ $(document).ready(function ($) {
             //$(this).removeClass("active-item-modal");
             //$(this).find(".name-service").addClass("active-item-modal");
             text =  $(this).find(".name-service").text();
-            text =  $(this).find(".year-service").text();
+            //text =  $(this).find(".year-service").text();
 
             $("#modal-select").modal('hide');
 
