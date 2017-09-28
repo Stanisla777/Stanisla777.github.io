@@ -732,6 +732,8 @@ $(document).ready(function ($) {
             //$(this).removeClass("active-item-modal");
             //$(this).find(".name-service").addClass("active-item-modal");
             text =  $(this).find(".name-service").text();
+            text =  $(this).find(".year-service").text();
+
             $("#modal-select").modal('hide');
 
         })
@@ -775,7 +777,7 @@ $(document).ready(function ($) {
             $("#modal-select .modal-header h1").text(title.title_year);
             for ( i = year; i > year-30; i--) {
                 $('<li class="modal-active-item js-name-brand text-center">'
-                +'<span>'+i+'</span>').appendTo("#modal-select .js-wrapper-services")
+                +'<span class="year-service">'+i+'</span>').appendTo("#modal-select .js-wrapper-services")
             }
         }
 
