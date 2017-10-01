@@ -47,7 +47,7 @@
 
                 <div class="flex-space-between">
                     <div class="header-inner-left">
-                        <a href="search-step-3.html" class="back-icon-to"></a>
+                        <a href="../../grow-screen.html" class="back-icon-to"></a>
                     </div>
                     <div class="header-inner-center">
                         <h1>Профиль</h1>
@@ -156,7 +156,7 @@
                 <p class="label">Выходные</p>
 
                 <div class="js-modal wrapper-input-choice border-grey mar-top-10 cur-pointer">
-                    <input disabled class="weekend" type="text" name="year">
+                    <input disabled class="weekend" type="text" name="weekend">
                     <div class="icon-search-carat-2"></div>
                 </div>
 
@@ -297,7 +297,7 @@
     </div>
 </footer>
 
-<!--Модальное окно-->
+<!--Модальное окно акции-->
 
 <div id="modal-subscription" class="modal fade">
     <div class="modal-dialog modal-bg">
@@ -339,21 +339,24 @@
 
 
 
-<div id="modal-characteristics" class="modal fade">
-    <div class="modal-dialog modal-sm">
+<!--Модальное окно селектов-->
+<div id="modal-select" class="modal fade js-modal-windows">
+    <div class="modal-dialog">
         <div class="modal-content">
             <!-- Заголовок модального окна -->
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h1></h1>
             </div>
-            <!-- Основное содержимое модального окна -->
-            <div class="modal-body">
 
+            <div class="modal-body">
+                <div class="wrapper-input-search border-grey mar-top-10 mar-bot-30">
+                    <input class="js-input-search " type="text">
+                    <div class="icon-search"></div>
+                </div>
+
+                <ul class="js-wrapper-services  inline-block"></ul>
             </div>
-            <!-- Футер модального окна -->
-            <!--<div class="modal-footer">-->
-            <!--<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>-->
-            <!--</div>-->
         </div>
     </div>
 </div>

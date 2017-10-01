@@ -136,43 +136,26 @@
                         <!-- Заголовок модального окна -->
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-
                             <h1></h1>
-
-
                         </div>
 
                         <div class="modal-body">
-                            <div class="wrapper-input-search border-grey mar-top-10">
+                            <div class="wrapper-input-search border-grey mar-top-10 mar-bot-30">
                                 <input class="js-input-search " type="text">
                                 <div class="icon-search"></div>
                             </div>
 
-                            <ul class="js-wrapper-services wrapper-services inline-block">
-
-
-                            </ul>
-
+                            <ul class="js-wrapper-services inline-block"></ul>
                         </div>
-
                     </div>
                 </div>
             </div>
 
 
-
-
-
-
-
-
-
-
-
         </div>
         <footer class="footer footer-call-to-action">
             <div class="container">
-                <input id="js-call-published" class="call-to-action" type="submit" value="Сохранить">
+                <input id=" js-call-published" class="then-remove-6 call-to-action" type="submit" value="Сохранить">
             </div>
         </footer>
     </form>
@@ -180,17 +163,18 @@
 
     <!--Часть шаблона templates для демонстрации селектов-->
 
-    <!--<script id="clientTemplate" type="text/html">-->
-        <!--<div class="modal-active-item flex-left-center">-->
-            <!--<div class="modal-item-cheked"></div>-->
-            <!--<p>${name}</p>-->
-        <!--</div>-->
-    <!--</script>-->
 
-    <script id="clientTemplate" type="text/html">
+
+    <script id="clientTemplate-2" type="text/html">
         <li class="modal-active-item js-name-brand item-service">
             <div style="background-image: url('../../assets/img/${ic_marka}')" class="icon-service"></div>
-            <span class="name-service">${name}</span>
+            <span class="js-name-item name-service">${name}</span>
+        </li>
+    </script>
+
+    <script id="clientTemplate" type="text/html">
+        <li class="modal-active-item js-name-brand text-center">
+            <span class="js-name-item modal-name-service">${name}</span>
         </li>
     </script>
 

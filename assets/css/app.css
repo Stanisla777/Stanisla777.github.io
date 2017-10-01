@@ -177,6 +177,9 @@ a:hover {
 .mar-bot-20{
     margin-bottom: 20px;
 }
+.mar-bot-10{
+    margin-bottom: 10px;
+}
 .mar-bot-5{
     margin-bottom: 5px;
 }
@@ -204,6 +207,9 @@ a:hover {
 }
 .pad-bot-20{
     padding-bottom: 20px;
+}
+.pad-10px{
+    padding: 10px;
 }
 .cur-pointer{
     cursor: pointer;
@@ -452,6 +458,7 @@ label {
 /*Доработать*/
 .header-inner-right, .header-inner-lef{
     min-width: 40px;
+    min-height: 40px;
 }
 .main-content-page, .main-content-brand{
     display: block;
@@ -954,7 +961,9 @@ footer{
     height: 1px;
     background-color: #d1d4df;
 }
-
+.wrapper-services li:last-child .name-service:after {
+    width: 0;
+}
 
 li:last-child .name-service{
     border: none;
@@ -1205,6 +1214,9 @@ li:last-child .name-service{
     margin-top: 10px;
     font-size: 15px;
     font-family: 'Open Sans', sans-serif;
+     overflow: hidden;
+     resize: none;
+     outline: none;
 }
 textarea:-moz-placeholder { color: #a2a5b2; }
 textarea::-webkit-input-placeholder { color: #a2a5b2; }
@@ -1257,7 +1269,9 @@ textarea::-webkit-input-placeholder { color: #a2a5b2; }
     width: 100px;
     height: 100px;
     overflow: hidden;
-    background: url(../img/fotik.png) center no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     float: left;
 }
 
@@ -1266,8 +1280,8 @@ textarea::-webkit-input-placeholder { color: #a2a5b2; }
 }
 
 .upload-file-container > img {
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -1856,6 +1870,9 @@ input.call-to-action{
 .wrapper-icon-car-order{
     background-image: url("../img/icon-car-order.png");
 }
+.wrapper-icon-key-screwdriver{
+    background-image: url("../img/icon-key-screwdriver.png");
+}
 .wrapper-name-order{
     width: 80%;
     /*width: 100%;*/
@@ -1890,6 +1907,7 @@ input.call-to-action{
     background-size: contain;
     margin-right: 20px;
 }
+
 .work-progress{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -2359,6 +2377,9 @@ label.star:before{
 .wrapper-icon-clock-calendar{
     background-image: url(../img/icon-clock-calendar.png);
 }
+.wrapper-icon-clock-calendar-black{
+    background-image: url(../img/icon-clock-calendar-black.png);
+}
 .page-profile-klient .wrapper-name-order{
     border-bottom: 1px solid #445372;
 }
@@ -2411,6 +2432,10 @@ label.star:before{
 .icon-wash-car{
     background-image: url("../img/icon_wash2.svg");
 }
+.icon-sos{
+    background-image: url("../img/icon-sos.png");
+}
+
 .icon-page{
     width: 40px;
     height: 40px;
@@ -2482,7 +2507,6 @@ label.star:before{
     border-radius: 50%;
     margin-right: 10px;
     background-color: #fff;
-
 }
 
 .wrapper-input-choice{
@@ -2759,7 +2783,7 @@ input[type="radio"] {
 
 .title-service{
     /*border-bottom: 1px solid;*/
-    width: 100%;
+    width: calc(100% - 55px);
     position: relative;
 }
 .title-service span {
@@ -2907,6 +2931,170 @@ input[type="radio"] {
     border: none;
 }
 
+.modal-line{
+    width: 1px;
+    height: 50px;
+    background-color: #e5e5e5;
+}
+.col-footer{
+    min-width: 70px;
+    text-align: center;
+}
+#modal-question-about-task .modal-footer{
+    padding:0 15px;
+    height: 50px;
+    overflow: hidden;
+}
+.nunber-actions-o{
+    display: block;
+    width: 35px;
+    height: 19px;
+    line-height: 19px;
+    background-color: #14a98d;
+    color: #fff;
+    text-align: center;
+    border-radius: 9px;
+    font-size: 13px;
+}
+
+/*Настройка прогресс-бар*/
+.wrapper-progress .progress{
+    height: 6px;
+}
+.wrapper-progress .progress-bar{
+    height: 6px;
+    background-color: #14a98d;
+}
+.wrapper-prog{
+    border-bottom: 1px solid #e3e7eb;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+.wrapper-icon-page{
+    position: relative;
+    margin-right: 15px;
+    width: 70px;
+    height: 70px;
+    background: url("../img/icon-hexagon.png")center no-repeat;
+    background-size: contain;
+    /*border-bottom: 1px solid #eeeeee;*/
+}
+.wrapper-icon-page .icon-page{
+    margin-right: 0;
+}
+.nunber-actions-b{
+    display: block;
+    width: 27px;
+    height: 27px;
+    line-height: 27px;
+    background-color: #262f58;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 13px;
+}
+.nunber-actions-icon-b {
+    position: absolute;
+    top: 35px;
+    right: -8px;
+}
+.icon-two-star{
+    background-image: url("../img/icon-2-star.png");
+}
+.envelope-and-star{
+    background-image: url("../img/envelope-and-star.png");
+}
+.icon-two-star-2{
+    background-image: url("../img/icon-2-star-2.png");
+}
+
+.col-reviews p{
+    margin-bottom: 10px;
+}
+.col-reviews p:last-child{
+    margin-bottom: 0;
+}
+
+/*Услуги*/
+
+.accordion .title-service:after{
+    height: 0;
+}
+.accordion li.accordion_item{
+    position: relative;
+    padding-bottom: 20px;
+}
+.accordion li.accordion_item:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 54px;
+    height: 1px;
+    width: calc(100% - 55px);
+    background-color: #e3e7eb;
+}
+
+
+
+.wrapper-services-profile .wrapper-order-go-to{
+    width: 27px;
+    background: url(../img/arrow-down.png)center no-repeat;
+}
+/*Настройка аккардеона*/
+.accordion .title_block{
+    -webkit-transition:all .2s linear 0;
+    -o-transition:all .2s linear 0;
+    transition:all .2s linear 0
+}
+.accordion .info {
+    display: none;
+    overflow: hidden;
+    padding-left: 55px;
+}
+
+.accordion .nunber-actions{
+    display: none;
+}
+
+/*Акции*/
+.edit-shares:before{
+    content: "";
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    background: url("../img/icon-pencil-green.png")center no-repeat;
+    background-size: contain;
+}
+.plus{
+    font-size: 26px;
+}
+.icon-page-20 {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2961,6 +3149,9 @@ input[type="radio"] {
     .wrapper-photos-order{
         width: 64px;
         height: 64px;
+    }
+    h1{
+        font-size: 17px;
     }
 /*Убираем курсоры*/
     .cur-pointer, .status-icon, .icon-clip, .icon-microphone, .wrapper-order-go-to-green, .wrapper-order-go-to,

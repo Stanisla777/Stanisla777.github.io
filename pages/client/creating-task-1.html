@@ -22,6 +22,7 @@
     <link href="../../assets/css/tcal.css" rel="stylesheet">
     <link href="../../assets/css/app.css" rel="stylesheet">
     <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+
 </head>
 <body class="home">
     <!--<div class="menu-icon">-->
@@ -74,13 +75,15 @@
                         <div class="tabssss">
 
                             <p class="label">Вид услуги</p>
-                            <div class="js-modal wrapper-input-choice border-grey mar-top-10 cur-pointer">
-                                <input disabled class="type-of-service" type="text" name="type_service">
-                                <div class="icon-search-carat-2"></div>
+
+                            <div class="wrapper-inp">
+                                <div class="js-modal wrapper-input-choice border-grey mar-top-10 cur-pointer">
+                                    <input disabled class="type-of-service" type="text" name="type_service">
+                                    <div class="icon-search-carat-2"></div>
+                                </div>
                             </div>
 
-
-                            <a href="#" class="perform-action">Добавить услугу</a>
+                            <a href="#" class="js-perform-action perform-action">Добавить услугу</a>
 
 
                             <label>Комментарий
@@ -91,8 +94,8 @@
 
                             <div class="wrapper-add-foto">
 
-                                <div class="upload-file-container">
-                                    <img id="image" src="#" alt=""/>
+                                <div style="background-image: url('')" class="upload-file-container flex-center-center">
+                                    <img id="image" src="../../assets/img/fotik.png" alt=""/>
 
                                     <div class="upload-file-container-text">
                                         <input type="file" name="pic[]" class="photo" id="imgInput"/>
@@ -284,18 +287,14 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     </div>
-
                     <div class="modal-body">
                         <div class="container flex-center-center">
                             <a href="orders.html" class=" pop-up-order-published">
                                 <div class="order-published-img"></div>
                                 <p class="fontweight700 text-center mar-top-30">Заказ опубликован</p>
                             </a>
-
                         </div>
-
                     </div>
-
                 </div>
             </div>
         </div>
@@ -330,25 +329,17 @@
                     <!-- Заголовок модального окна -->
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-
                         <h1></h1>
-
-
                     </div>
 
                     <div class="modal-body">
-                        <div class="wrapper-input-search border-grey mar-top-10">
+                        <div class="wrapper-input-search border-grey mar-top-10 mar-bot-30">
                             <input class="js-input-search " type="text">
                             <div class="icon-search"></div>
                         </div>
 
-                        <ul class="js-wrapper-services wrapper-services inline-block">
-
-
-                        </ul>
-
+                        <ul class="js-wrapper-services  inline-block"></ul>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -364,10 +355,16 @@
             <!--</div>-->
         <!--</script>-->
 
-        <script id="clientTemplate" type="text/html">
+        <script id="clientTemplate-2" type="text/html">
             <li class="modal-active-item js-name-brand item-service">
                 <div style="background-image: url('../../assets/img/${ic_marka}')" class="icon-service"></div>
-                <span class="name-service">${name}</span>
+                <span class="js-name-item name-service">${name}</span>
+            </li>
+        </script>
+
+        <script id="clientTemplate" type="text/html">
+            <li class="modal-active-item js-name-brand text-center">
+                <span class="js-name-item modal-name-service">${name}</span>
             </li>
         </script>
 
