@@ -79,6 +79,10 @@ $(document).ready(function ($) {
         event.preventDefault();
         location.replace("shares.html")
     });
+    $('.then-remove-10').on('click',function(){
+        event.preventDefault();
+        location.replace("mane-page-subscription-end.html")
+    });
 
 
 
@@ -702,7 +706,7 @@ $(document).ready(function ($) {
 
 
 
-    })
+    });
 
     //var elem = '<div class="js-modal wrapper-input-choice border-grey mar-top-10 cur-pointer">' +
     //    '<input disabled class="type-of-service" type="text" name="type_service">' +
@@ -730,31 +734,68 @@ $(document).ready(function ($) {
                     n.slideUp()) : (o.addClass("active_block"), n.stop(!0, !0).slideDown(),
                     o.siblings(".active_block").removeClass("active_block").children(
                         ".info").stop(!0, !0).slideUp())
-            //$(".active_block .wrapper-order-go-to").hide();
-            //$(".wrapper-order-go-to").show();
 
-            if($(".accordion_item").hasClass("active_block")){
-                $(this).find("span.wrapper-order-go-to").hide();
-                $(this).siblings(".nunber-actions").show()
-
-            } else{
-                $(this).find("span.wrapper-order-go-to").show()
-                $(this).siblings(".nunber-actions").hide()
-            }
 
 
         })
 
     }(jQuery);
 
-    // Услуги цвет в зависимости о отметки чекбокса, а не получается
-    $('.info .stylized-checkbox').on('click', function(){
-        if ($(this).prev().is(':checked')) {
-            $(this).addClass('color-green');
-        } else {
-            $(this).removeClass('color-green');
-        }
+    $(".js-reset").on("click",function () {
+        $("li.active_block input[type='checkbox']").prop('checked', false);
     });
+
+
+    //Задаю циклом id инпутам и лэйблам
+
+    $('.checkbox-green').each(function(i) {
+        $(this).attr('id', 'box'+(i+1))
+    });
+
+    $('.stylized-checkbox').each(function(i) {
+        $(this).attr('for', 'box'+(i+1))
+    });
+
+//Подписка считаю в месяц
+
+    $('.wrapper-subscription-price').each(function(i) {
+       var price = $(this).find(".subscription-price-price").text();
+        var month = $(this).find(".subscription-price-time").text();
+        var price_month = price/month;
+        price = parseInt(price);
+        month = parseInt(month);
+        var price_month = price/month;
+        price_month = price_month.toFixed();
+        $(this).find(".price-month").text(price_month + " p")
+    });
+
+    var month;
+    var price;
+
+    $('.wrapper-subscription-price').on('click',function(){
+        $(this).siblings('.wrapper-subscription-price').removeClass('border-green-2')
+        $(this).addClass('border-green-2');
+        month = $(this).find('.subscription-price-time').text();
+        price = $(this).find('.subscription-price-price').text();
+        $('.formed-price .tariff-plan').text(month+' / '+price);
+    });
+
+
+
+
+
+    //var price = $(".subscription-price-price").text();
+    //alert(price);
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -772,6 +813,7 @@ $(document).ready(function ($) {
 
 
     //В профиле выбор марок
+
 
 
 
