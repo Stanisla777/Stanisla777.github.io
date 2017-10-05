@@ -486,7 +486,7 @@ $(document).ready(function ($) {
 
         event.preventDefault(); /*Это убрать, так как окощко о том, что задание выполнено будет вызываться через ajax*/
         $("#modal-order-published").modal('show');
-        setTimeout('location.replace("orders.html")',2000);
+        //setTimeout('location.replace("orders.html")',2000);
 
 
     });
@@ -789,7 +789,9 @@ $(document).ready(function ($) {
 
 
 
-
+    //var e = $(window).width();
+    //$("#tcal").css("marginLeft",-e/2+"px");
+    ////alert(-e/2);
 
 
 

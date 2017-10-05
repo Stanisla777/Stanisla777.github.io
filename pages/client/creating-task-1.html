@@ -78,7 +78,7 @@
 
                             <div class="wrapper-inp">
                                 <div class="js-modal wrapper-input-choice border-grey mar-top-10 cur-pointer">
-                                    <input disabled class="type-of-service" type="text" name="type_service">
+                                    <input placeholder="Замена масла" disabled class="type-of-service" type="text" name="type_service">
                                     <div class="icon-search-carat-2"></div>
                                 </div>
                             </div>
@@ -148,13 +148,13 @@
 
                         <p class="label">Марка</p>
                         <div class="js-modal wrapper-input-choice border-grey mar-top-10 cur-pointer">
-                            <input disabled class="marka" type="text" name="marka">
+                            <input placeholder="Ford" disabled class="marka" type="text" name="marka">
                             <div class="icon-search-carat-2"></div>
                         </div>
 
                         <p class="label">Модель</p>
                         <div class="js-modal wrapper-input-choice border-grey mar-top-10 cur-pointer">
-                            <input disabled class="model" type="text" name="model">
+                            <input placeholder="Focus" disabled class="model" type="text" name="model">
                             <div class="icon-search-carat-2"></div>
                         </div>
 
@@ -162,14 +162,14 @@
                             <div class="col-left">
                                 <p class="label">Год выпуска</p>
                                 <div class="js-modal wrapper-input-choice border-grey mar-top-10 cur-pointer">
-                                    <input disabled class="year" type="text" name="year">
+                                    <input placeholder="2010" disabled class="year" type="number" name="year">
                                     <div class="icon-search-carat-2"></div>
                                 </div>
                             </div>
                             <div class="col-right">
                                 <p class="label">Двигатель</p>
                                 <div class="js-modal wrapper-input-choice border-grey mar-top-10 cur-pointer">
-                                    <input disabled class="engine" type="text" name="engine">
+                                    <input placeholder="Бензин" disabled class="engine" type="text" name="engine">
                                     <div class="icon-search-carat-2"></div>
                                 </div>
                             </div>
@@ -177,7 +177,7 @@
 
                         <p class="label">Коробка передач</p>
                         <div class="js-modal wrapper-input-choice border-grey mar-top-10 cur-pointer">
-                            <input disabled class="transmission" type="text" name="transmission">
+                            <input placeholder="Механическая" disabled class="transmission" type="text" name="transmission">
                             <div class="icon-search-carat-2"></div>
                         </div>
 
@@ -236,14 +236,14 @@
                             <div class="col-left">
                                 <p class="label">Отдать машину</p>
                                 <div class="wrapper-input-choice border-grey  mar-top-10">
-                                    <input class="tcal js-input-search" type="text" name="give_car">
+                                    <input placeholder="02.09.2017" class="tcal js-input-search" type="text" name="give_car">
                                     <div class="icon-search-carat-2"></div>
                                 </div>
                             </div>
                             <div class="col-right">
                                 <p class="label">Забрать машину</p>
                                 <div class="wrapper-input-choice border-grey  mar-top-10">
-                                    <input class="tcal js-input-search" type="text" name="pick_up_car">
+                                    <input placeholder="03.09.2017" class="tcal js-input-search" type="text" name="pick_up_car">
                                     <div  class="icon-search-carat-2"></div>
                                 </div>
                             </div>
@@ -255,12 +255,12 @@
 
                         <p class="label">Пожелания по запчастям</p>
                         <div class="js-modal wrapper-input-choice border-grey mar-top-10 cur-pointer">
-                            <input disabled class="wishes-spare" type="text" name="wishes_spare">
+                            <input placeholder="Только оригинальные" disabled class="wishes-spare" type="text" name="wishes_spare">
                             <div class="icon-search-carat-2"></div>
                         </div>
 
                         <label>Местоположение
-                            <input name="Location" placeholder="Проспект мира 10" type="text"/>
+                            <input name="Location" placeholder="Проспект мира 102к2" type="text"/>
                         </label>
 
                     </div>
@@ -280,14 +280,15 @@
         </footer>
 
         <!--Модальное окно Заказ опубликован-->
-        <div id="modal-order-published" class="modal fade js-modal-windows">
+        <div id="modal-order-published" class="modal-width-280 modal fade js-modal-windows">
             <div class="modal-dialog modal-sm">
                 <div class="modal-content">
                     <!-- Заголовок модального окна -->
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    </div>
+                    <!--<div class="modal-header">-->
+
+                    <!--</div>-->
                     <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                         <div class="container flex-center-center">
                             <a href="orders.html" class=" pop-up-order-published">
                                 <div class="order-published-img"></div>
