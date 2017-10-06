@@ -2,6 +2,20 @@
 
 $(document).ready(function ($) {
 
+    function footerToBottom() {
+        var browserHeight = $(window).height(),
+            footerOuterHeight = $('footer').outerHeight(true),
+            mainHeightMarginPaddingBorder = $('.wrap').outerHeight(true) - $('.wrap').height();
+        $('.wrap').css({
+            'min-height': browserHeight - footerOuterHeight - mainHeightMarginPaddingBorder
+        });
+    }
+    footerToBottom();
+    $(window).resize(function () {
+        footerToBottom();
+    });
+
+
 
 /*Раскоментировать когда добавлю везде*/
     $('#slider').slider({
@@ -58,6 +72,10 @@ $(document).ready(function ($) {
         location.replace("create-account-step2.html")
     });
     $('.then-remove-3').on('click',function(){
+        event.preventDefault();
+        location.replace("code-entry.html")
+    });
+    $('.then-remove-4').on('click',function(){
         event.preventDefault();
         location.replace("grow-screen.html")
     });
@@ -486,7 +504,7 @@ $(document).ready(function ($) {
 
         event.preventDefault(); /*Это убрать, так как окощко о том, что задание выполнено будет вызываться через ajax*/
         $("#modal-order-published").modal('show');
-        //setTimeout('location.replace("orders.html")',2000);
+        setTimeout('location.replace("orders.html")',2000);
 
 
     });
@@ -792,6 +810,14 @@ $(document).ready(function ($) {
     //var e = $(window).width();
     //$("#tcal").css("marginLeft",-e/2+"px");
     ////alert(-e/2);
+
+
+    //$(window).scroll(function(){
+    //    $("footer").removeClass("footer-abs")
+    //});
+
+
+
 
 
 

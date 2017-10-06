@@ -22,11 +22,12 @@
     <link href="../../assets/css/tcal.css" rel="stylesheet">
     <link href="../../assets/css/app.css" rel="stylesheet">
     <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+
 </head>
 
 <body class="home">
 
-    <div class="wrap">
+    <div style="" class="wrap">
 
         <section class="flex-center-screen">
             <div class="container container-grow-screen">
@@ -70,6 +71,22 @@
     <script src="../../assets/js/jquery.tmpl.js"></script>
     <script src="../../assets/js/tcal.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+
+    <script>
+        function footerToBottom() {
+            var browserHeight = $(window).height(),
+                    footerOuterHeight = $('footer').outerHeight(true),
+                    mainHeightMarginPaddingBorder = $('.wrapp-2').outerHeight(true) - $('.wrapp-2').height();
+            $('.wrapp-2').css({
+                'min-height': browserHeight - footerOuterHeight - mainHeightMarginPaddingBorder
+            });
+        };
+        footerToBottom();
+        $(window).resize(function () {
+            footerToBottom();
+        });
+    </script>
 
 </body>
 

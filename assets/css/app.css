@@ -41,6 +41,13 @@ html {
     /*max-width: 1920px;*/
     position: relative;
 }
+.window-filtr {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    /*max-width: 1920px;*/
+    position: relative;
+}
 section{
     display: block;
     position: relative;
@@ -182,6 +189,9 @@ a:hover {
 .mar-bot-10{
     margin-bottom: 10px;
 }
+/*.mar-bot-60{*/
+    /*margin-bottom: 60px;*/
+/*}*/
 .mar-bot-5{
     margin-bottom: 5px;
 }
@@ -683,9 +693,11 @@ input[type="checkbox"]:checked + label::after {
 .form-service{
     height: 100%;
 }
-.step, .wrap{
-    min-height: calc(100vh - 65px);
-}
+/*.step, .wrap{*/
+    /*min-height: calc(100vh - 65px);*/
+/*}*/
+
+
 .wrap-chat{
     min-height: calc(100vh - 204px);
 }
@@ -3227,15 +3239,18 @@ input[type="radio"] {
     position: absolute;
     z-index: 0;
     left: 50%;
-    margin-left: -18px;
+    margin-left: -45px;
     right: 0;
     top: -42px;
     background: url(../img/gears.png)no-repeat;
     background-position: center center;
     background-size: 115px;
 }
-
-
+/*Прижимаю футер*/
+/*.footer-abs{*/
+    /*position: fixed;*/
+    /*bottom: 0;*/
+/*}*/
 
 
 
