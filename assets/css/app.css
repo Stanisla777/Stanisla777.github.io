@@ -3235,7 +3235,15 @@ input[type="radio"] {
 .modal-width-280 .modal-dialog{
     width: 280px;
     height: 280px;
-    margin: 0 auto;
+}
+.modal{
+    padding-right: 0;
+}
+.modal-dialog{
+    position: relative;
+    top: 50%;
+    max-width: 300px;
+    margin: -130px auto 0;
 }
 .modal-width-280 .modal-content, #modal-question-about-task .modal-content{
     width: 100%;
