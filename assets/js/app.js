@@ -521,10 +521,10 @@ $(document).ready(function ($) {
     });
 
     //Вызов поп ап Другие шаблоны
-    $(".select-another-template").on("click",function(){
-        event.preventDefault(); /*Это убрать, так как окощко о том, что задание выполнено будет вызываться через ajax*/
-        $("#another-template").modal('show');
-    });
+    //$(".select-another-template").on("click",function(){
+    //    event.preventDefault(); /*Это убрать, так как окощко о том, что задание выполнено будет вызываться через ajax*/
+    //    $("#another-template").modal('show');
+    //});
 
     //Вызов поп ап Вы выполнили задание?
     $(".js-question-about-task").on("click",function(){
@@ -568,7 +568,8 @@ $(document).ready(function ($) {
         title_wishes_spare: "Пожелания по запчастям",
         title_weekend: "Выходные",
         title_category: "Категория",
-        title_kind_service: "Вид услуги"
+        title_kind_service: "Вид услуги",
+        title_templates: "Выберите шаблон"
 
     };
 
@@ -624,6 +625,12 @@ $(document).ready(function ($) {
             { name: "Диагностика кондиционера"},
             { name: "Диагностика мотора"},
             { name: "Диагностика шин"}
+        ];
+
+        var anoteher_templates = [
+            { name: "Другой шаблон"},
+            { name: "Другой шаблон"},
+            { name: "Другой шаблон"}
         ];
 
 
@@ -872,6 +879,12 @@ $(document).ready(function ($) {
             $("#clientTemplate").tmpl(category).appendTo(".main-content-brand .wrapper-services-modal" );
         }
 
+        if($(this).hasClass("select-another-template")){
+            $(".wrap-pop-up .header-inner-center h1").text(title.title_templates);
+            $(".wrap-pop-up").addClass("active-modal");
+            $("#clientTemplate").tmpl(anoteher_templates).appendTo(".main-content-brand .wrapper-services-modal" );
+        }
+
 
 
         ret()
@@ -898,7 +911,7 @@ $(document).ready(function ($) {
             $(this).parents(".wrap-pop-up").hide(1000);
             $(this).parents(".wrap-pop-up").siblings(".main-conteiner").show(1000);
             $(this).parents(".wrap-pop-up").find(".wrapper-services-modal").html("");
-            //alert(tex);
+
             $(".active-item-m").val(tex);
             $(".js-modal").find("input").removeClass("active-item-m");
             tex = "";

@@ -25,7 +25,44 @@
 </head>
 
 <body class="home">
+<div class="wrap-pop-up brand-machine">
 
+    <header class="header">
+        <div class="container">
+
+            <div class="flex-space-between">
+                <div class="header-inner-left"></div>
+                <div class="header-inner-center">
+                    <h1></h1>
+                </div>
+                <div class="header-inner-right">
+                    <a class="close-icom js-icon-close-brand" href="#"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="main-content-brand">
+        <div class="container">
+
+            <div class="wrapper-input-search border-grey mar-top-10">
+                <input class="js-input-search " type="text">
+                <div class="icon-search"></div>
+            </div>
+
+            <div class="wrapper-modal-window">
+
+                <ul class="wrapper-services-modal inline-block">
+
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+<div class="main-conteiner">
     <div class="wrap">
 
         <header class="header">
@@ -77,7 +114,7 @@
                         Добрый день!Добрый день!Добрый день!Добрый день!Добрый день!
                     </div>
 
-                    <p class="cur-pointer mar-top-20 color-green select-another-template">Выбрать другой шаблон</p>
+                    <p class="js-modal cur-pointer mar-top-20 color-green select-another-template">Выбрать другой шаблон</p>
                     <input type="checkbox" class="checkbox-green" id="box4" name="box1" value="10">
                     <label class="mar-top-20 stylized-checkbox" for="box4">
                         Не спрашивать более подтверждения
@@ -93,7 +130,13 @@
 
         </section>
 
+        <script id="clientTemplate" type="text/html">
+            <li class="modal-active-item js-name-brand item-service text-center">
+                <span class="modal-name-service margin-auto">${name}</span>
+            </li>
+        </script>
     </div>
+
     <footer class="footer footer-call-to-action">
         <div class="container">
             <a id="js-call-response-sent" href="#" class="call-to-action">
@@ -101,64 +144,68 @@
             </a>
         </div>
     </footer>
-
+</div>
 
 
 
     <!--Модальное окно Отклик отправлен-->
     <div id="modal-response-sent" class="modal-width-280 modal fade js-modal-windows modal-windows">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <!-- Заголовок модального окна -->
-                <!--<div class="modal-header">-->
+        <div class="wraper-modal-bootstrap">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <!-- Заголовок модального окна -->
+                    <!--<div class="modal-header">-->
                     <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>-->
-                <!--</div>-->
+                    <!--</div>-->
 
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <div class="container flex-center-center">
-                        <a href="mane-page-notification.html" class="pop-up-order-published">
-                            <div class="img-task-final"></div>
-                            <p class="fontweight700 text-center mar-top-30">Отклик отправлен</p>
-                        </a>
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <div class="container flex-center-center">
+                            <a href="mane-page-notification.html" class="pop-up-order-published">
+                                <div class="img-task-final"></div>
+                                <p class="fontweight700 text-center mar-top-30">Отклик отправлен</p>
+                            </a>
+                        </div>
+
                     </div>
 
                 </div>
-
             </div>
         </div>
     </div>
 
     <!--Модальное окно Другой шаблон-->
     <div id="another-template" class="modal-width-280 modal fade js-modal-windows modal-windows">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <!-- Заголовок модального окна -->
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <div class="wraper-modal-bootstrap">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <!-- Заголовок модального окна -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    </div>
+
+                    <div class="modal-body text-center">
+                        <ul class="list-of-templates">
+                            <li class="templates-item modal-list">
+                                <span>Шаблон 1</span>
+                            </li>
+                            <li class="templates-item modal-list">
+                                <span>Шаблон 2</span>
+                            </li>
+                            <li class="templates-item modal-list">
+                                <span>Шаблон 3</span>
+                            </li>
+                            <li class="templates-item modal-list">
+                                <span>Шаблон 4</span>
+                            </li>
+                            <li class="templates-item modal-list">
+                                <span>Шаблон 5</span>
+                            </li>
+                        </ul>
+
+                    </div>
+
                 </div>
-
-                <div class="modal-body text-center">
-                    <ul class="list-of-templates">
-                        <li class="templates-item modal-list">
-                            <span>Шаблон 1</span>
-                        </li>
-                        <li class="templates-item modal-list">
-                            <span>Шаблон 2</span>
-                        </li>
-                        <li class="templates-item modal-list">
-                            <span>Шаблон 3</span>
-                        </li>
-                        <li class="templates-item modal-list">
-                            <span>Шаблон 4</span>
-                        </li>
-                        <li class="templates-item modal-list">
-                            <span>Шаблон 5</span>
-                        </li>
-                    </ul>
-
-                </div>
-
             </div>
         </div>
     </div>

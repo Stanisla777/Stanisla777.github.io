@@ -3230,7 +3230,7 @@ input[type="radio"] {
 
 /*Настройка модальных окон с фиксированной шириной 280px*/
 
-.er{
+.wraper-modal-bootstrap{
     height: 100%;
     padding-right: 0;
     display: -webkit-box;
@@ -3377,6 +3377,9 @@ input[type="radio"] {
     }
     .name-item{
         font-size: 15px;
+    }
+    .input-template .stylized-checkbox, .wrapper-call-template .stylized-checkbox{
+        font-size: 13px;
     }
 
 
