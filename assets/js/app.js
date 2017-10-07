@@ -516,7 +516,7 @@ $(document).ready(function ($) {
     $("#js-call-response-sent").on("click",function(){
         event.preventDefault(); /*Это убрать, так как окощко о том, что задание выполнено будет вызываться через ajax*/
         $("#modal-response-sent").modal('show');
-
+        setTimeout('location.replace("mane-page-notification.html")',2000);
 
     });
 
@@ -537,7 +537,7 @@ $(document).ready(function ($) {
         event.preventDefault(); /*Это убрать, так как окощко о том, что задание выполнено будет вызываться через ajax*/
         $("#modal-order-published-q").modal('show');
         $("#modal-question-about-task").modal('hide');
-        //setTimeout('location.replace("orders.html")',2000);
+        setTimeout('location.replace("orders.html")',2000);
     });
 
 
