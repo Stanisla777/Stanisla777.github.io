@@ -3241,7 +3241,7 @@ input[type="radio"] {
 }
 .modal-dialog{
     position: relative;
-    top: 50%;
+    top: 50%!important;
     max-width: 300px;
     /*margin: -130px auto 0;*/
 }
