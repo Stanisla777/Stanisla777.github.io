@@ -25,26 +25,24 @@
 </head>
 
 <body class="home">
-<!--<div class="menu-icon">-->
-<!--<img src="../assets/img/iconMenu.png" alt="">-->
-<!--</div>-->
-<!--Страничка вкладки выбора бренда-->
+
+<!--Страничка вкладки для модальных окон-->
 <div class="wrap-pop-up brand-machine">
 
-    <section class="header">
+    <header class="header">
         <div class="container">
 
             <div class="flex-space-between">
                 <div class="header-inner-left"></div>
                 <div class="header-inner-center">
-                    <h1>Марка</h1>
+                    <h1></h1>
                 </div>
                 <div class="header-inner-right">
                     <a class="close-icom js-icon-close-brand" href="#"></a>
                 </div>
             </div>
         </div>
-    </section>
+    </header>
 
 
     <section class="main-content-brand">
@@ -55,50 +53,52 @@
                 <div class="icon-search"></div>
             </div>
 
-            <ul class="wrapper-services inline-block">
-                <li class="js-name-brand item-service">
-                    <div style="background-image: url('../../assets/img/icon-BMW.png')" class="icon-service"></div>
-                    <span class="name-service">BMW</span>
-                </li>
+            <div class="wrapper-modal-window">
 
-                <li class="js-name-brand item-service">
-                    <div style="background-image: url('../../assets/img/icon-BMW.png')" class="icon-service"></div>
-                    <span class="name-service">Audi</span>
-                </li>
+                <ul class="wrapper-services-modal inline-block">
+                    <!--<li class="js-name-brand item-service">-->
+                        <!--<div style="background-image: url('../../assets/img/icon-BMW.png')" class="icon-service"></div>-->
+                        <!--<span class="name-service">BMW</span>-->
+                    <!--</li>-->
 
-                <li class="js-name-brand item-service">
-                    <div style="background-image: url('../../assets/img/icon-BMW.png')" class="icon-service"></div>
-                    <span class="name-service">BMW</span>
-                </li>
-                <li class="js-name-brand item-service">
-                    <div style="background-image: url('../../assets/img/icon-BMW.png')" class="icon-service"></div>
-                    <span class="name-service">BMW</span>
-                </li>
-                <li class="js-name-brand item-service">
-                    <div style="background-image: url('../../assets/img/icon-BMW.png')" class="icon-service"></div>
-                    <span class="name-service">BMW</span>
-                </li>
-                <li class="js-name-brand item-service">
-                    <div style="background-image: url('../../assets/img/icon-BMW.png')" class="icon-service"></div>
-                    <span class="name-service">BMW</span>
-                </li>
-                <li class="js-name-brand item-service">
-                    <div style="background-image: url('../../assets/img/icon-BMW.png')" class="icon-service"></div>
-                    <span class="name-service">BMW</span>
-                </li>
+                    <!--<li class="js-name-brand item-service">-->
+                        <!--<div style="background-image: url('../../assets/img/icon-BMW.png')" class="icon-service"></div>-->
+                        <!--<span class="name-service">Audi</span>-->
+                    <!--</li>-->
 
-            </ul>
+                    <!--<li class="js-name-brand item-service">-->
+                        <!--<div style="background-image: url('../../assets/img/icon-BMW.png')" class="icon-service"></div>-->
+                        <!--<span class="name-service">BMW</span>-->
+                    <!--</li>-->
+                    <!--<li class="js-name-brand item-service">-->
+                        <!--<div style="background-image: url('../../assets/img/icon-BMW.png')" class="icon-service"></div>-->
+                        <!--<span class="name-service">BMW</span>-->
+                    <!--</li>-->
+                    <!--<li class="js-name-brand item-service">-->
+                        <!--<div style="background-image: url('../../assets/img/icon-BMW.png')" class="icon-service"></div>-->
+                        <!--<span class="name-service">BMW</span>-->
+                    <!--</li>-->
+                    <!--<li class="js-name-brand item-service">-->
+                        <!--<div style="background-image: url('../../assets/img/icon-BMW.png')" class="icon-service"></div>-->
+                        <!--<span class="name-service">BMW</span>-->
+                    <!--</li>-->
+                    <!--<li class="js-name-brand item-service">-->
+                        <!--<div style="background-image: url('../../assets/img/icon-BMW.png')" class="icon-service"></div>-->
+                        <!--<span class="name-service">BMW</span>-->
+                    <!--</li>-->
 
+                </ul>
+            </div>
         </div>
 
     </section>
 
 </div>
 
+<div class="main-conteiner">
+
+
 <form action="#" class="form-services form-service">
-
-
-
 <div class="wrapper-create-task-1 step step-1">
 
     <div class="wrap creating-task-1">
@@ -379,19 +379,38 @@
 <script id="clientTemplate-2" type="text/html">
     <li class="modal-active-item js-name-brand item-service">
         <div style="background-image: url('../../assets/img/${ic_marka}')" class="icon-service"></div>
-        <span class="js-name-item name-service">${name}</span>
+        <span class="modal-name-service mod-name-border">${name}</span>
     </li>
 </script>
 
 <script id="clientTemplate" type="text/html">
-    <li class="modal-active-item js-name-brand text-center">
-        <span class="js-name-item modal-name-service">${name}</span>
+    <li class="modal-active-item js-name-brand item-service text-center">
+        <span class="modal-name-service margin-auto">${name}</span>
     </li>
 </script>
 
 
-</form>
 
+
+
+
+
+<!--<script id="clientTemplate-2" type="text/html">-->
+    <!--<li class="modal-active-item js-name-brand item-service">-->
+        <!--<div style="background-image: url('../../assets/img/${ic_marka}')" class="icon-service"></div>-->
+        <!--<span class="js-name-item name-service">${name}</span>-->
+    <!--</li>-->
+<!--</script>-->
+
+<!--<script id="clientTemplate" type="text/html">-->
+    <!--<li class="modal-active-item js-name-brand text-center">-->
+        <!--<span class="js-name-item modal-name-service">${name}</span>-->
+    <!--</li>-->
+<!--</script>-->
+
+
+</form>
+</div>
 <script src="../../assets/js/jquery-3.1.1.min.js"></script>
 <script src="../../assets/js/jquery-ui.min.js"></script>
 <script src="../../assets/js/jquery.ui.touch-punch.js"></script>

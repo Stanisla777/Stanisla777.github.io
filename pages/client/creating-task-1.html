@@ -25,13 +25,44 @@
 
 </head>
 <body class="home">
-    <!--<div class="menu-icon">-->
-        <!--<img src="../assets/img/iconMenu.png" alt="">-->
-    <!--</div>-->
-    
+<div class="wrap-pop-up brand-machine">
 
-    
-    
+    <header class="header">
+        <div class="container">
+
+            <div class="flex-space-between">
+                <div class="header-inner-left"></div>
+                <div class="header-inner-center">
+                    <h1></h1>
+                </div>
+                <div class="header-inner-right">
+                    <a class="close-icom js-icon-close-brand" href="#"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="main-content-brand">
+        <div class="container">
+
+            <div class="wrapper-input-search border-grey mar-top-10">
+                <input class="js-input-search " type="text">
+                <div class="icon-search"></div>
+            </div>
+
+            <div class="wrapper-modal-window">
+
+                <ul class="wrapper-services-modal inline-block">
+
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+<div class="main-conteiner">
     <form action="#" class="form-services form-service">
 
         <div class="wrapper-create-task-1 step">
@@ -350,31 +381,37 @@
 
 
 
-
-        <!--<script id="clientTemplate" type="text/html">-->
-            <!--<div class="modal-active-item flex-left-center">-->
-                <!--<div class="modal-item-cheked"></div>-->
-                <!--<p>${name}</p>-->
-            <!--</div>-->
-        <!--</script>-->
-
         <script id="clientTemplate-2" type="text/html">
             <li class="modal-active-item js-name-brand item-service">
                 <div style="background-image: url('../../assets/img/${ic_marka}')" class="icon-service"></div>
-                <span class="js-name-item name-service">${name}</span>
+                <span class="modal-name-service mod-name-border">${name}</span>
             </li>
         </script>
 
         <script id="clientTemplate" type="text/html">
-            <li class="modal-active-item js-name-brand text-center">
-                <span class="js-name-item modal-name-service">${name}</span>
+            <li class="modal-active-item js-name-brand item-service text-center">
+                <span class="modal-name-service margin-auto">${name}</span>
             </li>
         </script>
+
+        <!--<script id="clientTemplate-2" type="text/html">-->
+            <!--<li class="modal-active-item js-name-brand item-service">-->
+                <!--<div style="background-image: url('../../assets/img/${ic_marka}')" class="icon-service"></div>-->
+                <!--<span class="js-name-item name-service">${name}</span>-->
+            <!--</li>-->
+        <!--</script>-->
+
+        <!--<script id="clientTemplate" type="text/html">-->
+            <!--<li class="modal-active-item js-name-brand text-center">-->
+                <!--<span class="js-name-item modal-name-service">${name}</span>-->
+            <!--</li>-->
+        <!--</script>-->
 
 
 
 
     </form>
+</div>
     <script src="../../assets/js/jquery-3.1.1.min.js"></script>
     <script src="../../assets/js/jquery-ui.min.js"></script>
     <script src="../../assets/js/jquery.ui.touch-punch.js"></script>

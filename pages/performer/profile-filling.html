@@ -25,11 +25,46 @@
 </head>
 
 <body class="home">
-<!--<div class="menu-icon">-->
-<!--<img src="../assets/img/iconMenu.png" alt="">-->
-<!--</div>-->
+<div class="wrap-pop-up brand-machine">
+
+    <header class="header">
+        <div class="container">
+
+            <div class="flex-space-between">
+                <div class="header-inner-left"></div>
+                <div class="header-inner-center">
+                    <h1></h1>
+                </div>
+                <div class="header-inner-right">
+                    <a class="close-icom js-icon-close-brand" href="#"></a>
+                </div>
+            </div>
+        </div>
+    </header>
 
 
+    <section class="main-content-brand">
+        <div class="container">
+
+            <div class="wrapper-input-search border-grey mar-top-10">
+                <input class="js-input-search " type="text">
+                <div class="icon-search"></div>
+            </div>
+
+            <div class="wrapper-modal-window">
+
+                <ul class="wrapper-services-modal inline-block">
+
+
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+<div class="main-conteiner">
 <form action="#" class="form-services form-service">
 
 
@@ -362,15 +397,21 @@
 </div>
 
 <script id="clientTemplate" type="text/html">
-    <div class="modal-active-item">
-        <div class="modal-item-cheked"></div>
-        <p>${name}</p>
-    </div>
+    <li class="modal-active-item js-name-brand item-service text-center">
+        <span class="modal-name-service margin-auto">${name}</span>
+    </li>
 </script>
+
+<!--<script id="clientTemplate" type="text/html">-->
+    <!--<div class="modal-active-item">-->
+        <!--<div class="modal-item-cheked"></div>-->
+        <!--<p>${name}</p>-->
+    <!--</div>-->
+<!--</script>-->
 
 
 </form>
-
+</div>
 <script src="../../assets/js/jquery-3.1.1.min.js"></script>
 <script src="../../assets/js/jquery-ui.min.js"></script>
 <script src="../../assets/js/jquery.ui.touch-punch.js"></script>

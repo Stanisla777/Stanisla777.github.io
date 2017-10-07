@@ -451,7 +451,7 @@ $(document).ready(function ($) {
 
     //Получаю текущий год
     Data = new Date();
-    year = Data.getFullYear();
+    var year = Data.getFullYear();
 
 
 
@@ -566,26 +566,31 @@ $(document).ready(function ($) {
         title_transmission: "Коробка передач",
         title_type_service: "Тип сервиса",
         title_wishes_spare: "Пожелания по запчастям",
-        title_type_service: "Вид услуги",
         title_weekend: "Выходные",
         title_category: "Категория",
-        title_type_of_service: "Вид услуги"
+        title_kind_service: "Вид услуги"
 
     };
 
+    var marka = [
+        { name: "Ford",ic_marka:"../../assets/img/icon-BMW.png"},
+        { name: "Mercedes-Benz",ic_marka:"../../assets/img/icon-BMW.png"},
+        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"},
+        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"},
+        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"},
+        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"},
+        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"},
+        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"},
+        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"},
+        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"}
+
+    ];
 
     var model = [
         { name: "Focus"},
         { name: "Mercedes-Benz G"},
         { name: "Ваз-2015"},
         { name: "410H"}
-    ];
-
-    var marka = [
-        { name: "Ford",ic_marka:"../../assets/img/icon-BMW.png"},
-        { name: "Mercedes-Benz",ic_marka:"../../assets/img/icon-BMW.png"},
-        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"},
-        { name: "Москвич",ic_marka:"../../assets/img/icon-BMW.png"}
     ];
 
     var engine = [
@@ -622,71 +627,71 @@ $(document).ready(function ($) {
         ];
 
 
-    function ret(){
-
-        $(".modal-active-item").on("click",function(){
-            //$(this).removeClass("active-item-modal");
-            //$(this).find(".js-name-item").addClass("active-item-modal");
-            text =  $(this).find(".js-name-item, .year-service").text();
-            $("#modal-select").modal('hide');
-
-        })
-    }
+    //function ret(){
+    //
+    //    $(".modal-active-item").on("click",function(){
+    //        //$(this).removeClass("active-item-modal");
+    //        //$(this).find(".js-name-item").addClass("active-item-modal");
+    //        text =  $(this).find(".js-name-item, .year-service").text();
+    //        $("#modal-select").modal('hide');
+    //
+    //    })
+    //}
 
     $(".js-modal").on("click",function(){
-        $("#modal-select").modal('show');
+        //$("#modal-select").modal('show');
 
         //Вэтих условиях используется подстановка заголовка модалки, а также данных в шаблон, который будет другим
         //В условиях так же стоит будет в модалке окно поиска или нет.
 
-        if($(this).find("input").hasClass("marka")){
-            $("#modal-select .modal-header h1").text(title.title_marka);
-            $("#clientTemplate-2").tmpl(marka).appendTo("#modal-select .js-wrapper-services" );
-        }
-        if($(this).find("input").hasClass("model")){
-            $("#modal-select .modal-header h1").text(title.title_model);
-            $("#clientTemplate").tmpl(model).appendTo("#modal-select .js-wrapper-services" );
-        }
+        //if($(this).find("input").hasClass("marka")){
+        //    $("#modal-select .modal-header h1").text(title.title_marka);
+        //    $("#clientTemplate-2").tmpl(marka).appendTo("#modal-select .js-wrapper-services" );
+        //}
+        //if($(this).find("input").hasClass("model")){
+        //    $("#modal-select .modal-header h1").text(title.title_model);
+        //    $("#clientTemplate").tmpl(model).appendTo("#modal-select .js-wrapper-services" );
+        //}
 
-        if($(this).find("input").hasClass("engine")){
-            $("#modal-select .modal-header h1").text(title.title_engine);
-            $(".wrapper-input-search").hide();
-            $("#clientTemplate").tmpl(engine).appendTo("#modal-select .js-wrapper-services" );
-        }
+        //if($(this).find("input").hasClass("engine")){
+        //    $("#modal-select .modal-header h1").text(title.title_engine);
+        //    $(".wrapper-input-search").hide();
+        //    $("#clientTemplate").tmpl(engine).appendTo("#modal-select .js-wrapper-services" );
+        //}
 
-        if($(this).find("input").hasClass("type-of-service")){
-            $("#modal-select .modal-header h1").text(title.title_type_service);
-            $("#clientTemplate").tmpl(type_service).appendTo("#modal-select .js-wrapper-services" );
-        }
+        //if($(this).find("input").hasClass("type-of-service")){
+        //    $("#modal-select .modal-header h1").text(title.title_type_service);
+        //    $("#clientTemplate").tmpl(type_service).appendTo("#modal-select .js-wrapper-services" );
+        //}
 
-        if($(this).find("input").hasClass("transmission")){
-            $("#modal-select .modal-header h1").text(title.title_transmission);
-            $(".wrapper-input-search").hide();
-            $("#clientTemplate").tmpl(transmission).appendTo("#modal-select .js-wrapper-services" );
-        }
+        //if($(this).find("input").hasClass("transmission")){
+        //    $("#modal-select .modal-header h1").text(title.title_transmission);
+        //    $(".wrapper-input-search").hide();
+        //    $("#clientTemplate").tmpl(transmission).appendTo("#modal-select .js-wrapper-services" );
+        //}
 
-        if($(this).find("input").hasClass("wishes-spare")){
-            $("#modal-select .modal-header h1").text(title.title_wishes_spare);
-            $("#clientTemplate").tmpl(wishes_spare).appendTo("#modal-select .js-wrapper-services" );
-        }
+        //if($(this).find("input").hasClass("wishes-spare")){
+        //    $("#modal-select .modal-header h1").text(title.title_wishes_spare);
+        //    $("#clientTemplate").tmpl(wishes_spare).appendTo("#modal-select .js-wrapper-services" );
+        //}
 
-        if($(this).find("input").hasClass("category")){
-            $("#modal-select .modal-header h1").text(title.title_category);
-            $("#clientTemplate").tmpl(category).appendTo("#modal-select .js-wrapper-services" );
-        }
+        //if($(this).find("input").hasClass("category")){
+        //    $("#modal-select .modal-header h1").text(title.title_category);
+        //    $("#clientTemplate").tmpl(category).appendTo("#modal-select .js-wrapper-services" );
+        //}
         if($(this).find("input").hasClass("type-of-service")){
             $("#modal-select .modal-header h1").text(title.title_category);
             $("#clientTemplate").tmpl(type_of_service).appendTo("#modal-select .js-wrapper-services" );
         }
 
         /*А это статичная инфа о годах, её не убирать*/
-        if($(this).find("input").hasClass("year")){
-            $("#modal-select .modal-header h1").text(title.title_year);
-            for ( i = year; i > year-50; i--) {
-                $('<li class="modal-active-item js-name-brand text-center">'
-                +'<span class="year-service">'+i+'</span>').appendTo("#modal-select .js-wrapper-services")
-            }
-        }
+        //if($(this).find("input").hasClass("year")){
+        //    $("#modal-select .modal-header h1").text(title.title_year);
+        //    for ( i = year; i > year-50; i--) {
+        //        $('<li class="modal-active-item js-name-brand text-center">'
+        //        +'<span class="year-service">'+i+'</span>').appendTo("#modal-select .js-wrapper-services")
+        //    }
+        //}
 
         if($(this).find("input").hasClass("weekend")){
             $("#modal-select .modal-header h1").text(title.title_weekend);
@@ -700,10 +705,10 @@ $(document).ready(function ($) {
 
 
 
-        $(this).find("input").addClass("active-item-m");
+        ///////////////////$(this).find("input").addClass("active-item-m");
 
 
-        ret();
+        //ret();
 
         $("#modal-select").on('hidden.bs.modal', function(){
             $(".active-item-m").val(text);
@@ -716,7 +721,7 @@ $(document).ready(function ($) {
     });
 
     $(".js-modal").on("click",function(){
-        $("#modal-select").modal('show');
+        /////////////////////$("#modal-select").modal('show');
         if($(this).find("p").hasClass("marka")){
             $("#modal-select .modal-header h1").text(title.title_marka);
             $("#clientTemplate-2").tmpl(marka).appendTo("#modal-select .js-wrapper-services" );
@@ -799,22 +804,149 @@ $(document).ready(function ($) {
     });
 
 
+    /*Вызов модального окна*/
+
+    //Открытие модального окна и подстановка содежимого в зависимости от окна
+    $(".js-modal").on("click",function(){
+        $(this).parents(".main-conteiner").hide(1000);
+        $(".wrap-pop-up").show(1000);
+        $(this).find("input").addClass("active-item-m");
+
+        if($(this).find("input").hasClass("marka")){
+            $(".wrap-pop-up .header-inner-center h1").text(title.title_marka);
+            $("#clientTemplate-2").tmpl(marka).appendTo(".main-content-brand .wrapper-services-modal" );
+        }
+
+        if($(this).find("input").hasClass("model")){
+            $(".wrap-pop-up .header-inner-center h1").text(title.title_model);
+            $("#clientTemplate").tmpl(model).appendTo(".main-content-brand .wrapper-services-modal" );
+        }
+
+        /*А это статичная инфа о годах, её не убирать*/
+        if($(this).find("input").hasClass("year")){
+            $(".wrap-pop-up .header-inner-center h1").text(title.title_year);
+            for ( i = year; i > year-50; i--) {
+                $('<li class="modal-active-item js-name-brand item-service text-center">'
+                +'<span class="modal-name-service margin-auto">'+i+'</span>'+'</li>').appendTo(".main-content-brand .wrapper-services-modal")
+            }
+        }
+        if($(this).find("input").hasClass("weekend")){
+            $(".wrap-pop-up .header-inner-center h1").text(title.title_weekend);
+            $(".wrap-pop-up").addClass("active-modal");
+            $('<li class="modal-active-item js-name-brand item-service text-center">'
+            +'<span class="modal-name-service margin-auto">Да</span>'+'</li>'+'<li class="modal-active-item js-name-brand item-service text-center">'
+            +'<span class="modal-name-service margin-auto">Нет</span>'+'</li>').appendTo(".main-content-brand .wrapper-services-modal")
+
+        }
 
 
 
-    //var price = $(".subscription-price-price").text();
-    //alert(price);
 
 
 
-    //var e = $(window).width();
-    //$("#tcal").css("marginLeft",-e/2+"px");
-    ////alert(-e/2);
+        if($(this).find("input").hasClass("engine")){
+            $(".wrap-pop-up .header-inner-center h1").text(title.title_engine);
+            $(".wrap-pop-up").addClass("active-modal");
+            $("#clientTemplate").tmpl(engine).appendTo(".main-content-brand .wrapper-services-modal" );
+        }
 
+        if($(this).find("input").hasClass("transmission")){
+            $(".wrap-pop-up .header-inner-center h1").text(title.title_transmission);
+            $(".wrap-pop-up").addClass("active-modal");
+            $("#clientTemplate").tmpl(transmission).appendTo(".main-content-brand .wrapper-services-modal" );
+        }
+
+        if($(this).find("input").hasClass("type-of-service")){
+            $(".wrap-pop-up .header-inner-center h1").text(title.title_kind_service);
+            $("#clientTemplate").tmpl(type_service).appendTo(".main-content-brand .wrapper-services-modal" );
+        }
+
+        if($(this).find("input").hasClass("wishes-spare")){
+            $(".wrap-pop-up .header-inner-center h1").text(title.title_wishes_spare);
+            $(".wrap-pop-up").addClass("active-modal");
+            $("#clientTemplate").tmpl(wishes_spare).appendTo(".main-content-brand .wrapper-services-modal" );
+        }
+
+        if($(this).find("input").hasClass("category")){
+            $(".wrap-pop-up .header-inner-center h1").text(title.title_category);
+            $("#clientTemplate").tmpl(category).appendTo(".main-content-brand .wrapper-services-modal" );
+        }
+
+
+
+        ret()
+
+
+    });
+    //Закрытие окна при нажатии на крестик
+    $(".close-icom").on("click",function(){
+        $(this).parents(".wrap-pop-up").hide(1000);
+        $(this).parents(".wrap-pop-up").siblings(".main-conteiner").show(1000);
+        $(this).parents(".wrap-pop-up").find(".wrapper-services-modal").html("");
+        setTimeout (function(){
+            $(".wrap-pop-up").removeClass("active-modal");
+        }, 2000);
+    });
+
+    //Функция при клике на пункт окна, записываем в переменную, подставляем в поле и закрываем окно
+    function ret(){
+
+        $(".modal-active-item").on("click",function(){
+            $(this).removeClass("active-item-modal");
+            $(this).find(".modal-name-service").addClass("active-item-modal");
+            var tex = $(this).find(".modal-name-service").text();
+            $(this).parents(".wrap-pop-up").hide(1000);
+            $(this).parents(".wrap-pop-up").siblings(".main-conteiner").show(1000);
+            $(this).parents(".wrap-pop-up").find(".wrapper-services-modal").html("");
+            //alert(tex);
+            $(".active-item-m").val(tex);
+            $(".js-modal").find("input").removeClass("active-item-m");
+            tex = "";
+
+            setTimeout (function(){
+                $(".wrap-pop-up").removeClass("active-modal");
+            }, 2000);
+
+        })
+    }
+
+
+
+
+
+
+
+
+
+
+
+    //Убираю класс у футера
 
     //$(window).scroll(function(){
     //    $("footer").removeClass("footer-abs")
     //});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
