@@ -693,10 +693,9 @@ input[type="checkbox"]:checked + label::after {
 .form-service{
     height: 100%;
 }
-/*.step, .wrap{*/
-    /*min-height: calc(100vh - 65px);*/
-/*}*/
-
+.step, .wrap {
+    min-height: calc(100vh - 65px);
+}
 
 .wrap-chat{
     min-height: calc(100vh - 204px);

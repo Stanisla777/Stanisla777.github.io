@@ -1,7 +1,6 @@
 
 
 $(document).ready(function ($) {
-
     function footerToBottom() {
         var browserHeight = $(window).height(),
             footerOuterHeight = $('footer').outerHeight(true),
@@ -14,6 +13,7 @@ $(document).ready(function ($) {
     $(window).resize(function () {
         footerToBottom();
     });
+
 
 
 
