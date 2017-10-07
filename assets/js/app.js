@@ -456,7 +456,7 @@ $(document).ready(function ($) {
 
 
     /*Настройка Шаблона пользователя*/
-    $(document).ready(function(){
+
         $(".checkbox").change(function(){
             if ($(this).prop('checked')) {
                 $('.wrapper-call-template').show();
@@ -468,7 +468,7 @@ $(document).ready(function ($) {
             }
         });
 
-    });
+
 
 
 
@@ -537,7 +537,7 @@ $(document).ready(function ($) {
         event.preventDefault(); /*Это убрать, так как окощко о том, что задание выполнено будет вызываться через ajax*/
         $("#modal-order-published-q").modal('show');
         $("#modal-question-about-task").modal('hide');
-        setTimeout('location.replace("orders.html")',2000);
+        //setTimeout('location.replace("orders.html")',2000);
     });
 
 
