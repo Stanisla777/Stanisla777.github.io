@@ -231,10 +231,11 @@ a:hover {
 
 }
 
-
-
 .fonsize14px{
     font-size: 14px;
+}
+.fonsize22px{
+    font-size: 22px;
 }
 .uppercase{
     text-transform: uppercase;
@@ -494,6 +495,9 @@ label {
     height: 20px;
     cursor: pointer;
     z-index: 1090000;
+}
+.media-menu .header-inner-center h1{
+    font-weight: 800;
 }
 .menu-icon img{
     width: 100%;
@@ -3240,6 +3244,9 @@ input[type="radio"] {
     -ms-flex-align: center;
     align-items: center;
 }
+/*.modal{*/
+    /*padding-right: 0!important;*/
+/*}*/
 .modal-dialog{
     max-width: 300px;
     margin: 0 auto;
@@ -3361,6 +3368,8 @@ input[type="radio"] {
     .fonsize14px{
         font-size: 13px;
     }
+
+
     .wrapper-icon-car-order{
         margin-right: 10px;
     }
