@@ -558,194 +558,9 @@ $(document).ready(function ($) {
     //
     //});
 
-    var title= {
-        title_marka: "Марка",
-        title_model: "Модель",
-        title_engine: "Двигатель",
-        title_year: "Год выпуска",
-        title_transmission: "Коробка передач",
-        title_type_service: "Тип сервиса",
-        title_wishes_spare: "Пожелания по запчастям",
-        title_weekend: "Выходные",
-        title_category: "Категория",
-        title_kind_service: "Вид услуги",
-        title_templates: "Выберите шаблон"
-
-    };
-
-    var marka = [
-        { name: "Ford",ic_marka:"../../assets/img/icon-BMW.png"},
-        { name: "Mercedes-Benz",ic_marka:"../../assets/img/icon-BMW.png"},
-        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"},
-        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"},
-        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"},
-        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"},
-        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"},
-        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"},
-        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"},
-        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"}
-
-    ];
-
-    var model = [
-        { name: "Focus"},
-        { name: "Mercedes-Benz G"},
-        { name: "Ваз-2015"},
-        { name: "410H"}
-    ];
-
-    var engine = [
-            { name: "Бензин"},
-            { name: "Электродвигатель"},
-            { name: "Дизель"}
-        ];
-
-        var type_service = [
-            { name: "Замена масла"},
-            { name: "Замена шин"},
-            { name: "Замена магнитолы"}
-        ];
-
-        var transmission = [
-            { name: "Механическая"},
-            { name: "Автомат"},
-            { name: "Полуавтомат"}
-        ];
-        var wishes_spare = [
-            { name: "Только оригинальные"},
-            { name: "Неоригинальные"},
-            { name: "Всё равно"}
-        ];
-        var category = [
-            { name: "Услуги"},
-            { name: "Неуслуги"},
-            { name: "Что-то ещё"}
-        ];
-        var type_of_service = [
-            { name: "Диагностика кондиционера"},
-            { name: "Диагностика мотора"},
-            { name: "Диагностика шин"}
-        ];
-
-        var anoteher_templates = [
-            { name: "Другой шаблон"},
-            { name: "Другой шаблон"},
-            { name: "Другой шаблон"}
-        ];
-
-
-    //function ret(){
-    //
-    //    $(".modal-active-item").on("click",function(){
-    //        //$(this).removeClass("active-item-modal");
-    //        //$(this).find(".js-name-item").addClass("active-item-modal");
-    //        text =  $(this).find(".js-name-item, .year-service").text();
-    //        $("#modal-select").modal('hide');
-    //
-    //    })
-    //}
-
-    $(".js-modal").on("click",function(){
-        //$("#modal-select").modal('show');
-
-        //Вэтих условиях используется подстановка заголовка модалки, а также данных в шаблон, который будет другим
-        //В условиях так же стоит будет в модалке окно поиска или нет.
-
-        //if($(this).find("input").hasClass("marka")){
-        //    $("#modal-select .modal-header h1").text(title.title_marka);
-        //    $("#clientTemplate-2").tmpl(marka).appendTo("#modal-select .js-wrapper-services" );
-        //}
-        //if($(this).find("input").hasClass("model")){
-        //    $("#modal-select .modal-header h1").text(title.title_model);
-        //    $("#clientTemplate").tmpl(model).appendTo("#modal-select .js-wrapper-services" );
-        //}
-
-        //if($(this).find("input").hasClass("engine")){
-        //    $("#modal-select .modal-header h1").text(title.title_engine);
-        //    $(".wrapper-input-search").hide();
-        //    $("#clientTemplate").tmpl(engine).appendTo("#modal-select .js-wrapper-services" );
-        //}
-
-        //if($(this).find("input").hasClass("type-of-service")){
-        //    $("#modal-select .modal-header h1").text(title.title_type_service);
-        //    $("#clientTemplate").tmpl(type_service).appendTo("#modal-select .js-wrapper-services" );
-        //}
-
-        //if($(this).find("input").hasClass("transmission")){
-        //    $("#modal-select .modal-header h1").text(title.title_transmission);
-        //    $(".wrapper-input-search").hide();
-        //    $("#clientTemplate").tmpl(transmission).appendTo("#modal-select .js-wrapper-services" );
-        //}
-
-        //if($(this).find("input").hasClass("wishes-spare")){
-        //    $("#modal-select .modal-header h1").text(title.title_wishes_spare);
-        //    $("#clientTemplate").tmpl(wishes_spare).appendTo("#modal-select .js-wrapper-services" );
-        //}
-
-        //if($(this).find("input").hasClass("category")){
-        //    $("#modal-select .modal-header h1").text(title.title_category);
-        //    $("#clientTemplate").tmpl(category).appendTo("#modal-select .js-wrapper-services" );
-        //}
-        if($(this).find("input").hasClass("type-of-service")){
-            $("#modal-select .modal-header h1").text(title.title_category);
-            $("#clientTemplate").tmpl(type_of_service).appendTo("#modal-select .js-wrapper-services" );
-        }
-
-        /*А это статичная инфа о годах, её не убирать*/
-        //if($(this).find("input").hasClass("year")){
-        //    $("#modal-select .modal-header h1").text(title.title_year);
-        //    for ( i = year; i > year-50; i--) {
-        //        $('<li class="modal-active-item js-name-brand text-center">'
-        //        +'<span class="year-service">'+i+'</span>').appendTo("#modal-select .js-wrapper-services")
-        //    }
-        //}
-
-        if($(this).find("input").hasClass("weekend")){
-            $("#modal-select .modal-header h1").text(title.title_weekend);
-            $(".wrapper-input-search").hide();
-            $('<li class="modal-active-item js-name-brand text-center">'
-            +'<span class="year-service">Да</span>'+'<li class="modal-active-item js-name-brand text-center">'
-            +'<span class="year-service">Нет</span>').appendTo("#modal-select .js-wrapper-services").appendTo("#modal-characteristics .modal-body")
-
-        }
 
 
 
-
-        ///////////////////$(this).find("input").addClass("active-item-m");
-
-
-        //ret();
-
-        $("#modal-select").on('hidden.bs.modal', function(){
-            $(".active-item-m").val(text);
-            $(".js-modal").find("input").removeClass("active-item-m");
-            text = "";
-            $(this).find(".modal-body ul.js-wrapper-services").html("");
-            $("input.js-input-search").val("");
-            $(".wrapper-input-search").show();
-        });
-    });
-
-    $(".js-modal").on("click",function(){
-        /////////////////////$("#modal-select").modal('show');
-        if($(this).find("p").hasClass("marka")){
-            $("#modal-select .modal-header h1").text(title.title_marka);
-            $("#clientTemplate-2").tmpl(marka).appendTo("#modal-select .js-wrapper-services" );
-        }
-
-
-
-    });
-
-    //var elem = '<div class="js-modal wrapper-input-choice border-grey mar-top-10 cur-pointer">' +
-    //    '<input disabled class="type-of-service" type="text" name="type_service">' +
-    //    '<div class="icon-search-carat-2"></div></div>'
-
-
-    //var elem = $('<div class="js-modal wrapper-input-choice border-grey mar-top-10 cur-pointer">' +
-    //'<input disabled class="type-of-service" type="text" name="type_service">' +
-    //'<div class="icon-search-carat-2"></div></div>').clone();
 
     $(".tabssss").on('click','.js-perform-action',function(e){
 
@@ -786,7 +601,7 @@ $(document).ready(function ($) {
         $(this).attr('for', 'box'+(i+1))
     });
 
-//Подписка считаю в месяц
+//Подписка подсчет платежа в месяц
 
     $('.wrapper-subscription-price').each(function(i) {
        var price = $(this).find(".subscription-price-price").text();
@@ -811,12 +626,92 @@ $(document).ready(function ($) {
     });
 
 
+
+    //Инфа для модальных окон
+
+    var title= {
+        title_marka: "Марка",
+        title_model: "Модель",
+        title_engine: "Двигатель",
+        title_year: "Год выпуска",
+        title_transmission: "Коробка передач",
+        title_type_service: "Тип сервиса",
+        title_wishes_spare: "Пожелания по запчастям",
+        title_weekend: "Выходные",
+        title_category: "Категория",
+        title_kind_service: "Вид услуги",
+        title_templates: "Выберите шаблон"
+
+    };
+
+    var marka = [
+        { name: "Ford",ic_marka:"../../assets/img/icon-BMW.png"},
+        { name: "Mercedes-Benz",ic_marka:"../../assets/img/icon-BMW.png"},
+        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"},
+        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"},
+        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"},
+        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"},
+        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"},
+        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"},
+        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"},
+        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"}
+
+    ];
+
+    var model = [
+        { name: "Focus"},
+        { name: "Mercedes-Benz G"},
+        { name: "Ваз-2015"},
+        { name: "410H"}
+    ];
+
+    var engine = [
+        { name: "Бензин"},
+        { name: "Электродвигатель"},
+        { name: "Дизель"}
+    ];
+
+    var type_service = [
+        { name: "Замена масла"},
+        { name: "Замена шин"},
+        { name: "Замена магнитолы"}
+    ];
+
+    var transmission = [
+        { name: "Механическая"},
+        { name: "Автомат"},
+        { name: "Полуавтомат"}
+    ];
+    var wishes_spare = [
+        { name: "Только оригинальные"},
+        { name: "Неоригинальные"},
+        { name: "Всё равно"}
+    ];
+    var category = [
+        { name: "Услуги"},
+        { name: "Неуслуги"},
+        { name: "Что-то ещё"}
+    ];
+    var type_of_service = [
+        { name: "Диагностика кондиционера"},
+        { name: "Диагностика мотора"},
+        { name: "Диагностика шин"}
+    ];
+
+    var anoteher_templates = [
+        { name: "Другой шаблон"},
+        { name: "Другой шаблон"},
+        { name: "Другой шаблон"}
+    ];
+
+
+
     /*Вызов модального окна*/
 
     //Открытие модального окна и подстановка содежимого в зависимости от окна
     $(".js-modal").on("click",function(){
-        $(this).parents(".main-conteiner").hide(1000);
-        $(".wrap-pop-up").show(1000);
+        $(this).parents(".main-conteiner").hide();
+        $(".wrap-pop-up").fadeIn(((1000)));
         $(this).find("input").addClass("active-item-m");
 
         if($(this).find("input").hasClass("marka")){
@@ -845,11 +740,6 @@ $(document).ready(function ($) {
             +'<span class="modal-name-service margin-auto">Нет</span>'+'</li>').appendTo(".main-content-brand .wrapper-services-modal")
 
         }
-
-
-
-
-
 
         if($(this).find("input").hasClass("engine")){
             $(".wrap-pop-up .header-inner-center h1").text(title.title_engine);
@@ -885,20 +775,16 @@ $(document).ready(function ($) {
             $("#clientTemplate").tmpl(anoteher_templates).appendTo(".main-content-brand .wrapper-services-modal" );
         }
 
-
-
         ret()
-
 
     });
     //Закрытие окна при нажатии на крестик
     $(".close-icom").on("click",function(){
-        $(this).parents(".wrap-pop-up").hide(1000);
-        $(this).parents(".wrap-pop-up").siblings(".main-conteiner").show(1000);
+        $(this).parents(".wrap-pop-up").hide();
+        $(this).parents(".wrap-pop-up").siblings(".main-conteiner").fadeIn(((1000)));
         $(this).parents(".wrap-pop-up").find(".wrapper-services-modal").html("");
-        setTimeout (function(){
-            $(".wrap-pop-up").removeClass("active-modal");
-        }, 2000);
+        $(".js-modal").find("input").removeClass("active-item-m");
+        $(".wrap-pop-up").removeClass("active-modal");
     });
 
     //Функция при клике на пункт окна, записываем в переменную, подставляем в поле и закрываем окно
@@ -908,18 +794,16 @@ $(document).ready(function ($) {
             $(this).removeClass("active-item-modal");
             $(this).find(".modal-name-service").addClass("active-item-modal");
             var tex = $(this).find(".modal-name-service").text();
-            $(this).parents(".wrap-pop-up").hide(1000);
-            $(this).parents(".wrap-pop-up").siblings(".main-conteiner").show(1000);
+            $(this).parents(".wrap-pop-up").hide();
+            $(this).parents(".wrap-pop-up").siblings(".main-conteiner").fadeIn(((1000)));
             $(this).parents(".wrap-pop-up").find(".wrapper-services-modal").html("");
 
             $(".active-item-m").val(tex);
             $(".js-modal").find("input").removeClass("active-item-m");
             tex = "";
 
-            setTimeout (function(){
-                $(".wrap-pop-up").removeClass("active-modal");
-            }, 2000);
 
+            $(".wrap-pop-up").removeClass("active-modal");
         })
     }
 
