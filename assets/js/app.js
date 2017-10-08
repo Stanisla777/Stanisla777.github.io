@@ -711,7 +711,7 @@ $(document).ready(function ($) {
     //Открытие модального окна и подстановка содежимого в зависимости от окна
     $(".js-modal").on("click",function(){
         $(this).parents(".main-conteiner").hide();
-        $(".wrap-pop-up").fadeIn(((1000)));
+        $(".wrap-pop-up").show();
         $(this).find("input").addClass("active-item-m");
 
         if($(this).find("input").hasClass("marka")){
@@ -781,7 +781,7 @@ $(document).ready(function ($) {
     //Закрытие окна при нажатии на крестик
     $(".close-icom").on("click",function(){
         $(this).parents(".wrap-pop-up").hide();
-        $(this).parents(".wrap-pop-up").siblings(".main-conteiner").fadeIn(((1000)));
+        $(this).parents(".wrap-pop-up").siblings(".main-conteiner").show();
         $(this).parents(".wrap-pop-up").find(".wrapper-services-modal").html("");
         $(".js-modal").find("input").removeClass("active-item-m");
         $(".wrap-pop-up").removeClass("active-modal");
@@ -795,7 +795,7 @@ $(document).ready(function ($) {
             $(this).find(".modal-name-service").addClass("active-item-modal");
             var tex = $(this).find(".modal-name-service").text();
             $(this).parents(".wrap-pop-up").hide();
-            $(this).parents(".wrap-pop-up").siblings(".main-conteiner").fadeIn(((1000)));
+            $(this).parents(".wrap-pop-up").siblings(".main-conteiner").show();
             $(this).parents(".wrap-pop-up").find(".wrapper-services-modal").html("");
 
             $(".active-item-m").val(tex);

@@ -760,6 +760,9 @@ footer{
     width: calc(100% - 63px);
     padding: 3px 0;
 }
+.wrapper-modal-window .modal-name-service:hover{
+    color: #a7a7a7;
+}
 .mod-name-border:after {
     display: block;
     position: absolute;
@@ -2568,19 +2571,11 @@ label.star:before{
 }
 /*Радиокнопки для модалок*/
 
-
-
-
-
-
-
-
-
 /*Моё*/
 .modal-active-item{
     margin-bottom: 10px;
     font-size: 19px;
-    /*text-align: center;*/
+    cursor: pointer;
 }
 .modal-item-cheked{
     display: none;
