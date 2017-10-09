@@ -1,9 +1,5 @@
 @font-face {
-    /*font-family: 'Vox';*/
-    /*src: url("../fonts/Vox/Vox-Regular15.eot");*/
-    /*src: url("../fonts/Vox/Vox-Regular15.eot?#iefix") format('embedded-opentype'), url("../fonts/Vox/Vox-Regular15.woff") format('woff'), url("../fonts/Vox/Vox-Regular15.ttf") format('truetype'), url("../fonts/Vox/Vox-Regular15.svg#Vox-Regular15") format('svg');*/
-    /*font-weight: normal;*/
-    /*font-style: normal;*/
+
 }
 
 * {
@@ -61,9 +57,6 @@ section{
     margin: 0 auto;
     padding: 0 15px;
     position: relative;
-    /*border-right: 1px solid;*/
-    /*border-left: 1px solid;*/
-
 }
 .container-pad-0{
     zoom: 1;
@@ -71,8 +64,6 @@ section{
     max-width: 570px;
     margin: 0 auto;
     position: relative;
-    /*border-right: 1px solid;*/
-    /*border-left: 1px solid;*/
 }
 .container:after,
 /*.container:before {*/
@@ -83,9 +74,8 @@ section{
     clear: both;
 }
 p{
-    font-weight: 400;
+    /*font-weight: 400;*/
 }
-
 
 a {
     display: block;
@@ -97,9 +87,7 @@ a {
 a img {
     text-decoration: none;
 }
-/*a:hover {*/
-    /*color: #e90000;*/
-/*}*/
+
 a:focus,a:hover,a:link,
 a:active {
     outline: none!important;
@@ -114,7 +102,7 @@ a:hover{
 h1 {
     position: relative;
     z-index: 1;
-    font-size: 19px;
+    font-size: 22px;
     line-height: 30px;
     font-weight: 700;
     text-align: center;
@@ -230,7 +218,6 @@ a:hover {
 }
 .cur-pointer{
     cursor: pointer;
-
 }
 
 .fonsize14px{
@@ -258,14 +245,23 @@ a:hover {
 .nunber-actions-icon{
     position: absolute;
     top: 0;
-    right: -6px;
+    right: 4px;
 }
 .color-grey{
     color: #a4a7ad;
+    /*color: #77829e;*/
+    font-weight: 600;
+}
+.tabs_menu li.active{
+    color: #000;
+}
+ul.tabs_menu, ul.tabs_menu_2  {
+    font-weight: 400;
 }
 .color-grey-fonsize14{
     color: #a4a7ad;
     font-size: 14px;
+    font-weight: 600;
 }
 .color-white{
     color: #fff;
@@ -292,33 +288,53 @@ input[type="text"], input[type="number"], input[type="tel"]{
     background-color: #fff;
     border-radius: 3px;
     border: 1px solid #b7bfd2;
-    /*-webkit-user-select: none;*/
-    /*-moz-user-select: none;*/
-    /*user-select: none;*/
     font-size: 15px;
     color: #000;
     padding-left: 17px;
     font-family: "Open sans";
+    font-weight: 400;
     height: 51px;
     outline: none;
 }
 input:-moz-placeholder { color: #b7bfd2; }
 input::-webkit-input-placeholder { color: #b7bfd2;}
+
+textarea{/*Стили для поля ввода*/
+    width: 100%;
+    height: 50px;
+    padding-top: 13px;
+    padding-left: 25px;
+    border: 1px solid #a2a5b2;
+    border-radius: 3px;
+    margin-top: 10px;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
+    resize: none;
+    outline: none;
+    font-weight: 400;
+}
+textarea:-moz-placeholder { color: #a2a5b2; }
+textarea::-webkit-input-placeholder { color: #a2a5b2; }
+
+
+
 button[disabled], html input[disabled] {
     cursor: pointer;
 }
 label {
     display: block;
     color: #a4a7ad;
+    font-weight: 600;
     font-size: 15px;
     margin-bottom: 10px;
     margin-top: 10px;
-    /*width: 100%;*/
 }
 .label{
     color: #a4a7ad;
     font-size: 15px;
     margin-top: 10px;
+    font-weight: 600;
 }
 .fontweight600{
     font-weight: 600;
@@ -472,9 +488,9 @@ label {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 /*Доработать*/
 .header-inner-right, .header-inner-lef{
@@ -492,7 +508,7 @@ label {
     left: 0;
     width: 100%;
 }
-.menu-icon{  /*Уточнить у Кости*/
+.menu-icon{
     width: 40px;
     height: 20px;
     cursor: pointer;
@@ -516,7 +532,6 @@ label {
     display: block;
     padding: 10px 0;
     border-radius: 20px;
-
 }
 
 .slider-button-green:hover{
@@ -550,6 +565,7 @@ label {
     text-align: center;
     color: #a5a9ae;
     font-size: 15px;
+    font-weight: 600;
 }
 /*Стилизованные чекбоксы*/
 .stylized-checkbox{
@@ -583,8 +599,6 @@ input.checkbox-green:checked + .stylized-checkbox::before {
     background-color: #06ae8f;
     border: none;
 }
-
-
 
 .stylized-checkbox::before,
 .stylized-checkbox::after {
@@ -698,7 +712,8 @@ input[type="checkbox"]:checked + label::after {
 }
 
 /*/////////////////////////////////////////////////////*/
-/*ФУТЕР прижатый к низу страницы*/
+/*ФУТЕР прижатый к низу страницы,он прижимается js,
+но это, чтобы не пригала страница*/
 .form-service{
     height: 100%;
 }
@@ -918,6 +933,10 @@ footer{
     top: 87px;
     right: 70px;
 }
+.card-img-more-orders{
+    top: 53%;
+    right: 12%;
+}
 .work-card-img{
     position: absolute;
     width: 133px;
@@ -1102,8 +1121,9 @@ li:last-child .name-service{
 }
 
 .title-information{
-    font-size: 13px;
+    font-size: 15px;
     color: #919297;
+    font-weight: 600;
 
 }
 .information-text{
@@ -1133,9 +1153,6 @@ li:last-child .name-service{
     cursor: pointer;
 }
 
-
-
-
 .wrapper-category-information{
     margin-top: 20px;
 }
@@ -1143,8 +1160,6 @@ li:last-child .name-service{
 .wrapper-item-category{
     margin-bottom: 20px;
 }
-
-
 
 .item-brief-compony{
     display: inline-block;
@@ -1216,8 +1231,8 @@ li:last-child .name-service{
     margin-right: 10px;
 }
 .working-hour{
-    color: #77829e;
-    font-size: 13px;
+    color: #14a98d;
+    font-size: 16px;
 }
 .list-of-works{
     margin-top: 10px;
@@ -1290,22 +1305,7 @@ li:last-child .name-service{
     overflow: hidden;
     white-space: nowrap;
 }
- textarea{/*Стили для поля ввода*/
-    width: 100%;
-    height: 50px;
-    padding-top: 13px;
-    padding-left: 25px;
-    border: 1px solid #a2a5b2;
-    border-radius: 3px;
-    margin-top: 10px;
-    font-size: 15px;
-    font-family: 'Open Sans', sans-serif;
-     overflow: hidden;
-     resize: none;
-     outline: none;
-}
-textarea:-moz-placeholder { color: #a2a5b2; }
-textarea::-webkit-input-placeholder { color: #a2a5b2; }
+
 .perform-action {
     margin: 20px 0;
     color: #06ae8f;
@@ -1495,8 +1495,6 @@ input.call-to-action{
     border-radius: 10px;
 }
 
-
-
 .icon-search{
     display: inline-block;
     width: 30px;
@@ -1504,8 +1502,6 @@ input.call-to-action{
     background: url(../img/magnifier.png)center no-repeat;
     background-size: contain;
 }
-
-
 
 .wrapper-inp-search input, .wrapper-input-search-2 input {
     width: 89%;
@@ -1520,12 +1516,6 @@ input.call-to-action{
     background: url(../img/icon-close.png)center no-repeat;
     background-size: contain;
 }
-
-
-
-
-
-
 
 .list-server{
     border-bottom: 1px solid #77829e;
@@ -1569,6 +1559,7 @@ input.call-to-action{
 
 .wrapper-media-menu {
     margin-top: 50px;
+    margin-bottom: 30px;
 }
 
 .media-menu-item{
@@ -1595,15 +1586,16 @@ input.call-to-action{
 
 }
 .media-logo{
-    background: url(../img/logo.svg)no-repeat center;
+    background: url(../img/logo-menu.svg)no-repeat center;
     background-size: contain;
     width: 100px;
     height: 100px;
     /*margin: 40px auto 10px;*/
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    margin-left: -50px;
+    /*position: absolute;*/
+    /*bottom: 70px;*/
+    /*left: 50%;*/
+    /*margin-left: -50px;*/
+    margin: 0 auto;
 }
 /*Профиль автосервиса*/
 .wrapper-map{
@@ -1626,7 +1618,7 @@ input.call-to-action{
     height: 40px;
     background: url("../img/arrows-back.png")center no-repeat;
     background-size: contain;
-    background-color: rgba(2, 2, 2, 0.1);
+    background-color: rgba(2, 2, 2, 0.2);
 }
 .wrapper-category-information{
     margin-top: 20px;
@@ -1969,7 +1961,7 @@ input.call-to-action{
 .name-order{
     font-weight: 600;
     font-size: 18px;
-
+    max-width: 300px;
 }
 .wrapper-order-go-to {
     width: 20px;
@@ -2046,6 +2038,7 @@ input.call-to-action{
     font-size: 14px;
     color: #a4a7ad;
     margin-bottom: 5px;
+    font-weight: 600;
 }
 .cancel-job{
     cursor: pointer;
@@ -2978,7 +2971,7 @@ input[type="radio"] {
 }
 /* Меняем фон чекбокса, когда он включен. */
 .checkbox:checked + label:before {
-    background: #9FD468;
+    background: #06ae8f;
 }
 /* Сдвигаем переключатель чекбокса, когда он включен. */
 .checkbox:checked + label:after {
@@ -3147,7 +3140,9 @@ input[type="radio"] {
 .accordion .nunber-actions{
     display: none;
 }
-
+.accordion label{
+    font-size: 14px;
+}
 /*Акции*/
 .edit-shares:before{
     content: "";
@@ -3278,6 +3273,29 @@ input[type="radio"] {
     background-position: center center;
     background-size: 115px;
 }
+.banner-card-close{
+    position: absolute;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: url(../img/icon-close-white.png)center no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+/*Круглый футер*/
+.footer-action-round {
+    background-color: #06ae8f;
+    text-align: center;
+    font-size: 18px;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 32px;
+    z-index: 10;
+    max-width: 225px;
+    height: 65px;
+    margin-bottom: 20px;
+}
+
 /*Прижимаю футер*/
 /*.footer-abs{*/
     /*position: fixed;*/
@@ -3302,6 +3320,10 @@ input[type="radio"] {
         width: 90px;
         height: 90px;
     }
+    .card-img-more-orders{
+        top: 39%;
+        right: 8%;
+    }
     .link-another-page{
         font-size: 13px;
         width: 100%;
@@ -3309,7 +3331,7 @@ input[type="radio"] {
     .name-service{
         width: 100%;
     }
-    .slider-item h2.title-wight{
+    .slider-item h2.title-wight, .banner-card h2.title-wight {
         font-size: 14px;
     }
     .content-work-card{
@@ -3333,7 +3355,10 @@ input[type="radio"] {
         height: 64px;
     }
     h1{
-        font-size: 17px;
+        font-size: 19px;
+    }
+    h1.uppercase{
+        font-size: 19px;
     }
 /*Убираем курсоры*/
     .cur-pointer, .status-icon, .icon-clip, .icon-microphone, .wrapper-order-go-to-green, .wrapper-order-go-to,
@@ -3365,16 +3390,14 @@ input[type="radio"] {
         height: 50px;
     }
     .fonsize14px{
-        font-size: 13px;
+        /*font-size: 13px;*/
     }
 
 
     .wrapper-icon-car-order{
         margin-right: 10px;
     }
-    body, .name-order{
-        font-size: 13px;
-    }
+
 
     .wrapper-information-car{
         min-width: 140px;
@@ -3394,184 +3417,55 @@ input[type="radio"] {
 
 }
 
-
 @media screen and (max-width: 390px){
 
     .link-another-page{
         font-size: 13px;
     }
+
+
+
 }
-@media screen and (max-width: 320px){
-    /*.wrapper-photos-order{*/
-        /*width: 40px;*/
-        /*height: 40px;*/
-    /*}*/
+
+@media screen and (max-width: 350px) {
+    .card-img-more-orders {
+        top: 55%;
+        right: 7%;
+        width: 90px;
+        height: 90px;
+    }
+
+    body, .name-order {
+        font-size: 14px;
+    }
+    .item-job-name {
+        margin-right: 5px;
+    }
 }
+
+@media screen and (min-height: 600px) {
+    .wrapper-media-menu {
+
+        margin-bottom: 60px;
+    }
+
+}
+
+@media screen and (max-height: 500px) {
+    .wrapper-media-menu {
+        margin-top: 50px;
+        margin-bottom: 40px;
+    }
+    .menu-link{
+        line-height: 40px;
+    }
+    .icon-add-car {
+        width: 140px;
+        height: 140px;}
+}
+
 
 
 .try{
     display: block;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

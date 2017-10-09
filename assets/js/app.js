@@ -1,6 +1,8 @@
 
 
 $(document).ready(function ($) {
+
+    //Футер прижимаю к низу страницы с помощью js
     function footerToBottom() {
         var browserHeight = $(window).height(),
             footerOuterHeight = $('footer').outerHeight(true),
@@ -17,7 +19,7 @@ $(document).ready(function ($) {
 
 
 
-/*Раскоментировать когда добавлю везде*/
+    //Слайдер
     $('#slider').slider({
         min: 0,
         max: 1000,
@@ -58,10 +60,7 @@ $(document).ready(function ($) {
     });
 
 
-
-
-
-    //!!!!!!!!!!!Потом убрать, это пока чтобы показать редирект на другую страницу!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    //!!!!!!!!!!!Потом убрать,это переходы, а пока чтобы показать редирект на другую страницу!!!!!!!!!!!!!!!!!!!!!!!!!!!
     $('.then-remove').on('click',function(){
         event.preventDefault();
         location.replace("car-added.html")
@@ -102,18 +101,18 @@ $(document).ready(function ($) {
         location.replace("mane-page-subscription-end.html")
     });
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
-
-    /*Снять все чекбоксы*/
+    /*Снять все чекбоксы по нажатию на клафишу*/
 
     $(".js-pull-off-checbox").on("click",function () {
             $(this).parents(".header").siblings(".main-content-brand").find(".list-filters input").prop('checked', false);
     });
 
 
-    //Переключение между табами
+    //Переключение между табами(вкладками) на странице, например летняя - зимняя резина
     $(".tabs_menu li").click(function () {
         if (!$(this).hasClass("active")) {
             var i = $(this).index();
@@ -185,35 +184,30 @@ $(document).ready(function ($) {
 
 
 
-    /*Меню*/
+    /*Вызов Меню*/
     $('.menu-icon').on("click",function(e){
-        $('header, section, footer').css('display','none');
-
+        $('.wrap, footer').css('display','none');
         $('.media-menu').css("display","block");
         e.preventDefault();
     });
     $(".media-close").click(function(){
         $('.media-menu').css("display","none");
-        $('header, section, footer').css('display','block');
-    });
-    $(".main-wrap").click(function(){
-        $('.media-menu').css("display","none");
+        $('.wrap, footer').css('display','block');
     });
 
 
 
-
-    $('.menu-icon').on("click",function(e){
-
-        $('.media-menu').css("display","block");
-        e.preventDefault();
-    });
-    $(".icon-close").click(function(){
-        $('.media-menu').css("display","none");
-    });
-    $(".main-wrap").click(function(){
-        $('.media-menu').css("display","none");
-    });
+    //$('.menu-icon').on("click",function(e){
+    //
+    //    $('.media-menu').css("display","block");
+    //    e.preventDefault();
+    //});
+    //$(".icon-close").click(function(){
+    //    $('.media-menu').css("display","none");
+    //});
+    //$(".main-wrap").click(function(){
+    //    $('.media-menu').css("display","none");
+    //});
 
 
 
@@ -238,9 +232,7 @@ $(document).ready(function ($) {
         readURL(this);
     });
 
-    /*Смена экранов регистрации*/
-
-
+    /*Смена экранов в рамках одной страницы, например регистрации*/
 
     var steps = $("form").children(".step"); // находим все шаги формы
     $(steps[0]).show(); // показываем первый шаг
@@ -281,39 +273,7 @@ $(document).ready(function ($) {
     }
 
 
-
-
-    //$(function(){
-    //    $( "#date" ).datepicker();
-    //});
-
-
-    /*Календарь*/
-    //$('.datetimepicker').datetimepicker({
-    //    //datepicker:false
-    //    format:'d.m.Y',
-    //    timepicker:false,
-    //    lang:'ru'
-    //});
-    //$('.datetimepicker-year').datetimepicker({
-    //    format:'Y',
-    //    //datepicker:false,
-    //    timepicker:false,
-    //    lang:'ru',
-    //    closeOnDateSelect:true,
-    //    closeOnWithoutClick :true
-    //});
-
-
-    //$(function () {
-    //    $('#datetimepicker6').datetimepicker(
-    //        {language: 'ru'}
-    //    );
-    //});
-
-
-
-    /*Стирать поля ввода*/
+    /*Стирать данные в  поле ввода по нажатию на крестик*/
 
     $('.js-icon-clear').on('click',function(){
         $(this).siblings('.js-input-search').val('');
@@ -371,7 +331,7 @@ $(document).ready(function ($) {
     }
     //
     //
-    ///*Формы отправки регулярка на ввод символов*/
+    ///*Формы отправки - регулярка на ввод символов*/
     //
     $('.js-number, input[name="tel"]').bind("change keyup input click", function() {
         if (this.value.match(/[^0-9\(\)\+\-\s]/g)) {
@@ -399,7 +359,7 @@ $(document).ready(function ($) {
     });
 
 
-    //Запускаю диаграмму
+    //Запуск диаграммы
 
     var c = $(".box input").val();
     $(function() {
@@ -445,7 +405,7 @@ $(document).ready(function ($) {
 
 
 
-    /*Модальное окно*/
+    /*Модальные окна*/
 
     var text;
 
@@ -470,17 +430,17 @@ $(document).ready(function ($) {
 
 
 
-
+/*Бутстраповские окна*/
 
     /*Открытие окна с фильтром*/
     $('.js-filtr-icon').click(function(){
-        $('.main-page-window, .footer').css('display','none');
+        $('.main-page-window, .wrap, .footer').css('display','none');
         $('.window-filtr').css('display','block');
     });
 
     $('.js-close').on('click',function(){
         $('.window-filtr').css('display','none');
-        $('.main-page-window, .footer').css('display','block');
+        $('.main-page-window,.wrap, .footer').css('display','block');
     });
 
     /*Открытие окна с подписками*/
@@ -540,27 +500,7 @@ $(document).ready(function ($) {
         setTimeout('location.replace("orders.html")',2000);
     });
 
-
-    //Вызов модалки селекты
-
-    //$(".js-modal").on("click",function(){
-    //    $("#modal-select").modal('show');
-    //});
-
-    /*По клику на кнопку  делать клон поля вид услуги*/
-
-    //$(".js-perform-action").click(function(){
-    //    var input = '<div class="js-modal wrapper-input-choice border-grey mar-top-10 cur-pointer">' +
-    //        '<input disabled class="type-of-service" type="text" name="type_service">' +
-    //        '<div class="icon-search-carat-2"></div></div>';
-    //
-    //    $(input).appendTo(".wrapper-inp");
-    //
-    //});
-
-
-
-
+    /*По клику на кнопку "Добавить услугу" на странице "Создание заказа" делать клон поля вид услуги*/
 
     $(".tabssss").on('click','.js-perform-action',function(e){
 
@@ -570,7 +510,7 @@ $(document).ready(function ($) {
 
     });
 
-    //Услуги - аккордеон
+    //Аккордеон на странице Услуги
     ! function(i) {
         var o, n;
         i(".title_block").on("click", function() {
@@ -586,12 +526,14 @@ $(document).ready(function ($) {
 
     }(jQuery);
 
+
+    //Снимаю все метки на чекбоксов
     $(".js-reset").on("click",function () {
         $("li.active_block input[type='checkbox']").prop('checked', false);
     });
 
 
-    //Задаю циклом id инпутам и лэйблам
+    //Задаю циклом id инпутам и for лэйблам для стилизованных чекбоксов id="box1" for="box1"
 
     $('.checkbox-green').each(function(i) {
         $(this).attr('id', 'box'+(i+1))
@@ -601,7 +543,7 @@ $(document).ready(function ($) {
         $(this).attr('for', 'box'+(i+1))
     });
 
-//Подписка подсчет платежа в месяц
+//Подписка - подсчет платежа в месяц
 
     $('.wrapper-subscription-price').each(function(i) {
        var price = $(this).find(".subscription-price-price").text();
@@ -706,7 +648,7 @@ $(document).ready(function ($) {
 
 
 
-    /*Вызов модального окна*/
+    /*Вызов модального окна для селектов*/
 
     //Открытие модального окна и подстановка содежимого в зависимости от окна
     $(".js-modal").on("click",function(){
@@ -778,7 +720,7 @@ $(document).ready(function ($) {
         ret()
 
     });
-    //Закрытие окна при нажатии на крестик
+    //Закрытие модального окна при нажатии на крестик
     $(".close-icom").on("click",function(){
         $(this).parents(".wrap-pop-up").hide();
         $(this).parents(".wrap-pop-up").siblings(".main-conteiner").show();
@@ -808,13 +750,10 @@ $(document).ready(function ($) {
     }
 
 
-
-
-
-
-
-
-
+    //Закрываю банер
+    $(".banner-card-close").on("click",function(){
+        $(this).parents(".banner-card").hide()
+    });
 
 
     //Убираю класс у футера
@@ -822,38 +761,6 @@ $(document).ready(function ($) {
     //$(window).scroll(function(){
     //    $("footer").removeClass("footer-abs")
     //});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -867,19 +774,6 @@ $(document).ready(function ($) {
         $this.height(1);
         $this.height(this.scrollHeight);
     });
-
-
-    //В профиле выбор марок
-
-
-
-
-
-
-
-
-
-
 
 
 });
