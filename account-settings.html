@@ -106,7 +106,7 @@
                     </div>
                 </div>
 
-                <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+                <script type="text/javascript" src="js/jquery1.9.1.js"></script>
                 <script src="js/tabs.js"></script>
     <script type="text/javascript">
 
@@ -117,10 +117,6 @@
         function onlyDigits(e) {
             this.value = this.value.replace(/[^\d\.\,]/g, "");
             this.value = this.value.replace(/\,/g, '.');
-
-
-
-
 
             if(this.value.length > 1&&this.value.indexOf(".") == '-1') {
                 this.value = this.value.substr(0, 3);
@@ -135,12 +131,6 @@
             if (this.value.match(/\./g).length > 1) {
                 this.value = this.value.substr(0, this.value.lastIndexOf("."));
             }
-
-
-
-
-
-
 
         }
         document.querySelector(".onlyDigits").onkeyup = onlyDigits;

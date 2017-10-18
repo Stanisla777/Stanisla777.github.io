@@ -53,7 +53,7 @@ body {
 }
 
 .swiper-slide {
-    background-image: url(../img/Back_inner.png);
+    /*background-image: url(../img/Back_inner.png);*/
     background-size: cover;
 }
 
@@ -507,12 +507,11 @@ body {
 }
 
 .swiper-pagination-bullet {
-    width: 40px !important;
-    /*min-width: 10px!important;*//*правка*/
+    width: 10px!important;
     height: 10px !important;
 }
 
-.swiper-pagination-bullet-active {
+.swiper-pagination-articles .swiper-pagination-bullet-active {
     border: 1px solid #6fb23f !important;
 }
 
@@ -527,6 +526,7 @@ input {
 .swiper-pagination-articles{
     border-bottom: 1px solid #b0b5c3!important;
 }
+
 .swiper-pagination-articles .article-type{
     padding-bottom: 0!important;
 }
@@ -538,6 +538,7 @@ input {
     height: 39px!important;
     /*min-height: 10px !important;*/
     display: inline-block!important;
+    border-radius: 0!important;
 
 }
 .swiper-pagination-articles .swiper-pagination-bullet-active{
@@ -1811,12 +1812,13 @@ input::-webkit-inner-spin-button {
 }
 
 .spoiler_body {
-    display: none;
+    /*display: none;*/
     padding-bottom: 30px;
 }
 
 .spoiler {
     padding-left: 50px;
+    position: relative;
 }
 
 .spoiler_links {
@@ -1836,6 +1838,59 @@ input::-webkit-inner-spin-button {
 .prev-spoiler .spoiler_links {
     color: #8691AD;
 }
+
+/*Правки страница timeline.html делаю swipe*/
+.swiper-container-schedule .swiper-slide{
+    text-align: left;
+}
+
+.wrapper-pagination{
+    position: absolute;
+    min-width: 120px!important;
+    height: 25px!important;
+    top: 0!important;
+    right: 20px!important;
+    display: none;
+}
+
+.swiper-pagination-shedule .swiper-pagination-bullet-active {
+    /*background: none!important;*/
+    border-radius: 40px!important;
+    background-color: #fff!important;
+    color: #5BB820!important;
+    border-bottom: 2px solid #5BB81F!important;
+}
+.swiper-pagination-shedule .swiper-pagination-bullet {
+    border: none!important;
+    opacity: 1!important;
+    width: 54px!important;
+    min-width: 10px!important;
+    height: 25px!important;
+    line-height: 23px;
+    display: inline-block!important;
+    color: #fff;
+}
+.schedule-type {
+    text-align: center;
+    padding-bottom: 0px;
+    display: inline-block;
+    margin-right: 7px;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Lato-Light;
+    transition: 0.2s all ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*класс now-spoiler для текущего или ближайшего приема пищи...при заходе на страницу график этот блок будет раскрыт и ярко зеленого цвета.. когда прошедший будет серого, а следующий прозрачного*/
 
