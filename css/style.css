@@ -1799,7 +1799,7 @@ input::-webkit-inner-spin-button {
     position: absolute;
     width: 50px;
     z-index: 1;
-    top: 105px;
+    top: 40px;
     margin-top: -15px;
     transition: 0.2s all ease;
 }
@@ -1840,6 +1840,10 @@ input::-webkit-inner-spin-button {
 }
 
 /*Правки страница timeline.html делаю swipe*/
+.swiper-container-schedule{
+    overflow: hidden;
+    margin-bottom: 25px;
+}
 .swiper-container-schedule .swiper-slide{
     text-align: left;
 }
@@ -1849,7 +1853,7 @@ input::-webkit-inner-spin-button {
     min-width: 120px!important;
     height: 25px!important;
     top: 0!important;
-    right: 20px!important;
+    right: 5px!important;
     display: none;
 }
 
@@ -1879,7 +1883,9 @@ input::-webkit-inner-spin-button {
     font-family: Lato-Light;
     transition: 0.2s all ease;
 }
-
+.color-grey{
+    color: #8691AD!important;
+}
 
 
 
@@ -2050,7 +2056,8 @@ input::-webkit-inner-spin-button {
     -webkit-border-radius: 40px;
     -moz-border-radius: 40px;
     border-radius: 40px;
-    left: 50px;
+    /*left: 50px;*/
+    left: 0px;
     position: absolute;
 }
 
@@ -3714,8 +3721,10 @@ input::-webkit-inner-spin-button {
 }
 
 .eat-name .fact-btn:first-child {
-    margin-top: -20px;
+    margin-top: -10px;
 }
+
+
 
 @media screen and (min-width: 321px) {
     .plan-fact .tabs li {
@@ -3761,3 +3770,62 @@ input::-webkit-inner-spin-button {
         padding: 20px 20px;
     }
 }
+
+/*Мои медиа*/
+
+@media screen and (max-width: 375px){
+    .important-spoiler .spoiler_links{
+        font-size: 14pt;
+    }
+    .spoiler_links{
+        font-size: 12pt;
+    }
+    .close-spoiler{
+        width: 60px;
+        height: 41px;
+    }
+    .close-spoiler img{
+        width: 65%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
