@@ -52,8 +52,8 @@ body {
     overflow-y: scroll;
 }
 
-.swiper-slide {
-    /*background-image: url(../img/Back_inner.png);*/
+.swiper-container-mane-page .swiper-slide {
+    background-image: url(../img/Back_inner.png);
     background-size: cover;
 }
 
@@ -1842,7 +1842,7 @@ input::-webkit-inner-spin-button {
 /*Правки страница timeline.html делаю swipe*/
 .swiper-container-schedule{
     overflow: hidden;
-    margin-bottom: 25px;
+    /*margin-bottom: 25px;*/
 }
 .swiper-container-schedule .swiper-slide{
     text-align: left;
@@ -2060,6 +2060,9 @@ input::-webkit-inner-spin-button {
     left: 0px;
     position: absolute;
 }
+.close-green{
+    margin-bottom: 25px;
+}
 
 .close-spoiler-red-span {
     color: #fff;
@@ -2238,6 +2241,7 @@ input::-webkit-inner-spin-button {
     -webkit-background-size: 100%;
     background-size: 100%;
     background-attachment: fixed;
+    min-height: 100%;
 }
 
 .back-fridge .header {
@@ -2365,6 +2369,7 @@ input::-webkit-inner-spin-button {
 }
 
 .box-container {
+    position: relative;
     width: 30vw;
     height: 30vw;
     display: inline-block;
@@ -2380,12 +2385,147 @@ input::-webkit-inner-spin-button {
     background: rgba(255, 255, 255, 0.3) url(../img/photo.png) no-repeat center center;
     -webkit-background-size: 60%;
     background-size: 60%;
+    overflow: hidden;
+    position: relative;
 }
 
 .photo-container {
     padding-bottom: 50px;
     float: left;
 }
+/*//////////////////////////////////////////////////////////////////////*/
+/*Правка добавление фото*/
+.wrapper-photo-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+}
+.wrapper-photo-container .box-container {
+    position: relative;
+    width: 30vw;
+    height: 30vw;
+    margin: 1.5vw;
+}
+
+
+/*Find the bellow CSS code*/
+
+
+.add-photo input[type="file"] {
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+
+.upload-file-container {
+    position: relative;
+    /*border: 1px solid;*/
+    position: relative;
+    width: 30vw;
+    height: 30vw;
+    display: inline-block;
+    margin: 1.5vw;
+    float: left;
+    background-color: rgba(255, 255, 255, 0.3);
+
+    /*Если решим не картинкой*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.upload-file-container > img {
+    width: 100%;
+    height: 100%;
+}
+.upload-file-container:first-child {
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    /*Если решим не картинкой*/
+    background-size: 60% 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+
+}
+.upload-file-container:first-child > img {
+    width: 60%;
+    height: 60%;
+}
+.delete-foto{
+    position: absolute;
+    top:10px;
+    right: 10px;
+    width: 3vw;
+    height: 3vw;
+    background: url("../img/cross.png")center no-repeat;
+    background-size: contain;
+    z-index: 2;
+    cursor: pointer;
+}
+.upload-file-container-text {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /*border: 1px solid;*/
+    z-index: 1;
+}
+.upload-file-container input {
+    font-size: 1px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .photo-option-btn {
     position: fixed;

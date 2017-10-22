@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<div class="main2 back-fridge">
+<div class="back-fridge">
     <div class="header">
         <span class="page-title">Добавление фото</span>
         <a href="timeline.html" class="back-x">
@@ -17,21 +17,24 @@
             <span class="x2"></span>
         </a>
     </div>
-    <div class="content photo-container">
-        <div class="box-container add-photo"></div>
-        <div class="box-container"><img src="img/photo-src.jpg"></div>
-        <div class="box-container"><img src="img/photo-src.jpg"></div>
-        <div class="box-container"><img src="img/photo-src.jpg"></div>
-        <div class="box-container"><img src="img/photo-src.jpg"></div>
-        <div class="box-container"><img src="img/photo-src.jpg"></div>
-        <div class="box-container"><img src="img/photo-src.jpg"></div>
-        <div class="box-container"><img src="img/photo-src.jpg"></div>
-        <div class="box-container"><img src="img/photo-src.jpg"></div>
-        <div class="box-container"><img src="img/photo-src.jpg"></div>
-        <div class="box-container"><img src="img/photo-src.jpg"></div>
-        <div class="box-container"><img src="img/photo-src.jpg"></div>
-        <div class="box-container"><img src="img/photo-src.jpg"></div>
-        <div class="box-container"><img src="img/photo-src.jpg"></div>
+    <div class="content wrapper-photo-container">
+
+
+        <div style="background-image: url(img/photo.png)" class="upload-file-container flex-center-center">
+            <!--<div class="delete-foto"></div>-->
+
+            <!--<img class="image" id="image" src="img/photo.png" alt=""/>-->
+
+            <div class="upload-file-container-text">
+                <input  type="file" name="pic[]" class="photo sd" />
+            </div>
+        </div>
+
+
+
+        <!--<div class="box-container add-photo">-->
+            <!--<input type="file" class="files" name="files[]" multiple />-->
+        <!--</div>-->
         <a href="photo-option.html" class="photo-option-btn">Продолжить</a>
     </div>
 </div>
@@ -54,6 +57,136 @@
     $('.close-photo-option').click(function () {
         $('.photo-option-container').removeClass('visible');
     });
+
+    var e =$(".upload-file-container").first().find(".photo");
+    $(document).on("change",".photo",function(){
+
+        var t = $(this).parents(".upload-file-container").find(".image");
+        var u =$(this).parents(".upload-file-container");
+        var i = $(this);
+        var b = '<div class="delete-foto"></div>';
+        var g = '<div style="background-image: url(img/photo.png)" class="upload-file-container">'
+
+//        var y = '<div class="upload-file-container"><img class="image" id="image" src="img/photo.png" />' +
+//                '<div class="upload-file-container-text"><input  type="file" name="pic[]" class="photo photo-addd" id="imgInput"/>' +
+//                '</div></div>';
+
+        var y = '<div style="background-image: url(img/photo.png)" class="upload-file-container">' +
+                '<div class="upload-file-container-text"><input  type="file" name="pic[]" class="photo photo-addd" id="imgInput"/>' +
+                '</div></div>';
+
+
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+
+
+                $(u).before(y);
+//                $(t).attr('src', e.target.result);
+                $(u).css('backgroundImage', "url(" + e.target.result + ")");
+                $(i).attr("disabled","disabled");
+                $(u).append(b);
+
+
+            };
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+
+    $(document).on("click",".delete-foto",function(){
+        $(this).parents(".upload-file-container").remove();
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    if(window.File && window.FileList && window.FileReader) {
+//        $(".files").on("change",function(e) {
+//
+//
+//            var files = e.target.files ,
+//                    filesLength = files.length ;
+//            for (var i = 0; i < filesLength ; i++) {
+//                var f = files[i];
+//                var fileReader = new FileReader();
+//                fileReader.onload = (function(e) {
+//                    var file = e.target;
+//                    $('<img >',{
+//                        class : "box-container imageThumb",
+//                        src : e.target.result,
+//                        title : file.name
+//                    }).appendTo(".wrapper-photo-container");
+//                });
+//                fileReader.readAsDataURL(f);
+//            }
+//        });
+//    } else { alert("Your browser doesn't support to File API") }
+
+
+
+
+
+
+//    $(".upload-file-container").on("click",function (){
+//        var y = '<div class="upload-file-container flex-center-center"><img id="image" src="img/photo.png" alt=""/>' +
+//                '<div class="upload-file-container-text"><input type="file" name="pic[]" class="photo" id="imgInput"/>' +
+//                '</div></div>';
+//
+//
+//        $(y).appendTo('.wrapper-photo-container');
+//    });
+
+//    function readURL(input) {
+//
+//        if (input.files && input.files[0]) {
+//            var reader = new FileReader();
+//
+//            reader.onload = function (e) {
+//
+//                $('.image').attr('src', e.target.result);
+////                var t = $('.upload-file-container').clone(true);
+////                $(t).appendTo('.wrapper-add-foto');
+//
+//            };
+//            reader.readAsDataURL(input.files[0]);
+//
+////            var er = $(".upload-file-container").clone(true).appendTo(".wrapper-photo-container");
+//
+//
+//                var y = '<div class="upload-file-container flex-center-center"><img id="image" src="img/photo.png" alt=""/>' +
+//                        '<div class="upload-file-container-text"><input type="file" name="pic[]" class="photo" id="imgInput"/>' +
+//                        '</div></div>';
+////
+////
+////                $(y).appendTo('.wrapper-photo-container')
+//
+//        }
+//    }
+
+
 </script>
 </body>
 </html>
