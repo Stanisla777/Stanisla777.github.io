@@ -185,11 +185,6 @@ function outClassInt(x,num) {
     }
     return returnClass;
 }
-//Получаю вес вчерашнего дня
-//var ii =$('.selected-weight span').text();
-var ii =$('.weigher').attr('data-before-weight');
-
-ii = parseFloat(ii);
 var weigher = {
     circle: $('.weigher'),
     wrap_weight_val: $('.weigher ul'),
@@ -198,7 +193,7 @@ var weigher = {
     rotate: 180,
     swiper:{},
     addWeightVal: function () {
-        for(var i = -8,num = 360; i <= 9.9; i = floatingSum(i,this.step_weight, num-=2)){
+        for(var i = floatingSub(this.before_weight, 8),num = 360; i <= floatingSum(this.before_weight, 63.9); i = floatingSum(i,this.step_weight, num-=2)){
             this.wrap_weight_val.append('<li data-weight="' + i + '" data-rotate="' + num + '" class="'+ outClassInt(i,num) +'"><span>' + outInt(i) + '</span></li>');
         }
     },
@@ -221,22 +216,13 @@ var weigher = {
             weight_el = weight_el + 360;
             this.rotate = weight_el;
         }
-        //console.log(weight_el)
         var active_el = $('.weigher ul li[data-rotate="'+ weight_el +'"]');
         this.setActiveClass(active_el);
         var weight_now = active_el.attr('data-weight');
-        //if(isInt(weight_now)){
-        //    weight_now += '.0';
-        //
-        //}
-
-        //var ii =$('.selected-weight span').text();
-        //ii = parseFloat(ii);
-        tr = parseFloat(weight_now);
-        var pp = ii + tr;
-        pp = pp.toFixed(1);
-        console.log(tr);
-        $('.selected-weight span').html( pp);
+        if(isInt(weight_now)){
+            weight_now += '.0';
+        }
+        $('.selected-weight span').html(weight_now);
     },
     setRotate: function (rotate) {
         var newRotate = parseInt((rotate)) + this.rotate;

@@ -3911,6 +3911,18 @@ input::-webkit-inner-spin-button {
     }
 }
 
+.my-days{
+    /*overflow: hidden;*/
+    /*height: 100vh;*/
+}
+.arrow-weight{
+    width: 20px;
+    height: 20px;
+    background: url("../img/1downarrow.png")center no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+}
+
 /*Мои медиа*/
 
 @media screen and (max-width: 375px){

@@ -60,7 +60,7 @@ $radius-circle:800px;
           margin-left: -8px;
         }
       }
-      @for $i from 1 through 360 {
+      @for $i from 1 through 1440 {
         &:nth-child(#{$i}) {
           -webkit-transform-origin: $transform-origin-val-x $transform-origin-val-y;
           -ms-transform-origin: $transform-origin-val-x $transform-origin-val-y;
