@@ -209,7 +209,17 @@ body {
     font-family: Lato-Bold;
     text-shadow: 0px 0px 4px #414141;
 }
-
+.short-prev-icon{
+    position: relative;
+}
+.short-prev-icons{
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 .short-prev {
     display: block;
     width: 100%;
@@ -433,7 +443,7 @@ body {
 
 .sms-admin {
     display: block;
-    background-color: #E9F0E9;
+    background-color: #f9f9fa;
     margin: 15px 20px;
     padding: 10px 15px;
     border-radius: 15px;
@@ -449,7 +459,7 @@ body {
 
 .sms-user {
     display: block;
-    background-color: #549043;
+    background-color: #5bb820;
     margin: 15px 20px;
     padding: 10px 15px;
     border-radius: 15px;
@@ -567,12 +577,41 @@ input {
     max-width: 300px;
     float: left;
     margin-top: 20px;
+    position: relative;
 }
 
 .chat-content .sms-user-wrap{
     float: right;
 }
-
+.sms-admin{
+    position: relative;
+}
+.sms-admin-wrap .sms-admin:before{
+    content: "";
+    width: 6px;
+    height: 5px;
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    background: url(../img/chat.png)center no-repeat;
+    background-size: contain;
+}
+.sms-admin-wrap .sms-admin{
+    left: 35px;
+}
+.sms-user{
+    position: relative;
+}
+.sms-user-wrap .sms-user:before{
+    content: "";
+    width: 6px;
+    height: 5px;
+    position: absolute;
+    bottom: 2px;
+    right: 0;
+    background: url(../img/Chat-2.png)center no-repeat;
+    background-size: contain;
+}
 .sms-admin-wrap .sms-admin{
     left: 35px;
 }
@@ -586,6 +625,7 @@ input {
     width: 40px;
     height: 40px;
     left: 5px;
+    bottom: 17px;
 }
 
 .sms-admin-wrap .sms-admin-img img{
@@ -606,7 +646,23 @@ input {
     float: right;
     margin-right: 35px;
 }
-
+.wrapper-admin-chat{
+    color: #fff;
+    text-align: center;
+    font-family: Lato-Light;
+}
+.wrapper-admin-chat p {
+    opacity: 0.8;
+}
+.name-admin{
+    font-size: 10pt;
+}
+.name-admin span{
+    opacity: 1;
+}
+.position-admin{
+    font-size: 8pt;
+}
 /*конец чата*/
 
 /*адаптация по высоте. для 480px +-*/
@@ -1214,6 +1270,7 @@ ul.tab-info li.current {
     color: #fff;
     display: inline-block;
     font-size: 25px;
+    font-weight: 600;
 }
 
 #tab-test-product h3, #tab-test-product2 h3, #tab-test-product3 h3 {
@@ -2034,35 +2091,67 @@ input::-webkit-inner-spin-button {
     margin-left: -47px;
 }
 
+.wrapper-miss{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
 .close-spoiler {
     display: block;
-    margin: auto;
+    /*margin: auto;*/
     width: 80px;
     text-align: center;
-    background-color: #5BB821;
+
     -webkit-border-radius: 40px;
     -moz-border-radius: 40px;
     border-radius: 40px;
-    left: -20px;
-    position: relative;
+    /*left: -20px;*/
+    /*position: relative;*/
 }
 
 .close-spoiler-red {
     display: block;
-    margin: auto;
-    width: 80px;
-    text-align: center;
     background-color: #EB456E;
-    -webkit-border-radius: 40px;
-    -moz-border-radius: 40px;
-    border-radius: 40px;
-    /*left: 50px;*/
-    left: 0px;
-    position: absolute;
 }
 .close-green{
-    margin-bottom: 25px;
+    /*margin-bottom: 25px;*/
+    background-color: #5BB821;
 }
+.icon-photo{
+    display: block;
+    width: 33px;
+    height: 33px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin-right: 50px;
+    padding: 8px;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #404040;
+}
+.icon-photo img {
+    max-width: 100%;
+    width: 100%;
+}
+
+.photo-btn {
+    display: block;
+    width: 33px;
+    height: 33px;
+     float: right;
+    position: absolute;
+    right: 8px;
+    margin-top: -69px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin-right: 50px;
+    padding: 8px;
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px #404040;
+}
+
 
 .close-spoiler-red-span {
     color: #fff;
@@ -2074,10 +2163,10 @@ input::-webkit-inner-spin-button {
     display: block;
     width: 33px;
     height: 33px;
-    /* float: right; */
+     float: right;
     position: absolute;
-    right: 0;
-    margin-top: -49px;
+    right: 8px;
+    margin-top: -69px;
     background-color: rgba(255, 255, 255, 0.3);
     margin-right: 50px;
     padding: 8px;
@@ -2760,10 +2849,17 @@ input::-webkit-inner-spin-button {
 .slider-custom-pagination {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
-
+/*Правки*/
 .article-container {
-    float: left;
-    margin-top: 10px;
+    /*float: left;*/
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 30px;
+
 }
 
 .article-type {
@@ -2781,13 +2877,43 @@ input::-webkit-inner-spin-button {
 }
 
 .article-img, .article-short-prev {
-    display: inline-block;
-    float: left;
+    /*display: inline-block;*/
+    /*float: left;*/
 }
+.article-img-polite{
+    /*border: 1px solid;*/
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("http://img1.liveinternet.ru/images/attach/b/4/113/57/113057117_3720816_plov_so_svininoi.jpg");
 
+}
 .article-img {
-    width: 20%;
+    /*width: 20%;*/
+    position: relative;
+    left: -6%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+
     text-align: left;
+    width: 14vw;
+    height: 14vw;
+    min-width: 72px;
+    min-height: 72px;
+    background-color: #fff;
+    border-radius: 50%;
+
 }
 
 .article-img img {
@@ -2819,7 +2945,7 @@ input::-webkit-inner-spin-button {
 
 .article-name {
     display: block;
-    float: left;
+    /*float: left;*/
     color: #fff;
     font-size: 16pt;
     margin-top: 5px;
@@ -2833,7 +2959,7 @@ input::-webkit-inner-spin-button {
 
 .article-short-prev-text {
     display: block;
-    float: left;
+    /*float: left;*/
     margin-top: 10px;
     color: rgba(255, 255, 255, 0.6);
     font-size: 11pt;
@@ -3863,6 +3989,131 @@ input::-webkit-inner-spin-button {
 .eat-name .fact-btn:first-child {
     margin-top: -10px;
 }
+
+/*Календарь*/
+
+.main-calendar{
+    padding: 0 30px 50px 30px;
+    width: 95%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.main-calendar .fc-calendar-container{
+    padding: 5px;
+}
+.main-calendar .custom-inner {
+    background: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.main-calendar .custom-header{
+    border: none;
+    background: none;
+}
+.main-calendar .custom-header h2{
+    color: #5bb820;
+}
+.main-calendar .custom-year{
+    opacity: 0;
+}
+.main-calendar .custom-header nav span:before,.main-calendar .custom-header nav span:before{
+    color: #5bb820;
+}
+.main-calendar .fc-calendar-container{
+    background: none;
+}
+.main-calendar .custom-inner:before, .custom-inner:after{
+    background: none;
+}
+.main-calendar .fc-calendar .fc-head{
+    color: #b4bcca;
+}
+.main-calendar .fc-calendar .fc-row > div{
+    background: none;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+}
+
+.main-calendar .fc-calendar .fc-row > div > span.fc-date{
+    color: #fff;
+}
+.main-calendar .fc-calendar .fc-row > div.fc-today > span.fc-date{
+    color: #d6d6d6;
+}
+.main-calendar .fc-calendar .fc-body,.main-calendar .fc-calendar .fc-row{
+    border: none;
+}
+.fc-calendar .fc-row > div, .fc-calendar .fc-head > div{
+    /*width: 4vw;*/
+    /*height: 4vw;*/
+}
+
+
+
+/*Стили бэкграунда для дивов означающих, что клиент похудел или потостел*/
+.client-fat{
+    background-color: rgba(235, 68, 109, 0.4)!important;
+    border: 1px solid #eb446d!important;
+}
+.client-not_change{
+    background-color: rgba(255, 160, 0, 0.4)!important;
+    border: 1px solid #ffa000!important;
+
+}
+.client-slim{
+    background-color: rgba(91, 184, 32, 0.4)!important;
+    border: 1px solid #5bb820!important;
+
+}
+
+.fc-calendar .fc-row > div.fc-today{
+    /*background-color: red;*/
+}
+
+
+/*--------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

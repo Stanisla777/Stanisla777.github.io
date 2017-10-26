@@ -34,7 +34,7 @@
                     <!--<input type="text" pattern="[0-9]*" class="weight-input" value="" name="width" maxlength="5" id="weight-input">-->
 
                     <div class="wrapper-input-weight">
-                        <input type="tel"  class="onlyDigits weight-input"  name="width"  id="weight-input">
+                        <input type="number"  class="onlyDigits weight-input"  name="width"  id="weight-input">
                         <div class="input-weight-size">кг</div>
                     </div>
                     <a class="tab-link button-next" data-tab="tab-test-product"><img src="img/ok-white.png" alt="OK"></a>
@@ -115,8 +115,8 @@
 
 
         function onlyDigits(e) {
-            this.value = this.value.replace(/[^\d\.\,]/g, "");
-            this.value = this.value.replace(/\,/g, '.');
+//            this.value = this.value.replace(/[^\d\.\,]/g, "");
+//            this.value = this.value.replace(/\,/g, '.');
 
             if(this.value.length > 1&&this.value.indexOf(".") == '-1') {
                 this.value = this.value.substr(0, 3);

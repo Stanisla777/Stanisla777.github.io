@@ -158,7 +158,7 @@ function isInt(x) {
     }
 }
 function isHalf(x) {
-    if(((x*10)%10) == 5){
+    if(((x*10)%10) == 5||((x*10)%10) == -5){
         return true;
     } else {
         return false;
@@ -190,6 +190,7 @@ function outClassInt(x,num) {
 var ii =$('.weigher').attr('data-before-weight');
 
 ii = parseFloat(ii);
+
 var weigher = {
     circle: $('.weigher'),
     wrap_weight_val: $('.weigher ul'),
@@ -198,7 +199,7 @@ var weigher = {
     rotate: 180,
     swiper:{},
     addWeightVal: function () {
-        for(var i = -8,num = 360; i <= 9.9; i = floatingSum(i,this.step_weight, num-=2)){
+        for(var i = -9,num = 360; i <= 8.9; i = floatingSum(i,this.step_weight, num-=2)){
             this.wrap_weight_val.append('<li data-weight="' + i + '" data-rotate="' + num + '" class="'+ outClassInt(i,num) +'"><span>' + outInt(i) + '</span></li>');
         }
     },
@@ -232,6 +233,7 @@ var weigher = {
 
         //var ii =$('.selected-weight span').text();
         //ii = parseFloat(ii);
+
         tr = parseFloat(weight_now);
         var pp = ii + tr;
         pp = pp.toFixed(1);
