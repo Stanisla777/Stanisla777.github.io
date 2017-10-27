@@ -3993,9 +3993,9 @@ input::-webkit-inner-spin-button {
 /*Календарь*/
 
 .main-calendar{
-    padding: 0 30px 50px 30px;
-    width: 95%;
-    max-width: 800px;
+    padding: 0 15px 50px 15px;
+    width: 100%;
+    max-width: 870px;
     margin: 0 auto;
 }
 .main-calendar .fc-calendar-container{
@@ -4008,12 +4008,45 @@ input::-webkit-inner-spin-button {
 .main-calendar .custom-header{
     border: none;
     background: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 .main-calendar .custom-header h2{
     color: #5bb820;
+    margin: 0 auto;
+}
+.custom-header nav span:first-child {
+    left: -17px;
+}
+.custom-header nav span:last-child {
+    right: -17px;
 }
 .main-calendar .custom-year{
     opacity: 0;
+}
+.custom-prev{
+    border: 15px solid transparent;
+    border-right: 22px solid #5bb820;
+    display: block;
+}
+.custom-next{
+    border: 15px solid transparent;
+    border-left: 22px solid #5bb820;
+    display: block;
+    width: 0;
+    height: 0;
+}
+.custom-header nav span.custom-prev:before{
+    content: "";
+
+}
+.custom-header nav span.custom-next:before{
+    content: "";
+
 }
 .main-calendar .custom-header nav span:before,.main-calendar .custom-header nav span:before{
     color: #5bb820;
@@ -4065,6 +4098,13 @@ input::-webkit-inner-spin-button {
     border: 1px solid #5bb820!important;
 
 }
+.client-this-day{
+    background-color: rgba(255, 255, 255, 0.84) !important;
+    border: 1px solid #fff!important;
+}
+.client-this-day span.fc-date{
+    color: #5bb820!important;
+}
 
 .fc-calendar .fc-row > div.fc-today{
     /*background-color: red;*/
@@ -4073,21 +4113,81 @@ input::-webkit-inner-spin-button {
 
 /*--------------------------------------------------------------*/
 
+/*Окно истории*/
+.wrapper-day-history{
+    color: #fff;
+    display: none;
+}
+.date-history{
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 28px;
+    font-family: Lato-Light;
+}
+.weight-history{
+    display: inline-block;
+    color: #b0b6c1;
+    font-size: 28px;
+}
+.weight-history span{
+    font-size:  24px;
+}
+.status-methodology{
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 10px;
+    font-family: Lato-Light;
+}
+.wrapper-history-eat{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.day-weight{
+    color: #b0b6c1;
+    font-size: 19px;
+    /*margin-right: 20px;*/
+    width: 80px;
+}
+.status-eat{
+    width: 80px;
+    height: 30px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.wrapper-reriod-eat{
+    margin-bottom: 20px;
+    border-bottom: 1px dotted;
+    padding-bottom: 10px;
+}
+.type-reriod-eat{
+    color: #b0b6c1;
+    font-size: 19px;
+}
+.wrapper-test-dish{
+    margin-bottom: 20px;
+    line-height: 28px;
+    border-bottom: 1px dotted;
+    padding-bottom: 10px;
+}
+.type-dish{
+    font-size: 24px;
+}
+.stus-dish{
+    color: #b0b6c1;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.wrapper-calendar{
+    padding: 0 0 50px 15px;
+    width: 100%;
+    max-width: 870px;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
+.wrapper-day-description{
+    width: 100%;
+}
 
 
 
