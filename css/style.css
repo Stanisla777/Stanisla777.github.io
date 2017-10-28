@@ -3998,6 +3998,9 @@ input::-webkit-inner-spin-button {
     max-width: 870px;
     margin: 0 auto;
 }
+.main-calendar .fc-six-rows .fc-row{
+    height: auto;
+}
 .main-calendar .fc-calendar-container{
     padding: 5px;
 }
@@ -4079,7 +4082,7 @@ input::-webkit-inner-spin-button {
 .fc-calendar .fc-row > div, .fc-calendar .fc-head > div{
     /*width: 4vw;*/
     /*height: 4vw;*/
-    margin: 0 2px;
+    margin: 2px 2px;
     width: calc(100%/7 - 4px);
 }
 
