@@ -256,11 +256,15 @@
             $el.addClass("client-this-day");
             $(".wrapper-day-history").show();
             var day = $el.find(".fc-date").text();
-            var month_d = $el.parents("#calendar").siblings(".custom-header").find(".custom-month").text()
+            var month_d = $el.parents("#calendar").siblings(".custom-header").find(".custom-month").text();
 
 
-            var re = /ь/g;
-            var month_d = month_d.replace(re, "я");
+//            var reg = /ь/g;
+//            var reg_2=/март/g;
+            month_d = month_d.replace(/ь/g, "я");
+            month_d = month_d.replace(/март/ig, "марта");
+            month_d = month_d.replace(/май/ig, "мая");
+            month_d = month_d.replace(/август/ig, "августа");
             $(".wrapper-day-history span.cal-day").text(day);
             $(".wrapper-day-history span.cal-month").text(month_d);
         }

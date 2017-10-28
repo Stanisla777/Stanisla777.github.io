@@ -4079,6 +4079,8 @@ input::-webkit-inner-spin-button {
 .fc-calendar .fc-row > div, .fc-calendar .fc-head > div{
     /*width: 4vw;*/
     /*height: 4vw;*/
+    margin: 0 2px;
+    width: calc(100%/7 - 4px);
 }
 
 
@@ -4123,6 +4125,7 @@ input::-webkit-inner-spin-button {
     margin-right: 20px;
     font-size: 28px;
     font-family: Lato-Light;
+    text-transform: uppercase;
 }
 .weight-history{
     display: inline-block;
@@ -4179,10 +4182,11 @@ input::-webkit-inner-spin-button {
     text-transform: uppercase;
     font-size: 12px;
 }
-.wrapper-calendar{
+.wrapper-calendar{/*переименовать*/
     padding: 0 0 50px 15px;
     width: 100%;
     max-width: 870px;
+    margin: 0 auto;
 
 }
 .wrapper-day-description{
