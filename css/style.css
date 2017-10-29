@@ -552,15 +552,31 @@ input {
 
 }
 .swiper-pagination-articles .swiper-pagination-bullet-active{
-
+    font-family: Lato-Bold!important;
     background: none!important;
     border-radius: 0!important;
     color: #5BB81F!important;
     border-bottom: 2px solid #5BB81F!important;
+
 }
-
-
-
+/*Дни недели*/
+.wrapper-days{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 15px;
+}
+.day-tomorrow{
+    margin-left: 51px;
+}
+.day-week{
+    margin-left: 37px;
+}
+.day-active{
+    color: #5BB81F;
+}
 
 /*Стили для чата*/
 
@@ -588,12 +604,12 @@ input {
 }
 .sms-admin-wrap .sms-admin:before{
     content: "";
-    width: 6px;
-    height: 5px;
+    width: 10px;
+    height: 13px;
     position: absolute;
-    bottom: 2px;
-    left: 0;
-    background: url(../img/chat.png)center no-repeat;
+    bottom: -2px;
+    left: -3px;
+    background: url(../img/chat2.png)center no-repeat;
     background-size: contain;
 }
 .sms-admin-wrap .sms-admin{
@@ -604,11 +620,11 @@ input {
 }
 .sms-user-wrap .sms-user:before{
     content: "";
-    width: 6px;
-    height: 5px;
+    width: 11px;
+    height: 10px;
     position: absolute;
     bottom: 2px;
-    right: 0;
+    right: -4px;
     background: url(../img/Chat-2.png)center no-repeat;
     background-size: contain;
 }
@@ -655,13 +671,14 @@ input {
     opacity: 0.8;
 }
 .name-admin{
-    font-size: 10pt;
+    font-size: 18px;
+    letter-spacing: 0.7px;
 }
 .name-admin span{
     opacity: 1;
 }
 .position-admin{
-    font-size: 8pt;
+    font-size: 16px;
 }
 /*конец чата*/
 
@@ -1130,7 +1147,13 @@ ul.tab-info li.current {
     color: #5BB820;
     padding-bottom: 9px;
 }
-
+.acc-setting-tab{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
 .acc-setting-tab .tab-link {
     font-family: Lato-Light;
     font-size: 10pt;
@@ -3991,7 +4014,7 @@ input::-webkit-inner-spin-button {
 }
 
 /*Календарь*/
-
+.main-chat{}
 .main-calendar{
     padding: 0 15px 50px 15px;
     width: 100%;
@@ -4042,6 +4065,7 @@ input::-webkit-inner-spin-button {
     display: block;
     width: 0;
     height: 0;
+
 }
 .custom-header nav span.custom-prev:before{
     content: "";
@@ -4195,10 +4219,47 @@ input::-webkit-inner-spin-button {
 .wrapper-day-description{
     width: 100%;
 }
+/*Новые стили для футера*/
+
+.flex-space-between-center {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
 
 
-
-
+/*Копка*/
+.but-next{
+    /*position: fixed;*/
+    text-decoration: none;
+    border-radius: 100px;
+    width: 220px;
+    height: 50px;
+    color: #fff;
+    background-color: #5BB81F;
+    border: none;
+    font-family: 'Lato-Regular', sans-serif;
+    font-size: 15px;
+    margin: 20px auto 40px;
+    text-align: center;
+    border: 0;
+    background-color: #5BB821;
+    position: relative;
+    display: block;
+    line-height: 47px;
+    /*left: 50%;*/
+    /*margin-left: -110px;*/
+    /*bottom: 30px;*/
+}
 
 
 

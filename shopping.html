@@ -16,6 +16,11 @@
         <a href="#" class="cart"><img src="img/icon-back.png"></a>
     </div>
     <div class="content shopping">
+        <div class="wrapper-days">
+            <p data-name="Сегодня" class="day-active day-today">12.09</p>
+            <p data-name="Завтра" class="day-tomorrow">12.09</p>
+            <p data-name="Неделя" class="day-week">12.09</p>
+        </div>
         <div class="swiper-container shoes">
             <div class="swiper-wrapper">
                 <div class="swiper-slide" data-name="Сегодня">
@@ -86,7 +91,7 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide" data-name="На неделю">
+            <div class="swiper-slide" data-name="Неделя">
                 <div class="content">
                     <div class="container-shop">
                         <span class="eat-name">Индейка</span>
@@ -173,6 +178,13 @@
         }
 
     });
+    mySwiper2.on('transitionStart', function () {
+        var dat = $(".swiper-slide-active").data("name");
+//        alert(dat);
+        $(".wrapper-days p").removeClass("day-active");
+        $(".wrapper-days p[data-name="+dat+"]").addClass("day-active");
+
+    });
 
     $(window).load(function(){
         $(".pag-shoes .swiper-pagination-bullet").addClass("article-type");
@@ -181,6 +193,36 @@
         $(".pag-shoes .swiper-pagination-bullet").eq(1).text("Завтра");
         $(".pag-shoes .swiper-pagination-bullet").eq(2).text("На неделю");
     });
+
+    //Получаю текущий год
+    var myDate = new Date();
+    var month = myDate.getMonth()+1;
+    var day = myDate.getDate();
+
+
+    Date.prototype.endWeek=function(){
+        return new Date(this.getFullYear(), this.getMonth(),(7-this.getDay())+this.getDate());
+    };
+
+    //call like this
+    var Sunday = myDate.endWeek();
+
+
+    Date.prototype.startWeek=function(){
+        return new Date(this.getFullYear(), this.getMonth(),(7-this.getDay()-6)+this.getDate());
+    };
+
+    //call like this
+    var Monday = myDate.startWeek();
+
+
+
+    $(".wrapper-days .day-today").text(day+"."+month);
+    $(".wrapper-days .day-tomorrow").text(day+1+"."+month);
+    $(".wrapper-days .day-week").text(Monday.getDate()+"."+month+" - "+Sunday.getDate()+"."+month);
+
+
+
 
 </script>
 </body>
