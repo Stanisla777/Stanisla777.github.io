@@ -447,7 +447,8 @@ body {
     margin: 15px 20px;
     padding: 10px 15px;
     border-radius: 15px;
-    color: #A5A6A8;
+    color: #5a5a5b;
+    font-family: Lato-Bold;
     box-shadow: 1px 2px 10px #424242;
     text-align: left;
     font-size: 12pt;
@@ -668,17 +669,17 @@ input {
     font-family: Lato-Light;
 }
 .wrapper-admin-chat p {
-    opacity: 0.8;
+    /*opacity: 0.8;*/
 }
 .name-admin{
-    font-size: 18px;
+    font-size: 20px;
     letter-spacing: 0.7px;
 }
 .name-admin span{
     opacity: 1;
 }
 .position-admin{
-    font-size: 16px;
+    font-size: 18px;
 }
 /*конец чата*/
 
@@ -1755,8 +1756,13 @@ input::-webkit-inner-spin-button {
 .page-title {
     color: #fff;
     line-height: 50px;
-}
 
+}
+.page-titles{
+    color: #fff;
+    line-height: 50px;
+    font-family: Lato-Bold;
+}
 .cart {
     position: absolute;
     width: 25px;
@@ -2392,7 +2398,7 @@ input::-webkit-inner-spin-button {
 }
 
 .container-shop .eat-name {
-    font-size: 12pt;
+    font-size: 13pt;
 }
 
 .eat-weight-green {
@@ -2917,23 +2923,28 @@ input::-webkit-inner-spin-button {
 .article-img {
     /*width: 20%;*/
     position: relative;
-    left: -6%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    left: -7%;
+    top: 10px;
+    /*display: -webkit-box;*/
+    /*display: -ms-flexbox;*/
+    /*display: flex;*/
+    /*-webkit-box-pack: center;*/
+    /*-ms-flex-pack: center;*/
+    /*justify-content: center;*/
+    /*-webkit-box-align: center;*/
+    /*-ms-flex-align: center;*/
+    /*align-items: center;*/
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 
     text-align: left;
     width: 14vw;
     height: 14vw;
-    min-width: 72px;
-    min-height: 72px;
+    min-width: 77px;
+    min-height: 77px;
     background-color: #fff;
     border-radius: 50%;
 
@@ -4261,6 +4272,143 @@ input::-webkit-inner-spin-button {
     /*bottom: 30px;*/
 }
 
+/*Правки страницы списки продуктов*/
+.wrapper-shop-checkbox{
+    position: relative;
+}
+.wrapper-shop{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.wrapper-shop-checkbox input[type="checkbox"],.wrapper-cooler-checkbox input[type="checkbox"]{
+    opacity: 0;
+    position: absolute;
+}
+
+.wrapper-shop-checkbox .checkbox-green:checked+label.stylized-checkbox {
+    color: green;
+}
+.wrapper-cooler-checkbox .checkbox-green:checked+label.stylized-checkbox {
+    color: green;
+}
+
+
+
+
+
+.wrapper-shop-checkbox label, .wrapper-cooler-checkbox label{
+    display: block;
+    color: #a4a7ad;
+    font-size: 15px;
+    width: 100%;
+}
+.wrapper-cooler-checkbox label{
+    min-height: 30px;
+}
+.wrapper-shop-checkbox .stylized-checkbox, .wrapper-cooler-checkbox .stylized-checkbox {
+    cursor: pointer;
+    position: relative;
+    margin-left: 30px;
+}
+
+
+
+.wrapper-shop-checkbox .stylized-checkbox::before, .wrapper-cooler-checkbox .stylized-checkbox::before {
+    position: absolute;
+    top: 0;
+    left: -29px;
+}
+.wrapper-shop-checkbox .stylized-checkbox::before {
+    content: "";
+    display: inline-block;
+    height: 22px;
+    width: 22px;
+    border-radius: 5px;
+    border: 1px solid #77829e;
+}
+.wrapper-cooler-checkbox .stylized-checkbox::before {
+    content: "";
+    display: inline-block;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    border: 1px solid #77829e;
+}
+
+
+
+
+.wrapper-shop-checkbox input[type="checkbox"]:checked + label::after {
+    content: "";
+}
+.wrapper-cooler-checkbox input[type="checkbox"]:checked + label::after {
+    content: "";
+}
+.wrapper-shop-checkbox input[type="checkbox"] + label::after {
+    content: none;
+}
+.wrapper-cooler-checkbox input[type="checkbox"] + label::after {
+    content: none;
+}
+.wrapper-shop-checkbox .stylized-checkbox::after {
+    left: -24px;
+    top: 6px;
+}
+.wrapper-cooler-checkbox .stylized-checkbox::after {
+    left: -24px;
+    top: 6px;
+}
+.stylized-checkbox::before, .stylized-checkbox::after {
+    position: absolute;
+}
+
+.stylized-checkbox::after {
+    content: "";
+    display: inline-block;
+    height: 7px;
+    width: 11px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(-46deg);
+}
+.wrapper-cooler-checkbox .stylized-checkbox::after {
+    content: "";
+    display: inline-block;
+    height: 4px;
+    width: 9px;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    transform: rotate(-46deg);
+}
+input.checkbox-gren:checked + .stylized-checkbox::before {
+    background-color: #5bb820;
+    border: none;
+}
+input.checkbox-red:checked + .stylized-checkbox::before {
+    background-color:#eb446d;
+    border: none;
+}
+input.checkbox-yellow:checked + .stylized-checkbox::before {
+    background-color: #c1c13a;
+    border: none;
+}
+.wrapper-type-product{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #989FB1;
+}
 
 
 
@@ -4268,15 +4416,31 @@ input::-webkit-inner-spin-button {
 
 
 
+/*.wrapper-shop-checkbox .eat-name{*/
+    /*display: inline-block;*/
+/*}*/
+/*.wrapper-shop-checkbox .eat-weight-green{*/
+    /*display: block;*/
+/*}*/
 
+.bought{
+    color: #d7dae1;
+    font-size: 14px;
+    opacity: 0.6;
+}
+.cross-out{
+    text-decoration: line-through;
+}
 
-
-
-
-
-
-
-
+/*Изменения в холодильнике*/
+.wrapper-change-cooler{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin-top: 30px;
+}
 
 
 
@@ -4306,7 +4470,7 @@ input::-webkit-inner-spin-button {
     }
 
     .container-shop .eat-name {
-        font-size: 15pt;
+        font-size: 16pt;
     }
 
     .eat-weight-green {
@@ -4319,6 +4483,9 @@ input::-webkit-inner-spin-button {
 
     .page-title {
         font-size: 14pt;
+    }
+    .page-titles {
+        font-size: 16pt;
     }
 
     .article-title {
