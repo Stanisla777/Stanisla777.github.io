@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="css/font-awesome.css">
     <title>YuNell</title>
 </head>
-<body>
-<div id="sign">
-    <div class="container">
-        <div class="caption">
+<body class="heigh-auto">
+<div id="sign2">
+    <div class="container-signup">
+        <div class="caption-signup">
             <h1>YU<span>NELL</span></h1>
         </div>
 
@@ -23,20 +23,28 @@
 
         <div id="tab-1" class="tab-content current">
             <form action="#">
-                <span class="icons-user"><img src="img/User@1,5x.png" alt=""></span>
-                <input type="text" placeholder="Логин" class="login-input">
-                <span class="icons-user"><img src="img/Password@1,5x.png" alt=""></span>
-                <input type="password" placeholder="Пароль" class="password-input">
+                <div class="wrapper-login">
+                    <div class="wrap-icons-user"><img src="img/User@1,5x.png" alt=""></div>
+                    <input type="text" placeholder="Логин" class="login-input">
+                </div>
+                <div class="wrapper-password">
+                    <div class="wrap-icons-user"><img src="img/Password@1,5x.png" alt=""></div>
+                    <input type="password" placeholder="Пароль" class="password-input">
+                </div>
                 <a class="main-form-btn" href="account-settings.html">Войти</a>
             </form>
         </div>
         <div id="tab-2" class="tab-content">
             <form action="#">
-                <span class="icons-user"><img src="img/User@1,5x.png" alt=""></span>
-                <input type="text" required placeholder="Логин" class="login-input">
-                <span class="icons-user"><img src="img/Password@1,5x.png" alt=""></span>
-                <input type="password" required placeholder="Пароль" class="password-input">
-                <a class="main-form-btn" href="account-settings.html">Создать аккаунт</a>
+                <div class="wrapper-login">
+                    <div class="wrap-icons-user"><img src="img/User@1,5x.png" alt=""></div>
+                    <input type="text" placeholder="Логин" class="login-input">
+                </div>
+                <div class="wrapper-password">
+                    <div class="wrap-icons-user"><img src="img/Password@1,5x.png" alt=""></div>
+                    <input type="password" placeholder="Пароль" class="password-input">
+                </div>
+                <a class="main-form-btn" href="account-settings.html">Войти</a>
             </form>
         </div>
     </div><!-- container -->
@@ -62,6 +70,25 @@
     $(".password-input").focusout(function(){
         $(".footer-social a").removeClass("hidden");
     });
+
+
+    //Футер прижимаю к низу страницы с помощью js
+    function footerToBottom() {
+        var browserHeight = $(window).height(),
+                footerOuterHeight = $('footer-social').outerHeight(true),
+                mainHeightMarginPaddingBorder = $('.container-signup').outerHeight(true) - $('.container-signup').height();
+        $('.container-signup').css({
+            'min-height': browserHeight - footerOuterHeight - mainHeightMarginPaddingBorder -100
+        });
+    }
+    footerToBottom();
+    $(window).resize(function () {
+        footerToBottom();
+    });
+
+
+
+
 </script>
 </body>
 </html>

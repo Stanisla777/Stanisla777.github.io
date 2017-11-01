@@ -131,10 +131,6 @@
 
     $(function() {
 
-
-
-
-
         var transEndEventNames = {
                     'WebkitTransition' : 'webkitTransitionEnd',
                     'MozTransition' : 'transitionend',
@@ -146,7 +142,7 @@
                 $wrapper = $( '#custom-inner' ),
                 $calendar = $( '#calendar' ),
 
-                //Сюда можно вешать события по клику на день
+        //Сюда можно вешать события по клику на день
 
                 cal = $calendar.calendario( {
                     onDayClick : function( $el, $contentEl, dateProperties ) {
@@ -165,18 +161,23 @@
                 $month = $( '#custom-month' ).html( cal.getMonthName() ),
                 $year = $( '#custom-year' ).html( cal.getYear() );
 
+
+
         //Перемещение календаря влево-вправо по клику и swipe
 
         $( '#custom-next' ).on( 'click', function() {
             cal.gotoNextMonth( updateMonthYear );
             weight_height();
             show_example();
+            inactive();
 
         } );
         $( '#custom-prev' ).on( 'click', function() {
             cal.gotoPreviousMonth( updateMonthYear );
             weight_height();
             show_example();
+            inactive();
+//            alert(cal.getMonth());
         } );
 
         $(".custom-header").swipe({
@@ -184,6 +185,7 @@
                 cal.gotoNextMonth( updateMonthYear );
                 weight_height();
                 show_example();
+                inactive();
             }
         });
         $(".custom-header").swipe({
@@ -191,6 +193,7 @@
                 cal.gotoPreviousMonth( updateMonthYear );
                 weight_height();
                 show_example();
+                inactive();
             }
         });
 
@@ -274,6 +277,32 @@
             $(".wrapper-day-history span.cal-day").text(day);
             $(".wrapper-day-history span.cal-month").text(month_d);
         }
+
+        var cur_day = $(".fc-today").text();
+        cur_day = parseInt (cur_day);
+
+        var monthh = cal.getMonth();
+
+        function inactive(){
+
+
+            $('.fc-date').each(function(i,elem) {
+                var day = $(this).text();
+
+
+                day = parseInt (day);
+
+
+
+                /*Додумать*/
+                if (day<cur_day&&cal.getMonth()<=monthh&&$(this).hasClass(".fc-today")==false) {
+                    $(this).addClass("colo-red")
+                }
+            });
+        }
+        inactive();
+
+
 
 
 

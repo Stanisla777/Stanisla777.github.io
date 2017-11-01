@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="user-info">
-        <div class="container-info">
+        <div class="container-info ">
             <ul class="tabs acc-setting-tab">
                 <li class="tab-link current" data-tab="tab-gender">1</li>
                 <li class="tab-link" data-tab="tab-width">2</li>
@@ -145,6 +145,15 @@
 //            this.style.width = 0;
 //            this.style.width = this.scrollWidth + 'px';
 //        });
+
+
+        $('.weight-input').on('focusin',function(){
+            $(this).parents('.wrapper-input-weight').siblings('.button-next').addClass('but-next-js');
+        });
+        $('.weight-input').on('focusout',function(){
+            $(this).parents('.wrapper-input-weight').siblings('.button-next').removeClass('but-next-js');
+        });
+
 
 
 
