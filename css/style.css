@@ -4733,6 +4733,27 @@ input.checkbox-yellow:checked + .stylized-checkbox::before {
     .glass-block{
         width: 100px;
     }
+    .trainer-name{
+        font-size: 16pt!important;
+    }
+    .tutorial-col-smile {
+        width: 118px !important;
+    }
+    .tutorial-col-abs1, .tutorial-col-abs2 {
+        width: 60px !important;
+        margin-top: 10px!important;
+    }
+    .trainer-photo-wrap {
+        width: 80px;
+        margin: auto;
+    }
+    .sms-admin, .sms-user{
+        font-size: 10pt;
+    }
+    .trainer-wrap {
+        margin-top: 30px;
+    }
+
 }
 @media screen and (max-height: 500px) {
     .tutorial-col-smile{
@@ -4748,9 +4769,7 @@ input.checkbox-yellow:checked + .stylized-checkbox::before {
         max-width: 100%;
         margin-top: 0;
     }
-    .trainer-name{
-        font-size: 16pt;
-    }
+
     .trainer-photo-wrap {
         width: 60px !important;
     }
@@ -4777,7 +4796,7 @@ input.checkbox-yellow:checked + .stylized-checkbox::before {
         margin: 35px 10px 10px;
     }
     .trainer-name {
-        font-size: 13pt;
+        font-size: 13pt!important;
     }
     .trainer-specialisation{
         font-size: 10pt;
