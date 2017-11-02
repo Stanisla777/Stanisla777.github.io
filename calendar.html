@@ -278,12 +278,23 @@
             $(".wrapper-day-history span.cal-month").text(month_d);
         }
 
-        var cur_day = $(".fc-today").text();
-        cur_day = parseInt (cur_day);
+
+
+        Data = new Date();
+        cur_day = Data.getDate();
+//        var cur_day = $(".fc-today").text();
+//        cur_day = parseInt (cur_day);
 
         var monthh = cal.getMonth();
+        var year = cal.getYear();
+
+
+
 
         function inactive(){
+
+
+
 
 
             $('.fc-date').each(function(i,elem) {
@@ -295,7 +306,7 @@
 
 
                 /*Додумать*/
-                if (day<cur_day&&cal.getMonth()<=monthh&&$(this).hasClass(".fc-today")==false) {
+                if ((day>cur_day&&cal.getMonth()==monthh) || (cal.getMonth()>monthh )||(cal.getYear()>year)) {
                     $(this).addClass("colo-red")
                 }
             });

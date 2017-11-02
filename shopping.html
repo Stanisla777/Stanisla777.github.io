@@ -4,14 +4,14 @@
     <title>YouNELL. Список продуктов</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/swiper.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta charset="UTF-8">
 </head>
 <body>
 
 <div class="main2 back-fridge">
     <div class="header">
-        <a href="timeline.html" class="back-a"><img src="img/arrow-back.png"></a>
+        <a href="timeline.html" class="back-a"><img src="img/double-left-arrows.svg"/></a>
         <span class="page-title">Список продуктов</span>
         <a href="#" class="cart"><img src="img/icon-back.png"></a>
     </div>
@@ -199,6 +199,9 @@
 
 <script type="text/javascript" src="js/jquery1.9.1.js"></script>
 <script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/moment.js"></script>
+
+
 <script>
     var mySwiper2 = new Swiper('.swiper-container.shoes', {
         // Optional parameters
@@ -243,62 +246,26 @@
         $(".pag-shoes .swiper-pagination-bullet").eq(2).text("На неделю");
     });
 
-    //Получаю текущий год
-    var myDate = new Date();
-    var month = myDate.getMonth()+1;
-    var day = myDate.getDate();
+
+    //Установка дат
+
+    var now = moment();
+
+    var current_day = now.format('DD.MM');
+    var next_day =now.add('days', 1).format('DD.MM');
+
+    var begin_week = now.startOf('week').add('days', 1).format('DD.MM');
+    var end_week = now.endOf('week').add('days', 1).format('DD.MM');
 
 
-    //Условия для дней меньше 10 с подстановкой 0
-    if(month<10){
-        month = "0"+month;
-
-    }
-    if(day<10){
-        day = "0"+day;
-
-    }
-
-
-
-
-    //Высчитываю промежуток дней в неделе
-    Date.prototype.endWeek=function(){
-        return new Date(this.getFullYear(), this.getMonth(),(7-this.getDay())+this.getDate());
-    };
-
-    //call like this
-    var Sunday = myDate.endWeek();
-
-
-    Date.prototype.startWeek=function(){
-        return new Date(this.getFullYear(), this.getMonth(),(7-this.getDay()-6)+this.getDate());
-    };
-
-    //call like this
-    var Monday = myDate.startWeek();
-
-    var sun = Sunday.getDate();
-    var mon = Monday.getDate();
-
-    //Условия для дней меньше 10 с подстановкой 0
-    if(Sunday.getDate()<10){
-        sun = "0"+Sunday.getDate();
-
-    }else{
-        sun = Sunday.getDate();
-    }
-
-    if(Monday.getDate()<10){
-        mon = "0"+Monday.getDate();
-    }else{
-        mon = Monday.getDate();
-    }
 
     //Подставляю даты на страницу
-    $(".wrapper-days .day-today").text(day+"."+month);
-    $(".wrapper-days .day-tomorrow").text(day+1+"."+month);
-    $(".wrapper-days .day-week").text(mon+"."+month+" - "+sun+"."+month);
+    $(".wrapper-days .day-today").text(current_day);
+    $(".wrapper-days .day-tomorrow").text(next_day);
+    $(".wrapper-days .day-week").text(begin_week +" - " +  end_week);
+
+
+
 
 
     //Задаю циклом id инпутам и for лэйблам для стилизованных чекбоксов id="box1" for="box1"
@@ -312,7 +279,7 @@
     });
 
 
-    var new_text = "<span class='bought'>Куплен</span>"
+    var new_text = "<span class='bought'>Куплен</span>";
 
     $(".wrapper-shop-checkbox .checkbox-green").on("change",function(){
         var cont = $(this).parents(".wrapper-shop").find(".wrapper-shop-product");

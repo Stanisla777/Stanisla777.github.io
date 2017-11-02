@@ -30,14 +30,14 @@ body {
     position: relative;
 }
 .main, .thx-box {
-    background-image: url(../img/Back_inner.png);
+    background-image: url(../img/Back_inner.jpg);
     background-size: cover;
     background-attachment: fixed;
     min-height: 100%;
 }
 
 .main2 {
-    background-image: url(../img/fon.png);
+    background-image: url(../img/fon.jpg);
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -722,6 +722,9 @@ input {
     .icon-block {
         margin-top: 30px;
     }
+    .first-slide-col-abs2 {
+        margin-top: 40px !important;
+    }
 
     .smile-wrapper {
         margin-top: 0px !important;
@@ -833,7 +836,7 @@ input {
     position: absolute;
 }
 #sign2 {
-    background-image: url(../img/Back_sign_in.png);
+    background-image: url(../img/Back_sign_in.jpg);
     background-repeat: no-repeat;
     background-position: bottom center;
     -webkit-background-size: cover;
@@ -1264,7 +1267,7 @@ margin-left: -265px;
 #user-info {
     width: 100%;
     position: absolute;
-    background-image: url(../img/Back_inner.png);
+    background-image: url(../img/Back_inner.jpg);
     background-attachment: fixed;
     min-height: 100%;
     margin: 0 auto;
@@ -2517,7 +2520,7 @@ input::-webkit-inner-spin-button {
 
 /*страница покупок*/
 .back-fridge {
-    background-image: url(../img/Background_fridge.png);
+    background-image: url(../img/Background_fridge.jpg);
     -webkit-background-size: 100%;
     background-size: 100%;
     background-attachment: fixed;
@@ -2822,7 +2825,7 @@ input::-webkit-inner-spin-button {
 }
 
 .photo-option-container {
-    background-image: url(../img/Back_inner.png);
+    background-image: url(../img/Back_inner.jpg);
     -webkit-background-size: cover;
     background-size: cover;
     background-attachment: fixed;
@@ -4271,7 +4274,7 @@ input::-webkit-inner-spin-button {
     color: #fff;
 }
 .main-calendar .fc-calendar .fc-row > div.fc-today > span.fc-date{
-    color: #d6d6d6;
+    color: #fff;
 }
 .main-calendar .fc-calendar .fc-body,.main-calendar .fc-calendar .fc-row{
     border: none;
@@ -4312,8 +4315,12 @@ input::-webkit-inner-spin-button {
     /*background-color: red;*/
 }
 .colo-red{
-    color: rgba(255, 255, 255, 0.67) !important;
+    color: rgba(92, 90, 90, 0.5) !important;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.30) !important;
 }
+/*.colo-red{*/
+    /*color: red !important;*/
+/*}*/
 
 /*--------------------------------------------------------------*/
 
@@ -4560,7 +4567,7 @@ input.checkbox-yellow:checked + .stylized-checkbox::before {
 }
 
 /*Классы flex*/
-.flex-space-between-center
+
 
 
 
@@ -4682,6 +4689,11 @@ input.checkbox-yellow:checked + .stylized-checkbox::before {
 
 /*Мои медиа*/
 
+
+
+
+
+
 @media screen and (max-width: 375px){
     .important-spoiler .spoiler_links{
         font-size: 14pt;
@@ -4701,6 +4713,80 @@ input.checkbox-yellow:checked + .stylized-checkbox::before {
         width: 65%;
     }
 }
+/*Для первых экранов*/
+@media screen and (max-height: 620px) {
+    .icon-block {
+        width: 90px !important;
+        height: 95px !important;
+    }
+    .first-slide-col-abs2 {
+        width: 70px !important;
+        right: 10px;
+        margin-top: 63px;
+    }
+    .glass-number{
+        font-size: 35pt;
+    }
+    .short-prev-text {
+        padding: 20px 15px 13px !important;
+    }
+    .glass-block{
+        width: 100px;
+    }
+}
+@media screen and (max-height: 500px) {
+    .tutorial-col-smile{
+        width: 85px;
+    }
+    .tutorial-col-smile .tutorial-time{
+        font-size: 18pt;
+    }
+    .tutorial-col-smile .tutorial-type{
+        font-size: 15pt;
+    }
+    .tutorial-col-abs1 img, .tutorial-col-abs2 img {
+        max-width: 100%;
+        margin-top: 0;
+    }
+    .trainer-name{
+        font-size: 16pt;
+    }
+    .trainer-photo-wrap {
+        width: 60px !important;
+    }
+    .sms-admin, .sms-user {
+        font-size: 8pt !important;
+    }
+    .short-prev-text {
+        padding: 24px 15px 0px !important;
+    }
+    .short-prev-title {
+        font-family: Lato-Regular;
+        font-weight: bold;
+        font-size: 5vw;
+        margin: 0;
+        padding-bottom: 5px;
+    }
+    .short-prev-text{
+        min-height: 110px;
+    }
+}
+
+@media screen and (max-height: 430px) {
+    .tomorrow-test .content .info {
+        margin: 35px 10px 10px;
+    }
+    .trainer-name {
+        font-size: 13pt;
+    }
+    .trainer-specialisation{
+        font-size: 10pt;
+    }
+}
+/*------------------------------------------------------------------------*/
+
+
+
 @media screen and (max-height: 550px) {
     .tomorrow-test .content .info {
         margin: 35px 10px 10px;
@@ -4710,6 +4796,29 @@ input.checkbox-yellow:checked + .stylized-checkbox::before {
 @media screen and (max-height: 530px) {
     .weight-change .btn-fixed-bottom {
         position: relative;
+    }
+    .thx-box img {
+        width: 45%;
+        margin-top: 10px;
+    }
+}
+@media screen and (max-height: 500px) {
+    .weight-change .content .info {
+        padding: 15px 20px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .thx-box img {
+        width: 45%;
+        margin-top: 10px;
+    }
+}
+@media screen and (max-width: 330px) {
+    .weight-change .content .weight-change-value p {
+        font-size: 35px;
+    }
+    .weight-change .content .info {
+        padding: 15px 20px;
     }
 }
 
