@@ -3816,7 +3816,7 @@ input::-webkit-inner-spin-button {
     bottom: 0;
     left: 0;
     width: 100%;
-    z-index: 100500;
+    z-index: 9998;
     padding-bottom: 20px;
 }
 
