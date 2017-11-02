@@ -4315,8 +4315,7 @@ input::-webkit-inner-spin-button {
     /*background-color: red;*/
 }
 .colo-red{
-    color: rgba(92, 90, 90, 0.5) !important;
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.30) !important;
+    color: rgba(92, 90, 90, 0.7) !important;
 }
 /*.colo-red{*/
     /*color: red !important;*/
@@ -4739,8 +4738,12 @@ input.checkbox-yellow:checked + .stylized-checkbox::before {
     .tutorial-col-smile {
         width: 118px !important;
     }
-    .tutorial-col-abs1, .tutorial-col-abs2 {
+    .tutorial-col-abs1{
         width: 60px !important;
+        margin-top: 10px!important;
+    }
+    .tutorial-col-abs2 {
+        width: 53px !important;
         margin-top: 10px!important;
     }
     .trainer-photo-wrap {
