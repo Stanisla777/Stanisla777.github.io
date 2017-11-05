@@ -11,14 +11,14 @@
     <div id="user-info">
         <div class="container-info ">
             <ul class="tabs acc-setting-tab">
-                <li class="tab-link current" data-tab="tab-gender">1</li>
-                <li class="tab-link" data-tab="tab-width">2</li>
-                <li class="tab-link" data-tab="tab-test-product">3</li>
-                <li class="tab-link" data-tab="tab-test-product2">4</li>
-                <li class="tab-link" data-tab="tab-test-product3">5</li>
+                <li class="tab-link current" data-page="1" data-tab="tab-gender">1</li>
+                <li class="tab-link" data-page="2" data-tab="tab-width">2</li>
+                <li class="tab-link" data-page="3" data-tab="tab-test-product">3</li>
+                <li class="tab-link" data-page="4" data-tab="tab-test-product2">4</li>
+                <li class="tab-link" data-page="5" data-tab="tab-test-product3">5</li>
             </ul>
             <form action="#">
-                <div id="tab-gender" class="tab-content current">
+                <div id="tab-gender" data-page="1" class="tab-content current">
                     <h3>Ваш пол</h3>
                     <input type="radio" name="gender" id="man_label" value="man"><label class="label label-man"
                     for="man_label"></label>
@@ -26,9 +26,9 @@
                     <input type="radio" name="gender" id="woman_label" value="female"><label class="label label-woman"
                     for="woman_label"></label>
                     <label for="woman_label" class="label-text">Женщина</label>
-                    <a class="tab-link button-next" data-tab="tab-width"><img src="img/ok-white.png" alt="OK"></a>
+                    <a data-tab="tab-gender" class="tab-link button-next" href="#"><img src="img/ok-white.png" alt="OK"></a>
                 </div>
-                <div id="tab-width" class="tab-content">
+                <div id="tab-width" data-tab="tab-gender" data-page="2" class="tab-content">
                     <h3>Вес</h3>
                     <p>Введите Ваш текущий вес</p>
                     <!--<input type="text" pattern="[0-9]*" class="weight-input" value="" name="width" maxlength="5" id="weight-input">-->
@@ -37,71 +37,96 @@
                         <input type="number"  class="onlyDigits weight-input"  name="width"  id="weight-input">
                         <div class="input-weight-size">кг</div>
                     </div>
-                    <a class="tab-link button-next" data-tab="tab-test-product"><img src="img/ok-white.png" alt="OK"></a>
+                    <a data-tab="tab-width" class="tab-link button-next" href="#"><img src="img/ok-white.png" alt="OK"></a>
                 </div>
-                <div id="tab-test-product" class="tab-content">
+                <div id="tab-test-product"  class="tab-content">
                     <h3>Тестируемые <br> продукты</h3>
+
                     <p class="border-box-info">
                         <span>Выберите 10 продуктов</span> на тестирование,<br>
                         что бы узнать, как они влияют на ваш вес.<br>
                         Рекомендуем выбирать продукты, которыми<br>
                         Вы питаетесь чаще всего.</p>
-                        <div class="checkbox-container">
-                            <input type="checkbox" name="buckwheat" id="buckwheat" value="buckwheat"><label for="buckwheat">Гречка</label>
-                            <input type="checkbox" name="burrice" id="burrice" value="burrice"><label for="burrice">Бурый рис</label>
-                            <input type="checkbox" name="eggplant" id="eggplant" value="eggplant"><label for="eggplant">Баклажан</label>
-                            <input type="checkbox" name="melon" id="melon" value="melon"><label for="melon">Дыня</label>
-                            <input type="checkbox" name="turkey" id="turkey" value="turkey"><label for="turkey">Индейка</label>
-                            <input type="checkbox" name="yogurt" id="yogurt" value="yogurt"><label for="yogurt">Йогурт</label>
-                            <input type="checkbox" name="shrimp" id="shrimp" value="shrimp"><label for="shrimp">Креветки</label>
-                            <input type="checkbox" name="chicken" id="chicken" value="chicken"><label for="chicken">Курица</label>
-                            <input type="checkbox" name="wheat" id="wheat" value="wheat"><label for="wheat">Пшеница</label>
-                            <input type="checkbox" name="rice" id="rice" value="rice"><label for="rice">Рис</label>
-                        </div>
-                        <a class="tab-link button-next" href="thanks.html"><img src="img/ok-white.png" alt="OK"></a>
+
+                    <div class="checkbox-container">
+                        <input type="checkbox" name="buckwheat" id="buckwheat" value="buckwheat"><label for="buckwheat">Гречка</label>
+                        <input type="checkbox" name="burrice" id="burrice" value="burrice"><label for="burrice">Бурый
+                        рис</label>
+                        <input type="checkbox" name="eggplant" id="eggplant" value="eggplant"><label for="eggplant">Баклажан</label>
+                        <input type="checkbox" name="melon" id="melon" value="melon"><label for="melon">Дыня</label>
+                        <input type="checkbox" name="turkey" id="turkey" value="turkey"><label
+                            for="turkey">Индейка</label>
+                        <input type="checkbox" name="yogurt" id="yogurt" value="yogurt"><label
+                            for="yogurt">Йогурт</label>
+                        <input type="checkbox" name="shrimp" id="shrimp" value="shrimp"><label
+                            for="shrimp">Креветки</label>
+                        <input type="checkbox" name="chicken" id="chicken" value="chicken"><label
+                            for="chicken">Курица</label>
+                        <input type="checkbox" name="wheat" id="wheat" value="wheat"><label for="wheat">Пшеница</label>
+                        <input type="checkbox" name="rice" id="rice" value="rice"><label for="rice">Рис</label>
                     </div>
-                    <div id="tab-test-product2" class="tab-content">
-                        <h3>Тестируемые <br> продукты</h3>
-                        <p class="border-box-info">
-                            <span>Выберите 10 продуктов</span> на тестирование,<br>
-                            что бы узнать, как они влияют на ваш вес.<br>
-                            Рекомендуем выбирать продукты, которыми<br>
-                            Вы питаетесь чаще всего.</p>
-                            <div class="checkbox-container">
-                                <input type="checkbox" name="buckwheat" id="buckwheat2" value="buckwheat"><label for="buckwheat2">Гречка</label>
-                                <input type="checkbox" name="burrice" id="burrice2" value="burrice"><label for="burrice2">Бурый рис</label>
-                                <input type="checkbox" name="eggplant" id="eggplant2" value="eggplant"><label for="eggplant2">Баклажан</label>
-                                <input type="checkbox" name="melon" id="melon2" value="melon"><label for="melon2">Дыня</label>
-                                <input type="checkbox" name="turkey" id="turkey2" value="turkey"><label for="turkey2">Индейка</label>
-                                <input type="checkbox" name="yogurt" id="yogurt2" value="yogurt"><label for="yogurt2">Йогурт</label>
-                                <input type="checkbox" name="shrimp" id="shrimp2" value="shrimp"><label for="shrimp2">Креветки</label>
-                                <input type="checkbox" name="chicken" id="chicken2" value="chicken"><label for="chicken2">Курица</label>
-                                <input type="checkbox" name="wheat" id="wheat2" value="wheat"><label for="wheat2">Пшеница</label>
-                                <input type="checkbox" name="rice" id="rice2" value="rice"><label for="rice2">Рис</label>
-                            </div>
-                            <a class="tab-link button-next" href="thanks.html"><img src="img/ok-white.png" alt="OK"></a>
-                        </div>
-                        <div id="tab-test-product3" class="tab-content">
-                            <h3>Тестируемые <br> продукты</h3>
-                            <p class="border-box-info">
-                                <span>Выберите 10 продуктов</span> на тестирование,<br>
-                                что бы узнать, как они влияют на ваш вес.<br>
-                                Рекомендуем выбирать продукты, которыми<br>
-                                Вы питаетесь чаще всего.</p>
-                                <div class="checkbox-container">
-                                    <input type="checkbox" name="buckwheat" id="buckwheat3" value="buckwheat"><label for="buckwheat3">Гречка</label>
-                                    <input type="checkbox" name="burrice" id="burrice3" value="burrice"><label for="burrice3">Бурый рис</label>
-                                    <input type="checkbox" name="eggplant" id="eggplant3" value="eggplant"><label for="eggplant3">Баклажан</label>
-                                    <input type="checkbox" name="melon" id="melon3" value="melon"><label for="melon3">Дыня</label>
-                                    <input type="checkbox" name="turkey" id="turkey3" value="turkey"><label for="turkey3">Индейка</label>
-                                    <input type="checkbox" name="yogurt" id="yogurt3" value="yogurt"><label for="yogurt3">Йогурт</label>
-                                    <input type="checkbox" name="shrimp" id="shrimp3" value="shrimp"><label for="shrimp3">Креветки</label>
-                                    <input type="checkbox" name="chicken" id="chicken3" value="chicken"><label for="chicken3">Курица</label>
-                                    <input type="checkbox" name="wheat" id="wheat3" value="wheat"><label for="wheat3">Пшеница</label>
-                                    <input type="checkbox" name="rice" id="rice3" value="rice"><label for="rice3">Рис</label>
-                                </div>
-                                <a class="tab-link button-next" href="thanks.html"><img src="img/ok-white.png" alt="OK"></a>
-                            </div>
+                    <a class="tab-link button-next" data-tab="tab-test-product" href="#"><img src="img/ok-white.png" alt="OK"></a>
+                </div>
+                <div id="tab-test-product2"  class="tab-content">
+                    <h3>Тестируемые <br> продукты</h3>
+
+                    <p class="border-box-info">
+                        <span>Выберите 10 продуктов</span> на тестирование,<br>
+                        что бы узнать, как они влияют на ваш вес.<br>
+                        Рекомендуем выбирать продукты, которыми<br>
+                        Вы питаетесь чаще всего.</p>
+
+                    <div class="checkbox-container">
+                        <input type="checkbox" name="buckwheat" id="buckwheat2" value="buckwheat"><label
+                            for="buckwheat2">Гречка</label>
+                        <input type="checkbox" name="burrice" id="burrice2" value="burrice"><label for="burrice2">Бурый
+                        рис</label>
+                        <input type="checkbox" name="eggplant" id="eggplant2" value="eggplant"><label for="eggplant2">Баклажан</label>
+                        <input type="checkbox" name="melon" id="melon2" value="melon"><label for="melon2">Дыня</label>
+                        <input type="checkbox" name="turkey" id="turkey2" value="turkey"><label
+                            for="turkey2">Индейка</label>
+                        <input type="checkbox" name="yogurt" id="yogurt2" value="yogurt"><label
+                            for="yogurt2">Йогурт</label>
+                        <input type="checkbox" name="shrimp" id="shrimp2" value="shrimp"><label
+                            for="shrimp2">Креветки</label>
+                        <input type="checkbox" name="chicken" id="chicken2" value="chicken"><label
+                            for="chicken2">Курица</label>
+                        <input type="checkbox" name="wheat" id="wheat2" value="wheat"><label
+                            for="wheat2">Пшеница</label>
+                        <input type="checkbox" name="rice" id="rice2" value="rice"><label for="rice2">Рис</label>
+                    </div>
+                    <a data-tab="tab-test-product2" class="tab-link button-next" href="#"><img src="img/ok-white.png" alt="OK"></a>
+                </div>
+                <div id="tab-test-product3"  class="tab-content">
+                    <h3>Тестируемые <br> продукты</h3>
+
+                    <p class="border-box-info">
+                        <span>Выберите 10 продуктов</span> на тестирование,<br>
+                        что бы узнать, как они влияют на ваш вес.<br>
+                        Рекомендуем выбирать продукты, которыми<br>
+                        Вы питаетесь чаще всего.</p>
+
+                    <div class="checkbox-container">
+                        <input type="checkbox" name="buckwheat" id="buckwheat3" value="buckwheat"><label
+                            for="buckwheat3">Гречка</label>
+                        <input type="checkbox" name="burrice" id="burrice3" value="burrice"><label for="burrice3">Бурый
+                        рис</label>
+                        <input type="checkbox" name="eggplant" id="eggplant3" value="eggplant"><label for="eggplant3">Баклажан</label>
+                        <input type="checkbox" name="melon" id="melon3" value="melon"><label for="melon3">Дыня</label>
+                        <input type="checkbox" name="turkey" id="turkey3" value="turkey"><label
+                            for="turkey3">Индейка</label>
+                        <input type="checkbox" name="yogurt" id="yogurt3" value="yogurt"><label
+                            for="yogurt3">Йогурт</label>
+                        <input type="checkbox" name="shrimp" id="shrimp3" value="shrimp"><label
+                            for="shrimp3">Креветки</label>
+                        <input type="checkbox" name="chicken" id="chicken3" value="chicken"><label
+                            for="chicken3">Курица</label>
+                        <input type="checkbox" name="wheat" id="wheat3" value="wheat"><label
+                            for="wheat3">Пшеница</label>
+                        <input type="checkbox" name="rice" id="rice3" value="rice"><label for="rice3">Рис</label>
+                    </div>
+                    <a data-tab="tab-test-product3" class="tab-link button-next" href="thanks.html"><img src="img/ok-white.png" alt="OK"></a>
+                </div>
                         </form>
                     </div>
                 </div>
@@ -115,8 +140,8 @@
 
 
         function onlyDigits(e) {
-//            this.value = this.value.replace(/[^\d\.\,]/g, "");
-//            this.value = this.value.replace(/\,/g, '.');
+            this.value = this.value.replace(/[^\d\.\,]/g, "");
+            this.value = this.value.replace(/\,/g, '.');
 
             if(this.value.length > 1&&this.value.indexOf(".") == '-1') {
                 this.value = this.value.substr(0, 3);

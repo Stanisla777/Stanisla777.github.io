@@ -314,6 +314,12 @@ body {
 
 .smile-wrapper {
     margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 .tutorial-col {
@@ -396,7 +402,7 @@ body {
 .tutorial-col-abs1 {
     position: absolute;
     left: 0;
-    margin-top: 30px;
+    /*margin-top: 30px;*/
     width: 52px;
     text-align: center;
 }
@@ -405,7 +411,7 @@ body {
     text-align: center;
     position: absolute;
     right: 0;
-    margin-top: 30px;
+    /*margin-top: 30px;*/
     width: 49px;
 }
 
@@ -4583,6 +4589,7 @@ input.checkbox-yellow:checked + .stylized-checkbox::before {
     color: #d7dae1;
     font-size: 14px;
     opacity: 0.6;
+    padding-top: 5px;
 }
 .cross-out{
     text-decoration: line-through;
@@ -4624,6 +4631,55 @@ input.checkbox-yellow:checked + .stylized-checkbox::before {
     margin-right: 18px;
 }
 
+/*Правки set-account*/
+.wrapper-test-product{
+    position: relative;
+    margin: 35px 10px 0;
+    border-top: 1px dashed rgba(255, 255, 255, 0.3);
+}
+.input-test-product{
+    position: relative;
+    position: relative;
+    margin-left: 35px;
+}
+.input-test-product label {
+    display: block;
+    padding-top: 10px;
+}
+.input-test-product input[type="checkbox"] {
+    opacity: 0;
+}
+
+.input-test-product input[type="checkbox"] + label::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    margin-left: -30px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 9pt;
+    color: #fff;
+}
+
+.input-test-product input[type="checkbox"]:checked + label::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    height: 3px;
+    width: 9px;
+    border-left: 2px solid #66b63d;
+    border-bottom: 2px solid #66b63d;
+    transform: rotate(-46deg);
+    left: -24px;
+    top: 36px;
+}
+.input-test-product label .sub {
+    opacity: 0.6;
+}
 
 
 @media screen and (min-width: 321px) {
@@ -4685,6 +4741,20 @@ input.checkbox-yellow:checked + .stylized-checkbox::before {
     background-size: contain;
     margin: 0 auto;
 }
+.day-graduation{
+    /*padding-left: 15px;*/
+    margin-top: 10px;
+}
+.day-graduation p{
+    display: inline;
+    border-bottom: 1px dashed;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: dotted;
+    margin-left: 15px;
+}
+
 
 /*Мои медиа*/
 
@@ -4733,18 +4803,18 @@ input.checkbox-yellow:checked + .stylized-checkbox::before {
         width: 100px;
     }
     .trainer-name{
-        font-size: 16pt!important;
+        font-size: 14pt!important;
     }
     .tutorial-col-smile {
         width: 118px !important;
     }
     .tutorial-col-abs1{
         width: 60px !important;
-        margin-top: 10px!important;
+        /*margin-top: 10px!important;*/
     }
     .tutorial-col-abs2 {
         width: 53px !important;
-        margin-top: 10px!important;
+        /*margin-top: 10px!important;*/
     }
     .trainer-photo-wrap {
         width: 80px;
@@ -4755,6 +4825,9 @@ input.checkbox-yellow:checked + .stylized-checkbox::before {
     }
     .trainer-wrap {
         margin-top: 30px;
+    }
+    .trainer-photo-wrap {
+        width: 60px !important;
     }
 
 }
@@ -4773,9 +4846,9 @@ input.checkbox-yellow:checked + .stylized-checkbox::before {
         margin-top: 0;
     }
 
-    .trainer-photo-wrap {
-        width: 60px !important;
-    }
+    /*.trainer-photo-wrap {*/
+        /*width: 60px !important;*/
+    /*}*/
     .sms-admin, .sms-user {
         font-size: 8pt !important;
     }
