@@ -252,6 +252,7 @@
 <script>
     var mySwiper2 = new Swiper('.swiper-container.shoes', {
         // Optional parameters
+        init: false,
         pagination: '.pag-shoes',
         paginationClickable: true,
         loop: true,
@@ -259,6 +260,11 @@
         initialSlide: 0,
 //        paginationType: "custom",
         keyboardControl: true
+//        on: {
+//            init: function () {
+//                console.log('Привет');
+//            }
+//        }
 //        effect: 'fade',
 //        fade: { crossFade: true }
 
@@ -283,19 +289,34 @@
 //        }
 
 
+
     });
 
 
     $(window).load(function(){
+//        $(".pag-shoes .swiper-pagination-bullet").addClass("article-type");
+//
+//        $(".pag-shoes .swiper-pagination-bullet").eq(0).text("Все");
+//        $(".pag-shoes .swiper-pagination-bullet").eq(1).text("Рецепты");
+//        $(".pag-shoes .swiper-pagination-bullet").eq(2).text("Продукты");
+//        $(".pag-shoes .swiper-pagination-bullet").eq(3).text("Образ жизни");
+    });
+
+
+    function item(){
         $(".pag-shoes .swiper-pagination-bullet").addClass("article-type");
 
         $(".pag-shoes .swiper-pagination-bullet").eq(0).text("Все");
         $(".pag-shoes .swiper-pagination-bullet").eq(1).text("Рецепты");
         $(".pag-shoes .swiper-pagination-bullet").eq(2).text("Продукты");
         $(".pag-shoes .swiper-pagination-bullet").eq(3).text("Образ жизни");
-    });
+    }
 
 
+
+    mySwiper2.on('init', function() { item() });
+
+    mySwiper2.init();
 
 
 

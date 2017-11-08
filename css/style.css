@@ -111,7 +111,12 @@ body {
     vertical-align: middle;
     text-align: center;
 }
-
+.spoiler .swiper-wrapper{
+    height: auto!important;
+}
+.spoiler .swiper-slide{
+    height: auto!important;
+}
 .swiper-slide {
     text-align: center;
     font-size: 18px;
@@ -1557,18 +1562,24 @@ input::-webkit-inner-spin-button {
 .checkbox-container label{
     position: relative;
 }
-
+/*Костя*/
 .checkbox-container input[type="checkbox"]:checked + label::after{
     position: absolute;
     content: "";
     display: inline-block;
-    height: 5px;
-    width: 8px;
-    border-left: 2px solid #fff;
-    border-bottom: 2px solid #fff;
-    transform: rotate(-46deg);
-    left: -24px;
-    top: 16px;
+    /*height: 5px;*/
+    /*width: 8px;*/
+    height: 13px;
+    width: 14px;
+    background: url(../img/galka-wight.svg)center no-repeat;
+    background-size: contain;
+    /*border-left: 2px solid #fff;*/
+    /*border-bottom: 2px solid #fff;*/
+    /*transform: rotate(-46deg);*/
+    /*left: -24px;*/
+    /*top: 16px;*/
+    left: -26px;
+    top: 15px;
 }
 
 
@@ -2185,7 +2196,7 @@ input::-webkit-inner-spin-button {
     color: #fff;
     font-size: 19pt;
     padding-bottom: 3px;
-    height: 30px;
+    /*height: 30px;*/
 }
 
 .eat-name a {
@@ -4527,24 +4538,50 @@ input::-webkit-inner-spin-button {
     position: absolute;
 }
 
-.stylized-checkbox::after {
+/*.stylized-checkbox::after {*/
+    /*content: "";*/
+    /*display: inline-block;*/
+    /*height: 7px;*/
+    /*width: 11px;*/
+    /*border-left: 2px solid #fff;*/
+    /*border-bottom: 2px solid #fff;*/
+    /*transform: rotate(-46deg);*/
+/*}*/
+/*Костя*/
+.wrapper-shop-checkbox .stylized-checkbox::after{
+    position: absolute;
     content: "";
     display: inline-block;
-    height: 7px;
-    width: 11px;
-    border-left: 2px solid #fff;
-    border-bottom: 2px solid #fff;
-    transform: rotate(-46deg);
+    height: 18px;
+    width: 20px;
+    background: url(../img/galka-wight.svg)center no-repeat;
+    background-size: contain;
+    left: -27px;
+    top: 4px;
 }
 .wrapper-cooler-checkbox .stylized-checkbox::after {
+    /*content: "";*/
+    /*display: inline-block;*/
+    /*height: 4px;*/
+    /*width: 9px;*/
+    /*border-left: 3px solid #fff;*/
+    /*border-bottom: 3px solid #fff;*/
+    /*transform: rotate(-46deg);*/
+
+    position: absolute;
     content: "";
     display: inline-block;
-    height: 4px;
-    width: 9px;
-    border-left: 3px solid #fff;
-    border-bottom: 3px solid #fff;
-    transform: rotate(-46deg);
+    height: 18px;
+    width: 20px;
+    background: url(../img/galka-wight.svg)center no-repeat;
+    background-size: contain;
+    left: -28px;
+    top: 3px;
 }
+
+
+
+
 input.checkbox-gren:checked + .stylized-checkbox::before {
     background-color: #5bb820;
     border: none;
@@ -4669,19 +4706,62 @@ input.checkbox-yellow:checked + .stylized-checkbox::before {
     position: absolute;
     content: "";
     display: inline-block;
-    height: 3px;
-    width: 9px;
-    border-left: 2px solid #66b63d;
-    border-bottom: 2px solid #66b63d;
-    transform: rotate(-46deg);
-    left: -24px;
-    top: 36px;
+    /*height: 3px;*/
+    /*width: 9px;*/
+    /*border-left: 2px solid #66b63d;*/
+    /*border-bottom: 2px solid #66b63d;*/
+    /*transform: rotate(-46deg);*/
+
+    height: 13px;
+    width: 14px;
+    background: url(../img/galka-green.png)center no-repeat;
+    background-size: contain;
+    /*left: -24px;*/
+    /*top: 36px;*/
+    left: -26px;
+    top: 34px;
 }
 .input-test-product label .sub {
     opacity: 0.6;
 }
-
-
+/*Костя*/
+.pag-shoes .article-type {
+    font-size: 20px;
+}
+@media screen and (max-width: 410px) {
+    .pag-shoes .article-type {
+        font-size: 19px;
+    }
+}
+@media screen and (max-width: 360px) {
+    .pag-shoes .article-type {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 325px) {
+    .pag-shoes .article-type {
+        font-size: 16px;
+    }
+    .swiper-pagination-articles .swiper-pagination-bullet{
+        height: 38px!important;
+    }
+}
+@media screen and (max-width: 310px) {
+    .pag-shoes .article-type {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 280px) {
+    .pag-shoes .article-type {
+        font-size: 12px;
+    }
+}
+@media screen and (min-width: 330px) {
+    .pag-shoes .article-type {
+        /*font-size: 14pt;*/
+        margin-right: 10px;
+    }
+}
 @media screen and (min-width: 321px) {
     .plan-fact .tabs li {
         font-size: 11pt;
@@ -4689,10 +4769,10 @@ input.checkbox-yellow:checked + .stylized-checkbox::before {
         font-family: Lato-Light;
     }
 
-    .article-type {
-        font-size: 14pt;
-        margin-right: 10px;
-    }
+    /*.pag-shoes .article-type {*/
+        /*font-size: 14pt;*/
+        /*margin-right: 10px;*/
+    /*}*/
 
     .article-name {
         font-size: 19pt;
@@ -4915,7 +4995,17 @@ input.checkbox-yellow:checked + .stylized-checkbox::before {
     .weight-change .content .info {
         padding: 15px 20px;
     }
+    .wrapper-eat-type .eat-name{
+        font-size: 16pt
+    ;
+    }
 }
+
+/*@media screen and (max-width: 360px) {*/
+    /*.pag-shoes .article-type {*/
+        /*font-size: 13pt;*/
+    /*}*/
+/*}*/
 
 @media screen and (max-height: 500px){
     .my-day .content .selected-weight p {
