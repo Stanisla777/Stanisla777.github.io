@@ -34,7 +34,7 @@
                     <!--<input type="text" pattern="[0-9]*" class="weight-input" value="" name="width" maxlength="5" id="weight-input">-->
 
                     <div class="wrapper-input-weight">
-                        <input type="number"  class="onlyDigits weight-input"  name="width"  id="weight-input">
+                        <input type="text"  class="onlyDigits weight-input"  name="width"  id="weight-input">
                         <div class="input-weight-size">кг</div>
                     </div>
                     <a data-tab="tab-width" class="tab-link button-next" href="#"><img src="img/ok-white.png" alt="OK"></a>
@@ -137,19 +137,50 @@
 
 
 
+        //1вариант
+//        $(function () {
+//            $(".onlyDigits").keypress(function (e) {
+//                if (e.which != 8 && e.which != 0 && e.which != 46 && (e.which < 48 || e.which > 57)) {
+//                    return false;
+//                }
+//
+//
+//            });
+//        });
 
+
+        //2вариант
+//        $(function () {
+//
+//            $('.onlyDigits').keypress(function (e) {
+//                if (isNaN(this.value + "" + String.fromCharCode(e.charCode))) return false;
+//            })
+//                    .on("cut copy paste", function (e) {
+//                        e.preventDefault();
+//                    });
+//
+//        });
+
+        //3 вариант
 
         $(function(){
-            $(".onlyDigits").keypress(function (e) {
-                if (e.which != 8 && e.which != 0 && e.which != 46  && (e.which < 48 || e.which > 57)) {
 
-                    return false;
-                }
+            $('.onlyDigits').keyup(function(e) {
+                if(this.value!='-')
+                    while(isNaN(this.value))
+                        this.value = this.value.split('').reverse().join('').replace(/[\D]/i,'')
+                                .split('').reverse().join('');
+            })
+                    .on("cut copy paste",function(e){
+                        e.preventDefault();
+                    });
 
-            });
         });
 
-        function onlyDigits(e) {
+
+
+
+        function onlyDigits() {
 //            this.value = this.value.replace(/[^\d\.\,]/g, "");
 //            this.value = this.value.replace(/\,/g, '.');
 
@@ -161,14 +192,16 @@
                 this.value=this.value.substring(0, this.value.indexOf(".") + 2); // цифра 4, устанавливает количество цифр после запятой,
                                                                         //т.е. если 4, то максимум 3 цифры после запятой
             }
-
-
-            if (this.value.match(/\./g).length > 1) {
-                this.value = this.value.substr(0, this.value.lastIndexOf("."));
-            }
-
+//            if (this.value.match(/\./g).length > 1) {
+//                this.value = this.value.substr(0, this.value.lastIndexOf("."));
+//            }
         }
         document.querySelector(".onlyDigits").onkeyup = onlyDigits;
+        $(".wrapper-input-weight").on("click",function(){
+            $(this).find("input.weight-input").animate({
+                width: "70%"
+            }, 'slow').focus();
+        });
 
         $(".wrapper-input-weight").on("click",function(){
             $(this).find("input.weight-input").animate({
@@ -176,19 +209,13 @@
             }, 'slow').focus();
         });
 
-//        document.querySelector('.wrapper-input-weight input').addEventListener('input', function () {
-//            this.style.width = 0;
-//            this.style.width = this.scrollWidth + 'px';
-//        });
-
 
         $('.weight-input').on('focusin',function(){
             $(this).parents('.wrapper-input-weight').siblings('.button-next').addClass('but-next-js');
         });
-        $('.weight-input').on('focusout',function(){
-            $(this).parents('.wrapper-input-weight').siblings('.button-next').removeClass('but-next-js');
-        });
-
+//        $('.weight-input').on('focusout',function(){
+//            $(this).parents('.wrapper-input-weight').siblings('.button-next').removeClass('but-next-js');
+//        });
 
 
 

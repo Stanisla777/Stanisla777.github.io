@@ -752,7 +752,10 @@ input {
     .footer-social a {
         width: 70px;
         height: 70px;
-        line-height: 66px;
+        /*line-height: 66px;*/
+    }
+    .footer-social a i{
+        line-height: 70px;
     }
 
     .label {
@@ -1026,12 +1029,14 @@ input[type="password"]::-webkit-input-placeholder {
     width: 80px;
     height: 80px;
     display: inline-block;
-    line-height: 76px;
+    /*line-height: 76px;*/
     border-radius: 70px;
     margin: 0px 20px;
     box-shadow: 0px 0px 10px #353535;
 }
-
+.footer-social a i{
+    line-height: 80px;
+}
 
 /*Правка полей*/
 
@@ -4456,7 +4461,7 @@ input::-webkit-inner-spin-button {
     -ms-flex-pack: justify;
     justify-content: space-between;
 }
-.wrapper-shop-checkbox input[type="checkbox"],.wrapper-cooler-checkbox input[type="checkbox"]{
+.wrapper-shop-checkbox input[type="checkbox"],.wrapper-cooler-checkbox input[type="radio"]{
     opacity: 0;
     position: absolute;
 }
@@ -4517,13 +4522,13 @@ input::-webkit-inner-spin-button {
 .wrapper-shop-checkbox input[type="checkbox"]:checked + label::after {
     content: "";
 }
-.wrapper-cooler-checkbox input[type="checkbox"]:checked + label::after {
+.wrapper-cooler-checkbox input[type="radio"]:checked + label::after {
     content: "";
 }
 .wrapper-shop-checkbox input[type="checkbox"] + label::after {
     content: none;
 }
-.wrapper-cooler-checkbox input[type="checkbox"] + label::after {
+.wrapper-cooler-checkbox input[type="radio"] + label::after {
     content: none;
 }
 .wrapper-shop-checkbox .stylized-checkbox::after {

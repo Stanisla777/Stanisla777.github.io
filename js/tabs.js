@@ -15,7 +15,6 @@ $(document).ready(function(){
         $(this).parents('.tab-content').removeClass('current');
         $(this).parents('.tab-content').next('.tab-content').addClass('current');
         $('.acc-setting-tab li').removeClass('current');
-
         $(this).parents('form').siblings('.acc-setting-tab').find('li[data-tab='+tab_id+']').next('li').addClass('current');
     })
 
