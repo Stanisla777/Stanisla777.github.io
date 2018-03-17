@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouNELL. Тестовое блюдо</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+</head>
+<body>
+<div class="site-overlay"></div>
+<div class="main tomorrow-test">
+    <div class="header">
+        <a href="tomorrow-test.html" class="btn-prev">
+            <span class="x1"></span>
+            <span class="x2"></span>
+        </a>
+        <span class="page-title">Тестируемое блюдо</span>
+        <a href="tomorrow-test.html" class="back-x">
+            <span class="x1"></span>
+            <span class="x2"></span>
+        </a>
+    </div>
+    <div class="content">
+        <div class="opacity-round-box dish">
+            <div class="eat-first_eat-type dish-desc">
+                <p class="dish-type">Основное блюдо</p>
+                <p class="name">Бурый рис</p>
+                <p class="portion">300 г <span class="sub">(2 горсти)</span></p>
+            </div>
+        </div>
+        <div class="cooking-method">
+            <h4>Способ приготовления</h4>
+            <div class="radio-group">
+                <div class="input-group">
+                    <input type="radio" value="fried" name="cooking-method" id="fried">
+                    <label for="fried">Жарено</label>
+                </div>
+                <div class="input-group">
+                    <input type="radio" value="welded" name="cooking-method" id="welded" checked>
+                    <label for="welded">Сварено</label>
+                </div>
+                <div class="input-group">
+                    <input type="radio" value="steamed" name="cooking-method" id="steamed">
+                    <label for="steamed">Парено</label>
+                </div>
+                <div class="input-group">
+                    <input type="radio" value="prepared" name="cooking-method" id="prepared">
+                    <label for="prepared">Готовое</label>
+                </div>
+                <div class="input-group">
+                    <input type="radio" value="natural" name="cooking-method" id="natural">
+                    <label for="natural">Натур</label>
+                </div>
+            </div>
+            <div class="radio-group">
+                <div class="input-group">
+                    <input type="radio" value="home" name="cooking-location" id="home">
+                    <label for="home">Дома</label>
+                </div>
+                <div class="input-group">
+                    <input type="radio" value="shop" name="cooking-location" id="shop" checked>
+                    <label for="shop">В магазине</label>
+                </div>
+            </div>
+            <div class="serving-size">
+                <p>Размер порции</p>
+                <div class="swiper-container weight-slider" data-min-size="50" data-max-size="1000" data-step="50">
+                    <div class="swiper-wrapper">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="btn-thx button-next" href="tomorrow-test.html">Сохранить</a>
+    </div>
+</div>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="js/pushy.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/weight-slider.js"></script>
+</body>
+</html>

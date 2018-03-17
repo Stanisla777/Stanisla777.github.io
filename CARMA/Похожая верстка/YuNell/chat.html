@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouNELL. Превью</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+</head>
+<body>
+<nav class="pushy pushy-left" data-focus="#first-link">
+    <div class="pushy-content">
+        <!--<ul>-->
+        <!--для создания дополнительных списков использовать макет снизу-->
+        <!--<li class="pushy-submenu">
+            <button>Submenu 4</button>
+            <ul>
+                <li class="pushy-link"><a href="#">Item 1</a></li>
+                <li class="pushy-link"><a href="#">Item 2</a></li>
+                <li class="pushy-link"><a href="#">Item 3</a></li>
+            </ul>
+        </li>-->
+        <!--<li class="pushy-link"><a href="#">Item 1</a></li></ul>-->
+        <div class="personal-photo">
+            <img src="img/trainer.png">
+        </div>
+        <span class="personal-name">Роман Квартальнов</span>
+        <span class="separate-dotted"></span>
+        <ul class="personal-menu">
+            <li class="personal-li-graph"><a href="timeline.html">График</a></li>
+            <li class="personal-li-freeze"><a href="#">Холодильник</a></li>
+            <li class="personal-li-history"><a href="#">История</a></li>
+            <li class="personal-li-articles"><a href="articles.html">Статьи</a></li>
+            <li class="personal-li-social"><a href="chat.html">Чат</a></li>
+        </ul>
+        <span class="separate-dotted"></span>
+        <a href="#" class="personal-quit">Выйти</a>
+
+    </div>
+</nav>
+<div class="site-overlay"></div>
+<div class="main2">
+    <div class="header">
+        <button class="menu-btn">
+            <span class="menu-btn-span first-span"></span>
+            <span class="menu-btn-span second-span"></span>
+            <span class="menu-btn-span last-span"></span>
+        </button>
+        <span class="page-title">Консультация</span>
+        <a href="#" class="cart"><img src="img/icon-graph-white.png"></a>
+    </div>
+</div>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="js/pushy.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.spoiler_links').click(function () {
+            $(this).parent().children('div.spoiler_body').toggle('normal');
+            return false;
+        });
+        $('.close-spoiler').click(function () {
+            $(this).parent('div.spoiler_body').toggle('normal');
+            return false;
+        });
+    });
+</script>
+</body>
+</html>

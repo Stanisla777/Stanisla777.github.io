@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <title>YuNell</title>
+</head>
+<body>
+<div id="sign">
+    <div class="container">
+        <div class="caption">
+            <h1>YOU<span>NELL</span></h1>
+        </div>
+
+        <ul class="tabs">
+            <li class="tab-link current" data-tab="tab-1">Вход</li>
+            <li class="tab-link" data-tab="tab-2">Регистрация</li>
+        </ul>
+
+        <div id="tab-1" class="tab-content current">
+            <form action="#">
+                <span class="icons-user"><img src="img/User@1,5x.png" alt=""></span>
+                <input type="text" placeholder="Логин" class="login-input">
+                <span class="icons-user"><img src="img/Password@1,5x.png" alt=""></span>
+                <input type="password" placeholder="Пароль" class="password-input">
+                <a class="main-form-btn" href="account-settings.html">Войти</a>
+            </form>
+        </div>
+        <div id="tab-2" class="tab-content">
+            <form action="#">
+                <span class="icons-user"><img src="img/User@1,5x.png" alt=""></span>
+                <input type="text" required placeholder="Логин" class="login-input">
+                <span class="icons-user"><img src="img/Password@1,5x.png" alt=""></span>
+                <input type="password" required placeholder="Пароль" class="password-input">
+                <a class="main-form-btn" href="account-settings.html">Создать аккаунт</a>
+            </form>
+        </div>
+    </div><!-- container -->
+    <div class="footer-social">
+        <!--<a href="#"><img src="img/multiply-nodes-2.png" alt=""></a>
+        <a href="#"><img src="img/multiply-nodes-3.png" alt=""></a>-->
+        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
+    </div>
+</div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="js/tabs.js"></script>
+<script type="text/javascript">
+    $(".login-input").focus(function(){
+        $(".footer-social a").addClass("hidden");
+    });
+    $(".login-input").focusout(function(){
+        $(".footer-social a").removeClass("hidden");
+    });
+    $(".password-input").focus(function(){
+        $(".footer-social a").addClass("hidden");
+    });
+    $(".password-input").focusout(function(){
+        $(".footer-social a").removeClass("hidden");
+    });
+</script>
+</body>
+</html>

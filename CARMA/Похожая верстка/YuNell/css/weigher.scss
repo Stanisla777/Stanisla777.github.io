@@ -1,0 +1,78 @@
+.weigher-wrap{
+  position: absolute;
+  -moz-transform: translateX(-50%); /* Для Firefox */
+  -ms-transform: translateX(-50%); /* Для IE */
+  -webkit-transform: translateX(-50%); /* Для Safari, Chrome, iOS */
+  -o-transform: translateX(-50%); /* Для Opera */
+  transform: translateX(-50%);
+  left: 50%;
+  margin-top: 20px;
+}
+$radius-circle:800px;
+.weigher {
+  position: relative;
+  //margin-top: 30px;
+  //margin-bottom: 20px;
+  //margin-left: 0;
+  width: $radius-circle;
+  height: $radius-circle;
+  border-radius: 50%;
+  //border: 1px dotted #000;
+
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -ms-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  ul{
+    position: absolute;
+    top:0;
+    left:50%;
+    list-style:none;
+    li{
+      position: absolute;
+      top:0;
+      left:0;
+      $transform-origin-val-x:0px;
+      $transform-origin-val-y:$radius-circle/2;
+      &.float{
+        width: 2px;
+        height: 2px;
+        background:#fff;
+      }
+      &.int{
+        &:before{
+          content: " ";
+          display: block;
+          width: 2px;
+          height: 8px;
+          margin-top: -4px;
+          background:#fff;
+        }
+        span{
+          display: block;
+          margin-left: -8px;
+        }
+      }
+      @for $i from 1 through 360 {
+        &:nth-child(#{$i}) {
+          -webkit-transform-origin: $transform-origin-val-x $transform-origin-val-y;
+          -ms-transform-origin: $transform-origin-val-x $transform-origin-val-y;
+          transform-origin: $transform-origin-val-x $transform-origin-val-y;
+          -webkit-transform: rotate(#{$i}deg);
+          -moz-transform: rotate(#{$i}deg);
+          -ms-transform: rotate(#{$i}deg);
+          -o-transform: rotate(#{$i}deg);
+          transform: rotate(#{$i}deg);
+        }
+      }
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head lang="en">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta content='true' name='HandheldFriendly'/>
+    <meta content='width' name='MobileOptimized'/>
+    <meta content='yes' name='apple-mobile-web-app-capable'/>
+    <meta name="google" value="notranslate">
+    <meta name="theme-color" content="#ffffff">
+    <title>CARMA</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="../../assets/css/easydropdown.css" rel="stylesheet">
+    <link href="../../assets/css/jquery-ui.min.css" rel="stylesheet">
+    <link href="../../assets/css/slick-slider.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/slider.css"/>
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css"/>
+    <link href="../../assets/css/tcal.css" rel="stylesheet">
+    <link href="../../assets/css/app.css" rel="stylesheet">
+    <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+</head>
+
+<body class="home">
+
+
+<!--/*Окно фильтр*/-->
+<div class="window-filtr">
+    <form action="#" method="post">
+
+        <section class="header">
+            <div class="container">
+
+                <div class="flex-space-between-center">
+                    <div class="header-inner-left">
+                        <a class="close-icom js-close" href="#"></a>
+                    </div>
+                    <div class="header-inner-center">
+                        <h1>Фильтры</h1>
+                    </div>
+                    <div class="header-inner-right">
+                        <p class="cur-pointer js-pull-off-checbox" >Сбросить</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="main-content-brand">
+            <div class="container">
+
+                <ul class="mar-top-10 list-filters">
+                    <li class="list-server  flex-space-around">
+                        <p class="name-server">Избранное</p>
+                        <input type="checkbox" class="checkbox-green" id="box1" name="box1" value="10">
+                        <label class="stylized-checkbox" for="box1"></label>
+                    </li>
+
+                    <li class="list-server  flex-space-around">
+                        <p class="name-server">Только автосервисы</p>
+                        <input type="checkbox" class="checkbox-green" id="box2" name="box1" value="10">
+                        <label class="stylized-checkbox" for="box2"></label>
+                    </li>
+
+                    <li class="list-server  flex-space-around">
+                        <p class="name-server">Только с фото</p>
+                        <input type="checkbox" class="checkbox-green" checked id="box3" name="box1" value="10">
+                        <label class="stylized-checkbox" for="box3"></label>
+                    </li>
+                    <li class="list-server  flex-space-around">
+                        <p class="name-server">Есть сайт</p>
+                        <input type="checkbox" class="checkbox-green" id="box4" name="box1" value="10">
+                        <label class="stylized-checkbox" for="box4"></label>
+                    </li>
+
+
+                    <li class="list-server  flex-space-around">
+                        <p class="name-server">Работают сейчас</p>
+                        <input type="checkbox" class="checkbox-green" checked id="box5" name="box1" value="10">
+                        <label class="stylized-checkbox" for="box5"></label>
+                    </li>
+
+                    <li class="list-server  flex-space-around">
+                        <p class="name-server">Круглосуточно</p>
+                        <input type="checkbox" class="checkbox-green" id="box6" name="box1" value="10">
+                        <label class="stylized-checkbox" for="box6"></label>
+                    </li>
+
+                    <li class="list-server  flex-space-around">
+                        <p class="name-server">Есть эвакуатор</p>
+                        <input type="checkbox" class="checkbox-green" checked id="box7" name="box1" value="10">
+                        <label class="stylized-checkbox" for="box7"></label>
+                    </li>
+                    <li class="list-server  flex-space-around">
+                        <p class="name-server">Оплата картой</p>
+                        <input type="checkbox" class="checkbox-green" id="box8" name="box1" value="10">
+                        <label class="stylized-checkbox" for="box8"></label>
+                    </li>
+                    <li class="list-server  flex-space-around">
+                        <p class="name-server">Wi-Fi</p>
+                        <input type="checkbox" class="checkbox-green" id="box9" name="box1" value="10">
+                        <label class="stylized-checkbox" for="box9"></label>
+                    </li>
+
+                </ul>
+
+                <div class="wrapper-price-range">
+                    <p class=" name-server">Стоимость норма часа</p>
+
+                    <div>
+                        <span class="" id="lower"></span>
+                        <span class="">p</span>
+
+                        <p class="in-block"> - </p>
+                        <span id="upper"></span>
+                        <span class="">p</span>
+                    </div>
+
+                    <div class="range-slider">
+                        <div class=" " id="slider"></div>
+                    </div>
+                    <input type="hidden" class="js-input-range-low">
+                    <input type="hidden" class="js-input-range-top">
+                </div>
+
+                <ul class="">
+                    <li class="list-server">
+                        <p class="name-server">Марки автомобилей</p>
+                    </li>
+
+                    <li class="list-server">
+                        <p class="name-server">Виды услуг</p>
+                    </li>
+                </ul>
+
+            </div>
+
+        </section>
+
+        <footer class="footer-call-to-action">
+            <div class="container">
+                <input class="input-hide call-to-action" type="submit" value="Применить" style="display: inline-block;">
+            </div>
+        </footer>
+    </form>
+</div>
+
+<div class="main-page-window wrap search-step-3">
+
+<header class="header header-bg-grey">
+    <div class="container">
+
+        <div class="header-inner">
+            <div class="flex-space-between-center">
+                <div class="header-inner-left">
+                    <div class="menu-icon">
+                        <img src="../../assets/img/iconMenu.png" alt="">
+                    </div>
+                </div>
+
+                <div class="header-inner-center">
+                    <h1>Автосервисы</h1>
+                </div>
+
+                <div class="header-inner-right">
+                    <div class="js-filtr-icon filtr-icon"></div>
+                    <span class="nunber-actions nunber-actions-icon">3</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-pad-0">
+            <ul class="color-grey wrapper-tabs-criteria flex-space-around tabs_menu">
+                <li class="active">Нормочас</li>
+                <li>Расстояние</li>
+                <li >Рейтинг</li>
+            </ul>
+        </div>
+
+    </div>
+</header>
+
+<section class="main-content-page">
+<div class="container">
+
+<div class="tabs">
+<!--Это нормочас-->
+
+<div class="wrapper-category-information info active-album flex-center">
+    <a href="car-service-profile-client.html" class="wrapper-item-category">
+        <div style="background-image: url('http://i42.woman.ru/womanru/images/gallery/1/e/g_1ed5096d77cf06e5a478901ba3aed003.jpg?02')"
+             class="item-job-foto">
+            <span class="rating-grey">2.4</span>
+        </div>
+        <div class="item-brief-compony">
+            <p class="item-job-name">Гранд Авто Сервис</p>
+            <p class="item-job-distance">1,5 км</p>
+            <p class="working-hour">Нормочас <span>1400 р</span></p>
+            <div class="list-of-works">Ремонт АКПП, ремонт МКПП...</div>
+        </div>
+    </a>
+
+    <a href="car-service-profile-client.html" class="wrapper-item-category">
+        <div style="background-image: url('http://s017.radikal.ru/i440/1510/1c/81d2eb70a4c4.png')"
+             class="item-job-foto">
+            <span class="rating-grey">2.4</span>
+        </div>
+        <div class="item-brief-compony">
+            <p class="item-job-name">Александр Бойко</p>
+            <p class="item-job-distance">1,5 км</p>
+            <p class="working-hour">Нормочас <span>1400 р</span></p>
+            <div class="list-of-works">Ремонт АКПП, ремонт МКПП...</div>
+        </div>
+    </a>
+
+    <!--<a href="car-service-profile-client.html" class="wrapper-item-category">-->
+    <!--<div style="background-image: url('http://i42.woman.ru/womanru/images/gallery/1/e/g_1ed5096d77cf06e5a478901ba3aed003.jpg?02')"-->
+    <!--class="item-job-foto">-->
+    <!--<span class="rating-grey">2.4</span>-->
+    <!--</div>-->
+    <!--<div class="item-brief-compony">-->
+    <!--<p class="item-job-name">Гранд Авто Сервис</p>-->
+    <!--<p class="item-job-distance">1,5 км</p>-->
+    <!--<p class="working-hour">Нормочас <span>1400 р</span></p>-->
+    <!--<div class="list-of-works">Ремонт АКПП, ремонт МКПП...</div>-->
+    <!--</div>-->
+    <!--</a>-->
+
+    <!--<a href="car-service-profile-client.html" class="wrapper-item-category">-->
+    <!--<div style="background-image: url('http://i42.woman.ru/womanru/images/gallery/1/e/g_1ed5096d77cf06e5a478901ba3aed003.jpg?02')"-->
+    <!--class="item-job-foto">-->
+    <!--<span class="rating-grey">2.4</span>-->
+    <!--</div>-->
+    <!--<div class="item-brief-compony">-->
+    <!--<p class="item-job-name">Гранд Авто Сервис</p>-->
+    <!--<p class="item-job-distance">1,5 км</p>-->
+    <!--<p class="working-hour">Нормочас <span>1400 р</span></p>-->
+    <!--<div class="list-of-works">Ремонт АКПП, ремонт МКПП...</div>-->
+    <!--</div>-->
+    <!--</a>-->
+
+    <!--<a href="car-service-profile-client.html" class="wrapper-item-category">-->
+    <!--<div style="background-image: url('http://i42.woman.ru/womanru/images/gallery/1/e/g_1ed5096d77cf06e5a478901ba3aed003.jpg?02')"-->
+    <!--class="item-job-foto">-->
+    <!--<span class="rating-grey">2.4</span>-->
+    <!--</div>-->
+    <!--<div class="item-brief-compony">-->
+    <!--<p class="item-job-name">Гранд Авто Сервис</p>-->
+    <!--<p class="item-job-distance">1,5 км</p>-->
+    <!--<p class="working-hour">Нормочас <span>1400 р</span></p>-->
+    <!--<div class="list-of-works">Ремонт АКПП, ремонт МКПП...</div>-->
+    <!--</div>-->
+    <!--</a>-->
+
+    <!--<a href="creating-task-1-variant.html" class="wrapper-item-category">-->
+    <!--<div style="background-image: url('http://i42.woman.ru/womanru/images/gallery/1/e/g_1ed5096d77cf06e5a478901ba3aed003.jpg?02')"-->
+    <!--class="item-job-foto">-->
+    <!--<span class="rating-grey">2.4</span>-->
+    <!--</div>-->
+    <!--<div class="item-brief-compony">-->
+    <!--<p class="item-job-name">Гранд Авто Сервис</p>-->
+    <!--<p class="item-job-distance">1,5 км</p>-->
+    <!--<p class="working-hour">Нормочас <span>1400 р</span></p>-->
+    <!--<div class="list-of-works">Ремонт АКПП, ремонт МКПП...</div>-->
+    <!--</div>-->
+    <!--</a>-->
+    <!--<div class="mar-bot-60"></div>-->
+
+
+
+</div>
+
+<!--Это расстояние-->
+
+<div class="wrapper-item-category info">
+    <a href="car-service-profile-client.html" class="wrapper-item-category">
+        <div style="background-image: url('http://i42.woman.ru/womanru/images/gallery/1/e/g_1ed5096d77cf06e5a478901ba3aed003.jpg?02')"
+             class="item-job-foto">
+            <span class="rating-grey">2.4</span>
+        </div>
+        <div class="item-brief-compony">
+            <p class="item-job-name">Гранд Авто Сервис</p>
+            <p class="item-job-distance">1,5 км</p>
+            <p class="working-hour">Нормочас <span>1400 р</span></p>
+            <div class="list-of-works">Ремонт АКПП, ремонт МКПП...</div>
+        </div>
+    </a>
+
+    <a href="car-service-profile-client.html" class="wrapper-item-category">
+        <div style="background-image: url('http://s017.radikal.ru/i440/1510/1c/81d2eb70a4c4.png')"
+             class="item-job-foto">
+            <span class="rating-grey">2.4</span>
+        </div>
+        <div class="item-brief-compony">
+            <p class="item-job-name">Александр Бойко</p>
+            <p class="item-job-distance">1,5 км</p>
+            <p class="working-hour">Нормочас <span>1400 р</span></p>
+            <div class="list-of-works">Ремонт АКПП, ремонт МКПП...</div>
+        </div>
+    </a>
+
+    <a href="car-service-profile-client.html" class="wrapper-item-category">
+        <div style="background-image: url('http://i42.woman.ru/womanru/images/gallery/1/e/g_1ed5096d77cf06e5a478901ba3aed003.jpg?02')"
+             class="item-job-foto">
+            <span class="rating-grey">2.4</span>
+        </div>
+        <div class="item-brief-compony">
+            <p class="item-job-name">Гранд Авто Сервис</p>
+            <p class="item-job-distance">1,5 км</p>
+            <p class="working-hour">Нормочас <span>1400 р</span></p>
+            <div class="list-of-works">Ремонт АКПП, ремонт МКПП...</div>
+        </div>
+    </a>
+
+    <a href="car-service-profile-client.html" class="wrapper-item-category">
+        <div style="background-image: url('http://i42.woman.ru/womanru/images/gallery/1/e/g_1ed5096d77cf06e5a478901ba3aed003.jpg?02')"
+             class="item-job-foto">
+            <span class="rating-grey">2.4</span>
+        </div>
+        <div class="item-brief-compony">
+            <p class="item-job-name">Гранд Авто Сервис</p>
+            <p class="item-job-distance">1,5 км</p>
+            <p class="working-hour">Нормочас <span>1400 р</span></p>
+            <div class="list-of-works">Ремонт АКПП, ремонт МКПП...</div>
+        </div>
+    </a>
+
+    <a href="car-service-profile-client.html" class="wrapper-item-category">
+        <div style="background-image: url('http://i42.woman.ru/womanru/images/gallery/1/e/g_1ed5096d77cf06e5a478901ba3aed003.jpg?02')"
+             class="item-job-foto">
+            <span class="rating-grey">2.4</span>
+        </div>
+        <div class="item-brief-compony">
+            <p class="item-job-name">Гранд Авто Сервис</p>
+            <p class="item-job-distance">1,5 км</p>
+            <p class="working-hour">Нормочас <span>1400 р</span></p>
+            <div class="list-of-works">Ремонт АКПП, ремонт МКПП...</div>
+        </div>
+    </a>
+
+    <a href="creating-task-1-variant.html" class="wrapper-item-category">
+        <div style="background-image: url('http://i42.woman.ru/womanru/images/gallery/1/e/g_1ed5096d77cf06e5a478901ba3aed003.jpg?02')"
+             class="item-job-foto">
+            <span class="rating-grey">2.4</span>
+        </div>
+        <div class="item-brief-compony">
+            <p class="item-job-name">Гранд Авто Сервис</p>
+            <p class="item-job-distance">1,5 км</p>
+            <p class="working-hour">Нормочас <span>1400 р</span></p>
+            <div class="list-of-works">Ремонт АКПП, ремонт МКПП...</div>
+        </div>
+    </a>
+    <div class="mar-bot-60"></div>
+
+</div>
+
+<!--Это рейтинг-->
+
+<div class="wrapper-item-category info">
+    <a href="car-service-profile-client.html" class="wrapper-item-category">
+        <div style="background-image: url('http://i42.woman.ru/womanru/images/gallery/1/e/g_1ed5096d77cf06e5a478901ba3aed003.jpg?02')"
+             class="item-job-foto">
+            <span class="rating-grey">2.4</span>
+        </div>
+        <div class="item-brief-compony">
+            <p class="item-job-name">Гранд Авто Сервис</p>
+            <p class="item-job-distance">1,5 км</p>
+            <p class="working-hour">Нормочас <span>1400 р</span></p>
+            <div class="list-of-works">Ремонт АКПП, ремонт МКПП...</div>
+        </div>
+    </a>
+
+    <a href="car-service-profile-client.html" class="wrapper-item-category">
+        <div style="background-image: url('http://s017.radikal.ru/i440/1510/1c/81d2eb70a4c4.png')"
+             class="item-job-foto">
+            <span class="rating-grey">2.4</span>
+        </div>
+        <div class="item-brief-compony">
+            <p class="item-job-name">Александр Бойко</p>
+            <p class="item-job-distance">1,5 км</p>
+            <p class="working-hour">Нормочас <span>1400 р</span></p>
+            <div class="list-of-works">Ремонт АКПП, ремонт МКПП...</div>
+        </div>
+    </a>
+
+    <a href="car-service-profile-client.html" class="wrapper-item-category">
+        <div style="background-image: url('http://i42.woman.ru/womanru/images/gallery/1/e/g_1ed5096d77cf06e5a478901ba3aed003.jpg?02')"
+             class="item-job-foto">
+            <span class="rating-grey">2.4</span>
+        </div>
+        <div class="item-brief-compony">
+            <p class="item-job-name">Гранд Авто Сервис</p>
+            <p class="item-job-distance">1,5 км</p>
+            <p class="working-hour">Нормочас <span>1400 р</span></p>
+            <div class="list-of-works">Ремонт АКПП, ремонт МКПП...</div>
+        </div>
+    </a>
+
+    <a href="car-service-profile-client.html" class="wrapper-item-category">
+        <div style="background-image: url('http://i42.woman.ru/womanru/images/gallery/1/e/g_1ed5096d77cf06e5a478901ba3aed003.jpg?02')"
+             class="item-job-foto">
+            <span class="rating-grey">2.4</span>
+        </div>
+        <div class="item-brief-compony">
+            <p class="item-job-name">Гранд Авто Сервис</p>
+            <p class="item-job-distance">1,5 км</p>
+            <p class="working-hour">Нормочас <span>1400 р</span></p>
+            <div class="list-of-works">Ремонт АКПП, ремонт МКПП...</div>
+        </div>
+    </a>
+
+    <a href="car-service-profile-client.html" class="wrapper-item-category">
+        <div style="background-image: url('http://i42.woman.ru/womanru/images/gallery/1/e/g_1ed5096d77cf06e5a478901ba3aed003.jpg?02')"
+             class="item-job-foto">
+            <span class="rating-grey">2.4</span>
+        </div>
+        <div class="item-brief-compony">
+            <p class="item-job-name">Гранд Авто Сервис</p>
+            <p class="item-job-distance">1,5 км</p>
+            <p class="working-hour">Нормочас <span>1400 р</span></p>
+            <div class="list-of-works">Ремонт АКПП, ремонт МКПП...</div>
+        </div>
+    </a>
+
+    <a href="creating-task-1-variant.html" class="wrapper-item-category">
+        <div style="background-image: url('http://i42.woman.ru/womanru/images/gallery/1/e/g_1ed5096d77cf06e5a478901ba3aed003.jpg?02')"
+             class="item-job-foto">
+            <span class="rating-grey">2.4</span>
+        </div>
+        <div class="item-brief-compony">
+            <p class="item-job-name">Гранд Авто Сервис</p>
+            <p class="item-job-distance">1,5 км</p>
+            <p class="working-hour">Нормочас <span>1400 р</span></p>
+            <div class="list-of-works">Ремонт АКПП, ремонт МКПП...</div>
+        </div>
+    </a>
+    <div class="mar-bot-60"></div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+<footer class="footer-abs footer footer-call-to-action">
+    <div class="container">
+        <a href="creating-task-1.html" class="call-to-action">
+            <p>Создать задание</p>
+        </a>
+    </div>
+</footer>
+<script src="../../assets/js/jquery-3.1.1.min.js"></script>
+<script src="../../assets/js/jquery-ui.min.js"></script>
+<script src="../../assets/js/jquery.ui.touch-punch.js"></script>
+<script src="../../assets/js/svg4everybody.min.js"></script>
+<script src="../../assets/js/slick.min.js"></script>
+<script src="../../assets/js/jquery.fancybox.min.js"></script>
+<script src="../../assets/js/app.js"></script>
+<script src="../../assets/js/jquery.easydropdown.js"></script>
+<script src="../../assets/js/slider.js"></script>
+<script src="../../assets/js/jquery.knob.min.js"></script>
+<script src="../../assets/js/bootstrap.min.js"></script>
+<script src="../../assets/js/jquery.tmpl.js"></script>
+<script src="../../assets/js/tcal.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</body>
+
+</html>

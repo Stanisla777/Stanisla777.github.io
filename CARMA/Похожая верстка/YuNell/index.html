@@ -1,0 +1,143 @@
+<html>
+<head>
+    <title>YouNELL. Превью</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+</head>
+<body>
+<div class="start-wrap" id="start-win">
+    <div class="start-slide">
+        <div class="first-slide-wrapper">
+            <img src="img/play.png" class="play-button" id="start-button">
+            <p class="first-slide-title">Название методики</p>
+            <p class="first-slide-article">Межденародная дистанционная академия коррекции веса Нелл Кешишьян</p>
+        </div>
+    </div>
+</div>
+<section class="main" id="main">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+ 
+            <div class="swiper-slide">
+
+                <div class="first-slide-col-abs first-slide-col-abs1">
+                    <div class="glass-block-small">-100</div>
+                    <img src="img/Bitmap999.png">
+                </div>
+                <div class="first-slide-col-abs first-slide-col-abs2">
+                    <img src="img/Bitmap99.png">
+                    <div class="glass-block-small">+100</div>
+                </div>
+
+                <div class="icon-block"><img src="img/Bitmap9.png" class="icon"></div>
+                <div class="glass-block"><span class="glass-number">-300</span>г</div>
+
+                <div class="short-prev">
+                    <div class="short-prev-icon"><img src="img/fill_green.png"></div>
+                    <div class="short-prev-text">
+                        <p class="short-prev-title">Индивидуальный подбор продуктов</p>
+                        <p class="short-prev-article">Все продукты по разному влияют на вес каждого человека. Сервис
+                            выявляет еду, подходящую именно вам.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <!-- блоки для боковых вставок -->
+                <div class="smile-wrapper">
+                    <div class="tutorial-col-abs1">
+                        <img src="img/eat1.png">
+                        <div class="tutorial-text">
+                            <p class="tutorial-time">15:00</p>
+                            <p class="tutorial-type">обед</p>
+                        </div>
+                    </div>
+
+                    <div class="tutorial-col-abs2">
+                        <img src="img/Bitmap2.png">
+                        <div class="tutorial-text">
+                            <p class="tutorial-time">19:00</p>
+                            <p class="tutorial-type">ужин</p>
+                        </div>
+                    </div>
+                    <!-- центральный блок с иконкой -->
+                    <div class="tutorial-col-smile">
+                        <!--<img src="img/smiles/smile_glad.png">-->
+                        <img src="img/smile-happy.png">
+                        <div class="tutorial-text">
+                            <p class="tutorial-time">17:00</p>
+                            <p class="tutorial-type">перекус</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="short-prev">
+                    <div class="short-prev-icon"><img src="img/icon-graph-green.png"></div>
+                    <div class="short-prev-text">
+                        <p class="short-prev-title">Сформированный график питания</p>
+                        <p class="short-prev-article">Правильный режим питания способствует хорошему самочувствию,
+                            высокой работоспособности и отличному настроению.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- третий слайд -->
+
+            <div class="swiper-slide">
+                <div class="trainer-wrap">
+                    <p class="trainer-name">Дмитрий</p>
+                    <p class="trainer-specialisation">специалист по методике</p>
+                    <div class="trainer-photo-wrap">
+                        <img src="img/trainer.png">
+                    </div>
+                </div>
+                <div class="sms-wrap">
+                    <div class="sms-admin">Вы сильно скинули в весе. Как вы себя чувствуете?</div>
+                    <div class="sms-user">Спасибо, Дмитрий. Все отлично.</div>
+                </div>
+
+                <div class="short-prev">
+                    <div class="short-prev-icon"><img src="img/icon-social-green.png"></div>
+                    <div class="short-prev-text">
+                        <p class="short-prev-title">Связь с создателями методики</p>
+                        <p class="short-prev-article">Квалифицированная поддержка специалистов, связавшись с которыми,
+                            вы гарантированно получите быстрый и исчерпывающий ответ.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url('img/tut4_2.png');">
+                
+                <div class="short-prev">
+                    <div class="short-prev-icon"><img src="img/ok.png"></div>
+                    <div class="short-prev-text">
+                        <p class="short-prev-title">Видимый результат за короткие сроки</p>
+                        <p class="short-prev-article">Люди по всему миру уже в течении месяца добиваются нормализации
+                            веса, улучшения здоровья и настроения.</p>
+                    </div>
+                    <a href="signup.html" class="start-button">Начать</a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+<!-- Swiper JS -->
+<script src="js/swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: false,
+        effect: 'fade'
+    });
+</script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript">
+    $("#start-button").click(function () {
+        $("#start-win").fadeOut(600);
+    });
+</script>
+</body>
+</html>
