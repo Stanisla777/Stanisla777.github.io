@@ -137,9 +137,9 @@
                             <img src="assets/img/SliderImg.jpg" alt=""/>
 
                             <div class="wrapper-slide-description">
-                                <h3>hffhfhfhflflflflf</h3>
+                                <h3>Lorem Ipsum is simply dummy text of</h3>
 
-                                <p>hshshshshshshhhhhhhhhh!</p>
+                                <p>Lorem Ipsum is simply dummy!</p>
                             </div>
                         </div>
                         <div class="wrapper-slide">
@@ -261,7 +261,79 @@
 
                     <div data-type="right-side-tab" class="wrapper-special-offers-info right-side-tab">
                         <!--Контейнер с содержание 2-->
-                        <p>Содержание 2</p>
+                        <form class="tabs-form" action="#">
+
+                            <label for="input_1">Other information about you</label>
+                            <input id="input_1" class="input adress" placeholder="Example: Wichita Falls, Texas 76301"
+                                   type="text"/>
+
+                            <div class="checkbox mar-top-10">
+                                <input id="checkbox_1" type="checkbox"/>
+                                <label for="checkbox_1">Include surrounding suburbs</label>
+                            </div>
+
+
+                            <div class="wrapper-input_selects">
+                                <div class="flex-space-between-center mar-top-20">
+                                    <div class="wrapper-label">
+                                        <label for="input_2">Property Type :</label>
+                                    </div>
+                                    <div class="wrapper-input">
+                                        <input class="input-first" id="input_2" readonly type="text"/>
+
+                                        <div class="input-select">
+                                            <i class="fa fa-caret-up" aria-hidden="true"></i>
+                                            <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wrapper-input_select">
+                                    <ul>
+                                        <li>Select one</li>
+                                        <li>Select two</li>
+                                        <li>Select three</li>
+                                        <li>Select four</li>
+                                        <li>Select five</li>
+                                        <li>Select six</li>
+                                        <li>Select seven</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="wrapper-input_selects">
+
+                                <div class="flex-space-between-center mar-top-20">
+                                    <div class="wrapper-label">
+                                        <label for="input_3">Bedrooms :</label>
+                                    </div>
+                                    <div class="wrapper-input">
+                                        <input id="input_3" readonly type="text"/>
+
+                                        <div class="input-select">
+                                            <i class="fa fa-caret-up" aria-hidden="true"></i>
+                                            <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="wrapper-input_select">
+                                    <ul>
+                                        <li>Маша</li>
+                                        <li>Даша</li>
+                                        <li>Катя</li>
+                                        <li>Юля</li>
+                                        <li>Марина</li>
+                                        <li>Оля</li>
+                                        <li>Катя</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                            <button type="submit">Search</button>
+                            <div style="clear: both;"></div>
+
+                        </form>
                     </div>
 
                 </div>
@@ -558,8 +630,8 @@
             adaptiveHeight:true,
             controls:true,
             pager: false,
-            nextText:"&gt;",
-            prevText:"&lt;"
+            nextText:"",
+            prevText:""
         });
 
 
@@ -572,7 +644,7 @@
             onSliderLoad: function(){
                 var width = $(".wrapper-slider .bx-pager").width();
                 $(".wrapper-slider .bx-pager").css('marginLeft',-width/2);
-                $('.wrapper-slide').css('display','block');
+                $('.wrapper-slider .wrapper-slide').css('display','block');
             }
 //
         });
@@ -593,21 +665,6 @@
         var last;
         var e;
         var select;
-
-
-
-//        function compile_massive (el_wrap_select){
-//           massive=[];
-//
-//            $(el_wrap_select).each(function(index,elem){
-//                massive.push($(elem).text())
-//            });
-//            last = massive.length;
-//            console.log(last)
-//        }
-
-
-
 
 
             //Подставляю в input value первый select
