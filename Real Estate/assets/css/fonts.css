@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'FontAwesoome';
+    src: url('FontAwesoome/fonts/fontawesome-webfont.eot');
+    src: url('FontAwesoome/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+    url('FontAwesoome/fonts/fontawesome-webfont.woff') format('woff'),
+    url('FontAwesoome/fonts/fontawesome-webfont.ttf') format('truetype'),
+    url('FontAwesoome/fonts/fontawesome-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'ACaslonPro';
+    src: url('../fonts/ACaslonPro/acaslonpro.eot');
+    src: url('../fonts/ACaslonPro/acaslonpro.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ACaslonPro/acaslonpro.woff') format('woff'),
+    url('../fonts/ACaslonPro/acaslonpro.ttf') format('truetype'),
+    url('../fonts/ACaslonPro/acaslonpro.svg') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+/*@font-face {*/
+    /*font-family: 'Arial';*/
+    /*src: url('../fonts/Arial/arial.eot');*/
+    /*src: url('../fonts/Arial/arial.eot?#iefix') format('embedded-opentype'),*/
+    /*url('../fonts/Arial/arial.woff') format('woff'),*/
+    /*url('../fonts/Arial/arial.ttf') format('truetype'),*/
+    /*url('../fonts/Arial/arial.svg') format('svg');*/
+    /*font-weight: normal;*/
+    /*font-style: normal;*/
+/*}*/
+@font-face {
+    font-family: 'ArialRoundedMtBold';
+    src: url('../fonts/ArialRoundedMtBold/arialroundedmtbold.eot');
+    src: url('../fonts/ArialRoundedMtBold/arialroundedmtbold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ArialRoundedMtBold/arialroundedmtbold.woff') format('woff'),
+    url('../fonts/ArialRoundedMtBold/ArialRoundedMtBold.ttf') format('truetype'),
+    url('../fonts/ArialRoundedMtBold/arialroundedmtbold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'MicrosoftSansSerif';
+    src: url('../fonts/MicrosoftSansSerif/microsoftsansserif.eot');
+    src: url('../fonts/MicrosoftSansSerif/microsoftsansserif.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MicrosoftSansSerif/microsoftsansserif.woff') format('woff'),
+    url('../fonts/MicrosoftSansSerif/MicrosoftSansSerif.ttf') format('truetype'),
+    url('../fonts/MicrosoftSansSerif/microsoftsansserif.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
