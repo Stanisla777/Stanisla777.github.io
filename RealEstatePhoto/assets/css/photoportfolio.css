@@ -305,7 +305,8 @@
     .right-side-tree{
         width: 79%;
     }
-    .item-tree, .tree-trunk{
+
+    .item-tree, .tree-trunk, .beginning-tree, .tree-trunk-first{
         display: none;
     }
     .wrapper-cart{
