@@ -171,19 +171,18 @@
 }
 
 .wrapper-foto-interviewee{
+    /*display: none;*/
     width: 25vw;
     height: 25vw;
     max-width: 400px;
     max-height: 400px;
     min-width: 160px;
     min-height: 160px;
-
-
-
     border-radius: 50%;
     background: url("../img/FotoInterviewee.jpg")center no-repeat;
     background-size: cover;
     flex-shrink: 0;
+    opacity: 0;
 }
 .wrapper-foto-interviewee img{
     width: 25vw;
@@ -333,6 +332,9 @@
     }
     .wrapper-template-text {
         margin-top: 30px;
+    }
+    .section-looking-perfect {
+        padding-bottom: 40px;
     }
 
 }

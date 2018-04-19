@@ -843,13 +843,10 @@ ul.header-menu li.active a{
         width: 230px;
     }
 }
+
 @media screen and (max-width: 380px){
-    .wrapper-footer ul li:first-child {
-        margin-top: 5px;
-    }
-    .wrapper-footer div[class^="wrapper-footer-col"]:not(.wrapper-footer-col-1) {
-        padding-top: 20px;
-    }
+
+
     .underside-footer{
         flex-direction: column;
     }
@@ -858,8 +855,13 @@ ul.header-menu li.active a{
     }
 
 }
-@media screen and (max-width: 470px){
-
+@media screen and (max-width: 376px){
+    .wrapper-footer ul li:first-child {
+        margin-top: 5px;
+    }
+    .wrapper-footer div[class^="wrapper-footer-col"]:not(.wrapper-footer-col-1) {
+        padding-top: 20px;
+    }
 
 }
 @media screen and (max-width: 470px){
