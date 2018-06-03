@@ -180,7 +180,7 @@
 
 @media screen and (max-width: 400px){
     .wrapper-time .time, .wrapper-temp .temp {
-        font-size: 17px;
+        font-size: 25px;
     }
     .wrapper-icon-clock,.wrapper-icon-cloud{
         width: 24px;
