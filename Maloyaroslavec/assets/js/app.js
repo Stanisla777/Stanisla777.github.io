@@ -81,18 +81,20 @@ $(document).ready(function ($) {
 
     //Цвет меняется иконки
 
-    //var offset_top = $('.footer').offset().top;
-    //
-    //$(document).scroll(function() {
-    //
-    //    if ($(this).scrollTop() >= offset_top) {
-    //        // создаем эффекты и анимацию
-    //        $(".media-logo").css('color','#fff')
-    //
-    //    }else{
-    //        $(".media-logo").css('color','#000')
-    //    }
-    //});
+
+
+    $(document).scroll(function() {
+
+        var offset_top = $('.footer').offset().top;
+
+        if ($(this).scrollTop() >= offset_top) {
+            // создаем эффекты и анимацию
+            $(".media-logo").css('color','#fff')
+
+        }else{
+            $(".media-logo").css('color','#000')
+        }
+    });
 
    // Слайдер по клику на область с заголовком новости
 

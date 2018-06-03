@@ -55,6 +55,10 @@
     .wrapper-banner{
         flex-direction: column;
     }
+    .wrapper-banner .first-block{
+        order: 2;
+        margin-top: 35px;
+    }
 
 }
 
@@ -65,10 +69,10 @@
     .wrapper-first-block-title p{
         font-size: 11px;
     }
-    .wrapper-banner .first-block{
-        order: 2;
-        margin-top: 35px;
-    }
+    /*.wrapper-banner .first-block{*/
+        /*order: 2;*/
+        /*margin-top: 35px;*/
+    /*}*/
 
     .footer .footer-navigation{
         display: none;
@@ -96,6 +100,10 @@
     }
     .news-title .item-slide-image{
         font-size: 19px;
+    }
+
+    #banner-after-navigation {
+        padding-top: 25px;
     }
 
 
@@ -179,7 +187,7 @@
     }
 
     header .second-block .block p {
-        line-height: 18px;
+        line-height: 24px;
     }
     .wrapper-date {
         margin-right: 25px;
