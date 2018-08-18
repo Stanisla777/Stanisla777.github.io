@@ -5026,17 +5026,17 @@ m39 -90 c-10 -25 -23 -15 -23 19 1 30 2 31 15 14 7 -11 11 -25 8 -33z"/>
 <script>
     $(document).ready(function() {
 
-//        if ($(window).width() <= 670) {
-////            $('#canvas-2-tel').show();
-//            canvas_1('canvas-2-tel');
-//        }
-//        else {
-////            $('#canvas-2').show();
-//            canvas_1('canvas-2');
-//        }
+        if ($(window).width() <= 670) {
+//            $('#canvas-2-tel').show();
+            canvas_1('canvas-2-tel');
+        }
+        else {
+//            $('#canvas-2').show();
+            canvas_1('canvas-2');
+        }
 
 
-        function canvas_1 (){
+        function canvas_1 (el){
             $('#canvas').css('opacity',1);
             new Vivus('canvas', {
                         start: 'autostart',
@@ -5047,16 +5047,16 @@ m39 -90 c-10 -25 -23 -15 -23 19 1 30 2 31 15 14 7 -11 11 -25 8 -33z"/>
                         obj.el.classList.add('fill');
 
                         setTimeout(hide,3000);
-                        setTimeout(show,3000);
-                        setTimeout(canvas_2,3000);
-                        console.log()
+                        setTimeout(show,3000,el);
+                        setTimeout(canvas_2,3000,el);
+                        console.log(el)
                     }
             );
         }
-        canvas_1();
+//        canvas_1();
 
         function canvas_2 (el2){
-            new Vivus('canvas-2-tel', {
+            new Vivus(el2, {
                         start: 'autostart',
                         type: 'delayed',
                         duration: 600
@@ -5073,7 +5073,7 @@ m39 -90 c-10 -25 -23 -15 -23 19 1 30 2 31 15 14 7 -11 11 -25 8 -33z"/>
             $('#canvas').fadeOut(2000);
         }
         function show(rt){
-            $('#canvas-2-tel').show()
+            $('#'+rt).show()
         }
 
 
