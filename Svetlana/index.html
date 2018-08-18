@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>Светлана</title>
     <!--<link rel="stylesheet" href="main.css"/>-->
     <style>
 
@@ -36,7 +36,7 @@
 <div class="" style="width: 1100px;margin: 0 auto">
 
 
-<svg style="" id="canvas" version="1.0" xmlns="http://www.w3.org/2000/svg"
+<svg style="opacity: 0;" id="canvas" version="1.0" xmlns="http://www.w3.org/2000/svg"
      width="700.000000pt" height="523.000000pt" viewBox="0 0 700.000000 523.000000"
      preserveAspectRatio="xMidYMid meet">
 
@@ -3201,7 +3201,7 @@ c-3 -8 -6 -5 -6 6 -1 11 2 17 5 13 3 -3 4 -12 1 -19z m-7 -39 c0 -27 -17 -23
 <path d="M40 26 c0 -2 7 -7 16 -10 8 -3 12 -2 9 4 -6 10 -25 14 -25 6z"/>
 </g>
 </svg>
-<svg style="display: none;" id="canvas-2-tel-2" version="1.0" xmlns="http://www.w3.org/2000/svg"
+<svg style="display: none;" id="canvas-2-tel" version="1.0" xmlns="http://www.w3.org/2000/svg"
      width="774.000000pt" height="1160.000000pt" viewBox="0 0 774.000000 1160.000000"
      preserveAspectRatio="xMidYMid meet">
 <metadata>
@@ -5026,17 +5026,18 @@ m39 -90 c-10 -25 -23 -15 -23 19 1 30 2 31 15 14 7 -11 11 -25 8 -33z"/>
 <script>
     $(document).ready(function() {
 
-        if ($(window).width() <= 670) {
-//            $('#canvas-2-tel').show();
-            canvas_1('canvas-2-tel');
-        }
-        else {
-//            $('#canvas-2').show();
-            canvas_1('canvas-2');
-        }
+//        if ($(window).width() <= 670) {
+////            $('#canvas-2-tel').show();
+//            canvas_1('canvas-2-tel');
+//        }
+//        else {
+////            $('#canvas-2').show();
+//            canvas_1('canvas-2');
+//        }
 
 
-        function canvas_1 (el){
+        function canvas_1 (){
+            $('#canvas').css('opacity',1);
             new Vivus('canvas', {
                         start: 'autostart',
                         type: 'delayed',
@@ -5046,16 +5047,16 @@ m39 -90 c-10 -25 -23 -15 -23 19 1 30 2 31 15 14 7 -11 11 -25 8 -33z"/>
                         obj.el.classList.add('fill');
 
                         setTimeout(hide,3000);
-                        setTimeout(show,3000,el);
-                        setTimeout(canvas_2,3000,el);
-                        console.log(el)
+                        setTimeout(show,3000);
+                        setTimeout(canvas_2,3000);
+                        console.log()
                     }
             );
         }
-//        canvas_1();
+        canvas_1();
 
         function canvas_2 (el2){
-            new Vivus(el2, {
+            new Vivus('canvas-2-tel', {
                         start: 'autostart',
                         type: 'delayed',
                         duration: 600
@@ -5072,7 +5073,7 @@ m39 -90 c-10 -25 -23 -15 -23 19 1 30 2 31 15 14 7 -11 11 -25 8 -33z"/>
             $('#canvas').fadeOut(2000);
         }
         function show(rt){
-            $('#'+rt).show()
+            $('#canvas-2-tel').show()
         }
 
 
