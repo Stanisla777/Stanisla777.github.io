@@ -42,7 +42,7 @@
 <div class="" style="width: 1100px;margin: 0 auto">
 
 
-<svg style="opacity: 0;" id="canvas" version="1.0" xmlns="http://www.w3.org/2000/svg"
+<svg style="display: none;opacity: 0;" id="canvas" version="1.0" xmlns="http://www.w3.org/2000/svg"
      width="700.000000pt" height="523.000000pt" viewBox="0 0 700.000000 523.000000"
      preserveAspectRatio="xMidYMid meet">
 
@@ -3208,7 +3208,7 @@ c-3 -8 -6 -5 -6 6 -1 11 2 17 5 13 3 -3 4 -12 1 -19z m-7 -39 c0 -27 -17 -23
 </g>
 </svg>
 
-<svg style="display: none;" id="canvas-2-tel" version="1.0" xmlns="http://www.w3.org/2000/svg"
+<svg style="display: none;" id="canvas-3-tel" version="1.0" xmlns="http://www.w3.org/2000/svg"
      width="300.000000pt" height="450.000000pt" viewBox="0 0 300.000000 450.000000"
      preserveAspectRatio="xMidYMid meet">
 <metadata>
@@ -4431,7 +4431,7 @@ m48 -147 c-3 -8 -6 -5 -6 6 -1 11 2 17 5 13 3 -3 4 -12 1 -19z"/>
 <path d="M2517 70 c3 -30 7 -57 9 -59 7 -8 2 64 -6 89 -6 16 -7 6 -3 -30z"/>
 </g>
 </svg>
-<!--<svg style="display: none;" id="canvas-2-tel" version="1.0" xmlns="http://www.w3.org/2000/svg"
+<svg style="display: none;" id="canvas-2-tel" version="1.0" xmlns="http://www.w3.org/2000/svg"
      width="300.000000pt" height="450.000000pt" viewBox="0 0 300.000000 450.000000"
      preserveAspectRatio="xMidYMid meet">
 <metadata>
@@ -4935,14 +4935,14 @@ m37 -4 c0 -5 -7 -10 -15 -10 -8 0 -15 5 -15 10 0 6 7 10 15 10 8 0 15 -4 15
 -10 -3 -10 -7z"/>
 <path d="M36 22 c-2 -4 4 -8 15 -8 10 0 19 4 19 8 0 10 -27 10 -34 0z"/>
 </g>
-</svg>-->
+</svg>
 
 
-<div class="wr" style="width: 600px;">600</div>
-<div class="wr" style="width: 500px;">500</div>
-<div class="wr" style="width: 400px;">400</div>
-<div class="wr" style="width: 300px;">300</div>
-<div class="wr" style="width: 200px;">200</div>
+<!--<div class="wr" style="width: 600px;">600</div>-->
+<!--<div class="wr" style="width: 500px;">500</div>-->
+<!--<div class="wr" style="width: 400px;">400</div>-->
+<!--<div class="wr" style="width: 300px;">300</div>-->
+<!--<div class="wr" style="width: 200px;">200</div>-->
 
 </div>
 
@@ -4953,28 +4953,26 @@ m37 -4 c0 -5 -7 -10 -15 -10 -8 0 -15 5 -15 10 0 6 7 10 15 10 8 0 15 -4 15
     $(document).ready(function() {
 
         if ($(window).width() <= 670) {
-//            $('#canvas-2-tel').show();
-            canvas_1('canvas-2-tel');
+            canvas_1('canvas-2-tel','canvas-3-tel');
         }
         else {
-//            $('#canvas-2').show();
-            canvas_1('canvas-2');
+            canvas_1('canvas-2','canvas');
         }
 
 
-        function canvas_1 (el){
-            $('#canvas').css('opacity',1);
-            new Vivus('canvas', {
+        function canvas_1 (el,el_2){
+            $('#'+ el_2).css({'opacity':1,'display':'block'});
+            new Vivus(el_2, {
                         start: 'autostart',
                         type: 'delayed',
-                        duration: 200
+                        duration: 100
                     },
                     function (obj) {
                         obj.el.classList.add('fill');
 
-                        setTimeout(hide,3000);
-                        setTimeout(show,3000,el);
-                        setTimeout(canvas_2,3000,el);
+                        setTimeout(hide,3000,el_2);
+                        setTimeout(show,5000,el);
+                        setTimeout(canvas_2,5000,el);
                         console.log(el)
                     }
             );
@@ -4995,11 +4993,11 @@ m37 -4 c0 -5 -7 -10 -15 -10 -8 0 -15 5 -15 10 0 6 7 10 15 10 8 0 15 -4 15
         }
 
 
-        function hide(){
-            $('#canvas').fadeOut(2000);
+        function hide(rt){
+            $('#'+rt).fadeOut(2000);
         }
         function show(rt){
-            $('#'+rt).show()
+            $('#'+rt).css('display','flex')
         }
 
 
