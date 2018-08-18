@@ -4953,14 +4953,14 @@ m37 -4 c0 -5 -7 -10 -15 -10 -8 0 -15 5 -15 10 0 6 7 10 15 10 8 0 15 -4 15
     $(document).ready(function() {
 
         if ($(window).width() <= 670) {
-            canvas_1('canvas-2-tel','canvas-3-tel');
+            canvas_1('canvas-2-tel','canvas-3-tel',300);
         }
         else {
-            canvas_1('canvas-2','canvas');
+            canvas_1('canvas-2','canvas',600);
         }
 
 
-        function canvas_1 (el,el_2){
+        function canvas_1 (el,el_2,el_3){
             $('#'+ el_2).css({'opacity':1,'display':'block'});
             new Vivus(el_2, {
                         start: 'autostart',
@@ -4972,18 +4972,17 @@ m37 -4 c0 -5 -7 -10 -15 -10 -8 0 -15 5 -15 10 0 6 7 10 15 10 8 0 15 -4 15
 
                         setTimeout(hide,3000,el_2);
                         setTimeout(show,5000,el);
-                        setTimeout(canvas_2,5000,el);
-                        console.log(el)
+                        setTimeout(canvas_2,5000,el,el_3);
                     }
             );
         }
 //        canvas_1();
 
-        function canvas_2 (el2){
+        function canvas_2 (el2,el3){
             new Vivus(el2, {
                         start: 'autostart',
                         type: 'delayed',
-                        duration: 600
+                        duration: el3
                     },
 
                     function (obj) {
