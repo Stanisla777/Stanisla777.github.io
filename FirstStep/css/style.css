@@ -35,25 +35,31 @@ html {
   overflow: hidden;
   position: relative;
 }
-.page-content {
-  background: url("../img/bacground.jpg") center;
-  background-size: cover!important;
-  background-color: #e5e5e5;
-  background-attachment: fixed!important;
-}
-
-/*.page-content{*/
+/*.page-content {*/
   /*background: url("../img/bacground.jpg") center;*/
-  /*-webkit-background-size: 100%;*/
-  /*-moz-background-size: 100%;*/
-  /*-o-background-size: 100%;*/
-  /*background-size: 100%;*/
-  /*-webkit-background-size: cover;*/
-  /*-moz-background-size: cover;*/
-  /*-o-background-size: cover;*/
-  /*background-size: cover;*/
-  /*!*background-attachment: fixed;*!*/
+  /*background-size: cover!important;*/
+  /*background-color: #e5e5e5;*/
+  /*background-attachment: fixed!important;*/
 /*}*/
+/*.page-content:before{*/
+  /**/
+/*}*/
+
+.page-content:before{
+  content: "";
+  display: block;
+  position: fixed;
+  background: url("../img/bacground.jpg") center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 section,
 header,
 footer {
