@@ -1,0 +1,496 @@
+@media screen and (max-width: 1190px){
+    .button{
+        font-size: 17px;
+    }
+    .wrapper-waiting-you p:nth-child(1) {
+        font-size: 36px;
+    }
+    .wrapper-waiting-you p:nth-child(2) {
+        font-size: 27px;
+        margin-top: 8px;
+    }
+    .wrapper-waiting-you p:nth-child(3) {
+        font-size: 55px;
+        margin-top: 3px;
+    }
+
+    .submit-request-3 .wrapper-submit-application{
+        padding-left: 0;
+    }
+
+
+}
+
+@media screen and (max-width: 1120px){
+    #upcoming-event__timer, .countdown_2{
+        font-size: 35px;
+        text-shadow: 0 0 7px #1d1c1c;
+    }
+    .upcoming-event__date-event{
+        font-size: 35px;
+    }
+    .wrapper-day-month{
+        margin: 0 auto;
+    }
+    .upcoming-event__title{
+        margin-bottom: 15px;
+    }
+
+    .wrapper-submit-application{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .submit-request-3 .part-in-program{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .healing-level {
+        width: calc(100%/4  - 10px);
+        margin-bottom: 10px;
+    }
+
+}
+
+@media screen and (max-width: 990px){
+    .wrapper-form__info{
+        flex-wrap: wrap;
+        width: 90%;
+    }
+    .wrapper-form__input:not(:last-child){
+        margin-bottom: 15px;
+    }
+
+    .slider-reviews-item{
+        flex-direction: column;
+    }
+    .slider-reviews-item__des{
+        width: 100%;
+    }
+    .slider-reviews-item__img{
+        order: -1;
+        margin: 30px auto 0;
+        width: 56%;
+    }
+
+
+
+
+
+
+
+}
+@media screen and (max-width: 970px){
+    .upcoming-event{
+        flex-direction: column;
+    }
+    .upcoming-event__title{
+        text-align: center;
+        text-shadow: 0 0 5px #000;
+        font-weight: 400;
+        font-size: 21px;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .healing-level {
+        width: calc(100%/3  - 10px);
+    }
+}
+
+
+@media screen and (max-width: 860px){
+    .wrapper-form__easy-connection div:first-child{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .submit-request-2__title {
+        font-size: 27px;
+        line-height: 35px;
+    }
+
+    .wrapper-part-in-program{
+        text-align: center;
+        margin: 20px auto;
+    }
+    .submit-request-2 .button{
+        margin: 30px auto;
+    }
+
+    .section-course-program {
+        padding-top: 110px;
+    }
+
+    .wrapper-owl-carousel .owl-nav .owl-prev {
+        left: -31px;
+    }
+    .wrapper-owl-carousel .owl-nav .owl-prev:hover {
+        left: -32px;
+    }
+
+    .wrapper-owl-carousel .owl-nav .owl-next{
+        right: -31px;
+    }
+    .wrapper-owl-carousel .owl-nav .owl-next:hover {
+        right: -32px;
+    }
+
+    .wrapper-owl-carousel .owl-nav button {
+        width: 24px;
+        height: 38px;
+        background-size: contain!important;
+        background-repeat: no-repeat!important;
+        /*margin-top: -19px;*/
+    }
+    .wrapper-dream-day__slogan{
+        text-shadow: 0 0 1px #b9b7b7
+    }
+
+    .wrapper-what-system{
+        margin-left: 0;
+        width: 100%;
+        top: -253px;
+    }
+
+    .wrapper-foto-authors{
+        width: 35%;
+        top: -241px;
+    }
+
+
+}
+
+@media screen and (max-width: 770px){
+    .wrapper-waiting-you p:nth-child(2){
+        width: 70%;
+    }
+
+    .watch-video{
+        color: #e9e7f5;
+    }
+
+    .section-five-levels{
+        padding-bottom: 140px;
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 750px){
+    .wrapper-header-logo{
+        width: 100%;
+        order: -1;
+    }
+    .header{
+        justify-content: center;
+    }
+    .header__logo{
+        margin: 0 auto;
+    }
+
+    .h2-title{
+        font-size: 25px;
+        line-height: 34px;
+    }
+    .parts-in-program{
+        line-height: 27px;
+    }
+
+    .section-desription-course h2 {
+        font-size: 25px;
+        line-height: 38px;
+    }
+    .desription-course-subtitle{
+        font-size: 17px;
+        margin-top: 15px;
+    }
+
+
+    .wrapper-course-authors{
+        margin-top: 50px;
+        font-size: 28px;
+        line-height: 40px;
+    }
+    .wrapper-course-authors p:nth-child(1) {
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+
+    .included-price-col {
+        width: calc(100% - 30px);
+    }
+    .included-price__item:not(:last-child){
+        margin-bottom: 20px;
+    }
+
+
+}
+
+@media screen and (max-width: 700px) {
+    .healing-level {
+        width: calc(100%/2  - 10px);
+    }
+}
+
+@media screen and (max-width: 660px){
+    .wrapper-form__input{
+        width: 320px;
+    }
+    .wrapper-form .button{
+        width: 320px;
+        max-width: 320px;
+    }
+    .wrapper-form__info {
+        width: 100%;
+        justify-content: center;
+    }
+    .wrapper-form__input{
+        margin-right: 0;
+    }
+    .h1-title-subtitle{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 625px){
+    .header__social-icon{
+        justify-content: center;
+    }
+    .header__slogan{
+        text-align: center;
+    }
+    .main-section__h1-title{
+        font-size: 33px;
+    }
+    .end-slogan{
+        font-size: 28px;
+        line-height: 35px;
+    }
+    .upcoming-event__date-event{
+        margin-top: 33px;
+    }
+    .col-advantage {
+        width: calc(100% - 30px);
+    }
+
+
+    .wrapper-waiting-you p:nth-child(2) {
+        width: 100%;
+    }
+
+    .wrapper-dream-day__location {
+        font-size: 23px;
+        margin-bottom: 20px;
+    }
+    .section-amazing-results{
+        padding-top: 130px;
+    }
+
+    .section-amazing-results h3{
+        font-size: 18px;
+        line-height: 27px;
+    }
+    .container-amazing-results{
+        padding: 0 15px 0 15px;
+    }
+    .amazing-list__item p {
+        line-height: 21px;
+    }
+    .amazing-list__item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    .wrapper-foto-authors{
+        right: 50%;
+        margin-right: -120px;
+        top: -250px;
+    }
+    .section-desription-course{
+        padding-bottom: 200px;
+        padding-top: 100px;
+    }
+
+    .wrapper-authors{
+        margin-top: 70px;
+    }
+
+    .section-course-authors{
+        padding-bottom: 130px;
+    }
+    .total-another-man{
+        font-size: 22px;
+        line-height: 35px;
+    }
+    .submit-request-6 .h2-title{
+        line-height: 35px;
+    }
+    .section-tour-program{
+        padding-top: 10px;
+    }
+
+    .wrapper-tour-program .h3-title{
+
+    }
+
+    .section-desription-course {
+        background-position: center -27px;
+    }
+
+    .section-cost-course{
+        padding-top: 100px;
+        padding-bottom: 90px;
+    }
+
+
+
+
+    .logo-first-step{
+        margin: 0 auto;
+    }
+    .course-location{
+        margin: 10px auto;
+        text-align: center;
+        text-shadow: 0 0 5px #f7f4f4;
+    }
+
+    .course-date{
+        margin: 3px auto;
+        text-align: center;
+        text-shadow: 0 0 5px #f7f4f4;
+    }
+    .section-baly{
+        padding-bottom: 200px;
+        background-position: center 0px;
+    }
+
+    .wrapper-privacy-policy{
+        flex-direction: column;
+        /*margin-top: 20px;*/
+    }
+    .wrapper-privacy-policy a:last-child{
+        text-align: center;
+    }
+    .wrapper-privacy-policy__item:not(:last-child){
+        margin-bottom: 10px;
+    }
+
+    .price-list, .discount-system-list{
+        padding-left: 0;
+    }
+
+
+
+}
+
+@media screen and (max-width: 570px) {
+
+}
+
+@media screen and (max-width: 520px){
+    .wrapper-form__easy-connection div{
+        width: 30%;
+        margin-bottom: 15px;
+    }
+    .wrapper-form__agree-conditions {
+        margin-top: 5px;
+    }
+    .wrapper-waiting-you p:nth-child(1) {
+        font-size: 30px;
+    }
+    .wrapper-waiting-you p:nth-child(2) {
+        font-size: 25px;
+    }
+    .wrapper-waiting-you p:nth-child(3) {
+        font-size: 45px;
+    }
+
+    .section-course-program h3 {
+        font-size: 25px;
+    }
+
+    .detail-about-authors__right-col{
+        float: none;
+        margin: 10px auto;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 500px) {
+    .healing-level {
+        width: calc(100%/1  - 10px);
+    }
+    .healing-level h3{
+        text-align: center;
+        font-size: 18px;
+    }
+    .healing-level__description{
+        font-size: 14px;
+    }
+    .wrapper-five-levels {
+        margin-top: 40px;
+    }
+    .result-treatment p{
+        font-size: 21px;
+    }
+
+    .section-baly{
+        padding-top: 160px;
+        padding-bottom: 160px;
+    }
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1120px) {
+
+
+}
+
+@media screen and (max-width: 970px){
+
+}
+@media screen and (max-width: 970px){
+
+}
+@media screen and (max-width: 970px){
+
+}
+@media screen and (max-width: 970px){
+
+}
+@media screen and (max-width: 970px){
+
+}
+@media screen and (max-width: 970px){
+
+}
+
+@media screen and (max-width: 590px){
+
+}
