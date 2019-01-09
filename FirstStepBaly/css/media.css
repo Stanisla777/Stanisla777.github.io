@@ -22,7 +22,7 @@
 }
 
 @media screen and (max-width: 1120px){
-    #upcoming-event__timer, .countdown_2{
+    .countdown_2{
         font-size: 35px;
         text-shadow: 0 0 7px #1d1c1c;
     }
@@ -258,6 +258,14 @@
 }
 
 @media screen and (max-width: 625px){
+
+    .countdown_2{
+        font-size: 30px;
+        text-shadow: 0 0 7px #1d1c1c;
+    }
+    .upcoming-event__date-event {
+        font-size: 30px;
+    }
     .header__social-icon{
         justify-content: center;
     }
@@ -265,10 +273,10 @@
         text-align: center;
     }
     .main-section__h1-title{
-        font-size: 33px;
+        font-size: 28px;
     }
     .end-slogan{
-        font-size: 28px;
+        font-size: 25px;
         line-height: 35px;
     }
     .upcoming-event__date-event{
@@ -308,10 +316,10 @@
     .wrapper-foto-authors{
         right: 50%;
         margin-right: -120px;
-        top: -250px;
+        top: -278px;
     }
     .section-desription-course{
-        padding-bottom: 200px;
+        padding-bottom: 230px;
         padding-top: 100px;
     }
 
@@ -325,6 +333,7 @@
     .total-another-man{
         font-size: 22px;
         line-height: 35px;
+        text-align: left;
     }
     .submit-request-6 .h2-title{
         line-height: 35px;
@@ -347,7 +356,9 @@
     }
 
 
-
+    .about-first-step p {
+        text-align: left;
+    }
 
     .logo-first-step{
         margin: 0 auto;
@@ -383,6 +394,48 @@
         padding-left: 0;
     }
 
+
+    .wrapper-waiting-you p:nth-child(2) {
+        font-size: 25px;
+    }
+
+    .wrapper-waiting-you p:nth-child(3) {
+        font-size: 48px;
+    }
+    .advantages-list__item {
+        font-size: 18px;
+    }
+    .submit-request-2__title {
+        font-size: 25px;
+        text-align: left;
+    }
+    .slider-reviews-item__img {
+        width: 70%;
+    }
+    .slider-reviews-item__des {
+        text-align: left;
+    }
+    .wrapper-what-system p{
+        text-align: left;
+    }
+
+    .wrapper-authors__ara:first-child{
+        margin-right: 10px;
+        width: calc(50% - 5px);
+    }
+    .wrapper-authors__ara:last-child{
+        width: calc(50% - 5px);
+        margin-right: 0;
+    }
+    .detail-about-authors h3{
+        font-weight: 500;
+    }
+    .program-will-give{
+        text-align: left;
+    }
+    .price-list li:not(:last-child) {
+        margin-bottom: 15px;
+    }
 
 
 }
