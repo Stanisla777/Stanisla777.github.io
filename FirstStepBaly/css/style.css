@@ -5,6 +5,7 @@
   padding: 0;
   margin: 0;
 }
+html * { max-height:999999px; }
 html,
 body {
   width: 100%;
