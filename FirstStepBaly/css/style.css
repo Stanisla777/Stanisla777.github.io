@@ -11,8 +11,6 @@ html,
 body {
   width: 100%;
   height: 100%;
-  max-height: 1000000em; /* Chrome for Android */
-  -moz-text-size-adjust: none; /* Firefox Mobile */
 }
 body {
   position: relative;
@@ -25,7 +23,10 @@ body {
   line-height: normal;
   height: auto;
   min-height: 100%;
-  -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+
 }
 html {
   font-family: sans-serif;
@@ -418,8 +419,8 @@ section {
 }
 .main-section__h1-title {
   margin-top: 21px;
-    max-height: 1000000em; /* Chrome for Android */
-    -moz-text-size-adjust: none; /* Firefox Mobile */
+  max-height: 99999px;
+
 }
 .h1-title-subtitle {
   font-size: 20px;
