@@ -420,6 +420,7 @@ section {
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: none;
   text-size-adjust: none;
+
   max-height: 99999px;
 }
 .h1-title-subtitle {
