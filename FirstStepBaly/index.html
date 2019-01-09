@@ -1317,16 +1317,16 @@
 
             onInitialized: function(){
 
-                $('.owl-carousel-2').children('.owl-nav').addClass('owl-nav-pagers');
-
-                if ($(window).width()<=430){
-                    $('.slider-reviews-item__des').readmore({
-                        maxHeight: 240,
-                        speed: 1000,
-                        moreLink: '<a style="color: #000" href="#">Подробнее</a>',
-                        lessLink: '<a style="color: #000"  href="#">Скрыть</a>'
-                    });
-                }
+                // $('.owl-carousel-2').children('.owl-nav').addClass('owl-nav-pagers');
+                //
+                // if ($(window).width()<=430){
+                //     $('.slider-reviews-item__des').readmore({
+                //         maxHeight: 240,
+                //         speed: 1000,
+                //         moreLink: '<a style="color: #000" href="#">Подробнее</a>',
+                //         lessLink: '<a style="color: #000"  href="#">Скрыть</a>'
+                //     });
+                // }
 
 
 
@@ -1391,6 +1391,26 @@
         $('.wrapper-form__checkbox').each(function (index,el) {
             $(this).find('input[type="checkbox"]').attr('id','checkbox_'+index);
             $(this).find('label').attr('for','checkbox_'+index);
+        })
+
+        $('.slider-reviews-item__name').on('click',function () {
+            if($(this).siblings('.slider-reviews-item__review').hasClass('visible')){
+                $('.slider-reviews-item__review').css({
+                    'overflow':'hidden',
+                    'max-height':'250px'
+                }).removeClass('visible');
+            }
+
+            else{
+                $('.slider-reviews-item__review').css({
+                    'overflow':'visible',
+                    'max-height':'none'
+                }).addClass('visible')
+            }
+
+
+
+
         })
 
 

@@ -1033,6 +1033,9 @@ section {
   line-height: 23px;
   font-weight: 400;
   font-style: italic;
+  overflow: hidden;
+  max-height: 250px;
+  transition: top 1s ease-out 0.5s;
 }
 /*Стрелки слайдера*/
 .wrapper-slider-reviews .owl-nav {
