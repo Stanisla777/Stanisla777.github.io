@@ -416,6 +416,9 @@ section {
 }
 .main-section__h1-title {
   margin-top: 21px;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
 }
 .h1-title-subtitle {
   font-size: 20px;
