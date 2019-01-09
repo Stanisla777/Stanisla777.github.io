@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="google" value="notranslate">
     <meta name="theme-color" content="#ffffff">
-    <meta name="MobileOptimized" content="width" />
-    <meta name="HandheldFriendly" content="true" />
     <title> </title>
     <meta name="description" content="">
     <meta name="keywords" content="">
@@ -58,14 +56,10 @@
 
             <div style="background-image: url('img/LogoMain.png')" class="main-logo"></div>
 
+
             <h1 class="h1-title main-section__h1-title">ОЗДОРОВИТЕЛЬНЫЙ ТУР НА ОСТРОВ БАЛИ</h1>
             <h2 class="h1-title-subtitle">Обучение клеточному восстановлению и омоложению собственного организма в тропических
                 джунглях самого сильного острова Индонезии по программе «Первый шаг»</h2>
-
-            <div class="" style="width: 360px; height: 60px; margin: 10px auto;border-left: 1px solid;border-right: 1px solid"></div>
-            <div class="" style="width: 320px; height: 60px; margin: 10px auto;border-left: 1px solid;border-right: 1px solid"></div>
-            <div class="" style="width: 280px; height: 60px; margin: 10px auto;border-left: 1px solid;border-right: 1px solid"></div>
-            <div class="" style="width: 240px; height: 60px; margin: 10px auto;border-left: 1px solid;border-right: 1px solid"></div>
 
             <div class="upcoming-event">
 
@@ -1234,6 +1228,7 @@
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/owl.carousel.js"></script>
 <script src="js/downCount.js"></script>
+<script src="js/readmore.js"></script>
 
 
 <script>
@@ -1294,7 +1289,7 @@
         var maxwidth_2 =0;
 
 
-        //Слайдер на карте
+        //Слайдер отзывы
         $('.wrapper-slider-reviews .owl-carousel').owlCarousel({
 //                loop:true, //Зацикливаем слайдер
             margin:6, //Отступ от элемента справа в 50px
@@ -1324,6 +1319,17 @@
 
                 $('.owl-carousel-2').children('.owl-nav').addClass('owl-nav-pagers');
 
+                if ($(window).width()<=430){
+                    $('.slider-reviews-item__des').readmore({
+                        maxHeight: 240,
+                        speed: 1000,
+                        moreLink: '<a style="color: #000" href="#">Подробнее</a>',
+                        lessLink: '<a style="color: #000"  href="#">Скрыть</a>'
+                    });
+                }
+
+
+
             }
         });
 
@@ -1346,7 +1352,7 @@
                     nav:false,
                     dots:true
                 },
-                300:{
+                380:{
                     items:2,
                     nav:false
                 },
@@ -1388,6 +1394,9 @@
         })
 
 
+
+
+
     });
 
 
@@ -1404,6 +1413,8 @@
     // owl.on('changed.owl.carousel', function(e) {
     //     console.log("test");
     // });
+
+
 
 
 </script>
