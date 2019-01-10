@@ -56,6 +56,7 @@
 
             <div style="background-image: url('img/LogoMain.png')" class="main-logo"></div>
 
+
             <h1 class="h1-title main-section__h1-title">ОЗДОРОВИТЕЛЬНЫЙ ТУР НА ОСТРОВ БАЛИ</h1>
             <h2 class="h1-title-subtitle">Обучение клеточному восстановлению и омоложению собственного организма в тропических
                 джунглях самого сильного острова Индонезии по программе «Первый шаг»</h2>
@@ -1227,6 +1228,7 @@
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/owl.carousel.js"></script>
 <script src="js/downCount.js"></script>
+<script src="js/readmore.js"></script>
 
 
 <script>
@@ -1287,7 +1289,7 @@
         var maxwidth_2 =0;
 
 
-        //Слайдер на карте
+        //Слайдер отзывы
         $('.wrapper-slider-reviews .owl-carousel').owlCarousel({
 //                loop:true, //Зацикливаем слайдер
             margin:6, //Отступ от элемента справа в 50px
@@ -1315,7 +1317,18 @@
 
             onInitialized: function(){
 
-                $('.owl-carousel-2').children('.owl-nav').addClass('owl-nav-pagers');
+                // $('.owl-carousel-2').children('.owl-nav').addClass('owl-nav-pagers');
+                //
+                // if ($(window).width()<=430){
+                //     $('.slider-reviews-item__des').readmore({
+                //         maxHeight: 240,
+                //         speed: 1000,
+                //         moreLink: '<a style="color: #000" href="#">Подробнее</a>',
+                //         lessLink: '<a style="color: #000"  href="#">Скрыть</a>'
+                //     });
+                // }
+
+
 
             }
         });
@@ -1339,7 +1352,7 @@
                     nav:false,
                     dots:true
                 },
-                300:{
+                380:{
                     items:2,
                     nav:false
                 },
@@ -1380,6 +1393,29 @@
             $(this).find('label').attr('for','checkbox_'+index);
         })
 
+        $('.slider-reviews-item__name').on('click',function () {
+            if($(this).siblings('.slider-reviews-item__review').hasClass('visible')){
+                $('.slider-reviews-item__review').css({
+                    'overflow':'hidden',
+                    'max-height':'250px'
+                }).removeClass('visible');
+            }
+
+            else{
+                $('.slider-reviews-item__review').css({
+                    'overflow':'visible',
+                    'max-height':'none'
+                }).addClass('visible')
+            }
+
+
+
+
+        })
+
+
+
+
 
     });
 
@@ -1397,6 +1433,8 @@
     // owl.on('changed.owl.carousel', function(e) {
     //     console.log("test");
     // });
+
+
 
 
 </script>

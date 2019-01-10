@@ -26,6 +26,9 @@
         font-size: 35px;
         text-shadow: 0 0 7px #1d1c1c;
     }
+    .line {
+        margin: 0 7px 0 4px;
+    }
     .upcoming-event__date-event{
         font-size: 35px;
     }
@@ -273,7 +276,8 @@
         text-align: center;
     }
     .main-section__h1-title{
-        font-size: 28px;
+        font-size: 7vw;
+        line-height: 36px;
     }
     .end-slogan{
         font-size: 25px;
@@ -325,6 +329,7 @@
 
     .wrapper-authors{
         margin-top: 70px;
+        flex-direction: column;
     }
 
     .section-course-authors{
@@ -420,12 +425,13 @@
     }
 
     .wrapper-authors__ara:first-child{
-        margin-right: 10px;
-        width: calc(50% - 5px);
+        margin-right: 0;
+        width: 100%;
     }
     .wrapper-authors__ara:last-child{
-        width: calc(50% - 5px);
+        width: 100%;
         margin-right: 0;
+        margin-top: 20px;
     }
     .detail-about-authors h3{
         font-weight: 500;
@@ -436,6 +442,13 @@
     .price-list li:not(:last-child) {
         margin-bottom: 15px;
     }
+    .section-amazing-results h3{
+        font-weight: 400;
+    }
+    .detail-about-authors {
+        margin-top: 40px;
+    }
+
 
 
 }
