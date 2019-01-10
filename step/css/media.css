@@ -247,12 +247,21 @@
     .left-site-bar__item {
         margin: 0 6px;
     }
+
+    /*Доработка*/
     .main-site-bar__list {
         background-color: rgba(0, 0, 0, 0.4);
         margin-right: -15px;
         margin-left: -15px;
         padding-left: 15px;
+        flex-direction: column;
+
     }
+    .main-site-bar__item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    /*-------------------------*/
     .main-site-bar__item a {
         text-transform: uppercase;
         color: #fff;
@@ -290,7 +299,9 @@
     .main-site-bar__item a {
         text-transform: uppercase;
         color: #fff;
-        font-size: 10px;
+
+        /*Доработка*/
+        /*font-size: 10px;*/
         font-weight: 300;
     }
     .main-site-bar__item:not(:last-child) {
@@ -306,6 +317,18 @@
     .detail-product-blog .tab-item:not(:last-child) {
         margin-right: -4px;
     }
+
+
+    /*Доработка*/
+    .main-site-bar__icon{
+        display: block;
+    }
+    .main-site-bar__list{
+        display: none;
+    }
+
+
+
 
 
 }

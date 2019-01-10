@@ -516,8 +516,17 @@ label {
   padding: 47px 15px 0;
   position: relative;
 }
+/*Доработка*/
 .main-site-bar {
   margin-bottom: 32px;
+}
+.main-site-bar__icon {
+  display: none;
+}
+.main-site-bar__icon i {
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
 }
 .main-site-bar__list {
   display: -webkit-box;
