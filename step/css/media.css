@@ -248,18 +248,8 @@
         margin: 0 6px;
     }
 
-    /*Доработка*/
-    .main-site-bar__list {
-        background-color: rgba(0, 0, 0, 0.4);
-        margin-right: -15px;
-        margin-left: -15px;
-        padding-left: 15px;
-        flex-direction: column;
 
-    }
-    .main-site-bar__item:not(:last-child) {
-        margin-bottom: 10px;
-    }
+
 
     /*-------------------------*/
     .main-site-bar__item a {
@@ -275,6 +265,13 @@
     .wrapper-trainers__foto{
         height: 180px;
         margin: 20px auto 10px;
+    }
+
+    .main-site-bar{
+        background-color: rgba(0, 0, 0, 0.4);
+        margin-right: -15px;
+        margin-left: -15px;
+        padding-left: 15px;
     }
 
 
@@ -296,6 +293,35 @@
     }
 }
 @media screen and (max-width: 560px) {
+
+    /*Доработка*/
+    /*Доработка*/
+    .main-site-bar__icon{
+        display: flex;
+        margin-top: 17px;
+        padding: 6px 0;
+    }
+    .main-site-bar__list{
+        display: none;
+    }
+    .main-site-bar__icon{
+
+    }
+    .main-site-bar__list {
+
+        flex-direction: column;
+
+    }
+    .main-site-bar__item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    /*.main-site-bar{*/
+        /*background-color: rgba(0, 0, 0, 0.4);*/
+        /*margin-right: -15px;*/
+        /*margin-left: -15px;*/
+        /*padding-left: 15px;*/
+    /*}*/
+
     .main-site-bar__item a {
         text-transform: uppercase;
         color: #fff;
@@ -319,13 +345,7 @@
     }
 
 
-    /*Доработка*/
-    .main-site-bar__icon{
-        display: block;
-    }
-    .main-site-bar__list{
-        display: none;
-    }
+
 
 
 
