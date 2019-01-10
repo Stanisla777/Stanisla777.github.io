@@ -1540,8 +1540,10 @@ label {
   color: #445485;
   padding: 5px 6px;
 }
+/*Доработка*/
 .upper-tab .item-active a {
   color: #fff;
+  text-shadow: 0 0 4px #000;
 }
 .unauth-menu {
   display: flex;
