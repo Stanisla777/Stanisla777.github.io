@@ -362,9 +362,28 @@ section {
   background-size: cover;
 }
 .main-section {
-  background-image: url("../img/Fon1.jpg");
+  background-image: url("../img/Fon1c.jpg");
   padding-top: 24px;
   padding-bottom: 82px;
+}
+.wrapper-main-section {
+  position: absolute;
+  width: 59%;
+  min-width: 600px;
+  height: 50%;
+  z-index: 10;
+}
+.wrapper-main-section img {
+  width: 100%;
+  height: auto;
+}
+.top {
+  top: -93px;
+  left: -278px;
+}
+.bot {
+  bottom: -77px;
+  right: -283px;
 }
 .header {
   display: flex;
@@ -1033,8 +1052,6 @@ section {
   line-height: 23px;
   font-weight: 400;
   font-style: italic;
-  overflow: hidden;
-  max-height: 250px;
   transition: top 1s ease-out 0.5s;
 }
 /*Стрелки слайдера*/

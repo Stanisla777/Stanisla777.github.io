@@ -22,6 +22,12 @@
 <section class="page-content">
 
     <section class="main-section">
+        <div class="wrapper-main-section top">
+            <img src="img/grid_1сс.png" alt="">
+        </div>
+        <div class="wrapper-main-section bot">
+            <img src="img/grid_2.png" alt="">
+        </div>
         <div class="container">
             <div class="header">
                 <p class="header__wrap header__slogan">
@@ -1297,6 +1303,7 @@
             nav:true, //Отключение навигации
             navText : ['',''],
             items:1,
+            autoHeight: true,
             slideBy:'page',
 //            responsive:{ //Адаптивность. Кол-во выводимых элементов при определенной ширине.
 //                 0:{
@@ -1317,18 +1324,6 @@
 
             onInitialized: function(){
 
-                // $('.owl-carousel-2').children('.owl-nav').addClass('owl-nav-pagers');
-                //
-                // if ($(window).width()<=430){
-                //     $('.slider-reviews-item__des').readmore({
-                //         maxHeight: 240,
-                //         speed: 1000,
-                //         moreLink: '<a style="color: #000" href="#">Подробнее</a>',
-                //         lessLink: '<a style="color: #000"  href="#">Скрыть</a>'
-                //     });
-                // }
-
-
 
             }
         });
@@ -1345,7 +1340,7 @@
             slideBy:'page',
             animateIn: 'fadeIn',
             animateOut: 'fadeOut',
-            autoHeight: true,
+            // autoHeight: true,
             responsive:{ //Адаптивность. Кол-во выводимых элементов при определенной ширине.
                 0:{
                     items:1,
@@ -1393,47 +1388,8 @@
             $(this).find('label').attr('for','checkbox_'+index);
         })
 
-        $('.slider-reviews-item__name').on('click',function () {
-            if($(this).siblings('.slider-reviews-item__review').hasClass('visible')){
-                $('.slider-reviews-item__review').css({
-                    'overflow':'hidden',
-                    'max-height':'250px'
-                }).removeClass('visible');
-            }
-
-            else{
-                $('.slider-reviews-item__review').css({
-                    'overflow':'visible',
-                    'max-height':'none'
-                }).addClass('visible')
-            }
-
-
-
-
-        })
-
-
-
-
 
     });
-
-
-
-
-    // owl = $(".owl-carousel").owlCarousel({
-    //     autoplay: true,
-    //     autoplaySpeed: 300,
-    //     loop: true,
-    //     navSpeed: 300,
-    //     items: 1,
-    //     margin: 2
-    // });
-    // owl.on('changed.owl.carousel', function(e) {
-    //     console.log("test");
-    // });
-
 
 
 
