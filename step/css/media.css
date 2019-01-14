@@ -394,7 +394,7 @@
     .wrapper-product-item__block-button{
         margin-top: 20px;
     }
-    /*Добавлено*/
+    /*Доработка*/
     .wrapper-about-authors{
         flex-direction: column;
         align-items: baseline;
@@ -417,6 +417,9 @@
     }
     .h3-title{
         line-height: 24px;
+    }
+    .owl-slider-header__archive{
+        font-size: 20px;
     }
 
 }
