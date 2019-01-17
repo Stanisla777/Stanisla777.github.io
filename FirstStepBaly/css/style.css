@@ -358,32 +358,33 @@ a.button {
 /*1 Главная секция*/
 section {
   background-position: center;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 .main-section {
-  background-image: url("../img/Fon1.jpg");
+  background-image: url("../img/Fon1cc.jpg");
   padding-top: 24px;
-  padding-bottom: 82px;
+  padding-bottom: 89px;
+}
+.main-section .grid-top {
+  /*top: -52px;
+        left: -5px;*/
+  top: -78px;
+  left: -375px;
+}
+.main-section .grid-bot {
+  /*bottom: -154px;
+        right: -7px;*/
+  bottom: -243px;
+  right: -378px;
 }
 .wrapper-main-section {
   position: absolute;
-  width: 59%;
-  min-width: 600px;
-  height: 50%;
-  z-index: 10;
+  min-width: 500px;
 }
 .wrapper-main-section img {
-  width: 100%;
+  width: auto;
   height: auto;
-}
-.top {
-  top: -93px;
-  left: -278px;
-}
-.bot {
-  bottom: -77px;
-  right: -283px;
 }
 .header {
   display: flex;
@@ -455,7 +456,7 @@ section {
   margin-top: 38px;
 }
 .countdown_2 {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -509,8 +510,32 @@ section {
 /*2вариант*/
 .submit-request {
   background-color: #d5ddff;
-  padding-top: 13px;
+  padding-top: 3px;
   padding-bottom: 9px;
+  z-index: 2;
+}
+.submit-request:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: -124px;
+  height: 125px;
+  background: url(../img/plaha1.png) center no-repeat;
+  background-size: cover;
+}
+.submit-request:before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -138px;
+  height: 138px;
+  background: url(../img/submitReqdownccc.png) center no-repeat;
+  background-size: cover;
+  z-index: 4;
 }
 .call-to-action-title {
   text-transform: uppercase;
@@ -524,6 +549,9 @@ section {
 }
 .wrapper-form {
   margin-top: 21px;
+}
+.wrapper-form__agree-conditions {
+  margin-bottom: 10px;
 }
 .wrapper-form__info {
   display: flex;
@@ -630,25 +658,23 @@ section {
 }
 /*Секция 3 - Преимущества*/
 .advantages-section {
-  padding-top: 98px;
-  background-image: url(../img/Fon2.jpg);
-  background-position: center;
+  z-index: 1;
+  padding-top: 92px;
+  background-image: url(../img/Fon2c.jpg);
+  background-position: center 284px;
   background-repeat: no-repeat;
   padding-bottom: 153px;
 }
 .advantages-section .logo-first-step {
   margin-bottom: 28px;
 }
-/**/
-.grid-up {
-  position: absolute;
-  top: -130px;
-  right: -10px;
-  width: 42vw;
-  height: 26vw;
-  background: url(../img/grid-up.png) no-repeat;
-  background-position: center;
-  background-size: cover;
+.advantages-section .grid-top {
+  top: -105px;
+  right: -378px;
+}
+.advantages-section .grid-bot {
+  bottom: -120px;
+  left: -374px;
 }
 .wrapper-advantages-logo {
   display: flex;
@@ -737,6 +763,22 @@ section {
   margin-right: 14px;
   color: #292d83;
 }
+.submit-request-2 {
+  background-color: #d5ddff;
+  z-index: 1;
+}
+.submit-request-2:before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: -131px;
+  height: 141px;
+  background: url(../img/submitReq2up.png) center no-repeat;
+  background-size: cover;
+  z-index: 25;
+}
 .submit-request-2 .button {
   margin-left: auto;
   margin-top: 21px;
@@ -767,10 +809,34 @@ section {
 }
 /*4 секция Программа курса*/
 .section-course-program {
-  background-image: url(../img/Fon3c.jpg);
-  background-position: center -1px;
+  background-image: url(../img/Fon3.jpg);
+  background-position: center 332px;
   padding-top: 168px;
   padding-bottom: 106px;
+}
+.section-course-program .grid-top {
+  /*top: 27px;
+        left: -5px;*/
+  top: -142px;
+  left: -376px;
+}
+.section-course-program .grid-bot {
+  /*bottom: 167px;
+        right: -7px;*/
+  bottom: 60px;
+  right: -374px;
+}
+.section-course-program:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 11px;
+  height: 161px;
+  background: url(../img/submitReq2downcc.png) center no-repeat;
+  background-size: cover;
+  z-index: 4;
 }
 .section-course-program h3 {
   font-size: 30px;
@@ -805,6 +871,8 @@ section {
   font-size: 7px;
 }
 .wrapper-dream-day {
+  position: relative;
+  z-index: 1;
   width: 100%;
   border: 1px solid #fff;
   background-color: #fff;
@@ -904,12 +972,37 @@ section {
 .submit-request-3 {
   padding-top: 53px;
 }
+.submit-request-3:before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: -109px;
+  height: 125px;
+  background: url(../img/plaha1.png) center no-repeat;
+  background-size: cover;
+  z-index: 4;
+}
+.submit-request-3:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -149px;
+  height: 138px;
+  background: url(../img/submitReqdowncccc.png) center no-repeat;
+  background-size: cover;
+  z-index: 4;
+}
 .submit-request-3 .wrapper-submit-application {
   display: flex;
   justify-content: space-between;
   width: 83%;
   margin: 43px auto 0;
   padding-left: 27px;
+  margin-bottom: 20px;
 }
 .submit-request-3 .part-in-program {
   text-align: right;
@@ -917,9 +1010,18 @@ section {
 /*5 секция Удивительные результаты*/
 .section-amazing-results {
   background-image: url("../img/Fon4.jpg");
-  background-position: center 6px;
-  padding-top: 177px;
+  background-position: center 104%;
+  background-size: cover;
+  padding-top: 156px;
   padding-bottom: 128px;
+}
+.section-amazing-results .grid-top {
+  top: -160px;
+  right: -381px;
+}
+.section-amazing-results .grid-bot {
+  top: 353px;
+  left: -377px;
 }
 .section-amazing-results h3 {
   font-size: 24px;
@@ -994,7 +1096,32 @@ section {
   font-weight: 500;
   line-height: 22px;
 }
+.submit-request-4:before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: -104px;
+  height: 125px;
+  background: url(../img/plaha1.png) center no-repeat;
+  background-size: cover;
+  z-index: 4;
+}
+.submit-request-4:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -159px;
+  height: 134px;
+  background: url(../img/submitReqdownccc.png) center no-repeat;
+  background-size: cover;
+  z-index: 4;
+}
 .submit-request-center {
+  z-index: 1;
   padding-top: 14px;
 }
 .submit-request-center .parts-in-program p:nth-child(1) {
@@ -1006,9 +1133,17 @@ section {
 /*6 секция Описание курса*/
 .section-desription-course {
   background-image: url(../img/Fon5.jpg);
+  background-position: center -7px;
   padding-top: 142px;
   padding-bottom: 162px;
-  background-position: center -10px;
+}
+.section-desription-course .grid-top {
+  top: -107px;
+  right: -379px;
+}
+.section-desription-course .grid-bot {
+  bottom: 333px;
+  left: -376px;
 }
 .section-desription-course h2 {
   font-size: 33px;
@@ -1110,10 +1245,29 @@ section {
 }
 /*6 секция Авторы курса*/
 .section-course-authors {
-  background-image: url("../img/Fon6.jpg");
+  background-color: #d5ddff;
   background-position: center 6px;
   padding-top: 10px;
   padding-bottom: 248px;
+}
+.section-course-authors .grid-top {
+  top: -490px;
+  right: -371px;
+}
+.section-course-authors .grid-bot {
+  bottom: 124px;
+  left: -374px;
+}
+.section-course-authors:before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: -229px;
+  height: 242px;
+  background: url(../img/authorsup.png) center no-repeat;
+  background-size: cover;
 }
 .wrapper-foto-authors {
   position: absolute;
@@ -1208,8 +1362,22 @@ section {
   letter-spacing: 0.1px;
 }
 .submit-request-5 {
+  box-shadow: 0 0 26px 4px #9a9494;
+  z-index: 1;
   padding-top: 21px;
   padding-bottom: 35px;
+}
+.submit-request-5:before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: -180px;
+  height: 194px;
+  background: url(../img/submitReq5up.png) center no-repeat;
+  background-size: cover;
+  z-index: 4;
 }
 .submit-request-5 .h2-title {
   letter-spacing: -0.2px;
@@ -1220,12 +1388,18 @@ section {
 .submit-request-5 .button {
   margin: 32px auto 0;
 }
+/*.section-cost-courseСекция 5 уровней*/
 .section-five-levels {
-  background-image: url("../img/Fon7cc.jpg");
-  background-position: center 6px;
+  z-index: 1;
+  background-image: url("../img/Fon7c.jpg");
+  background-position: center 28px;
   padding-top: 87px;
   padding-bottom: 313px;
   background-repeat: no-repeat;
+}
+.section-five-levels .grid-top {
+  top: 307px;
+  left: -375px;
 }
 .section-five-levels h2 {
   letter-spacing: -0.6px;
@@ -1295,11 +1469,30 @@ section {
   margin-bottom: 17px;
 }
 .section-tour-program {
-  background-image: url("../img/Fon8.jpg");
+  background-color: #d5ddff;
   background-position: center 6px;
   padding-top: 70px;
   padding-bottom: 157px;
-  background-repeat: no-repeat;
+}
+.section-tour-program .grid-top {
+  top: -184px;
+  right: -375px;
+}
+.section-tour-program .grid-bot {
+  bottom: -283px;
+  left: -376px;
+}
+.section-tour-program:before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: -270px;
+  height: 277px;
+  background: url(../img/tourup.png) center no-repeat;
+  background-size: cover;
+  z-index: 4;
 }
 .wrapper-who-is .h3-title {
   margin-bottom: 16px;
@@ -1350,6 +1543,32 @@ section {
 .submit-request-6 {
   padding-top: 21px;
   padding-bottom: 35px;
+  background-color: #d5ddff;
+  z-index: 1;
+}
+.submit-request-6:before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: -129px;
+  height: 130px;
+  background: url(../img/plaha1.png) center no-repeat;
+  background-size: cover;
+  z-index: 4;
+}
+.submit-request-6:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -134px;
+  height: 138px;
+  background: url(../img/submitReqdowncc.png) center no-repeat;
+  background-size: cover;
+  z-index: 4;
 }
 .submit-request-6 .h2-title {
   letter-spacing: -0.2px;
@@ -1363,19 +1582,39 @@ section {
 }
 /*8секция Стоимость работ*/
 .section-cost-course {
-  background-image: url("../img/Fon9cc.jpg");
-  background-position: center -4px;
-  padding-top: 143px;
+  background-image: url("../img/Fon9.jpg");
+  background-position: center 51px;
+  padding-top: 153px;
   padding-bottom: 127px;
   background-repeat: no-repeat;
+}
+.section-cost-course .grid-top {
+  top: -173px;
+  right: -446px;
+}
+.section-cost-course .grid-bot {
+  bottom: -224px;
+  left: -443px;
+}
+.section-cost-course:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -12px;
+  height: 114px;
+  background: url(../img/costdown.png) center no-repeat;
+  background-size: cover;
+  z-index: 4;
 }
 .section-cost-course .container {
   max-width: 1035px;
 }
 .section-cost-course h2 {
   text-transform: uppercase;
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 25px;
+  font-weight: 500;
   text-align: center;
 }
 .price-list {
@@ -1434,7 +1673,7 @@ section {
   margin-right: 15px;
 }
 .included-price {
-  margin-top: 46px;
+  margin-top: 27px;
 }
 .included-price__item {
   background-color: rgba(255, 255, 255, 0.4);
@@ -1484,11 +1723,30 @@ section {
 }
 /*Секция 10 Как принять участие*/
 .section-how-participate {
-  background-image: url("../img/Fon10с.jpg");
+  background-color: #d5ddff;
   background-position: center 28px;
   padding-top: 42px;
   padding-bottom: 57px;
   background-repeat: no-repeat;
+}
+.section-how-participate .grid-top {
+  top: 366px;
+  right: -376px;
+}
+.section-how-participate .grid-bot {
+  bottom: 76px;
+  left: -378px;
+}
+.section-how-participate:before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 348px;
+  height: 130px;
+  background: url(../img/howupc.png) center no-repeat;
+  background-size: cover;
 }
 .section-how-participate .h2-title {
   text-align: left;
@@ -1534,7 +1792,21 @@ section {
   line-height: 23px;
 }
 .submit-request-end {
+  box-shadow: 0 0 26px 4px #b5b3b3;
+  padding-bottom: 20px;
   padding-top: 21px;
+}
+.submit-request-end:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -144px;
+  height: 157px;
+  background: url(../img/enddown.png) center no-repeat;
+  background-size: cover;
+  z-index: 4;
 }
 .submit-request-end .h2-title {
   text-align: left;
@@ -1547,11 +1819,18 @@ section {
 }
 /*Секция 11 */
 .section-baly {
-  background-image: url("../img/Fon11.jpg");
-  background-position: center -13px;
-  padding-top: 220px;
+  background-image: url("../img/Fon11c.jpg");
+  padding-top: 191px;
   padding-bottom: 488px;
   background-repeat: no-repeat;
+}
+.section-baly .grid-top {
+  top: -211px;
+  right: -377px;
+}
+.section-baly .grid-bot {
+  bottom: -520px;
+  left: -375px;
 }
 .course-location {
   font-size: 50px;
@@ -1571,6 +1850,17 @@ section {
   margin-top: -14px;
   padding-top: 28px;
   padding-bottom: 50px;
+}
+.section-footer:before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: -111px;
+  height: 118px;
+  background: url(../img/footerup.png) center no-repeat;
+  background-size: cover;
 }
 .footer-social-icon {
   justify-content: center;
@@ -1592,6 +1882,115 @@ section {
 }
 .wrapper-privacy-policy a:last-child {
   text-align: left;
+}
+.table-price-list {
+  position: relative;
+  background: rgba(174, 196, 237, 0.8);
+  text-align: center;
+  letter-spacing: -0.7px;
+  line-height: 15px;
+  width: 100%;
+  margin: 22px auto 0;
+  border-radius: 9px;
+}
+.table-price-list .hide {
+  display: none;
+}
+.table-row__col-tarif {
+  display: flex;
+}
+.table-row__col-tarif:not(:first-child) {
+  width: calc((100% - 43%)/2);
+}
+.table-row__col-tarif:first-child {
+  width: 43%;
+}
+.table-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.table-col {
+  padding: 10px 10px;
+  border-bottom: 1px solid #fff;
+  min-height: 62px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.type-allocation {
+  display: flex;
+}
+.tarif-price {
+  display: flex;
+}
+.col-row {
+  border-right: 1px solid #fff;
+  width: 29%;
+}
+.col-row-1 {
+  font-size: 16px;
+  color: #2e3180;
+  font-weight: 500;
+  width: 34%;
+  max-width: 144px;
+}
+.col-row-2 {
+  flex-grow: 1;
+}
+.col-col {
+  width: 50%;
+}
+.col-col:not(:last-child) {
+  border-right: 1px solid #fff;
+}
+.table-font-light {
+  font-size: 14px;
+  font-weight: 300;
+}
+.table-font-medium {
+  font-size: 16px;
+  font-weight: 500;
+}
+.table-font-bold {
+  font-size: 16px;
+  font-weight: 600;
+}
+.table-price-list-children {
+  display: flex;
+  position: relative;
+  background: rgba(174, 196, 237, 0.8);
+  text-align: center;
+  letter-spacing: -0.7px;
+  line-height: 15px;
+  width: 100%;
+  margin: 20px auto 0;
+  border-radius: 9px;
+}
+.table-price-list-children .col-col {
+  flex-grow: 1;
+}
+.children-row {
+  display: flex;
+}
+.price-children-col-1 {
+  font-size: 16px;
+  color: #2e3180;
+  font-weight: 500;
+  width: 34%;
+  max-width: 144px;
+}
+.price-children-col-2 {
+  flex-grow: 1;
+}
+.children-row-tarif {
+  justify-content: center;
+}
+.children-row-col {
+  padding: 10px;
+}
+.col-col-16 {
+  width: 16.6%;
 }
 /*Модальное окно*/
 #lean_overlay {
