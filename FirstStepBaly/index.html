@@ -12,8 +12,8 @@
     <!--<link href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet">-->
     <link rel="stylesheet" href="css/FontAwesoome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="css/media.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/medias.css"/>
 
 
 </head>
@@ -1046,7 +1046,7 @@
                             <div class="table-col col-row__col">Стоимость</div>
                         </div>
 
-                        <div class="col-row col-row-2">
+                        <div class="col-row-2">
                             <div class="table-col col-row__col table-font-medium">Эконом</div>
 
                             <div class="col-row__col type-allocation">
@@ -1084,7 +1084,7 @@
                     <div class="table-col col-row__col">Стоимость</div>
                 </div>
 
-                <div class="col-row col-row-2">
+                <div class="col-row-2">
 
                     <div class="table-col col-row__col table-font-medium">Детский</div>
 
@@ -1093,33 +1093,33 @@
                             <p>0-6 лет</p>
 
                         </div>
-                        <div class="table-col type-allocation-2 col-col table-font-light">
+                        <div class="table-col type-allocation-2 col-16-3 col-col table-font-light">
                             <p>7-12 лет</p>
                         </div>
 
                     </div>
 
                     <div class="tarif-price">
-                        <div class="table-col col-col table-font-bold">
+                        <div class="table-col col-col col-col-16-2 table-font-bold">
                             <p></p>
                         </div>
-                        <div class="table-col media col-col table-font-light">
+                        <div class="table-col media col-col col-col-16-2 table-font-light">
                             <p>Без проведения практики «Первый Шаг»</p>
                         </div>
-                        <div class="table-col media tarif-price-2 col-col table-font-light">
+                        <div class="table-col media tarif-price-2 col-col col-col-16-2 table-font-light">
                             <p>С проведением практики «Первый Шаг»</p>
                         </div>
 
                     </div>
 
                     <div class="tarif-price">
-                        <div class="table-col col-col table-font-bold">
+                        <div class="table-col col-col col-col-16-2 table-font-bold">
                             <p>0$</p>
                         </div>
-                        <div class="table-col tarif-price-2 col-col table-font-bold">
+                        <div class="table-col tarif-price-2 col-col-16-2 col-col table-font-bold">
                             <p>700$</p>
                         </div>
-                        <div class="table-col tarif-price-2 col-col table-font-bold">
+                        <div class="table-col tarif-price-2 col-col-16-2 col-col table-font-bold">
                             <p>1000$</p>
                         </div>
 
@@ -1282,7 +1282,7 @@
                     исцеления?</p>
                 <p class="wrapper-repeated-questions__answer">Аллергии, заболевания ЖКТ, мочеполовой системы, кожные
                     болезни, болезни сердца и сосудов, проблемы с репродуктивной системой, суставные болезни,
-                    доброкачественные и злокачественные образования и мн.другие.</p>
+                    доброкачественные и злокачественныевенные образования и мн.другие.</p>
 
                 <p class="wrapper-repeated-questions__question">У меня не хватит воли пройти исцеление.</p>
                 <p class="wrapper-repeated-questions__answer">Вы будете находиться в окружении единомышленников, людей,
@@ -1418,7 +1418,7 @@
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/owl.carousel.js"></script>
 <script src="js/downCount.js"></script>
-<script src="js/readmore.js"></script>
+
 
 
 <script>
@@ -1428,21 +1428,17 @@
 
         var year = '2019';
         var month  = '01';
-        var day = '19';
+        var day = '24';
 
 
 
 //        var deadline='2019-01-10 00:28:00';
 
 
-        var deadline=year+'-'+month+'-'+day + ' 02:28:00';
+        var deadline=year+'-'+month+'-'+day + ' 00:00:00';
 
         $('.countdown_2').downCount({
                 date: deadline
-            },
-            function(){
-                /* действие после завершения таймера */
-                alert("Время истекло!");
             });
 
 
@@ -1453,19 +1449,6 @@
         }
 
         setTimeout(countdown,2000);
-
-
-
-
-
-//        var minutes = $('.countdown_2 .minutes').text();
-//        minutesy = parseFloat(minutes)
-//
-//        $('.days_ref').text(num2str(day, ['день', 'дня', 'дней']));
-//
-//        $('.minutes_ref').text(num2str(minutes, ['минута', 'минуты', 'минут']));
-
-
 
 
         //    В хедере блоки делаю одной ширины, чтобы лого всегда было по центру
@@ -1481,7 +1464,7 @@
             $('.header__wrap').css('minWidth',maxwidth);//даю крайним блокам одинаковую ширину
 
         }
-        auto_width();//вызываю функцию
+        auto_width();
 
 
 
@@ -1498,28 +1481,7 @@
             navText : ['',''],
             items:1,
             autoHeight: true,
-            slideBy:'page',
-//            responsive:{ //Адаптивность. Кол-во выводимых элементов при определенной ширине.
-//                 0:{
-//                     items:1,
-//                     nav:false,
-//                     dots:true
-//                 },
-//                 480:{
-//                     items:2
-//                 },
-//                 670:{
-//                     items:3
-//                 },
-//                 920:{
-//                     items:4
-//                 }
-//            },
-
-            onInitialized: function(){
-
-
-            }
+            slideBy:'page'
         });
 
         //Слайдер на карте
@@ -1593,9 +1555,6 @@
         })
 
 
-
-
-
         var maxH = 0;
         $(".table-col").each(function () {
             var h_block = parseInt($(this).height());
@@ -1604,12 +1563,6 @@
             };
         });
         $(".table-col").height(maxH - 5);
-
-
-
-
-
-
 
 
     });

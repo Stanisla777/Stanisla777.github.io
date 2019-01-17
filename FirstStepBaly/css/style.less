@@ -38,6 +38,7 @@ footer {
     display: block;
     position: relative;
 }
+
 .page-content {
     //padding-top: 10px;
     width: 100%;
@@ -57,8 +58,8 @@ footer {
     margin: 0 auto;
     padding: 0 15px;
     position: relative;
-    border-right: 1px solid;
-    border-left: 1px solid;
+    //border-right: 1px solid;
+    //border-left: 1px solid;
 }
 
 .container-pad-0 {
@@ -139,6 +140,10 @@ ul {
 img {
     max-width: 100%;
     height: auto;
+}
+h1,h2,h3{
+  position: relative;
+  z-index: 5;
 }
 button {
     outline: none;
@@ -691,6 +696,8 @@ section{
 
 /*Стилизация чекбокса*/
 .wrapper-form{
+  position: relative;
+  z-index: 10;
     &__easy-connection{
         margin-top: 18px;
         display: flex;
@@ -849,6 +856,8 @@ section{
 
 @margin:15px;
 .row-2-column{
+  position: relative;
+  z-index: 1;
     display: flex;
     flex-wrap: wrap;
     margin-left: -@margin;
@@ -905,6 +914,8 @@ section{
 }
 .advantages-list{
     margin-top: 21px;
+  position: relative;
+  z-index: 1;
     &__item{
         font-size: 20px;
         font-weight: 500;
@@ -1039,6 +1050,8 @@ section{
 
 .program-list{
     margin-top: 24px;
+  position: relative;
+  z-index: 1;
     &__item{
         font-size: 20px;
         font-weight: 300;
@@ -1187,7 +1200,7 @@ section{
         position: absolute;
         right: 0;
         left: 0;
-        top: -109px;
+      top: -113px;
         height: 125px;
         background: url(../img/plaha1.png)center no-repeat;
         background-size: cover;
@@ -1201,7 +1214,7 @@ section{
         left: 0;
         bottom: -149px;
         height: 138px;
-        background: url(../img/submitReqdowncccc.png)center no-repeat;
+        background: url(../img/submit-request-3-dow.png)center no-repeat;
         background-size: cover;
         z-index: 4;
     }
@@ -1394,12 +1407,15 @@ section{
 }
 
 .desription-course-subtitle{
+  position: relative;
+  z-index: 1;
+  margin-bottom: 41px;
     font-size: 20px;
     text-transform: uppercase;
     font-weight: 600;
     line-height: 29px;
 }
-
+.wrapper-who-is
 /*слайдер отзывы*/
 .wrapper-slider-reviews{
     margin-top: 43px;
@@ -1576,6 +1592,8 @@ section{
     margin-top: 75px;
     display: flex;
     flex-direction: column;
+    position: relative;
+    z-index: 1;
     &__list{
         line-height: 24px;
         letter-spacing: -0.4px;
@@ -1815,6 +1833,8 @@ section{
 
 
 .program-will-give{
+  position: relative;
+  z-index: 1;
     font-size: 22px;
     letter-spacing: -0.1px;
     line-height: 24px;
@@ -1825,6 +1845,8 @@ section{
     }
 }
 .total-another-man{
+  position: relative;
+  z-index: 1;
     font-size: 25px;
     font-weight: 500;
     text-transform: uppercase;
@@ -2095,6 +2117,8 @@ section{
 }
 .wrapper-positive-changes{
     margin-top: 50px;
+  position: relative;
+  z-index: 1;
     .h3-title{
         margin-bottom: 27px;
     }
@@ -2106,6 +2130,8 @@ section{
     }
 }
 .wrapper-repeated-questions{
+  position: relative;
+  z-index: 1;
     margin-top: 42px;
     &__question{
         font-weight: 500;
@@ -2130,7 +2156,7 @@ section{
         left: 0;
         bottom: -144px;
         height: 157px;
-        background: url(../img/enddown.png)center no-repeat;
+        background: url(../img/enddownr.png)center no-repeat;
         background-size: cover;
         z-index: 4;
     }
@@ -2150,7 +2176,7 @@ section{
 .section-baly {
 
     .grid-top{
-        top: -211px;
+      top: -195px;
         right: -377px;
     }
     .grid-bot{
@@ -2237,6 +2263,9 @@ section{
   .hide{
     display: none;
   }
+  .tarif-price .table-col{
+    border-bottom: none;
+  }
 }
 
 .table-row__col-tarif{
@@ -2267,6 +2296,9 @@ section{
   align-items: center;
   justify-content: center;
   //background-color: #aec4ed;
+}
+.col-row-1 .table-col:last-child{
+  border-bottom: none;
 }
 .col-row__col{
 
@@ -2316,6 +2348,13 @@ section{
 
 
 .table-price-list-children{
+  .tarif-price{
+    &:last-child{
+      .table-col{
+        border-bottom: none;
+      }
+    }
+  }
   .col-col{
     flex-grow: 1;
   }
