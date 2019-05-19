@@ -986,3 +986,313 @@ button:focus {
   padding-top: 95%;
 }
 /*------------------------------*/
+
+/*----------------------Сервисные центры-------------------------*/
+/*Модальное окно*/
+/*Модальное окно*/
+.parent {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /*display: flex;*/
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  overflow: auto;
+  z-index: 1100;
+  display: none;
+}
+.parent #block {
+  position: relative;
+  width: 80%;
+  height: 50%;
+  border: 1px solid #7b7a7a;
+  background: #fff;
+  box-shadow: 0 0 4px 0 #7b7a7a;
+}
+img {
+  display: block;
+  border: none;
+}
+#lean_overlay {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  display: none;
+}
+.close-menu {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: -10px;
+  top: -10px;
+  font-size: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../img3/IconClose.png");
+  cursor: pointer;
+  z-index: 10;
+}
+/*Блок поиск городов - написать в центральный сервис*/
+.sc-container-search-town {
+  margin-top: 30px;
+  padding: 50px 0;
+  box-shadow: 0 0 9px 3px rgba(254, 73, 70, 0.2);
+}
+.sc-container-search-town:focus-within {
+  box-shadow: 0 0 9px 3px rgba(254, 73, 70, 0.28);
+}
+.sc-wrapper-search-town {
+  width: 80%;
+  margin: 0 auto;
+}
+.sc-searh-form {
+  height: 45px;
+  width: 100%;
+}
+.sc-searh-form__wrap {
+  padding-left: 20px;
+  display: flex;
+  height: 100%;
+  border: 1px solid #979292;
+  border-radius: 6px;
+}
+.sc-searh-form__wrap:hover,
+.sc-searh-form__wrap:focus,
+.sc-searh-form__wrap:focus-within {
+  box-shadow: 0 0 7px 1px #ded2d2;
+}
+.sc-searh-form__wrap input {
+  border-radius: 6px;
+  width: calc(100% - 30px);
+  /*padding-left: 15px;*/
+  margin-left: 15px;
+  font-size: 18px;
+  color: #888888;
+  border: none;
+  outline: none;
+}
+.sc-searh-form__wrap input.input-hover {
+  box-shadow: 0 0 7px 1px #ded2d2;
+}
+.sc-searh-form__icon {
+  height: 100%;
+  width: 30px;
+  background-position: center;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-image: url("../img3/IconSearch.png");
+}
+.sc-searh-input {
+  display: flex;
+}
+.sc-activate-write-center-active:before {
+  content: "-";
+}
+.sc-activate-write-center-not:before {
+  content: "+";
+}
+.sc-activate-write-center {
+  width: max-content;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.sc-activate-write-center:before {
+  margin-right: 8px;
+  text-shadow: 0 0 1px #000;
+}
+.sc-activate-write-center:after {
+  content: "";
+  display: block;
+  width: 94%;
+  height: 1px;
+  border-bottom: 1px dashed;
+  margin-left: 20px;
+}
+/*Форма написать в центр*/
+.sc-write-center-form {
+  margin-top: 20px;
+  display: none;
+}
+.sc-write-center-form button {
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  border-radius: 7px;
+  width: 40%;
+  min-width: 280px;
+  height: 40px;
+  color: #fff;
+  outline: none;
+  background: #008d55;
+  background: -moz-linear-gradient(-45deg, #008d55 0%, #63b84f 69%, #63b84f 69%);
+  background: -webkit-linear-gradient(-45deg, #008d55 0%, #63b84f 69%, #63b84f 69%);
+  background: linear-gradient(135deg, #008d55 0%, #63b84f 69%, #63b84f 69%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#008d55', endColorstr='#63b84f', GradientType=1);
+  margin-top: 20px;
+}
+.sc-write-center-form button:hover {
+  background: #63b84f;
+  background: -moz-linear-gradient(-45deg, #63b84f 0%, #008d55 69%);
+  background: -webkit-linear-gradient(-45deg, #63b84f 0%, #008d55 69%);
+  background: linear-gradient(135deg, #63b84f 0%, #008d55 69%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#63b84f', endColorstr='#008d55', GradientType=1);
+}
+.sc-write-center-form input {
+  display: block;
+  border-radius: 6px;
+  width: 40%;
+  height: 35px;
+  padding-left: 15px;
+  font-size: 15px;
+  color: #888888;
+  border: 1px solid #888888;
+  outline: none;
+  font-family: 'OpenSans', sans-serif;
+}
+.sc-write-center-form input:not(:last-child) {
+  margin-bottom: 5px;
+}
+.sc-write-center-form input.input-hover {
+  box-shadow: 0 0 7px 1px #ded2d2;
+}
+.sc-write-center-form input:-moz-placeholder {
+  color: #888888;
+}
+.sc-write-center-form input::-webkit-input-placeholder {
+  color: #888888;
+}
+.write-center-textarea {
+  width: 40%;
+  height: 100px;
+  border: 1px solid #888888;
+  border-radius: 6px;
+  padding-left: 15px;
+  padding-top: 15px;
+}
+.write-center-textarea textarea {
+  display: block;
+  border-radius: 6px;
+  border: none;
+  width: 100%;
+  font-family: 'OpenSans', sans-serif;
+  height: 100%;
+  font-size: 15px;
+  color: #888888;
+  resize: none;
+  outline: none;
+}
+/**/
+.sc-wrapper-service {
+  margin-top: 40px;
+}
+.sc-wrapper-service .row-3-column {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.sc-wrapper-service .row-3-column__col {
+  position: relative;
+  width: calc(100%/3 - 5px*2);
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+.sc-service {
+  box-shadow: 0 2px 5px 1px #c7c7c7;
+  padding: 10px 5px 5px 10px;
+}
+.sc-service__information {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.sc-service:nth-child(4n+1) .sc-service__map {
+  background-image: url('../img3/ScMap2.jpg');
+}
+.sc-service:nth-child(4n+2) .sc-service__map {
+  background-image: url('../img3/ScMap1.jpg');
+}
+.sc-service:nth-child(4n+3) .sc-service__map {
+  background-image: url('../img3/ScMap3.jpg');
+}
+.sc-service:nth-child(4n+4) .sc-service__map {
+  background-image: url('../img3/ScMa4.jpg');
+}
+.sc-service__map {
+  margin-right: 10px;
+  width: 30%;
+  min-width: 110px;
+  height: 110px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.sc-service__map p {
+  font-size: 12px;
+}
+.sc-service__description {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.sc-service__description p {
+  font-size: 13px;
+  padding: 0;
+}
+.sc-service__description p:not(.sc-service__town) {
+  margin-bottom: 5px;
+}
+.sc-service__town {
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.sc-service__name {
+  text-shadow: 0 0 0.4px #000;
+}
+.sc-service__icon {
+  display: flex;
+  margin-top: auto;
+}
+.sc-service__icon-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 31px;
+  height: 31px;
+  cursor: pointer;
+  margin-top: 10px;
+  background-color: #0c9be4;
+}
+.sc-service__icon-item:not(:last-child) {
+  margin-right: 5px;
+}
+.sc-service__icon-item div {
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.sc-service__icon-tel div {
+  background-image: url("../img3/IconTelefHotel.png");
+}
+.sc-service__icon-map div {
+  background-image: url("../img3/IconMapHotel.png");
+}
+/*------------------------------*/
