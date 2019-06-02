@@ -17,304 +17,334 @@
 </head>
 <body>
 
-<div class="parent">
-    <div id="block">
+<div class="parent-ab">
+    <div class="pop-up-ab">
         <div class="close-menu"></div>
+        <div class="pop-up__header">
+            <p class="pop-up__category">РЕЦЕПТЫ ВЫПЕЧКА И ДЕСЕРТЫ</p>
+            <p class="pop-up__dish-name">Дефлопе с крутонами</p>
+            <div class="col-dish__time-preparing">
+                <p class="col-dish__time">30 - 60 минут</p>
+                <p class="col-dish__number-servings">4 порции</p>
+            </div>
+        </div>
 
+        <div class="pop-up__body">
+            <div class="pop-up__wrap-main-img">
+                <div style="" class="pop-up__main-img"></div>
+            </div>
+
+            <div class="pop-up__wrapper-ingredients">
+                <h3 class="pop-up__title">Ингридиенты</h3>
+                <ul class="list-ingredients">
+                    <li class="list-ingredients__item">
+                        <p class="list-ingredients__name">Мясо</p>
+                        <p class="list-ingredients__count">1 кг</p>
+                    </li>
+
+                    <li class="list-ingredients__item">
+                        <p class="list-ingredients__name">Соль</p>
+                        <p class="list-ingredients__count">на 1 килограмм мяса 1 столовая ложки соли с горкой</p>
+                    </li>
+
+                    <li class="list-ingredients__item">
+                        <p class="list-ingredients__name">специи: перец молотый, кориандр молотый</p>
+                        <p class="list-ingredients__count">по 1-2 чайной ложке каждого компонента</p>
+                    </li>
+
+                    <li class="list-ingredients__item">
+                        <p class="list-ingredients__name">винный уксус 6%</p>
+                        <p class="list-ingredients__count">2 ложки</p>
+                    </li>
+
+
+                </ul>
+            </div>
+
+            <div class="pop-up__wrapper-cooking">
+                <h3 class="pop-up__title">Способ приготовления</h3>
+                <ol class="list-cooking-method">
+                    <li class="list-cooking-method__item">
+                        <p>Мясо (разумеется, свежее, а не замороженное!) — нарезаем небольшими кубиками размером по 5 см,
+                        сбрызгиваем винным уксусом и маринуем 15-20 минут (можно также подержать мясо и в сухом вине);</p>
+                    </li>
+                    <li class="list-cooking-method__item">
+                        <p>Вынимаем мясо, даем ему стечь и остатки влаги высушиваем салфеткой;</p>
+                    </li>
+                    <li class="list-cooking-method__item">
+                        <p>Далее нужно тщательно обвалять мясо в смеси соли, сахара и специй, уложить в стеклянную или
+                        эмалированную посуду и ещё слегка присолить. Затем прикрыть мясо (можно тарелочкой меньшего
+                        диаметра, можно марлей или полотняной салфеткой) и оставить под гнётом в холодильнике минимум на
+                        12 часов;</p>
+                    </li>
+                    <li class="list-cooking-method__item">
+                        <p>С мяса стряхнуть излишки соли, а затем развесить на открытом воздухе (или в прохладном
+                        проветриваемом месте) на 2-3 дня, чтобы оно хорошо провялилось;</p>
+                    </li>
+                    <li class="list-cooking-method__item">
+                        <p>Подавать готовое холодное дефлопе нужно со свежей зеленью или салатом из свежих овощей.</p>
+                    </li>
+
+
+                </ol>
+            </div>
+
+            <div class="pop-up__technics-for-cooking">
+                <h3 class="pop-up__title">Техника для приготовления</h3>
+                <div class="technics-for-cooking row-4-col">
+                    <div style="background-image: url('img5/Tenhnika.jpg')" class="technics-for-cooking__item row-4-col__col"></div>
+                    <div style="background-image: url('img5/Tenhnika.jpg')" class="technics-for-cooking__item row-4-col__col"></div>
+                    <div style="background-image: url('img5/Tenhnika.jpg')" class="technics-for-cooking__item row-4-col__col"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pop-up-border-bottom" >
     </div>
 </div>
 <div id="lean_overlay"></div>
+
 <div class="wrap">
-    <section class="mn-slider"></section>
-
-    <section>
-
 
         <div class="container">
-            <div class="no-container">
 
-                <div class="sc-container-search-town">
-                    <div class="sc-wrapper-search-town">
-                        <form action="#" class="sc-searh-form">
-                            <div class="sc-searh-form__wrap">
-                                <div class="sc-searh-form__icon"></div>
-                                <input placeholder="Введите город" type="text" name="">
+            <h1 style="text-align: center" class="h1-title">Рецепты для техники SIMFERSHOP</h1>
+
+            <div class="rec-section-search-dish">
+                <div class="rec-wrapper-search-dish">
+                    <form action="#" class="rec-searh-form sc-searh-form">
+                        <div class="sc-searh-form__wrap">
+                            <div class="sc-searh-form__icon"></div>
+                            <input placeholder="Название блюда" type="text" name="">
+                        </div>
+
+                    </form>
+
+                    <div class="rec-search-category">
+
+                        <div class="wrapper-package wrapper-package__border"><!--контейнер самого селекта-->
+                            <div class="rec-wrapper-input">
+                                <input readonly value="Первые блюда" type="text"/><!--поле input-->
+                                <div class="triangle-down"></div><!--стрелка для раскрытия select-->
                             </div>
 
-                        </form>
+                            <ul class="wrapper-select"><!--раскрывающийся список-->
+                                <li>Package-1</li>
+                                <li>Package-2</li>
+                                <li>Package-3</li>
+                                <li>Package-4</li>
+                                <li>Package-5</li>
+                                <li>Package-6</li>
+                            </ul>
+                        </div>
 
-                        <p class="sc-activate-write-center sc-activate-write-center-not">Написать в центральный
-                            сервис</p>
-
-                        <form action="#" class="sc-write-center-form">
-                            <input type="text" placeholder="ФИО" name="">
-                            <input type="text" placeholder="Ваш телефон" name="">
-                            <input type="text" placeholder="Ваш e-mail" name="">
-                            <input type="text" placeholder="Название магазина в котором куплен товар" name="">
-                            <div class="write-center-textarea">
-                                <textarea placeholder="Причина обращения"></textarea>
+                        <div class="wrapper-package wrapper-package__border"><!--контейнер самого селекта-->
+                            <div class="rec-wrapper-input">
+                                <input readonly value="Техника" type="text"/><!--поле input-->
+                                <div class="triangle-down"></div><!--стрелка для раскрытия select-->
                             </div>
-                            <button type="submit">Отправить</button>
 
-
-                        </form>
-
+                            <ul class="wrapper-select"><!--раскрывающийся список-->
+                                <li>Package-1</li>
+                                <li>Package-2</li>
+                                <li>Package-3</li>
+                                <li>Package-4</li>
+                                <li>Package-5</li>
+                                <li>Package-6</li>
+                            </ul>
+                        </div>
                     </div>
-
                 </div>
+            </div>
 
-
-                <div class="sc-wrapper-service">
-
-                    <div class="row-3-column">
-
-                        <div class="sc-service row-3-column__col">
-                            <div class="sc-service__information">
-                                <div style="" class="sc-service__map">
-                                    <p></p>
-                                </div>
-                                <div class="sc-service__description">
-                                    <p class="sc-service__town">Абакан</p>
-                                    <p class="sc-service__name">ВидеоТехника-сервис</p>
-                                    <p class="sc-service__adress">655003, г.Абакан, ул. Баумана, д. 3</p>
-                                    <p class="sc-service__telephone">(3902)266-364, 89134443434</p>
-                                    <div class="sc-service__icon">
-                                        <a href="tel:89134443434" class="sc-service__icon-item sc-service__icon-tel">
-                                            <div></div>
-                                        </a>
-                                        <div class="sc-service__icon-item sc-service__icon-map">
-                                            <div></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="rec-section-dishes">
+                <div class="rec-wrapper-dishes row-4-col">
+                    <div class="col-dish row-4-col__col">
+                        <div style="background-image: url('img5/Dish1.jpg')" class="col-dish__img"></div>
+                        <p class="col-dish__name">Дефлопе с крутонами</p>
+                        <div class="col-dish__time-preparing">
+                            <p class="col-dish__time">30 - 60 минут</p>
+                            <p class="col-dish__number-servings">4 порции</p>
                         </div>
-
-                        <div class="sc-service row-3-column__col">
-                            <div class="sc-service__information">
-                                <div style="" class="sc-service__map">
-                                    <p></p>
-                                </div>
-                                <div class="sc-service__description">
-                                    <p class="sc-service__town">Альметьевск</p>
-                                    <p class="sc-service__name">ИП Валиуллин М.Р.</p>
-                                    <p class="sc-service__adress">423450, г.Альметьевск, ул. К.Цеткин, д.18а</p>
-                                    <p class="sc-service__telephone">(8553)32-22-11, (960)047-22-11</p>
-                                    <div class="sc-service__icon">
-                                        <a href="tel:8(960)047-22-11"
-                                           class="sc-service__icon-item sc-service__icon-tel">
-                                            <div></div>
-                                        </a>
-                                        <div class="sc-service__icon-item sc-service__icon-map">
-                                            <div></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="sc-service row-3-column__col">
-                            <div class="sc-service__information">
-                                <div style="" class="sc-service__map">
-                                    <p></p>
-                                </div>
-                                <div class="sc-service__description">
-                                    <p class="sc-service__town">Анапа</p>
-                                    <p class="sc-service__name">ЮФФА</p>
-                                    <p class="sc-service__adress">353451, г.Анапа, ул.Стахановкая, д. 16</p>
-                                    <p class="sc-service__telephone">(903)448-86-68, (989)295-36-03</p>
-                                    <div class="sc-service__icon">
-                                        <a href="tel:8(903)448-86-68"
-                                           class="sc-service__icon-item sc-service__icon-tel">
-                                            <div></div>
-                                        </a>
-                                        <div class="sc-service__icon-item sc-service__icon-map">
-                                            <div></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="sc-service row-3-column__col">
-                            <div class="sc-service__information">
-                                <div style="" class="sc-service__map">
-                                    <p></p>
-                                </div>
-                                <div class="sc-service__description">
-                                    <p class="sc-service__town">Армавир</p>
-                                    <p class="sc-service__name">Омега-сервис</p>
-                                    <p class="sc-service__adress">655003, г.Абакан, ул. Баумана, д. 3</p>
-                                    <p class="sc-service__telephone">(3902)266-364, 89134443434</p>
-                                    <div class="sc-service__icon">
-                                        <a href="tel:(86137)9-40-61" class="sc-service__icon-item sc-service__icon-tel">
-                                            <div></div>
-                                        </a>
-                                        <div class="sc-service__icon-item sc-service__icon-map">
-                                            <div></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="sc-service row-3-column__col">
-                            <div class="sc-service__information">
-                                <div style="" class="sc-service__map">
-                                    <p></p>
-                                </div>
-                                <div class="sc-service__description">
-                                    <p class="sc-service__town">Арсеньев</p>
-                                    <p class="sc-service__name">Арс-Сервис</p>
-                                    <p class="sc-service__adress">692342, г.Арсеньев, ул. Вокзальная, д.57</p>
-                                    <p class="sc-service__telephone">(42361)3-34-52, 89242631299</p>
-                                    <div class="sc-service__icon">
-                                        <a href="tel:89242631299" class="sc-service__icon-item sc-service__icon-tel">
-                                            <div></div>
-                                        </a>
-                                        <div class="sc-service__icon-item sc-service__icon-map">
-                                            <div></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="sc-service row-3-column__col">
-                            <div class="sc-service__information">
-                                <div style="" class="sc-service__map">
-                                    <p></p>
-                                </div>
-                                <div class="sc-service__description">
-                                    <p class="sc-service__town">Архангельск</p>
-                                    <p class="sc-service__name">УАН-Сервис</p>
-                                    <p class="sc-service__adress">163001, г. Архангельск, ул. Суворова, д.12</p>
-                                    <p class="sc-service__telephone">(8182)27-69-12</p>
-                                    <div class="sc-service__icon">
-                                        <a href="tel:(8182)27-69-12" class="sc-service__icon-item sc-service__icon-tel">
-                                            <div></div>
-                                        </a>
-                                        <div class="sc-service__icon-item sc-service__icon-map">
-                                            <div></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
-
-
+                    <div class="col-dish row-4-col__col">
+                        <div style="background-image: url('img5/Dish2.jpg')" class="col-dish__img"></div>
+                        <p class="col-dish__name">Блюдо из арбуза</p>
+                        <div class="col-dish__time-preparing">
+                            <p class="col-dish__time">30 - 60 минут</p>
+                            <p class="col-dish__number-servings">4 порции</p>
+                        </div>
+                    </div>
+                    <div class="col-dish row-4-col__col">
+                        <div style="background-image: url('img5/Dish3.jpg')" class="col-dish__img"></div>
+                        <p class="col-dish__name">Гарнир из Дыни</p>
+                        <div class="col-dish__time-preparing">
+                            <p class="col-dish__time">30 - 60 минут</p>
+                            <p class="col-dish__number-servings">4 порции</p>
+                        </div>
+                    </div>
+                    <div class="col-dish row-4-col__col">
+                        <div style="background-image: url('img5/Dish4.jpg')" class="col-dish__img"></div>
+                        <p class="col-dish__name">Суп из персиков</p>
+                        <div class="col-dish__time-preparing">
+                            <p class="col-dish__time">30 - 60 минут</p>
+                            <p class="col-dish__number-servings">4 порции</p>
+                        </div>
+                    </div>
+                    <div class="col-dish row-4-col__col">
+                        <div style="background-image: url('img5/Dish1.jpg')" class="col-dish__img"></div>
+                        <p class="col-dish__name">Дефлопе с крутонами</p>
+                        <div class="col-dish__time-preparing">
+                            <p class="col-dish__time">30 - 60 минут</p>
+                            <p class="col-dish__number-servings">4 порции</p>
+                        </div>
+                    </div>
+                    <div class="col-dish row-4-col__col">
+                        <div style="background-image: url('img5/Dish1.jpg')" class="col-dish__img"></div>
+                        <p class="col-dish__name">Дефлопе с крутонами</p>
+                        <div class="col-dish__time-preparing">
+                            <p class="col-dish__time">30 - 60 минут</p>
+                            <p class="col-dish__number-servings">4 порции</p>
+                        </div>
+                    </div>
+                    <div class="col-dish row-4-col__col">
+                        <div style="background-image: url('img5/Dish1.jpg')" class="col-dish__img"></div>
+                        <p class="col-dish__name">Дефлопе с крутонами</p>
+                        <div class="col-dish__time-preparing">
+                            <p class="col-dish__time">30 - 60 минут</p>
+                            <p class="col-dish__number-servings">4 порции</p>
+                        </div>
+                    </div>
+                    <div class="col-dish row-4-col__col">
+                        <div style="background-image: url('img5/Dish1.jpg')" class="col-dish__img"></div>
+                        <p class="col-dish__name">Дефлопе с крутонами</p>
+                        <div class="col-dish__time-preparing">
+                            <p class="col-dish__time">30 - 60 минут</p>
+                            <p class="col-dish__number-servings">4 порции</p>
+                        </div>
+                    </div>
                 </div>
-            </div><!--kkk-->
+            </div>
         </div>
-    </section>
 </div>
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script src="owl.carousel.js"></script>
-<script src="wow_book.min.js"></script>
-<script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
-
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
 
 <script>
     $(document).ready(function () {
 
+        /*Стилизованный селект*/
+        $('.rec-wrapper-input').on('click',function(){
+
+            //крутящийся треугольник
+
+            $(this).find('.triangle-down').toggleClass('triangle-down__rotate');
 
 
-        //Открытие формы написать в центр
-        $('.sc-activate-write-center').on('click', function () {
-            if ($(this).hasClass('sc-activate-write-center-not')) {
-                $(this).removeClass('sc-activate-write-center-not').addClass('sc-activate-write-center-active');
+            //добавлене  - удаление радиусов
+            if($(this).parents('.wrapper-package').hasClass('wrapper-package__border')) {
+                $(this).parents('.wrapper-package').find('.wrapper-select').slideDown();
+
+                $(this).parents('.wrapper-package').removeClass('wrapper-package__border');
+            }
+            else{
+
+                $(this).parents('.wrapper-package').find('.wrapper-select').slideUp(function () {
+                    $(this).parents('.wrapper-package').addClass('wrapper-package__border');
+                });
+
+            }
+
+            //добавление - удаление подсветки
+
+            if($(this).hasClass('wrapper-select-color')){
+                $(this).removeClass('wrapper-select-color');
+                $(this).find('input').removeClass('wrapper-select-color');
             }
             else {
-                $(this).removeClass('sc-activate-write-center-active').addClass('sc-activate-write-center-not');
+                $(this).addClass('wrapper-select-color');
+                $(this).find('input').addClass('wrapper-select-color');
             }
-            $('.sc-write-center-form').slideToggle();
-            $('.sc-searh-form').slideToggle();
         });
 
+        //выбор значения селекта
 
-        //поиск названия города в карточке и подстановка в картинку карты
-
-        $('.sc-service').each(function () {
-            var town = $(this).find('.sc-service__town').text();
-            $(this).find('.sc-service__map p').text(town);
-        });
-
-        //модальное окно для карты
-        //Построение карты
-
-        var adress_to_map;
-        var address;
-        var feature_geo;
-
-
-        $('.sc-service__map').on('click', function () {
-            $(this).siblings('.sc-service__description').find('.sc-service__icon-map').click();
-        });
-        $('body').on('click', '.sc-service__icon-map', function () {//Открываю модально окно по клику
-
-
-            address = $(this).parents('.sc-service__description').find('.sc-service__adress').text();
-            console.log(address);
-
-            $.ajax({
-                method: 'GET',
-                url: 'https://geocode-maps.yandex.ru/1.x/?geocode=' + address + '&format=json',
-                success: function (json) {
-                    var feature = json.response.GeoObjectCollection.featureMember[0];
-                    feature_geo = feature.GeoObject.Point.pos.split(' ').reverse();
-                    if (!feature) console.log('Не удалось распознать адрес'); else console.log(feature_geo);
-                    ya_map(feature_geo, address);//пердаю координаты
-                }
+        $('.wrapper-select li').on('click',function(){
+            $(this).parents('.wrapper-select').find('li').removeClass('wrapper-select__choose');
+            $(this).addClass('wrapper-select__choose');
+            var val = $(this).text();
+            $(this).parents('.wrapper-package').find('input').val(val);
+            $(this).parents('.wrapper-package').find('.wrapper-select').slideUp(function () {
+                $(this).parents('.wrapper-package').addClass('wrapper-package__border');
             });
+            if($(this).parents('.wrapper-package').find('.rec-wrapper-input').hasClass('wrapper-select-color')){
+                $(this).parents('.wrapper-package').find('.rec-wrapper-input').removeClass('wrapper-select-color');
+                $(this).parents('.wrapper-package').find('.rec-wrapper-input').find('input').removeClass('wrapper-select-color');
+            }
+            else {
+                $(this).parents('.wrapper-package').find('.rec-wrapper-input').addClass('wrapper-select-color');
+                $(this).parents('.wrapper-package').find('.rec-wrapper-input').find('input').addClass('wrapper-select-color');
+            }
+            $(this).parents('.wrapper-package').find('.triangle-down').toggleClass('triangle-down__rotate');
+
+        });
 
 
-            $('.parent').css('display', 'flex');
+        /*Модальное окно с рецептами*/
+
+
+        $('.col-dish').on('click', function () {//Открываю модально окно по клику
+
+            //Беру картинку и подставляю в модалку
+            var attr_img = $(this).find('.col-dish__img').css('background-image').replace(/^url\(['"](.+)['"]\)/, '$1');
+            var name_dish = $(this).find('.col-dish__name').text();
+
+            $('.parent-ab').css('display', 'block').addClass('parent-ab__active');
             $('#lean_overlay').show();//фон затемнение
+            $("body").css("overflow-y", "hidden");
+            //подставляю картинку
+            $('.parent-ab .pop-up__main-img').css('background-image','url('+attr_img+')');
+            //подставляю название блюда
+            $('.parent-ab .pop-up__dish-name').text(name_dish);
+            scroll(); //вызываю функцию красивого скролла
         });
-
-
-        var massive_map = [[55.012187, 36.472265], [55.011959, 36.457569], [55.002175, 36.439836], [54.999356, 36.440052]];
-
-
-        var myMap;
-
-        function ya_map(index, adress) {
-            ymaps.ready(function () {
-                myMap = new ymaps.Map('block', {
-//                        center: massive_map[0],// координаты передаются из массива
-                    center: index,//координаты передаются на прямую
-                    zoom: 16
-                }, {
-                    searchControlProvider: 'yandex#search'
-                });
-                myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-                    hintContent: adress
-                });
-
-                myMap.geoObjects.add(myPlacemark);
-            });
-        }
-
 
         $('.close-menu').on('click', function () {//Закрываю модальное окно по клику на крестик
-            $('.parent').css('display', 'none');
+            $('.parent-ab').css('display', 'none').removeClass('parent-ab__active');
+            $(".pop-up-ab").getNiceScroll().hide();
             $('#lean_overlay').hide();
-            myMap.destroy();//убиваю карту
-
+            $("body").css("overflow-y", "auto");
         });
 
-        $('.parent').on('click', function (e) {//Закрываю модальное окно по клику рабочей области
-            $('.parent').css('display', 'none');
-            $("#lean_overlay").hide();
-            myMap.destroy();
-        }).on('click', '#block', function (e) {//Запрещаю закрывать окно по клику на само молдальное окно
-            e.stopPropagation();
 
+        $('#lean_overlay').on('click', function () {
+            $('.parent-ab').css('display', 'none');
+            $(this).hide();
+            $("body").css("overflow-y", "auto");
+            $('#lean_overlay').hide();
         });
 
+
+        //Функция красивый скролл
+
+        var pop_up_ab = $('.pop-up-ab');
+
+        function scroll(){
+            $(pop_up_ab).scrollTop(0);
+            $(pop_up_ab).getNiceScroll().show();
+            $(pop_up_ab).getNiceScroll().resize();
+
+            $(pop_up_ab).niceScroll({
+                cursorcolor: "#fff", //цвет ползунка
+                autohidemode: false,
+                cursorwidth: 10,  //ширина ползунка
+                cursorborderradius: 4, //радиус ползунка
+                background: "#a4a4a4", //цвет линии сролла
+
+            });
+        }
 
     })
 
