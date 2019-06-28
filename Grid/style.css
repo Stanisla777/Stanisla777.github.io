@@ -18,7 +18,7 @@ body{
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
     -ms-grid-rows: 200px 20px 200px 20px 200px;
     grid-template-rows: repeat(3,200px);
     grid-gap: 20px;
