@@ -328,6 +328,14 @@
         margin-top: 20px;
     }
 
+    .product-detail__price {
+        width: max-content;
+        padding-top: 3px;
+    }
+    .wrapper-separate-model_2 {
+        margin-top: 10px;
+    }
+
 
 
 
