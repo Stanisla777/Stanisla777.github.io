@@ -528,6 +528,9 @@
         justify-content: center;
         flex-shrink: 0;
     }
+    .wrapper-models-modal .owl-dots button:not(:last-child) {
+        margin-right: 13px;
+    }
 
 
 }
