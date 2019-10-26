@@ -359,7 +359,8 @@ $(document).ready(function ($) {
     function res_slide() {
         width_window = $(window).width();
         count_elem = $('.section-separate-model .wrapper-separate-model').length;
-        restructuring_block(width_window,count_elem)
+        restructuring_block(width_window,count_elem);
+        restructuring_block_3(width_window,count_elem)
     }
     res_slide();
     //параметры при измеении ширины экрана
@@ -460,15 +461,15 @@ $(document).ready(function ($) {
     //     let count_slide;
     //     count_slide = $(this).length;
 
-        // $(this).find( '.models-small-img__item').each(function (index,elem) {
-        //     if(index<=3){
-        //         $(this).addClass('img_show');
-        //     }
-        //     else{
-        //         $(this).addClass('img_hide');
-        //     }
-        //
-        // })
+    // $(this).find( '.models-small-img__item').each(function (index,elem) {
+    //     if(index<=3){
+    //         $(this).addClass('img_show');
+    //     }
+    //     else{
+    //         $(this).addClass('img_hide');
+    //     }
+    //
+    // })
 
 
     // })
