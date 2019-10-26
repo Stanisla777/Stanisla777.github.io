@@ -245,9 +245,9 @@ $(document).ready(function ($) {
             touchDrag: false,
             responsive: { //Адаптивность. Кол-во выводимых элементов при определенной ширине.
                 0: {
-                    items: 4
+                    items: 3
                 },
-                800: {
+                400: {
                     items: 4
                 },
                 1050: {
