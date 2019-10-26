@@ -544,6 +544,11 @@
         right: 10%;
     }
 
+    .wrapper-owl-carousel-models-img{
+        width: 70%;
+        min-width: 200px;
+    }
+
 }
 
 @media screen and (max-width: 400px) and (max-height: 630px) {
