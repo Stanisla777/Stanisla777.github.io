@@ -550,7 +550,7 @@
         right: -149px;
     }
 }
-@media screen and (max-width: 385px) and (min-height: 730px) {
+@media screen and (max-width: 340px) and (min-height: 600px) {
     .container-main-page {
         right: -300px;
         background-size: 71vh 100vh;
