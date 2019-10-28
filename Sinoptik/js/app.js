@@ -463,18 +463,36 @@ $(document).ready(function ($) {
 
     //Для страницы карточка товара 2 вариант
 
-    $('.model-slider-item__big-img__img').zoom({
-        'magnify':1.5,
-        onZoomIn: function(){
-            // $(this).parents('.model-slider-item__big-img__img').fadeIn(600)
-            $(this).parents('.model-slider-item__big-img__img').find('img:first-child').hide()
-        },
-        onZoomOut: function(){
-            // $(this).parents('.model-slider-item__big-img__img').hide()
-            $(this).parents('.model-slider-item__big-img__img').find('img:first-child').fadeIn(600)
-        }
+    if ($(window).width()>=600){
+        $('.model-slider-item__big-img__img').zoom({
+            'magnify':1.5,
+            onZoomIn: function(){
+                // $(this).parents('.model-slider-item__big-img__img').fadeIn(600)
+                $(this).parents('.model-slider-item__big-img__img').find('img:first-child').hide()
+            },
+            onZoomOut: function(){
+                // $(this).parents('.model-slider-item__big-img__img').hide()
+                $(this).parents('.model-slider-item__big-img__img').find('img:first-child').fadeIn(600)
+            }
 
-    });
+        });
+
+        $('.model-slider-item__img').zoom({
+            'magnify':1.5,
+            onZoomIn: function(){
+                // $(this).parents('.model-slider-item__big-img__img').fadeIn(600)
+                $(this).parents('.model-slider-item__img').find('img:first-child').hide()
+            },
+            onZoomOut: function(){
+                // $(this).parents('.model-slider-item__big-img__img').hide()
+                $(this).parents('.model-slider-item__img').find('img:first-child').fadeIn(600)
+            }
+
+        });
+
+    }
+
+
 
 
 
