@@ -178,6 +178,9 @@ $(document).ready(function ($) {
         $('#before-load').find('i').end().delay(600).fadeOut('slow');
         $('.container-models-modal').show();
         $("body").css("overflow-y", "hidden");
+        zoom_modal();
+        zoom_modal_2()
+
     }
 
     function close_open() {
@@ -455,29 +458,55 @@ $(document).ready(function ($) {
 
     });
 
-    /*В карточке товара слайдер для пейджера*/
 
-    // $('.wrapper-models-small-img').each(function () {
-    //     let count_slide;
-    //     count_slide = $(this).length;
+    /*Добавил*/
 
-    // $(this).find( '.models-small-img__item').each(function (index,elem) {
-    //     if(index<=3){
-    //         $(this).addClass('img_show');
-    //     }
-    //     else{
-    //         $(this).addClass('img_hide');
-    //     }
-    //
-    // })
+    //Для страницы карточка товара 2 вариант
 
+    $('.model-slider-item__big-img__img').zoom({
+        'magnify':1.5,
+        onZoomIn: function(){
+            // $(this).parents('.model-slider-item__big-img__img').fadeIn(600)
+            $(this).parents('.model-slider-item__big-img__img').find('img:first-child').hide()
+        },
+        onZoomOut: function(){
+            // $(this).parents('.model-slider-item__big-img__img').hide()
+            $(this).parents('.model-slider-item__big-img__img').find('img:first-child').fadeIn(600)
+        }
 
-    // })
-
+    });
 
 
 
+    function zoom_modal() {
+        $('.wrapper-models-modal__container .models-small-img__item-img').zoom({
+            'magnify':1.5,
+            onZoomIn: function(){
+                // $(this).parents('.model-slider-item__big-img__img').fadeIn(600)
+                $(this).parents('.models-small-img__item-img').find('img:first-child').hide()
+            },
+            onZoomOut: function(){
+                // $(this).parents('.model-slider-item__big-img__img').hide()
+                $(this).parents('.models-small-img__item-img').find('img:first-child').fadeIn(600)
+            }
 
+        });
+    }
+
+    function zoom_modal_2() {
+        $('.wrapper-models-modal__container .models-img-slider-item').zoom({
+            'magnify':1.5,
+            onZoomIn: function(){
+                // $(this).parents('.model-slider-item__big-img__img').fadeIn(600)
+                $(this).parents('.models-img-slider-item').find('img:first-child').hide()
+            },
+            onZoomOut: function(){
+                // $(this).parents('.model-slider-item__big-img__img').hide()
+                $(this).parents('.models-img-slider-item').find('img:first-child').fadeIn(600)
+            }
+
+        });
+    }
 
 
 

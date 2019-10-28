@@ -123,16 +123,32 @@
                             <div class="wrapper-model-slider-img">
                                 <div class="owl-carousel owl-carousel-models">
                                     <div class="model-slider-item" data-hash="zero">
-                                        <div style="background-image: url('./img/slider-img1.png')" class="model-slider-item__img"></div>
+                                        <div  class="model-slider-item__img">
+                                            <img src='./img/slider-img1.png' alt="">
+                                        </div>
                                         <div class="wrapper-owl-carousel-models-img">
                                             <div class="owl-carousel">
-                                                <div style="background-image: url('./img/fancy1.jpg')" class="models-img-slider-item"></div>
-                                                <div style="background-image: url('./img/fancy2.png')" class="models-img-slider-item"></div>
-                                                <div style="background-image: url('./img/fancy3.png')" class="models-img-slider-item"></div>
-                                                <div style="background-image: url('./img/fancy1.jpg')" class="models-img-slider-item"></div>
-                                                <div style="background-image: url('./img/fancy1.jpg')" class="models-img-slider-item"></div>
-                                                <div style="background-image: url('./img/fancy1.jpg')" class="models-img-slider-item"></div>
-                                                <div style="background-image: url('./img/fancy1.jpg')" class="models-img-slider-item"></div>
+                                                <div  class="models-img-slider-item">
+                                                    <img src="./img/fancy1.jpg" alt="">
+                                                </div>
+                                                <div  class="models-img-slider-item">
+                                                    <img src="./img/fancy2.png" alt="">
+                                                </div>
+                                                <div class="models-img-slider-item">
+                                                    <img src="./img/fancy3.png" alt="">
+                                                </div>
+                                                <div class="models-img-slider-item">
+                                                    <img src="./img/fancy1.jpg" alt="">
+                                                </div>
+                                                <div class="models-img-slider-item">
+                                                    <img src="./img/fancy1.jpg" alt="">
+                                                </div>
+                                                <div class="models-img-slider-item">
+                                                    <img src="./img/fancy1.jpg" alt="">
+                                                </div>
+                                                <div class="models-img-slider-item">
+                                                    <img src="./img/fancy1.jpg" alt="">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -367,10 +383,22 @@
     <script src="js/jquery.cssslider.js"></script>
     <script src="js/jquery.touchSwipe.js"></script>
     <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.zoom.min.js"></script>
 
     <script>
         $(document).ready(function () {
+            $('.model-slider-item__img').zoom({
+                'magnify':1.5,
+                onZoomIn: function(){
+                    // $(this).parents('.model-slider-item__big-img__img').fadeIn(600)
+                    $(this).parents('.model-slider-item__img').find('img:first-child').hide()
+                },
+                onZoomOut: function(){
+                    // $(this).parents('.model-slider-item__big-img__img').hide()
+                    $(this).parents('.model-slider-item__img').find('img:first-child').fadeIn(600)
+                }
 
+            });
 
         });
     </script>
