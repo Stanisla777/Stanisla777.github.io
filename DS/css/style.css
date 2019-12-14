@@ -159,3 +159,8 @@ textarea:focus {
     width: calc(100%/1 - 30px);
   }
 }
+.header{
+  position: fixed;
+  width: 100%;
+  text-align: center;
+}
