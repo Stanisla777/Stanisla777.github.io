@@ -434,12 +434,13 @@ $(document).ready(function ($) {
     let attr_total_img;
     $('.wrapper-models-small-img .models-small-img__item-img').hover(
         function(){
-            attr_total_img = $(this).parents('.wrapper-models-small-img').siblings('.model-slider-item__big-img').find('.model-slider-item__big-img__img').css('background-image');
-            attr_img = $(this).css('background-image')
-            $(this).parents('.wrapper-models-small-img').siblings('.model-slider-item__big-img').find('.model-slider-item__big-img__img').css('background-image',attr_img)
+            attr_total_img = $(this).parents('.wrapper-models-small-img').siblings('.model-slider-item__big-img').find('.model-slider-item__big-img__img img:first-child').attr('src');
+            attr_img = $(this).find('img:first-child').attr('src');
+            console.log(attr_img)
+            $(this).parents('.wrapper-models-small-img').siblings('.model-slider-item__big-img').find('.model-slider-item__big-img__img img:first-child').attr('src',attr_img)
         },
         function(){
-            $(this).parents('.wrapper-models-small-img').siblings('.model-slider-item__big-img').find('.model-slider-item__big-img__img').css('background-image',attr_total_img)
+            $(this).parents('.wrapper-models-small-img').siblings('.model-slider-item__big-img').find('.model-slider-item__big-img__img img:first-child').attr('src',attr_total_img)
 
 
         });
@@ -497,33 +498,37 @@ $(document).ready(function ($) {
 
 
     function zoom_modal() {
-        $('.wrapper-models-modal__container .models-small-img__item-img').zoom({
-            'magnify':1.5,
-            onZoomIn: function(){
-                // $(this).parents('.model-slider-item__big-img__img').fadeIn(600)
-                $(this).parents('.models-small-img__item-img').find('img:first-child').hide()
-            },
-            onZoomOut: function(){
-                // $(this).parents('.model-slider-item__big-img__img').hide()
-                $(this).parents('.models-small-img__item-img').find('img:first-child').fadeIn(600)
-            }
+        if ($(window).width()>=600) {
+            $('.wrapper-models-modal__container .models-small-img__item-img').zoom({
+                'magnify': 1.2,
+                onZoomIn: function () {
+                    // $(this).parents('.model-slider-item__big-img__img').fadeIn(600)
+                    $(this).parents('.models-small-img__item-img').find('img:first-child').hide()
+                },
+                onZoomOut: function () {
+                    // $(this).parents('.model-slider-item__big-img__img').hide()
+                    $(this).parents('.models-small-img__item-img').find('img:first-child').fadeIn(600)
+                }
 
-        });
+            });
+        }
     }
 
     function zoom_modal_2() {
-        $('.wrapper-models-modal__container .models-img-slider-item').zoom({
-            'magnify':1.5,
-            onZoomIn: function(){
-                // $(this).parents('.model-slider-item__big-img__img').fadeIn(600)
-                $(this).parents('.models-img-slider-item').find('img:first-child').hide()
-            },
-            onZoomOut: function(){
-                // $(this).parents('.model-slider-item__big-img__img').hide()
-                $(this).parents('.models-img-slider-item').find('img:first-child').fadeIn(600)
-            }
+        if ($(window).width()>=600) {
+            $('.wrapper-models-modal__container .models-img-slider-item').zoom({
+                'magnify': 1.2,
+                onZoomIn: function () {
+                    // $(this).parents('.model-slider-item__big-img__img').fadeIn(600)
+                    $(this).parents('.models-img-slider-item').find('img:first-child').hide()
+                },
+                onZoomOut: function () {
+                    // $(this).parents('.model-slider-item__big-img__img').hide()
+                    $(this).parents('.models-img-slider-item').find('img:first-child').fadeIn(600)
+                }
 
-        });
+            });
+        }
     }
 
 
