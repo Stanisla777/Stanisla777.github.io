@@ -8,32 +8,40 @@ $(document).ready(function ($) {
         $('.header__wrapper-logo-menu').hide()
     }
 
+    const body_wrapper = $('.body-wrapper');
+    const container_main_page = $('.container-main-page')
+
     $('.icon-media-menu').on('click', function () {
+
+
         if ($(this).hasClass('icon-media-menu_active')) {
 
+
             $('.header__wrapper-logo-menu').removeClass('zoomMenuUp').addClass('zoomMenudown');
-            $('.body-wrapper').removeClass('zoomSectionUp').addClass('zoomSectiondown');
-            $('.container-main-page').removeClass('zoomSectionUp').addClass('zoomSectiondown');
+            body_wrapper.removeClass('zoomSectionUp').addClass('zoomSectiondown');
+            container_main_page.removeClass('zoomSectionUp').addClass('zoomSectiondown');
             setTimeout(hide_menu, 500);
             $(this).removeClass('icon-media-menu_active');
-            $('.body-wrapper').fadeIn(800);
-            $('.container-main-page').fadeIn(800);
+            body_wrapper.fadeIn(800);
+            container_main_page.fadeIn(800);
 
         }
         else {
             $(this).addClass('icon-media-menu_active');
             $('.header__wrapper-logo-menu').show().removeClass('zoomMenudown').addClass('zoomMenuUp')
-            $('.body-wrapper').removeClass('zoomSectiondown').addClass('zoomSectionUp');
-            $('.container-main-page').removeClass('zoomSectiondown').addClass('zoomSectionUp');
-            $('.body-wrapper').fadeOut(600);
-            $('.container-main-page').fadeOut(600);
+            body_wrapper.removeClass('zoomSectiondown').addClass('zoomSectionUp');
+            container_main_page.removeClass('zoomSectiondown').addClass('zoomSectionUp');
+            body_wrapper.fadeOut(600);
+            container_main_page.fadeOut(600);
         }
 
     });
+
+    const wrapper_for_slider = $('.wrapper-for-slider');
     $(".product-model-slider").on('changed.owl.carousel', function(event) {
-        var colorEnum = $(event.target).find(".owl-stage").first().find(".owl-item").not(".owl-item  .owl-item").eq(event.item.index).find(".model-slider-item").data("hash");
-        $(".wrapper-for-slider").find("li").removeClass("selected active-item")
-        $(".wrapper-for-slider").find("li[data-color-id='#"+colorEnum+"']").addClass("selected active-item")
+        let colorEnum = $(event.target).find(".owl-stage").first().find(".owl-item").not(".owl-item  .owl-item").eq(event.item.index).find(".model-slider-item").data("hash");
+        wrapper_for_slider.find("li").removeClass("selected active-item")
+        wrapper_for_slider.find("li[data-color-id='#"+colorEnum+"']").addClass("selected active-item")
     })
     //формирую меню  /*Исправил*/
 
@@ -103,13 +111,14 @@ $(document).ready(function ($) {
     }
 
 //        Чтобы слайд можно было листать мышкой, а не только нажатием на кнопки
+    const wrapper_model_slider_img = $('.wrapper-model-slider-img')
 
-    $(".wrapper-model-slider-img").swipe({
+    wrapper_model_slider_img.swipe({
         swipeLeft: function (event, direction, distance, duration, fingerCount) {
             $('#btn_next1').click();
         }
     });
-    $(".wrapper-model-slider-img").swipe({
+    wrapper_model_slider_img.swipe({
         swipeRight: function (event, direction, distance, duration, fingerCount) {
             $('#btn_prev1').click();
         }
@@ -117,14 +126,14 @@ $(document).ready(function ($) {
 
 //        Так как все li у нас имеют position:absolute, задаем высоту общего контейнера
 
-    var current_item = $('.choose_slider_items li.current_item');
-    var height_current_item;
+    const current_item = $('.choose_slider_items li.current_item');
+    let height_current_item;
 
     /*Высчтывает высоту слайдера только на странице модели*/
     function height_slider() {
 
         if($(".model-slider").length>0){
-            var maxheight = 0;
+            let maxheight = 0;
             $('.model-slider li').each(function () {
                 height = $(this).outerHeight();
 
@@ -269,7 +278,7 @@ $(document).ready(function ($) {
     let massive_imj = [];
 
     $('.model-slider-item__img, .model-slider-item__big-img').on('click',function () {
-        $('.body-wrapper').removeClass('zoomSectiondown');
+        body_wrapper.removeClass('zoomSectiondown');
 
         $(this).siblings('.wrapper-owl-carousel-models-img, .wrapper-models-small-img').find('.models-img-slider-item, .models-small-img__item').each(function () {
 
@@ -291,7 +300,7 @@ $(document).ready(function ($) {
 
 
     $('.wrapper-owl-carousel-models-img .models-img-slider-item, .wrapper-models-small-img .models-small-img__item').on('click', function () {
-        $('.body-wrapper').removeClass('zoomSectiondown');
+        body_wrapper.removeClass('zoomSectiondown');
         let img_src = $(this).attr('style');
         let index;
         if($(this).parent().hasClass('owl-item')){
