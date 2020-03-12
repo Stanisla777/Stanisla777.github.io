@@ -1,0 +1,115 @@
+@media screen and (max-width: 850px)  {
+    .header-navigation {
+        position: fixed;
+        display: none;
+        flex-direction: column;
+        z-index: 20;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        transform: translate(-50%, 0);
+        left: 50%;
+        top: 60px;
+    }
+    .icon-media-menu{
+        display: flex;
+    }
+    .total-amount{
+        margin-top: 8px;
+        margin-left: -2px;
+    }
+
+    .slider-reviews__item {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 770px)  {
+    .block-customers:nth-child(2){
+        margin-top: 20px;
+    }
+    .wrapper-footer{
+        flex-direction: column;
+    }
+    .social-networks{
+        justify-content: flex-start;
+    }
+    .footer__wrap-tel{
+        text-align: left;
+    }
+    .footer-adress{
+        width: 100%;
+    }
+    .footer__col-right{
+        margin-top: 50px;
+        align-items: center;
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 630px)  {
+    .slider-reviews__item{
+        flex-direction: column;
+    }
+    .slider-reviews__col-left{
+        text-align: center;
+    }
+    .slider-reviews__col-right{
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 580px)  {
+    .list-company__item{
+        padding-right: 0;
+    }
+    .list-company{
+        width: 60%;
+        transform: translate(-50%, 0);
+        left: 50%;
+        top: 50%;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 460px)  {
+    .wrap-media-menu {
+        position: fixed;
+        top: 0;
+        right: 8px;
+        z-index: 10;
+        cursor: pointer;
+    }
+    .icon-media-menu{
+        transform: translateX(-100%);
+    }
+    .header-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .header-select-language{
+        margin-left: 0;
+        order: -1;
+        margin-bottom: 25px;
+    }
+
+}
+
+@media screen and (max-width: 430px)  {
+    .list-company{
+        width: 90%;
+        transform: translate(-50%, 0);
+        left: 50%;
+        top: 50%;
+        position: relative;
+    }
+    .footer-menu__item a{
+        font-size: 12px;
+    }
+}
+
