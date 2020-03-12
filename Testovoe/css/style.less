@@ -787,3 +787,140 @@ input:focus, textarea:focus{
     }
   }
 }
+
+
+
+
+
+
+
+/*1 колонка*/
+
+/*margin 0*/
+[class*="row-"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.row-3-col-mar-10 {
+  margin-left: -10px;
+  margin-right: -10px;margin-bottom: -20px;
+}
+.row-3-col-mar-10 > .col-flex {
+  position: relative;
+  width: calc(100%/3 - 10px*2);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.row-3-col-mar-10.mar-bottom > .col-flex {
+  margin-bottom: 20px;
+}
+
+/*margin 20px*/
+/*----------------------------------------------------------*/
+.row-3-col-mar-20 {
+  margin-left: -20px;
+  margin-right: -20px;margin-bottom: -40px;
+}
+.row-3-col-mar-20 > .col-flex {
+  position: relative;
+  width: calc(100%/3 - 20px*2);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.row-3-col-mar-20.mar-bottom > .col-flex {
+  margin-bottom: 40px;
+}
+/*----------------------------------------------------------*/
+.row-4-col-mar-20 {
+  margin-left: -20px;
+  margin-right: -20px;margin-bottom: -40px;
+}
+.row-4-col-mar-20 > .col-flex {
+  position: relative;
+  width: calc(100%/4 - 20px*2);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.row-4-col-mar-20.mar-bottom > .col-flex {
+  margin-bottom: 40px;
+}
+
+/*margin 30px*/
+.row-2-col-mar-30 {
+  margin-left: -30px;
+  margin-right: -30px;
+  margin-bottom: -60px;
+}
+.row-2-col-mar-30 > .col-flex {
+  position: relative;
+  width: calc(100%/2 - 30px*2);
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.row-2-col-mar-30.mar-bottom > .col-flex {
+  margin-bottom: 60px;
+}
+
+
+/*экран шириной меньшей 768px - md*/
+@media screen and (max-width: 768px) {
+  /*Для колонок с одинаковой шириной меняю отступ*/
+  [class*="mar-"].row-1-col-md-mar-0 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  [class*="mar-"].row-1-col-md-mar-0 > [class*='col-flex'] {
+    width: calc(100% / 1);
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  [class*="mar-"].row-1-col-md-mar-0.mar-bottom > [class*='col-flex'] {
+    margin-bottom: 0;
+  }
+  /*Убираю нижние отступы у самых нижних блоков*/
+  [class*="mar-"].row-2-col-md-mar-20 {
+    margin-left: -20px;
+    margin-right: -20px;margin-bottom: -40px;
+  }
+  [class*="mar-"].row-2-col-md-mar-20 > [class*='col-flex'] {
+    width: calc(100% / 2 - 20px * 2);
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  [class*="mar-"].row-2-col-md-mar-20.mar-bottom > [class*='col-flex']:not(:nth-last-child(-n+2)) {
+    margin-bottom: 40px;
+  }
+
+}
+@media screen and (max-width: 576px) {
+  /*Для колонок с одинаковой шириной меняю отступ*/
+  [class*="mar-"].row-1-col-sm-mar-10 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  [class*="mar-"].row-1-col-sm-mar-10 > [class*='col-flex'] {
+    width: calc(100% / 1);
+    margin-left: 0;
+    margin-right: 0;
+  }
+  [class*="mar-"].row-1-col-sm-mar-10.mar-bottom > [class*='col-flex'] {
+    margin-bottom: 20px;
+  }
+  [class*="mar-"].row-2-col-sm-mar-5 {
+    margin-left: -5px;
+    margin-right: -5px;margin-bottom: -10px;
+  }
+  [class*="mar-"].row-2-col-sm-mar-5 > [class*='col-flex'] {
+    width: calc(100% / 2 - 5px * 2);
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  [class*="mar-"].row-2-col-sm-mar-5.mar-bottom > [class*='col-flex']:not(:nth-last-child(-n+2)) {
+    margin-bottom: 10px;
+  }
+}

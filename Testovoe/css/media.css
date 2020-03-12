@@ -2,37 +2,47 @@
     .header-navigation {
         position: fixed;
         display: none;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         z-index: 20;
         background-color: #fff;
         padding: 20px;
         border-radius: 5px;
+        -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
         transform: translate(-50%, 0);
         left: 50%;
         top: 60px;
     }
     .icon-media-menu{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
     .total-amount{
         margin-top: 8px;
         margin-left: -2px;
     }
-
     .slider-reviews__item {
         width: 90%;
         margin: 0 auto;
     }
 }
-
 @media screen and (max-width: 770px)  {
     .block-customers:nth-child(2){
         margin-top: 20px;
     }
     .wrapper-footer{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
     .social-networks{
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
         justify-content: flex-start;
     }
     .footer__wrap-tel{
@@ -43,16 +53,16 @@
     }
     .footer__col-right{
         margin-top: 50px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
-
-
-
-
 }
-
 @media screen and (max-width: 630px)  {
     .slider-reviews__item{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
     .slider-reviews__col-left{
@@ -70,6 +80,8 @@
     }
     .list-company{
         width: 60%;
+        -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
         transform: translate(-50%, 0);
         left: 50%;
         top: 50%;
@@ -86,23 +98,32 @@
         cursor: pointer;
     }
     .icon-media-menu{
+        -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
         transform: translateX(-100%);
     }
     .header-container{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
     .header-select-language{
         margin-left: 0;
+        -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
         order: -1;
         margin-bottom: 25px;
     }
-
 }
-
 @media screen and (max-width: 430px)  {
     .list-company{
         width: 90%;
+        -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
         transform: translate(-50%, 0);
         left: 50%;
         top: 50%;
