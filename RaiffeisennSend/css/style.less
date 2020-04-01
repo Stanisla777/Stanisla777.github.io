@@ -1,0 +1,698 @@
+@import url("fonts.css");
+
+body{
+  font-size: 14px;
+  font-family: 'Futura PT', Arial, Helvetica, sans-serif;
+  background:#ffffff;
+  font-weight: 300;
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap {
+  width: 100%;
+  //margin-bottom: 30px;
+  overflow: hidden;
+  position: relative;
+}
+section,header,footer{
+  display: block;
+  position: relative;
+}
+
+.container {
+  zoom: 1;
+  width: 100%;
+  max-width: 970px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+}
+
+
+
+a:focus,a:hover,a:link,
+a:active {
+  outline: none!important;
+  text-decoration: none!important;
+  outline-width: 0;
+}
+a:hover{
+  text-decoration: none!important;
+}
+
+
+//Общие классы
+
+.pos-absolute(){
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.text-color{
+  color: #FFDD00;
+}
+
+//Первая секция
+
+.first-section{
+  &:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
+    opacity: 0.2;
+    position: absolute;
+    bottom: 17px;
+  }
+  padding-top: 30px;
+  padding-bottom: 76px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper-logo{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 357px;
+}
+
+.logo{
+  &__item{
+    display: block;
+    img{
+      //width: 100%;
+      //height: 100%;
+      //object-fit: cover;
+    }
+    &:not(:last-child){
+      margin-right: 10px;
+    }
+
+  }
+}
+.logo-raiffeisen{
+  width: 50%;
+  max-width: 177px;
+  position: relative;
+  img{
+    .pos-absolute;
+  }
+  &:before{
+    content: "";
+    display: block;
+    padding-top: 53%;
+  }
+
+}
+.logo-lounge{
+  width: 32%;
+  position: relative;
+  max-height: 41px;
+  max-width: 114px;
+  img{
+    .pos-absolute;
+  }
+  &:before{
+    content: "";
+    display: block;
+    padding-top: 53%;
+  }
+
+}
+.h1-title{
+  font-size: 50px;
+  line-height: 60px;
+  text-align: center;
+  color: #FFFFFF;
+  max-width: 640px;
+  margin: 39px auto 0;
+  font-weight: 300
+}
+.sub-title{
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 300;
+  max-width: 475px;
+  margin: 24px auto 0;
+}
+.payment-systems{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 524px;
+  margin: 52px auto 0;
+}
+.payment-systems__item{
+  position: relative;
+  width: 47%;
+  max-width: 242px;
+  min-width: 200px;
+  max-height: 152px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 10px;
+
+  &:before{
+    content: "";
+    display: block;
+    padding-top: 63%;
+  }
+  img{
+    .pos-absolute();
+    object-fit: contain;
+
+  }
+}
+//.payment-systems__ms{
+//  //background-image: url("../img/RBCardMC.png");
+//  margin-bottom: 10px;
+//
+//}
+//.payment-systems__visa{
+//  //background-image: url("../img/RBCardVISA.png");
+//  margin-bottom: 10px;
+//}
+
+
+
+
+
+//Секция преимущества
+.section-advantages {
+  padding-top: 64px;
+  padding-bottom: 70px;
+  background-color: #000000;
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
+    opacity: 0.2;
+    position: absolute;
+    bottom: 0;
+  }
+}
+.advantages-company{
+  display: flex;
+  justify-content: space-between;
+  max-width: 910px;
+
+  .advantages-company__col {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  &__item{
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    //&:first-child{
+    //  max-width: 106px;
+    //}
+    //&:nth-child(2){
+    //  max-width: 153px;
+    //  padding-left: 75px;
+    //}
+    //&:nth-child(3){
+    //  max-width: 248px;
+    //  padding-left: 39px;
+    //}
+    //&:nth-child(4){
+    //  max-width: 132px;
+    //  padding-left: 30px;
+    //}
+  }
+  &__img{
+    width: 51px;
+    height: 34px;
+    background-position: center;
+    background-repeat: no-repeat;
+    //background-size: contain;
+
+  }
+  &__halls {
+    background-image: url("../img/IconAdvantage1.png");
+    background-size: 39px 32px;
+  }
+  &__snacks{
+    background-image: url("../img/IconAdvantage2.png");
+    background-size: 50.5px 32px;
+  }
+
+  &__expectation{
+    background-image: url("../img/IconAdvantage3.png");
+    background-size: 38.8px 34px;
+  }
+  &__internet{
+    background-image: url("../img/IconAdvantage4.png");
+    background-size: 49px 32px;
+  }
+
+  &__description{
+    margin-top: 14px;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  &__item__body{
+    max-width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.advantages-company__col-left{
+  width: 38%;
+  margin-bottom: 20px;
+}
+
+.advantages-company__col-left .advantages-company__item:first-child{
+  width: 101px;
+}
+
+.advantages-company__col-left .advantages-company__item:nth-child(2){
+  width: 78px;
+}
+
+.advantages-company__col-right{
+  width: 44%;
+}
+
+.advantages-company__col-right .advantages-company__item:first-child{
+  width: 143px;
+}
+.advantages-company__col-right .advantages-company__item:nth-child(2){
+  width: 101px;
+}
+
+.section-advantages-box{
+  width: 100%;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 8px;
+  box-shadow: 0 0 19px 12px rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+.section-continued-advantages{
+  padding-top: 47px;
+  padding-bottom: 67px;
+  background-color: #000000;
+}
+
+.advantages-visit{
+  display: flex;
+  align-items: center;
+  min-width: 240px;
+  &:after{
+    content: "";
+
+  }
+
+  &__count{
+    margin-right: 22px;
+    p{
+      font-size: 80px;
+      font-weight: 900;
+    }
+  }
+  &__description{
+    p{
+      font-size: 30px;
+      line-height: 30px;
+      color: #ffffff;
+    }
+
+  }
+}
+
+
+.advantages-company-continued{
+  display: flex;
+  &__line{
+    width: 1px;
+    background-color: #ffffff;
+    height: 56%;
+    margin: 0 31px;
+    flex-shrink: 0;
+  }
+  &__line-2{
+    width: 1px;
+    background-color: #ffffff;
+    height: 56%;
+    margin: 0 0px;
+    flex-shrink: 0;
+  }
+  &__col-left{
+    display: flex;
+    align-items: center;
+    width: 52.4%;
+    margin-right: 50px;
+  }
+  &__col-right{
+    width: calc(100% - 52.4% - 50px);
+    display: flex;
+    align-items: center;
+  }
+  &__available{
+    padding: 0 10px 0 0;
+    min-width: 190px;
+
+    //border-left: 1px solid #ffffff;
+    //border-right: 1px solid #ffffff;
+    p{
+      font-size: 18px;
+      line-height: 26px;
+      color: #FFFFFF;
+    }
+  }
+  &__passes{
+    margin-right: 30px;
+    padding-top: 18px;
+    max-width: 180px;
+    min-width: 180px;
+    flex-shrink: 0;
+    p{
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+  }
+  &__cost{
+    padding-top: 18px;
+    flex-shrink: 0;
+    max-width: 160px;
+    p{
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+  }
+}
+
+//Секция
+.section-use-service{
+  padding-top: 59px;
+  padding-bottom: 52px;
+  background-color: #141414;
+}
+.h2-title{
+  text-align: center;
+  font-size: 30px;
+  line-height: 50px;
+  color: #FFFFFF;
+  font-weight: 300;
+
+}
+.use-service{
+  display: flex;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  &__item{
+    padding-right: 10px;
+    &:not(:last-child){
+      margin-bottom: 15px;
+    }
+    &:first-child{
+      width: 34%;
+      min-width: 265px;
+      margin-right: 10px;
+      p{
+        max-width: 180px;
+      }
+    }
+    &:nth-child(2){
+      width: 32%;
+      min-width: 265px;
+      .use-service__list{
+        max-width: 200px;
+      }
+    }
+    &:nth-child(3){
+      width: calc(100% - 66% - 10px);
+      min-width: 265px;
+    }
+  }
+  &__title{
+    display: flex;
+    align-items: center;
+  }
+  &__icon{
+    &:first-child{
+
+    }
+    margin-right: 15px;
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/Gal.svg");
+  }
+  &__instruction{
+    font-size: 21px;
+    line-height: 26px;
+    color: #FFFFFF;
+  }
+  &__list{
+    .use-service__apps{
+      margin-top: 17px;
+    }
+    margin-top: 10px;
+  }
+  &__list-item-color{
+    &:before{
+      background-color: #FFDD00;
+    }
+
+  }
+  &__list-item{
+    position: relative;
+    &:before{
+      content: "";
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      position: absolute;
+      top: 12px;
+    }
+
+    p{
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 26px;
+      color: #FFFFFF;
+
+    }
+  }
+  &__container{
+    padding-left: 21px;
+  }
+  &__apps{
+    display: flex;
+  }
+  &__apps-item{
+    display: block;
+    &:not(:last-child){
+      margin-right: 5px;
+    }
+    &:first-child{
+      width: 100px;
+      height: 33px;
+      background-image: url("../img/IconApp.svg");
+    }
+    &:nth-child(2){
+      width: 110px;
+      height: 33px;
+      background-image: url("../img/IconGoogle.svg");
+    }
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+}
+
+.section-common-question{
+  padding-top: 58px;
+  padding-bottom: 40px;
+  background-color: #000000;
+}
+
+//Аккардеон
+
+.common-question-accordion{
+  margin-top: 32px;
+}
+.accordion-item{
+
+  width: 100%;
+  &:not(:last-child){
+    margin-bottom: 2px;
+  }
+  background-color: rgba(196, 196, 196, .1);
+}
+
+
+.accordion-item__title{
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 76px 32px 40px;
+  cursor: pointer;
+  h3{
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 300;
+    margin-right: 15px;
+
+  }
+  &:hover{
+    background-color: rgba(51, 51, 51, 0.1);
+  }
+}
+.accordion-item__description{
+  display: none;
+  padding: 24px 80px 45px 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  p{
+    font-size: 18px;
+    line-height: 26px;
+    color: #ffffff;
+    &:not(:last-child){
+      margin-bottom: 7px;
+    }
+  }
+
+}
+.accordion-item__container{
+  max-width: 790px;
+  .use-service__apps{
+    margin-top: 16px;
+  }
+}
+
+
+
+
+//Крестик
+
+.accordion-item__cross {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.accordion-item__cross:before,
+.accordion-item__cross:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 2px;
+  transition: all 0.3s ease-in;
+  background-color: #FFDD00;
+}
+.accordion-item__cross:before {
+  transform: rotate(0deg);
+}
+.accordion-item__cross:after {
+  transform: rotate(90deg);
+}
+.accordion-item__cross.active:before,
+.accordion-item__cross.active:after {
+  transition: all 0.3s ease-in;
+}
+.accordion-item__cross.active:before {
+  transform: rotate(-45deg);
+}
+.accordion-item__cross.active:after {
+  transform: rotate(45deg);
+}
+
+.wrapper-contacts{
+  margin-top: 59px;
+}
+.contact-header{
+  margin-top: 17px;
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.phone-list{
+  width: 41%;
+  margin: 40px auto 0;
+  //max-width: 380px;
+  display: flex;
+  justify-content: space-between;
+  &__col{
+
+    a{
+      display: block;
+      &:not(:last-child){
+        margin-bottom: 16px;
+      }
+      font-size: 18px;
+      line-height: 26px;
+      color: #ffffff;
+    }
+
+    p{
+      &:not(:last-child){
+        margin-bottom: 16px;
+      }
+
+      font-size: 18px;
+      line-height: 26px;
+      color: #ffffff;
+    }
+  }
+  &__col-right{
+
+  }
+
+}
+
+.chat-link{
+  text-align: center;
+  font-size: 18px;
+  line-height: 26px;
+  display: block;
+  margin-top: 42px;
+}
+
+
+
+
+
+
+
+
+
+
+
