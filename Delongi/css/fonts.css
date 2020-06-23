@@ -1,0 +1,42 @@
+@font-face {
+font-family: 'FontAwesoome';
+src: url('FontAwesoome/fonts/fontawesome-webfont.eot');
+src: url('FontAwesoome/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+url('FontAwesoome/fonts/fontawesome-webfont.woff') format('woff'),
+url('FontAwesoome/fonts/fontawesome-webfont.ttf') format('truetype'),
+url('FontAwesoome/fonts/fontawesome-webfont.svg') format('svg');
+font-weight: normal;
+font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Samsung';
+    src: url('../fonts/Samsung/SamsungOne-400.eot');
+    src: url('../fonts/Samsung/SamsungOne-400.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Samsung/SamsungOne-400.woff') format('woff'),
+    url('../fonts/Samsung/SamsungOne-400.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Samsung';
+    src: url('../fonts/Samsung/SamsungOne-700.eot');
+    src: url('../fonts/Samsung/SamsungOne-700.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Samsung/SamsungOne-700.woff') format('woff'),
+    url('../fonts/Samsung/SamsungOne-700.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Samsung';
+    src: url('../fonts/Samsung/SamsungSharpSans-Bold.eot');
+    src: url('../fonts/Samsung/SamsungSharpSans-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Samsung/SamsungSharpSans-Bold.woff') format('woff'),
+    url('../fonts/Samsung/SamsungSharpSans-Bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+
+}
