@@ -112,6 +112,7 @@
         width: 80%;
         position: fixed;
         left: 50%;
+        top: 100px;
         transform: translate(-50%, 0);
         z-index: 101;
         background-color: #ffffff;
@@ -151,8 +152,13 @@
 }
 @media screen and (max-width: 693px){
     .event-location{
+        width: 108vw;
+
         /*width: 184vw;*/
-        left: 25%;
+        /*left: 25%;*/
+    }
+    .event-location__item p {
+        font-size: 13px;
     }
 }
 @media screen and (max-width: 650px){
@@ -198,7 +204,7 @@
         font-size: 26px;
     }
     .year-line{
-        top: 198px;
+        top: 238px;
     }
 
     .footer-lower-part{
@@ -270,8 +276,8 @@
 }
 @media screen and (max-width: 517px){
     .event-location{
-        width: 240%;
-        left: 5vw;
+        /*width: 240%;*/
+        /*left: 5vw;*/
     }
 
 }
