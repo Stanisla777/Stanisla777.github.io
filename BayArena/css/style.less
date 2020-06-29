@@ -1170,7 +1170,7 @@ input:focus, textarea:focus {
 .wrapper-select__wrapper-input-after {
   display: none;
   position: absolute;
-  top: 0;
+  top: 6px;
   left: 28px;
   p {
     font-size: 10px;
@@ -1221,6 +1221,8 @@ input:focus, textarea:focus {
 }
 
 .usual-input {
+  height: 28px;
+  width: 100%;
   color: #292929;
   font-weight: 300;
   &:-moz-placeholder {
@@ -1758,7 +1760,7 @@ input:focus, textarea:focus {
   bottom: 10px;
   right: 10px;
   cursor: pointer;
-
+  z-index: 100;
 }
 .half-left {
   border-top: 71px solid transparent;
@@ -1926,4 +1928,7 @@ input:focus, textarea:focus {
 }
 
 
-
+//Яндекс-карты
+.ymaps-2-1-74-balloon__content{
+  display: none!important;
+}

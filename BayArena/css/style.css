@@ -1022,7 +1022,7 @@ textarea:focus {
 .wrapper-select__wrapper-input-after {
   display: none;
   position: absolute;
-  top: 0;
+  top: 6px;
   left: 28px;
 }
 .wrapper-select__wrapper-input-after p {
@@ -1066,6 +1066,8 @@ textarea:focus {
   color: #10394F;
 }
 .usual-input {
+  height: 28px;
+  width: 100%;
   color: #292929;
   font-weight: 300;
 }
@@ -1536,6 +1538,7 @@ textarea:focus {
   bottom: 10px;
   right: 10px;
   cursor: pointer;
+  z-index: 100;
 }
 .half-left {
   border-top: 71px solid transparent;
@@ -1676,5 +1679,8 @@ textarea:focus {
   background-color: #67B514;
 }
 .slick-disabled {
+  display: none!important;
+}
+.ymaps-2-1-74-balloon__content {
   display: none!important;
 }

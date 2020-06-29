@@ -123,7 +123,9 @@
          <div class="event-location-place__wrap-text"></div>
         </div>
         <div class="event-location-place__map">
-         <div id="map1" style="width: 100%; height: 100%"></div>
+         <div  style="width: 100%; height: 100%">
+          <iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://yandex.ru/map-widget/v1/-/CCQhZZxqpB"  frameborder="0"></iframe>
+         </div>
         </div>
        </div>
        <div class="event-location-date">
@@ -921,42 +923,42 @@
      <div class="gallery-foto">
       <div class="wrapper-gallery row-4-col-mar-10 mar-bottom row-2-col-md-mar-10 row-2-col-sm-mar-5">
        <div class="col-flex gallery-item">
-        <a data-fancybox="images2" href="img/5.JPG" data-caption="" tabindex="0">
+        <a data-fancybox="images2" href="img/5.JPG" data-caption="">
          <img src="img/5.JPG">
         </a>
        </div>
        <div class="col-flex gallery-item">
-        <a data-fancybox="images2" href="img/6.JPG" data-caption="" tabindex="0">
+        <a data-fancybox="images2" href="img/6.JPG" data-caption="">
          <img src="img/6.JPG">
         </a>
        </div>
        <div class="col-flex gallery-item">
-        <a data-fancybox="images2" href="img/7.JPG" data-caption="" tabindex="0">
+        <a data-fancybox="images2" href="img/7.JPG" data-caption="">
          <img src="img/7.JPG">
         </a>
        </div>
        <div class="col-flex gallery-item">
-        <a data-fancybox="images2" href="img/8.JPG" data-caption="" tabindex="0">
+        <a data-fancybox="images2" href="img/8.JPG" data-caption="">
          <img src="img/8.JPG">
         </a>
        </div>
        <div class="col-flex gallery-item">
-        <a data-fancybox="images2" href="img/9.JPG" data-caption="" tabindex="0">
+        <a data-fancybox="images2" href="img/9.JPG" data-caption="">
          <img src="img/9.JPG">
         </a>
        </div>
        <div class="col-flex gallery-item">
-        <a data-fancybox="images2" href="img/5.JPG" data-caption="" tabindex="0">
+        <a data-fancybox="images2" href="img/5.JPG" data-caption="">
          <img src="img/5.JPG">
         </a>
        </div>
        <div class="col-flex gallery-item">
-        <a data-fancybox="images2" href="img/10.JPG" data-caption="" tabindex="0">
+        <a data-fancybox="images2" href="img/10.JPG" data-caption="">
          <img src="img/10.JPG">
         </a>
        </div>
        <div class="col-flex gallery-item">
-        <a data-fancybox="images2" href="img/11.JPG" data-caption="" tabindex="0">
+        <a data-fancybox="images2" href="img/11.JPG" data-caption="">
          <img src="img/11.JPG">
         </a>
        </div>
@@ -1108,7 +1110,8 @@
            <div class="wrapper-select__wrapper-input-after">
             <p>Индекс, почтовый адрес</p>
            </div>
-           <input class="wrapper-select__input usual-input"  placeholder="Индекс, почтовый адрес" value="" type="text">
+           <input type="text" class="wrapper-select__input usual-input" placeholder="Индекс">
+           
           </div>
          </div>
         </div>
@@ -1118,7 +1121,7 @@
            <div class="wrapper-select__wrapper-input-after">
             <p>Контактный телефон</p>
            </div>
-           <input class="wrapper-select__input usual-input"  placeholder="Контактный телефон" value="" type="text">
+           <input   class="wrapper-select__input usual-input phone"  placeholder="Контактный телефон" value="" type="text">
           </div>
          </div>
          <div class="col-flex application-item__field">
@@ -1126,7 +1129,7 @@
            <div class="wrapper-select__wrapper-input-after">
             <p>E-mail</p>
            </div>
-           <input class="wrapper-select__input usual-input"  placeholder="E-mail" value="" type="text">
+           <input  class="wrapper-select__input usual-input"  placeholder="E-mail" value="" type="text">
           </div>
          </div>
         </div>
@@ -1542,8 +1545,8 @@
            </div>
           </div>
           <div class="footer__check  checkbox">
-           <input type="checkbox"  tabindex="0">
-           <label ><a href="#" target="_blank" tabindex="0">Подтверждаю согласие</a> на обработку персональных данных</label>
+           <input type="checkbox"  >
+           <label ><a href="#" target="_blank">Подтверждаю согласие</a> на обработку персональных данных</label>
           </div>
           
           <div class="footer-in-networks">
@@ -1647,6 +1650,9 @@
 <script src="js/jquery.fancybox.min.js" type="text/javascript"></script>
 <script>
     $(document).ready(function ($) {
+
+        
+        
         
         //Слайдер года
         
@@ -1756,12 +1762,12 @@
             
         });
         
-        //Ввод только чисел
-        $('.questions-application__input').bind("change keyup input click", function() {
-            if (this.value.match(/[^0-9]/g)) {
-                this.value = this.value.replace(/[^0-9]/g, '');
-            }
-        });
+        // //Ввод только чисел
+        // $('.questions-application__input').bind("change keyup input click", function() {
+        //     if (this.value.match(/[^0-9]/g)) {
+        //         this.value = this.value.replace(/[^0-9]/g, '');
+        //     }
+        // });
         
         //Слайдер Заявка на участие
         let request = $('.container-application');
@@ -1804,16 +1810,66 @@
             $(this).find('.wrapper-select__option').slideUp();
         });
         //Форма отправки input
+        
+        $('.wrapper-select__wrapper-input').on('click',function () {
+            
+            $(this).find('input').focus()
+        })
         $('.usual-input').on('input',function () {
+            
             let con = $(this).val().length
+            
             if(con>0){
+                $(this).css('top',10+'px')
                 $(this).siblings('.wrapper-select__wrapper-input-after').fadeIn(400)
             }
             else {
+                
                 $(this).siblings('.wrapper-select__wrapper-input-after').fadeOut(400)
+                $(this).css('top',0)
             }
+            
         })
-        
+        let phoneInput = document.querySelector('.phone')
+        phoneInput.addEventListener('keydown', function(event) {
+            
+            if( !(event.key == 'ArrowLeft' || event.key == 'ArrowRight' || event.key == 'Backspace' || event.key == 'Tab')) { event.preventDefault() }
+            let mask = '+7 (111) 111-11-11'; // Задаем маску
+
+            if (/[0-9\+\ \-\(\)]/.test(event.key)) {
+                // Здесь начинаем сравнивать this.value и mask
+                // к примеру опять же
+                let currentString = this.value;
+                let currentLength = currentString.length;
+                if (/[0-9]/.test(event.key)) {
+                    if (mask[currentLength] == '1') {
+                        this.value = currentString + event.key;
+                    } else {
+                        for (let i=currentLength; i<mask.length; i++) {
+                            if (mask[i] == '1') {
+                                this.value = currentString + event.key;
+                                break;
+                            }
+                            currentString += mask[i];
+                        }
+                    }
+                }
+            }
+            let con = $(this).val().length
+
+            if(con>0){
+                $(this).css('top',10+'px')
+                $(this).siblings('.wrapper-select__wrapper-input-after').fadeIn(400)
+            }
+            else {
+
+                $(this).siblings('.wrapper-select__wrapper-input-after').fadeOut(400)
+                $(this).css('top',0)
+            }
+        });
+
+
+
         //Запускаю видео
         
         let videoyou = [
@@ -1928,14 +1984,14 @@
             tab = $(this).attr('data-local');
             $(`.event-location-desc[data-local=${tab}]`).fadeIn(400).siblings('.event-location-desc').hide()
 
-            slider(tab)
+            slider()
             
             
-            let count = $(this).parents('.event-location').siblings(`.event-location-desc[data-local=${tab}]`).find('ymaps')
-            if(count.length===0){
-                // Подставляю в яндекс карту нужнуые координаты
-                map(`map${tab}`,yanadress[tab-1].adress)
-            }
+            // let count = $(this).parents('.event-location').siblings(`.event-location-desc[data-local=${tab}]`).find('ymaps')
+            // if(count.length===0){
+            //     // Подставляю в яндекс карту нужнуые координаты
+            //     map(`map${tab}`,yanadress[tab-1].adress)
+            // }
 
         })
         
@@ -1978,6 +2034,10 @@
                         // её "ножки" (точки привязки).
                         iconImageOffset: [-3, -42]
                     });
+
+                
+
+                // Добавляем круг на карту.
 
                 myMap.geoObjects.add(myPlacemark);
             });
@@ -2025,6 +2085,11 @@
                 $(this).siblings('.event-location__item.active').removeClass('active').addClass('non-active')
             }
         })
+        let fun_map = function(){
+            $('body').find(".map-container").hide()
+        }
+        
+        setTimeout(fun_map,4000)
 
 
     });
