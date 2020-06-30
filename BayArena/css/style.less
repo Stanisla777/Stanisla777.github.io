@@ -158,6 +158,39 @@ input:focus, textarea:focus {
   outline: none;
 }
 
+/*Окно политики конфиденциальности*/
+
+.modal-parent {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  overflow: auto;
+  z-index: 1100;
+  display: none;
+}
+
+/*шрина окна*/
+.modal-container {
+  position: relative;
+  width: 60%;
+  min-width: 280px;
+  background: #fff;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.close-menu{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
 
 
 #lean_overlay {
@@ -626,6 +659,7 @@ input:focus, textarea:focus {
     padding: 5px;
   }
   &__item {
+    margin: 0 auto;
 
     width: 214px;
     height: 72px;
@@ -1927,8 +1961,19 @@ input:focus, textarea:focus {
   display: none!important;
 }
 
-
-//Яндекс-карты
-.ymaps-2-1-74-balloon__content{
-  display: none!important;
+/*Модальное окно*/
+.modal-title{
+  margin: 0 0 20px 0;
+  font-size: 32px;
+  line-height: 1.1;
+  color: #D3104C;
+  font-weight: 500;
+}
+.modal-inner{
+  margin-top: 20px;
+  p{
+  font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 24px;
+  }
 }

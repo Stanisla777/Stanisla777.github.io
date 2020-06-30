@@ -10,14 +10,14 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/grid-same-column.css" rel="stylesheet">
+    <link href="css/grid-same-column.min.css" rel="stylesheet">
     <link href="css/slick.css" rel="stylesheet">
     <link href="css/slick-theme.css" rel="stylesheet">
     <link href="css/jquery.fancybox.min.css" rel="stylesheet">
     <link href="css/media.css" rel="stylesheet">
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <!--<![endif]&ndash;&gt;-->
+    <![endif]-->
     
 </head>
 <body>
@@ -282,7 +282,10 @@
          <div class="event-location-place__wrap-text"></div>
         </div>
         <div class="event-location-place__map">
-         <div id="map2" style="width: 100%; height: 100%"></div>
+         <!--<div id="map2" style="width: 100%; height: 100%"></div>-->
+         <div  style="width: 100%; height: 100%">
+          <iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://yandex.ru/map-widget/v1/-/CCQhZCBRTB"  frameborder="0"></iframe>
+         </div>
         </div>
        </div>
        <div class="event-location-date">
@@ -439,7 +442,10 @@
          <div class="event-location-place__wrap-text"></div>
         </div>
         <div class="event-location-place__map">
-         <div id="map3" style="width: 100%; height: 100%"></div>
+         <!--<div id="map3" style="width: 100%; height: 100%"></div>-->
+         <div  style="width: 100%; height: 100%">
+          <iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://yandex.ru/map-widget/v1/-/CCQhZCrnCD"  frameborder="0"></iframe>
+         </div>
         </div>
        </div>
        <div class="event-location-date">
@@ -596,7 +602,10 @@
          <div class="event-location-place__wrap-text"></div>
         </div>
         <div class="event-location-place__map">
-         <div id="map4" style="width: 100%; height: 100%"></div>
+         <!--<div id="map4" style="width: 100%; height: 100%"></div>-->
+         <div  style="width: 100%; height: 100%">
+          <iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://yandex.ru/map-widget/v1/-/CCQhZCC5TC"  frameborder="0"></iframe>
+         </div>
         </div>
        </div>
        <div class="event-location-date">
@@ -750,7 +759,6 @@
     <div class="container">
      <div data-scroll="2" class="h2-title">Цели и задачи проекта</div>
      <div class="wrapper-purpose row-3-col-mar-25 mar-bottom row-3-col-lg-mar-10 row-2-col-md-mar-10 row-1-col-sm-mar-10">
-      
       <div class="col-flex purpose-item">
        <div class="purpose-item__icon">
         <img src="img/PurposeIcon1.svg" alt="">
@@ -770,7 +778,6 @@
        </div>
  
       </div>
- 
       <div class="col-flex purpose-item">
        <div class="purpose-item__icon">
         <img src="img/PurposeIcon3.svg" alt="">
@@ -810,13 +817,11 @@
        <div class="purpose-item__description">
         <p class="purpose-item__title">Техническое консультирование</p>
        </div>
- 
       </div>
      </div>
     </div>
    </section>
    <section class="history-company">
-  
     <div data-scroll="3" class="h2-title">История Байарены</div>
     <div class="year-line"></div>
     <div class="container">
@@ -908,14 +913,7 @@
   
      </div>
     </div>
-    
    </section>
-    
-   
-   
-    
-   
-   
    <section class="section-gallery">
     <div class="container">
      <div data-scroll="4" class="h2-title">Галерея</div>
@@ -963,10 +961,8 @@
         </a>
        </div>
       </div>
- 
       <button type="button" class="button-white button section-gallery-button">Показать больше</button>
      </div>
-     
      <div class="gallery-video">
       <div class="row-2-col-mar-10 mar-bottom row-1-col-sm-mar-5">
        <div data-video="0" class="col-flex video-item">
@@ -1008,7 +1004,6 @@
       </div>
       <button type="button" class="button-white button section-gallery-button">Показать больше</button>
      </div>
-     
      <div data-video="4" class="single-video video-item">
       <div class="thumb-wrap thumb-wrap-1">
        <div class="video-item__img">
@@ -1018,21 +1013,14 @@
        </div>
       </div>
      </div>
-     
-     
     </div>
    </section>
    <div class="sub-section-application">
    <section class="section-application">
-    
     <div class="container">
      <div class="h2-title">Заявка на участие</div>
- 
- 
      <form class="container-application-form" action="#">
       <div class="container-application">
-       
-   
        <div class="application-item">
         <div class="row-2-col-mar-10 row-1-col-sm-mar-10 mar-bottom application-item__wrap">
          <div class="col-flex application-item__field wrapper-select">
@@ -1053,7 +1041,6 @@
            <li>
             <p>Мероприятие 3</p>
            </li>
-           
           </ul>
          </div>
          <div class="col-flex application-item__field wrapper-select">
@@ -1077,7 +1064,6 @@
           </ul>
          </div>
         </div>
-  
         <div class="row-2-col-mar-10 mar-bottom row-1-col-sm-mar-10 application-item__wrap">
          <div class="col-flex application-item__field">
           <div class="wrapper-select__wrapper-input">
@@ -1133,26 +1119,22 @@
           </div>
          </div>
         </div>
-        
         <div class="wrapper-confirmation confirmation-checkbox">
          <div class="confirmation-item confirmation-item-1">
           <div class="confirmation-item__check  checkbox">
            <input type="checkbox" id="checkbox_1">
-           <label for="checkbox_1"><a href="#" target="_blank">Подтверждаю согласие</a> на обработку персональных данных</label>
+           <label for="checkbox_1"><a class="js-modal" href="#">Подтверждаю согласие</a> на обработку персональных данных</label>
           </div>
           <div class="confirmation-item__check checkbox">
            <input type="checkbox" id="checkbox_2">
            <label for="checkbox_2">Даю согласие на получение новостей и информации об акциях компании АО «Байер»</label>
           </div>
          </div>
-  
          <div class="confirmation-item confirmation-item-2">
           <button data-button="0" type="button" class="confirmation-item__but-slider button-red button">Продолжить</button>
          </div>
         </div>
-        
        </div>
-       
        <div class="application-item questions-application">
         <p class="questions-application__title">
          Какие из&nbsp;перечисленных с/х культур представляют для Вас интерес, и&nbsp;какие посевные площади они занимают?
@@ -1623,37 +1605,76 @@
       </div>
      </div>
      
-     <div class="scroll-beginning">
-      <div class="half-left">
-      
-  
-      </div>
-      <div class="half-right">
-       
-        <div class="scroll-icon">
-         <img src="img/ScrollIcon.png" alt="">
-        </div>
-       <p class="scroll-up">Наверх</p>
-       </div>
-      
-     </div>
      
      
      
     
     </footer>
+  <!--Скролл вверх-->
+  <div class="scroll-beginning">
+   <div class="half-left">
+   </div>
+   <div class="half-right">
+    <div class="scroll-icon">
+     <img src="img/ScrollIcon.png" alt="">
+    </div>
+    <p class="scroll-up">Наверх</p>
+   </div>
+  </div>
+ 
+ 
+  <!--Модальное окно даю согласие-->
+  <div data-modal="promocod" class="modal-parent">
+   <div class="modal-container modal-container-js">
+    <div class="close-menu">x</div>
+    <div class="modal-body">
+     <h2 class="modal-title">Согласие субъекта персональных данных на обработку персональных данных для веб-сайта
+      <a style="text-decoration: none;color: #D3104C;display: inline;" href="http://www.bayer.promo/">www.bayer.promo</a></h2>
+     <div class="modal-inner">
+      <p>Я свободно, своей волей и в своем интересе даю свое согласие ООО «Медиа Импакт» (адрес: Российская Федерация,
+       125130, г. Москва, Старопетровский проезд, д. 11, корп. 1):</p>
+      <div class="sub">
+       <p>- на поручение обработки моих персональных данных следующим лицам:<br>
+        АО «БАЙЕР» (адрес: Российская Федерация, 107113, г. Москва, ул. 3-я Рыбинская, д. 18, стр.2., ОГРН:
+        1027739373903 ИНН: 7704017596)<br>
+        ООО «АЙЭЙДЖ МАРКЕТИНГ» (РФ, 390037, г. Рязань, ул. Советской Армии, д. 19, корп. 2, офис Н4 лит А);<br>
+        ООО «ЭЙЧ ЭЙЧ ГЛОБАЛ» (РФ, 123112 , Москва, наб. Пресненская, 12-А14-С44);<br>
+        ООО «Монсанто Рус» (РФ, 125047, г. Москва, ул. Лесная, д.5, эт.5)</p>
+       <p>- на обработку моих персональных данных (сбор, запись, систематизацию, накопление, хранение, уточнение
+        (обновление, изменение), извлечение, использование, блокирование, удаление, уничтожение) с
+        использованием средств автоматизации или без использования таких средств;</p>
+       <p>- на передачу (распространение, предоставление, доступ) персональных данных третьим лицам;</p>
+       <p>- на продвижение товаров, работ, услуг на рынке путем осуществления прямых контактов с помощью средств
+        связи</p>
+      </div>
+      <p>в целях взаимодействие со специалистами (отправка подарков, последующие информационные и рекламные
+       рассылки)</p>
+      <p>в составе: ФИО, мобильный телефон, должность, сфера деятельности, название предприятия, адрес предприятия,
+       адрес для почтовой доставки, адрес электронной почты сроком на 20 (двадцать) лет</p>
+      <p><i>Я проинформирован о праве на получение информации, касающейся обработки моих персональных данных, в
+       соответствии с Федеральным законом от 27.06.2006 г. № 152-ФЗ «О персональных данных», а также о том, что
+       данное согласие может быть отозвано путем направления мной соответствующего запроса на адрес
+       оператора.</i></p>
+      <p><a href="/upload/privacy.pdf" target="_blank">Политика ООО «Медиа Импакт» в отношении обработки
+       персональных данных</a></p>
+     </div>
+   
+    </div>
+   </div>
+  </div>
+  
+  
 </div>
 </div>
-<script src="js/jquery-3.1.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 <script src="js/slick.min.js" type="text/javascript"></script>
 <script src="js/jquery.fancybox.min.js" type="text/javascript"></script>
-<script>
+<script type="text/javascript">
     $(document).ready(function ($) {
+        
+        
 
-        
-        
-        
         //Слайдер года
         
         let slide_year = $('.history-line');
@@ -1692,6 +1713,182 @@
             ]
 
         });
+
+        //Слайдер площадки
+        let slide_platform = $('.event-location');
+        slide_platform.slick({
+            infinite:false,
+            arrows:false,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            dots:false,
+            responsive: [
+                {
+                    breakpoint: 693,
+                    settings: {
+                        arrows: false,
+                        // centerPadding: '10px',
+                        slidesToShow: 3
+                    }
+                }
+            ]
+
+        });
+        //Поправляю слайдер
+        slide_platform.on('afterChange', function(event, slick, currentSlide, nextSlide){
+            if ($(window).width()<=490){
+                let count_slide = $(this).find('.slick-track .slick-slide').length;
+                let attr = $(this).find(`.slick-slide[data-local="${count_slide}"]`).attr('aria-hidden')
+                if(attr==="false"){
+                    $(this).animate({
+                        left: -44+"px",
+                    }, 1000);
+                }
+                else {$(this).animate({
+                    left: 0,
+                }, 1000);}
+            }
+
+            
+        });
+
+        
+        //Слайдер Заявка на участие
+        let request = $('.container-application');
+        request.slick({
+            infinite:false,
+            arrows:false,
+            dots:true,
+            slidesToShow: 1,
+            fade:true,
+            adaptiveHeight:true
+        });
+        //Переключение
+        $('.container-application button').on('click',function () {
+            let ind = $(this).attr('data-button');
+            $(this).parents('.container-application').find('.slick-dots li').eq(ind).click()
+            if(ind===0){
+                $(this).parents('.container-application').find('.slick-dots li').eq(ind+1).click()
+            }
+            else {
+                $(this).parents('.container-application').find('.slick-dots li').eq(ind-1).click()
+            }
+        });
+
+
+        //Слайдер года и техники
+        let slide_teh = $('.industrial-slider');
+        let slide_date = $('.event-location-date');
+        let tab=1;
+        let slider = function () {
+
+
+            slide_date.slick({
+                infinite:false,
+                edgeFriction:true,
+                arrows: true,
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                dots:false,
+                prevArrow:'<button type="button" class="slide-arrow slide-arrow-left"></button>',
+                nextArrow:'<button type="button" class="slide-arrow slide-arrow-right"></button>',
+                responsive: [
+                    {
+                        breakpoint: 1180,
+                        settings: {
+                            slidesToShow: 4
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 3
+                        }
+                    }
+                ]
+
+            });
+            //Слайдер техники
+            slide_teh.slick({
+                lazyLoad: 'ondemand',
+                infinite:true,
+                edgeFriction:true,
+                arrows: true,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                dots:true,
+                prevArrow:'<button type="button" class="slide-arrow slide-arrow-left"></button>',
+                nextArrow:'<button type="button" class="slide-arrow slide-arrow-right"></button>',
+                responsive: [
+                    {
+                        breakpoint: 1150,
+                        settings: {
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 870,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 450,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                    }
+                ]
+            });
+
+            
+
+
+
+
+        }
+        slider();
+       //Поправляю слайдер
+        if ($(window).width()<=490) {
+            slide_date.on('afterChange', function (event, slick, currentSlide, nextSlide) {
+
+                let count_slide = $(this).find('.slick-track .slick-slide').length
+                let attrb = $(this).find(`.slick-track .slick-slide[data-slick-index="${count_slide - 1}"]`).attr('aria-hidden')
+                console.log(attrb)
+                if (attrb === "false") {
+                    $(this).animate({
+                        left: -10 + "%",
+                    }, 1000);
+                }
+                else {
+                    $(this).animate({
+                        left: 0,
+                    }, 1000);
+                }
+            });
+        }
+
+        //Табы площадок и мероприятий
+        let loc_item = $('.event-location__item')
+        loc_item.on('click',function () {
+            slide_date.slick('unslick');
+            slide_teh.slick('unslick');
+
+            tab = $(this).attr('data-local');
+            $(`.event-location-desc[data-local=${tab}]`).fadeIn(400).siblings('.event-location-desc').hide()
+
+            slider()
+
+
+            // let count = $(this).parents('.event-location').siblings(`.event-location-desc[data-local=${tab}]`).find('ymaps')
+            // if(count.length===0){
+            //     // Подставляю в яндекс карту нужнуые координаты
+            //     map(`map${tab}`,yanadress[tab-1].adress)
+            // }
+
+        });
+        
+        
         
         //Открыть меню
         $('.menu-icon').on('click',function(){//Открываю модально окно по клику
@@ -1724,7 +1921,7 @@
         });
         //Скролл подать заявку
         $('.button[data-scroll="form"]').on('click',function(e){
-            e.preventDefault()
+            e.preventDefault();
             $('html, body').animate({ scrollTop: $(`.section-application`).offset().top-+30}, {
                 duration: 800, // тут можно контролировать скорость
                 easing: "swing"
@@ -1739,63 +1936,15 @@
         });
         element.click(function() {
             $('html, body').animate({scrollTop: 0}, 500);
-        })
-        
-        //Слайдер площадки
-        let slide_platform = $('.event-location');
-        slide_platform.slick({
-            infinite:false,
-            arrows:false,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            dots:false,
-            responsive: [
-                {
-                    breakpoint: 693,
-                    settings: {
-                        arrows: false,
-                        // centerPadding: '10px',
-                        slidesToShow: 3
-                    }
-                }
-            ]
-            
         });
         
-        // //Ввод только чисел
-        // $('.questions-application__input').bind("change keyup input click", function() {
-        //     if (this.value.match(/[^0-9]/g)) {
-        //         this.value = this.value.replace(/[^0-9]/g, '');
-        //     }
-        // });
         
-        //Слайдер Заявка на участие
-        let request = $('.container-application');
-        request.slick({
-            infinite:false,
-            arrows:false,
-            dots:true,
-            slidesToShow: 1,
-            fade:true,
-            adaptiveHeight:true
-        });
-        //Переключение
-        $('.container-application button').on('click',function () {
-            let ind = $(this).attr('data-button')
-            $(this).parents('.container-application').find('.slick-dots li').eq(ind).click()
-            if(ind===0){
-                $(this).parents('.container-application').find('.slick-dots li').eq(ind+1).click()
-            }
-            else {
-                $(this).parents('.container-application').find('.slick-dots li').eq(ind-1).click()
-            }
-        })
         
         //Задаю id для чекбоксов
         $('.checkbox').each(function (ind) {
             $(this).find('input').attr('id',`checkbox_${ind}`)
             $(this).find('label').attr('for',`checkbox_${ind}`)
-        })
+        });
         
         //Форма отправки поле select
 
@@ -1814,7 +1963,7 @@
         $('.wrapper-select__wrapper-input').on('click',function () {
             
             $(this).find('input').focus()
-        })
+        });
         $('.usual-input').on('input',function () {
             
             let con = $(this).val().length
@@ -1829,7 +1978,7 @@
                 $(this).css('top',0)
             }
             
-        })
+        });
         let phoneInput = document.querySelector('.phone')
         phoneInput.addEventListener('keydown', function(event) {
             
@@ -1858,7 +2007,7 @@
             let con = $(this).val().length
 
             if(con>0){
-                $(this).css('top',10+'px')
+                $(this).css('top',10+'px');
                 $(this).siblings('.wrapper-select__wrapper-input-after').fadeIn(400)
             }
             else {
@@ -1894,106 +2043,18 @@
                 video:'https://www.youtube.com/embed/qT1Jx_wd7jQ'
             }
             
-        ]
+        ];
         $('.video-item').on('click',function () {
             
             let dataYoutobe = $(this).attr('data-video')
             $(this).find('img').hide()
             $(this).find('.thumb-wrap').append(`<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"  src="${videoyou[dataYoutobe].video}?autoplay=1" frameborder=\'0\' allowfullscreen ></iframe><br/>`)
             
-        })
+        });
         
         
         
-        //Слайдер года и техники
-        let slide_teh = $('.industrial-slider');
-        let slide = $('.event-location-date');
-        let tab=1;
-        let slider = function () {
-           
-            
-            slide.slick({
-                lazyLoad: 'ondemand',
-                infinite:false,
-                edgeFriction:true,
-                arrows: true,
-                slidesToShow: 5,
-                slidesToScroll: 1,
-                dots:false,
-                prevArrow:'<button type="button" class="slide-arrow slide-arrow-left"></button>',
-                nextArrow:'<button type="button" class="slide-arrow slide-arrow-right"></button>',
-                responsive: [
-                    {
-                        breakpoint: 1180,
-                        settings: {
-                            slidesToShow: 4
-                        }
-                    },
-                    {
-                        breakpoint: 600,
-                        settings: {
-                            slidesToShow: 3
-                        }
-                    }
-                ]
-                
-            });
-//Слайдер техники
-            slide_teh.slick({
-                lazyLoad: 'ondemand',
-                infinite:true,
-                edgeFriction:true,
-                arrows: true,
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                dots:true,
-                prevArrow:'<button type="button" class="slide-arrow slide-arrow-left"></button>',
-                nextArrow:'<button type="button" class="slide-arrow slide-arrow-right"></button>',
-                responsive: [
-                    {
-                        breakpoint: 1150,
-                        settings: {
-                            slidesToShow: 3
-                        }
-                    },
-                    {
-                        breakpoint: 870,
-                        settings: {
-                            slidesToShow: 2
-                        }
-                    },
-                    {
-                        breakpoint: 450,
-                        settings: {
-                            slidesToShow: 1,
-                        }
-                    }
-                ]
-            });
-            
-
-        }
-        slider()
-
-        //Табы площадок и мероприятий
-        let loc_item = $('.event-location__item')
-        loc_item.on('click',function () {
-            slide.slick('unslick')
-            slide_teh.slick('unslick')
-
-            tab = $(this).attr('data-local');
-            $(`.event-location-desc[data-local=${tab}]`).fadeIn(400).siblings('.event-location-desc').hide()
-
-            slider()
-            
-            
-            // let count = $(this).parents('.event-location').siblings(`.event-location-desc[data-local=${tab}]`).find('ymaps')
-            // if(count.length===0){
-            //     // Подставляю в яндекс карту нужнуые координаты
-            //     map(`map${tab}`,yanadress[tab-1].adress)
-            // }
-
-        })
+        
         
 
         let text;
@@ -2003,7 +2064,7 @@
             $(this).addClass('another-text').find('p').text('Скачать отчёт')
         },function () {
             $(this).removeClass('another-text').find('p').text(text)
-        })
+        });
         
         //Яндекс карта
         
@@ -2041,7 +2102,7 @@
 
                 myMap.geoObjects.add(myPlacemark);
             });
-        }
+        };
 
 
         let yanadress=[
@@ -2060,7 +2121,7 @@
             {
                 id:4,  adress:[52.632739,32.928025]
             }
-        ]
+        ];
 
         
         //Координаты областей
@@ -2077,7 +2138,7 @@
             $(this).removeClass('active')
             $(this).addClass('non-active')
         
-        })
+        });
 
         loc_item.on('click',function () {
             if(!$(this).hasClass('active')){
@@ -2085,12 +2146,43 @@
                 $(this).siblings('.event-location__item.active').removeClass('active').addClass('non-active')
             }
         })
-        let fun_map = function(){
-            $('body').find(".map-container").hide()
-        }
         
-        setTimeout(fun_map,4000)
+    //    Модальное окно
+        $('.js-modal').on('click',function(e){
+            e.stopPropagation();
+            OffScroll ()
+            $('.modal-parent').css('display','flex');
+            $('#lean_overlay').show();//фон затемнение
+        });
 
+        $('.close-menu').on('click',function(){
+            $('.modal-parent').css('display','none');
+            $('#lean_overlay').hide();
+            $(window).unbind('scroll');
+        });
+
+
+        $('.modal-parent').on('click', function (e) {
+            $('.modal-parent').css('display', 'none');
+            $("#lean_overlay").hide();
+            $(window).unbind('scroll');
+        }).on('click', '.modal-container', function (e) {//Запрещаю закрывать окно по клику на само молдальное окно
+            e.stopPropagation();
+
+        });
+
+
+      
+        function OffScroll() {
+            let winScrollTop = $(window).scrollTop();
+            $(window).bind('scroll', function () {
+                $(window).scrollTop(winScrollTop);
+            });
+        }
+
+
+        
+        
 
     });
 </script>
