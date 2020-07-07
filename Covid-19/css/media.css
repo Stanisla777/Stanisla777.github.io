@@ -1,0 +1,257 @@
+@media screen and (max-width: 1440px){
+    .section-main__virus-2{
+        left: 0;
+    }
+}
+@media screen and (max-width: 1370px){
+    .section-main__virus-4{
+        right: 0;
+    }
+}
+@media screen and (max-width: 1260px){
+    .slide-arrow-left{
+        left: -9px;
+    }
+}
+@media screen and (max-width: 980px){
+    .wrapper-who-we{
+        flex-direction: column;
+    }
+    .wrapper-who-we__col-left{
+        max-width: 100%;
+        width: 100%;
+    }
+    .wrapper-who-we__description {
+        max-width: 100%;
+    }
+    .wrapper-who-we__col-right{
+        max-width: 68%;
+        margin: 0 auto;
+    }
+    .wrapper-who-we__num{
+        justify-content: space-between;
+    }
+    .wrapper-who-we__num-item:nth-child(1) {
+        margin-right: 0;
+    }
+    .wrapper-who-we__num-item:nth-child(2) {
+        margin-right: 0;
+    }
+    .wrapper-who-we__progress{
+        margin-top: 55px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .statistics-data{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .statistics-data__col-left{
+        width: 100%;
+        max-width: 100%;
+    }
+    .statistics-data__col-left p{
+        text-align: center;
+    }
+    .statistics-data__col-center{
+        max-width: 100%;
+        width: 60%;
+    }
+    .statistics-data__col-right{
+        width: calc(100% - 60% - 18px);
+    }
+}
+
+@media screen and (max-width: 740px){
+    .section-main__virus-5{
+        top: -24%;
+        left: 0;
+    }
+
+}
+@media screen and (max-width: 680px){
+    .wrapper-who-we__col-right {
+        max-width: 88%;
+    }
+
+}
+
+@media screen and (max-width: 658px){
+    .clientage__item{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .clientage__img:nth-child(2) {
+        margin-top: 0px;
+    }
+    .clientage__item:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .h2-title{
+        font-size: 39px;
+        line-height: 47px;
+    }
+    .our-help__title{
+        font-size: 36px;
+    }
+    .our-help__description{
+        margin-top: 10px;
+    }
+    .our-help__title{
+        line-height: 40px;
+    }
+}
+
+
+@media screen and (max-width: 640px){
+    .statistics-data__col-center{
+        width: 100%;
+        margin-right: 0;
+    }
+    .pharmacy-indicators__item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .statistics-data__col-right{
+        width: 100%;
+    }
+    .section-main__virus-4{
+        right: 0;
+    }
+
+
+
+}
+@media screen and (max-width: 600px){
+    .h1-title{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .section-main{
+        padding-bottom: 115px;
+    }
+    .wrap-query-statistics {
+        margin-top: 40px;
+    }
+    .query-statistics-title{
+        font-size: 34px;
+        line-height: 50px;
+    }
+}
+
+@media screen and (max-width: 578px){
+    .page-form__item{
+        margin-bottom: 20px!important;
+    }
+}
+
+@media screen and (max-width: 560px){
+    .section-submit-application{
+        padding-bottom: 65px;
+    }
+    .clientage__item{
+        align-items: center;
+        margin-bottom: 0;
+        flex-direction: column;
+    }
+    .clientage__item:not(:last-child){
+        margin-bottom: 0;
+    }
+    .clientage__img{
+        margin-top: 20px;
+    }
+    .clientage__img:nth-child(2) {
+        margin-top: 20px;
+    }
+    .statistics-data__col-right{
+        margin-bottom: 10px;
+    }
+    .wrapper-who-we__arrow{
+        width: 56px;
+        min-height: 238px;
+        flex-shrink: 0;
+    }
+    .wrapper-who-we{
+        margin-bottom: 0;
+    }
+    .section-clientage:before {
+        height: 70px;
+    }
+    .title-clientage {
+        margin-top: 40px;
+    }
+    .section-main__virus-4{
+        bottom: -120px;
+    }
+    .clientage{
+        margin-top: 20px;
+    }
+    .section-clientage:after {
+        height: 10px;
+    }
+    .section-who-we:after {
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 530px){
+    .wrapper-who-we__progress{
+        flex-direction: column;
+    }
+    .wrapper-who-we__progress-item:nth-child(1) {
+        margin-bottom: 35px;
+        max-width: 100%;
+    }
+    .wrapper-who-we__progress-item:nth-child(2) {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .wrapper-who-we__col-right{
+        max-width: 100%;
+    }
+    .wrapper-who-we__digit-value{
+        font-size: 38px;
+    }
+    .wrapper-who-we__designation{
+        font-size: 13px;
+    }
+    .wrapper-who-we__progress-item:nth-child(1),.wrapper-who-we__progress-item:nth-child(2){
+        max-width: 100%;
+    }
+    .wrapper-who-we__arrow{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 410px){
+    .wrap-situation-description p{
+        text-align: left;
+        font-size: 16px;
+    }
+    .pharmacy-indicators__num{
+        font-size: 38px;
+    }
+    .pharmacy-indicators__name{
+        font-size: 13px;
+    }
+    .statistics-data__col-left p{
+        font-size: 58px;
+    }
+    .statistics-data{
+        margin-top: 30px;
+    }
+    .statistics-data__col-left{
+        margin-bottom: 45px;
+    }
+    .pharmacy-indicators__item {
+        margin-bottom: 35px;
+    }
+
+}
