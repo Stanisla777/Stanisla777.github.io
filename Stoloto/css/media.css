@@ -28,7 +28,19 @@
         font-size: 18px;
     }
     .header{
-        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+    }
+    .fixed{
+        background: none;
+    }
+    .fixed .header__col-left{
+        width: 145px;
+        height: 106px;
+        background: url("../img/logo.png")center no-repeat;
+    }
+    .header__col-right{
+        display: none;
     }
     .wrap-participants-action{
         position: relative;
@@ -36,6 +48,9 @@
         transform: rotate(0) translate(0, 0);
         width: 100%;
         top: -100px;
+    }
+    .container-earth{
+        margin-top: 20px;
     }
     .wrap-title{
         transform: rotate(0deg);
@@ -111,14 +126,14 @@
         margin-top: 25px;
     }
     .wrap-title{
-        top: 190px;
+        top: 105px;
     }
     .header__action{
         margin-top: 17px;
         margin-right: -15px;
     }
     .emty-block {
-        height: 260px;
+        height: 174px;
     }
     .wrap-participants-action{
         top: -58px;

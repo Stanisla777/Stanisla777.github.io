@@ -217,7 +217,7 @@ img {
     width: 145px;
     height: 106px;
     background: url("../img/logo.png")center no-repeat;
-    background-size: cover;
+    //background-size: cover;
   }
   &__action{
     display: flex;
@@ -258,7 +258,14 @@ img {
   }
 }
 .fixed{
-  background-color: rgba(53, 54, 75, .6);
+  background: #0F102A;
+  .header__col-left{
+    width: 145px;
+    height: 58px;
+    background: url("../img/logo2.png")center no-repeat;
+
+
+  }
 }
 .results-participation{
   img{
@@ -345,13 +352,17 @@ img {
 }
 .wrap-earth{
   position: relative;
-
   height: auto;
+}
+.container-earth{
+  display: flex;
+  justify-content: center;
 }
 .earth{
   position: relative;
   z-index: 10;
   width: 100%;
+  min-width: 600px;
 
   img{
     position: absolute;

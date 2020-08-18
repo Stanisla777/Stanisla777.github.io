@@ -195,7 +195,6 @@ img {
   width: 145px;
   height: 106px;
   background: url("../img/logo.png") center no-repeat;
-  background-size: cover;
 }
 .header__action {
   display: flex;
@@ -234,7 +233,12 @@ img {
   display: flex;
 }
 .fixed {
-  background-color: rgba(53, 54, 75, 0.6);
+  background: #0F102A;
+}
+.fixed .header__col-left {
+  width: 145px;
+  height: 58px;
+  background: url("../img/logo2.png") center no-repeat;
 }
 .results-participation img {
   margin-right: 10px;
@@ -313,10 +317,15 @@ img {
   position: relative;
   height: auto;
 }
+.container-earth {
+  display: flex;
+  justify-content: center;
+}
 .earth {
   position: relative;
   z-index: 10;
   width: 100%;
+  min-width: 600px;
 }
 .earth img {
   position: absolute;
