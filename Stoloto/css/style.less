@@ -414,14 +414,410 @@ img {
   background-image: url("../img/fonvideo.jpg");
 }
 
+
+.wrap-animate-1{
+  display: none;
+}
+.wrap-animate-2{
+  //display: none;
+}
+
+.wrap-animate__text{
+  &:nth-child(2){
+    margin-top: 11px;
+  }
+  display: flex;
+  justify-content: center;
+  p{
+    display: flex;
+    align-items: flex-end;
+    span{
+      line-height: 88%;
+    }
+    &{
+      span.span-animate{
+        animation: animate 4s linear forwards;
+        animation-iteration-count: infinite;
+        animation-delay: 6s;
+        will-change:transform;
+      }
+    }
+
+    b{
+      display: none;
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    opacity: 1;
+    filter: blur(1px);
+  }
+  100% {
+    transform: rotate(10deg) translateY(-200px);
+    opacity: 0;
+    filter: blur(20px);
+  }
+}
+.wrap-animate__text p span:nth-child(2) {
+  animation-delay: .1s;
+}
+.wrap-animate__text p span:nth-child(3) {
+   animation-delay: .4s;
+
+ }
+.wrap-animate__text p span:nth-child(4) {
+  animation-delay: .5s;
+}
+.wrap-animate__text p span:nth-child(5) {
+  animation-delay: .6s;
+}
+.wrap-animate__text p span:nth-child(6) {
+  animation-delay: .7s;
+}
+.wrap-animate__text p span:nth-child(7) {
+  animation-delay: .8s;
+}
+.wrap-animate__text p span:nth-child(8) {
+  animation-delay: .9s;
+}
+.wrap-animate__text p span:nth-child(9) {
+  animation-delay: 1s;
+}
+.wrap-animate__text p span:nth-child(10) {
+  animation-delay: 1.2s;
+}
+.wrap-animate__text p span:nth-child(11) {
+  animation-delay: 1.2s;
+}
+.wrap-animate__text p span:nth-child(12) {
+  animation-delay: 1.3s;
+}
+.wrap-animate__text p span:nth-child(13) {
+  animation-delay: 1.4s;
+}
+.wrap-animate__text p span:nth-child(14) {
+  animation-delay: 1.6s;
+}
+.wrap-animate__text p span:nth-child(15) {
+  animation-delay: 1.8s;
+}
+.wrap-animate__text p span:nth-child(16) {
+  animation-delay: 1.9s;
+}
+.wrap-animate__text p span:nth-child(17) {
+  animation-delay: 2.1s;
+}
+.wrap-animate__text p span:nth-child(18) {
+  animation-delay: 2.2s;
+}
+.wrap-animate__text p span:nth-child(18) {
+  animation-delay: 2.3s;
+}
+.wrap-animate__text p span:nth-child(19) {
+  animation-delay: 2.4s;
+}
+
+.wrap-animate-1{
+  .wrap-animate__count-prise p span:nth-child(2) {
+    font-size: 5vw;
+  }
+  .wrap-animate__count-prise p span:nth-child(3) {
+    font-size: 5vw;
+  }
+  .wrap-animate__text p span:nth-child(11) {
+    margin-right: 8px;
+  }
+}
+.wrap-animate-1{
+  .wrap-animate__text p span:nth-child(3) {
+    margin-right: 8px;
+  }
+  .wrap-animate__text p span:nth-child(11) {
+    margin-right: 8px;
+  }
+
+  .wrap-animate__count-prise p span:nth-child(2) {
+    font-size: 5vw;
+  }
+  .wrap-animate__count-prise p span:nth-child(3) {
+    font-size: 5vw;
+  }
+  .wrap-animate__text p span:nth-child(11) {
+    margin-right: 8px;
+  }
+
+  .wrap-animate__count-prise p span:nth-child(5) {
+    font-size: 4vw;
+    padding-top: 6px;
+  }
+  .wrap-animate__count-prise p span:nth-child(6) {
+    font-size: 4vw;
+    padding-top: 6px;
+  }
+  .wrap-animate__count-prise p span:nth-child(7) {
+     font-size: 4vw;
+    padding-top: 6px;
+   }
+  .wrap-animate__count-prise p span:nth-child(8) {
+    font-size: 4vw;
+    padding-top: 6px;
+  }
+  .wrap-animate__count-prise p span:nth-child(9) {
+    font-size: 4vw;
+    padding-top: 6px;
+  }
+  .wrap-animate__count-prise p span:nth-child(10) {
+    font-size: 4vw;
+    padding-top: 6px;
+  }
+
+
+
+  .wrap-animate__prise-present p span:nth-child(2) {
+    font-size: 4vw;
+  }
+  .wrap-animate__prise-present p span:nth-child(3) {
+    font-size: 4vw;
+  }
+
+  .wrap-animate__prise-present p span:nth-child(5) {
+    font-size: 5vw;
+    padding-top: 6px;
+  }
+  .wrap-animate__prise-present p span:nth-child(6) {
+    font-size: 5vw;
+    padding-top: 6px;
+  }
+  .wrap-animate__prise-present p span:nth-child(7) {
+    font-size: 5vw;
+    padding-top: 6px;
+  }
+  .wrap-animate__prise-present p span:nth-child(8) {
+    font-size: 5vw;
+    padding-top: 6px;
+  }
+  .wrap-animate__prise-present p span:nth-child(9) {
+    font-size: 5vw;
+    padding-top: 6px;
+  }
+  .wrap-animate__prise-present p span:nth-child(10) {
+    font-size: 5vw;
+    padding-top: 6px;
+  }
+  .wrap-animate__prise-present p span:nth-child(13) {
+    font-size: 5vw;
+    padding-top: 6px;
+  }
+  .wrap-animate__prise-present p span:nth-child(11) {
+    font-size: 5vw;
+    padding-top: 6px;
+  }
+
+
+}
+
+
+
+
+.wrap-animate-2{
+  .wrap-animate__count-present p span:nth-child(2) {
+    font-size: 5vw;
+  }
+  .wrap-animate__count-present p span:nth-child(3) {
+    font-size: 5vw;
+  }
+  .wrap-animate__count-present p span:nth-child(4) {
+    font-size: 5vw;
+  }
+  .wrap-animate__text p span:nth-child(11) {
+    margin-right: 8px;
+  }
+
+  .wrap-animate__count-present p span:nth-child(5) {
+    font-size: 4vw;
+    padding-top: 6px;
+  }
+  .wrap-animate__count-present p span:nth-child(6) {
+    font-size: 4vw;
+    padding-top: 6px;
+  }
+  .wrap-animate__count-present p span:nth-child(7) {
+    font-size: 4vw;
+    padding-top: 6px;
+  }
+  .wrap-animate__count-present p span:nth-child(8) {
+    font-size: 4vw;
+    padding-top: 6px;
+  }
+  .wrap-animate__count-present p span:nth-child(9) {
+    font-size: 4vw;
+    padding-top: 6px;
+  }
+  .wrap-animate__count-present p span:nth-child(10) {
+    font-size: 4vw;
+    padding-top: 6px;
+  }
+  .wrap-animate__count-present p span:nth-child(11) {
+    font-size: 4vw;
+    padding-top: 6px;
+  }
+
+
+
+  .wrap-animate__prise-present p span:nth-child(2) {
+    font-size: 4vw;
+  }
+  .wrap-animate__prise-present p span:nth-child(3) {
+    font-size: 4vw;
+  }
+
+  .wrap-animate__prise-present p span:nth-child(5) {
+    font-size: 5vw;
+    padding-top: 6px;
+  }
+  .wrap-animate__prise-present p span:nth-child(6) {
+    font-size: 5vw;
+    padding-top: 6px;
+  }
+  .wrap-animate__prise-present p span:nth-child(7) {
+    font-size: 5vw;
+    padding-top: 6px;
+  }
+  .wrap-animate__prise-present p span:nth-child(8) {
+    font-size: 5vw;
+    padding-top: 6px;
+  }
+  .wrap-animate__prise-present p span:nth-child(9) {
+    font-size: 5vw;
+    padding-top: 6px;
+  }
+  .wrap-animate__prise-present p span:nth-child(10) {
+    font-size: 5vw;
+    padding-top: 6px;
+  }
+  .wrap-animate__prise-present p span:nth-child(13) {
+    font-size: 4vw;
+    padding-top: 6px;
+  }
+  .wrap-animate__prise-present p span:nth-child(12) {
+    font-size: 4vw;
+    padding-top: 6px;
+  }
+  .wrap-animate__prise-present p span:nth-child(13) {
+    font-size: 4vw;
+    padding-top: 6px;
+  }
+  .wrap-animate__prise-present p span:nth-child(14) {
+    font-size: 4vw;
+    padding-top: 6px;
+  }
+  .wrap-animate__prise-present p span:nth-child(15) {
+    font-size: 4vw;
+    padding-top: 6px;
+  }
+  .wrap-animate__prise-present p span:nth-child(16) {
+    font-size: 4vw;
+    padding-top: 6px;
+  }
+  .wrap-animate__prise-present p span:nth-child(17) {
+    font-size: 4vw;
+    padding-top: 6px;
+  }
+  .wrap-animate__prise-present p span:nth-child(18) {
+    font-size: 4vw;
+    padding-top: 6px;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wrap-animate-2{
+  margin-top: 10px;
+  .wrap-animate__count-present p span:nth-child(4) {
+    margin-right: 8px;
+  }
+  .wrap-animate__prise-present p span:nth-child(3) {
+    margin-right: 8px;
+  }
+  .wrap-animate__text p span:nth-child(8) {
+    margin-right: 8px;
+  }
+  .wrap-animate__prise-present p span:nth-child(10) {
+    font-family: 'icomoon';
+    font-weight: 500;
+    text-transform: none;
+    margin-left: 16px;
+    color: #2AFA1D;
+    margin-right: 5px;
+  }
+
+
+
+}
+.wrap-animate{
+  span{
+    line-height: normal;
+  }
+}
+
+
+
+
+
+
+
+
+
 .wrap-animate{
   position: absolute;
   left: 50%;
-  transform: translate(-26%, 0);
+  transform: translate(-50%, 0);
   top: -10vw;
-  z-index: 20;
-  display: flex;
-  flex-direction: column;
+  z-index: 10;
+
+  font-size: 72px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-weight: 500;
+
+
+  &__count-prise{
+
+  }
+  &__winning-amount{
+
+  }
+
+
+
+
+
+  //z-index: 20;
+  //display: flex;
+  //flex-direction: column;
 
 }
 .anim_title {

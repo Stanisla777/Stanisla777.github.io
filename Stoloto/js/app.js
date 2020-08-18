@@ -3,6 +3,49 @@
 $(document).ready(function ($) {
 
 
+  //Меняющийся блок
+
+  $('.wrap-animate__text').each(function () {
+    let str = $(this).find('p').text();
+    let arr = str.split('');
+    let that = this;
+
+    arr.forEach(function (item, i, arr) {
+      $(that).find("p").append('<span class="">' + item + '</span>')
+    });
+
+  });
+
+  function addClass() {
+    $('.wrap-animate__text span').addClass("span-animate")
+  }
+
+  setTimeout(addClass,2500)
+
+
+  function showElem_1() {
+    $('.wrap-animate-1').fadeOut(500, "linear",function () {
+      $('.wrap-animate-2').fadeIn(1000, "linear",function () {
+
+      })
+    })
+  }
+  function showElem_2() {
+    $('.wrap-animate-2').fadeOut(500, "linear",function () {
+      $('.wrap-animate-1').fadeIn(1000, "linear",function () {
+
+      })
+    })
+  }
+  // setTimeout(showElem_1,2500)
+  // setTimeout(showElem_2,5000)
+  setInterval(showElem_1,3000)
+  setInterval(showElem_2,6000)
+
+
+
+
+
 
   //Меняющийся блок
   function we(e) {
@@ -123,8 +166,8 @@ $(document).ready(function ($) {
 
   }
 
-  we('word')
-  wer('word-2')
+  // we('word')
+  // wer('word-2')
 
 
 
