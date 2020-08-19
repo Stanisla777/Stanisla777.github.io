@@ -49,7 +49,7 @@ $(document).ready(function ($) {
       elem_1.fadeIn()
     }
   }
-  setInterval(addClass,3000)
+  setInterval(addClass,3500)
 
   function addClass2() {
     let elem_2 = $('.wrap-animate-2')
@@ -62,7 +62,7 @@ $(document).ready(function ($) {
       elem_2.fadeIn()
     }
   }
-  setInterval(addClass2,3000)
+  setInterval(addClass2,3500)
 
 //Надпись Только для участников
   function posText() {
@@ -236,7 +236,7 @@ $(document).ready(function ($) {
     $(".terms-action__img").height(maxHeight);
   }
   setTimeout(heightCol,1000)
-  
+
 
 
   //Папаллакс гири
