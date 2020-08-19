@@ -37,8 +37,16 @@ $(document).ready(function ($) {
     });
 
   });
+  let elem_1 = $('.wrap-animate-1')
 
-  function addClass() {
+
+  function animateTitle() {
+    animateTitle_1()
+    animateTitle_2()
+  }
+  setInterval(animateTitle,8000)
+
+  function animateTitle_1() {
     let elem_1 = $('.wrap-animate-1')
     if(elem_1.hasClass('active')){
       elem_1.removeClass('active')
@@ -46,12 +54,10 @@ $(document).ready(function ($) {
     }
     else {
       elem_1.addClass('active')
-      elem_1.fadeIn()
+      elem_1.fadeIn(1000)
     }
   }
-  setInterval(addClass,3500)
-
-  function addClass2() {
+  function animateTitle_2() {
     let elem_2 = $('.wrap-animate-2')
     if(elem_2.hasClass('active')){
       elem_2.removeClass('active')
@@ -59,10 +65,9 @@ $(document).ready(function ($) {
     }
     else {
       elem_2.addClass('active')
-      elem_2.fadeIn()
+      elem_2.fadeIn(1000)
     }
   }
-  setInterval(addClass2,3500)
 
 //Надпись Только для участников
   function posText() {
@@ -261,14 +266,13 @@ $(document).ready(function ($) {
 
 
   //Видео
-  // let img = './img/fonvideo.jpg'
-  // let video = './img/video.mp4'
-  // $(".video_bg").vide({
-  //   mp4: video,
-  //   // webm: path/to/video2,
-  //   // ogv: path/to/video3,
-  //   // poster: img
-  // })
+  let img = './img/fonvideo.jpg'
+  $(".video_bg").vide({
+    mp4: './img/video3.mp4',
+    webm: './img/video3.webm',
+    ogv: './img/video3.ogv',
+    // poster: img
+  })
 
 
 

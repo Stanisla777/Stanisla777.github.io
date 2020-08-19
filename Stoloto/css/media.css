@@ -12,6 +12,13 @@
         margin-right: 24px;
     }
 }
+@media screen and (max-width: 900px) {
+    .section-terms-action{
+        background-image: url(../img/cloudsLeft.jpg);
+        background-position: left center;
+        background-repeat: no-repeat;
+    }
+}
 @media screen and (max-width: 800px) {
     /*.wrap-title{*/
         /*top: 66px;*/
@@ -136,6 +143,9 @@
     #reiting .reiting td.phone {
         width: 40%;
     }
+    .section-terms-action{
+        background-image: none;
+    }
 }
 @media screen and (max-width: 460px){
     .header__col-right{
@@ -206,3 +216,14 @@
     }
 }
 
+/*For retina*/
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-resolution: 1.5dppx){
+
+
+
+}
