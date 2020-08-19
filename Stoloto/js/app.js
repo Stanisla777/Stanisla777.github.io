@@ -226,13 +226,17 @@ $(document).ready(function ($) {
 
 
   //Колонки одинаковой высоты
-  var maxHeight = 0;
-  $(".terms-action__img").each(function () {
-    if ($(this).height() > maxHeight) {
-      maxHeight = $(this).height();
-    }
-  });
-  $(".terms-action__img").height(maxHeight);
+  function heightCol() {
+    var maxHeight = 0;
+    $(".terms-action__img").each(function () {
+      if ($(this).height() > maxHeight) {
+        maxHeight = $(this).height();
+      }
+    });
+    $(".terms-action__img").height(maxHeight);
+  }
+  setTimeout(heightCol,1000)
+  
 
 
   //Папаллакс гири
