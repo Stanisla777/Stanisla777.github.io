@@ -2,8 +2,30 @@
 
 $(document).ready(function ($) {
 
+//всплывающая подсказка в хедере
 
-  //Меняющийся блок
+  $('.count__haniel')
+    .popup({
+      popup: $('.pop-help__haniel'),
+      on: 'hover',
+      position: 'bottom center',
+    });
+  $('.count__cup')
+    .popup({
+      popup: $('.pop-help__cup'),
+      on: 'hover',
+      position: 'bottom center',
+    });
+  //Высота заголовка
+  $(window).resize(function(){
+    // fun()
+  });
+  let fun = function () {
+    let height_title = $('.wrap-title').height()
+    $('.earth').css('top',height_title)
+  }
+
+  //Анимированный текст
 
   $('.wrap-animate__text').each(function () {
     let str = $(this).find('p').text();
@@ -11,36 +33,259 @@ $(document).ready(function ($) {
     let that = this;
 
     arr.forEach(function (item, i, arr) {
-      $(that).find("p").append('<span class="">' + item + '</span>')
+      $(that).find("p").append('<span class="span-animate">' + item + '</span>')
     });
 
   });
 
   function addClass() {
-    $('.wrap-animate__text span').addClass("span-animate")
+    let elem_1 = $('.wrap-animate-1')
+    if(elem_1.hasClass('active')){
+      elem_1.removeClass('active')
+      elem_1.fadeOut()
+    }
+    else {
+      elem_1.addClass('active')
+      elem_1.fadeIn()
+    }
+  }
+  setInterval(addClass,3000)
+
+  function addClass2() {
+    let elem_2 = $('.wrap-animate-2')
+    if(elem_2.hasClass('active')){
+      elem_2.removeClass('active')
+      elem_2.fadeOut()
+    }
+    else {
+      elem_2.addClass('active')
+      elem_2.fadeIn()
+    }
+  }
+  setInterval(addClass2,3000)
+
+//Надпись Только для участников
+  function posText() {
+    if ($(window).width() >= 800) {
+      let off_img = $('.earth img:first-child').offset();
+      let wid_img = $('.earth img:first-child').width();
+      $('.wrap-participants-action').offset({left: off_img.left + wid_img - 10})
+    }
+  }
+  posText()
+  $(window).resize(function () {
+    setTimeout(posText, 200)
+  });
+
+  //Скролл к форме
+  var hei = 0
+  $('.scroll-pump-up,.leave-phone span,.express-desire-button,.header__action').click(function (event) {
+    hei = $('.header').outerHeight(true)
+    event.preventDefault();
+    $('html, body').animate({scrollTop: $('.time-act').offset().top - hei}, 500);
+  });
+
+  //Класс Хедеру
+
+  var scr = $(window).scrollTop();
+  if (scr > 0) {
+    $('.header').addClass('fixed');
+  }
+  else {
+    $('.header').removeClass('fixed');
   }
 
-  setTimeout(addClass,2500)
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 0) {
+      $('.header').addClass('fixed');
+    } else {
+      $('.header').removeClass('fixed');
+    }
+  });
 
+  //Форма с номером
 
-  function showElem_1() {
-    $('.wrap-animate-1').fadeOut(500, "linear",function () {
-      $('.wrap-animate-2').fadeIn(1000, "linear",function () {
+  $('.ui.dropdown').dropdown();
+  $('#phonebox').inputmask("+7(999)9999999");
+  $('.selection.dropdown input').change(function () {
+    var contry = $(this).val();
 
+    if (contry == 'ru') $('#phonebox').inputmask("+7(999)9999999");
+    if (contry == 'uk') $('#phonebox').inputmask("+380999999999");
+    if (contry == 'kz') $('#phonebox').inputmask("+7(999)9999999");
+    if (contry == 'bl') $('#phonebox').inputmask("+375999999999");
+    if (contry == 'tj') $('#phonebox').inputmask("+\\9\\92999999999");
+    if (contry == 'ml') $('#phonebox').inputmask("+373999999999");
+    if (contry == 'uz') $('#phonebox').inputmask("+\\9\\98(99)9999999");
+    if (contry == 'ar') $('#phonebox').inputmask("+374999999999");
+    if (contry == 'ge') $('#phonebox').inputmask("+\\9\\95999999999");
+    if (contry == 'az') $('#phonebox').inputmask("+\\9\\94999999999");
+  })
+
+  $('.phone_wrap > input').focus(function () {
+    $('.phone_wrap').addClass('focus');
+  })
+  $('.phone_wrap > input').blur(function () {
+    $('.phone_wrap').removeClass('focus');
+  })
+
+  $.validator.addMethod(
+    "phone",
+    function (value, element) {
+      return /\+[\d\(\)]+$/.test(value);
+    },
+    "Please check your input."
+  );
+
+  $('#p_form').validate({
+    submitHandler: function (form) {
+      var action = $(form).attr('action');
+      var data = $(form).serialize();
+      $(form).find(".btn").addClass('loading');
+
+      $.ajax({
+        url: action,
+        data: data,
+        method: 'POST',
+        success: function (data) {
+          $(form).find(".btn").removeClass('loading');
+          $('#main_form .main_title').html("\n" +
+            "Вы уже участвуете в акции. Покупайте билеты и улучшайте позицию в рейтинге!")
+
+          $('.already .inputbox').text($('#phonebox').val());
+          $('.already .flg').addClass($('.ui.selection.dropdown input').val());
+
+          if (data != 'ok' && data) {
+            $('.your_pos').html(data);
+          }
+
+          $('#p_form').hide();
+          $('.already').show();
+          var support_replace_url = window.history && window.history.pushState && window.history.replaceState && !navigator.userAgent.match(/(iPod|iPhone|iPad|WebApps\/.+CFNetwork)/)
+
+          if (support_replace_url)
+            history.pushState(null, null, '/')
+        }
       })
-    })
-  }
-  function showElem_2() {
-    $('.wrap-animate-2').fadeOut(500, "linear",function () {
-      $('.wrap-animate-1').fadeIn(1000, "linear",function () {
+    },
+    rules: {
+      phone: {
+        required: true,
+        phone: true
+      }
+    },
+    messages: {
+      email: {
+        required: 'Вы уже участвуете в акции. Покупайте билеты и улучшайте позицию в рейтинге!',
+        phone: 'Укажите номер телефона'
+      }
+    },
+    errorPlacement: function (error, element) {
+      element.parent().removeClass('success').addClass('error');
+    },
+    success: function (element) {
+      $('#p_form .phone_wrap').removeClass('error').addClass('success');
+    }
+  });
 
-      })
-    })
+
+  //Слайдер
+  $('.games').slick({
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    prevArrow: '<button type="button" class="slide-arrow slide-arrow-left"></button>',
+    nextArrow: '<button type="button" class="slide-arrow slide-arrow-right"></button>',
+    responsive: [
+      {
+        breakpoint: 1100,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 475,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+    ]
+  });
+
+
+  //Колонки одинаковой высоты
+  var maxHeight = 0;
+  $(".terms-action__img").each(function () {
+    if ($(this).height() > maxHeight) {
+      maxHeight = $(this).height();
+    }
+  });
+  $(".terms-action__img").height(maxHeight);
+
+
+  //Папаллакс гири
+  var folder = $('.earth img:first-child');
+  $(window).resize(function () {
+    $('.earth img:first-child').css('transform', 'translate(-50%, -109%)')
+    paral()
+  });
+  let paral = function () {
+    $(folder).paroller({
+      factor: -0.1,            // multiplier for scrolling speed and offset
+      factorXs: -0.05,          // multiplier for scrolling speed and offset if window width is <576px
+      factorSm: -0.05,          // multiplier for scrolling speed and offset if window width is <=768px
+      factorMd: -0.05,          // multiplier for scrolling speed and offset if window width is <=1024px
+      factorLg: -0.05,          // multiplier for scrolling speed and offset
+      type: 'foreground',     // background, foreground
+      direction: 'vertical', // vertical, horizontal
+      transition: 'transform 0.7s lear' // CSS transition
+    });
   }
-  // setTimeout(showElem_1,2500)
-  // setTimeout(showElem_2,5000)
-  setInterval(showElem_1,3000)
-  setInterval(showElem_2,6000)
+  paral()
+
+
+  //Видео
+  // let img = './img/fonvideo.jpg'
+  // let video = './img/video.mp4'
+  // $(".video_bg").vide({
+  //   mp4: video,
+  //   // webm: path/to/video2,
+  //   // ogv: path/to/video3,
+  //   // poster: img
+  // })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -172,28 +417,7 @@ $(document).ready(function ($) {
 
 
 
-  //всплывающая подсказка в хедере
 
-  $('.count__haniel')
-    .popup({
-      popup: $('.pop-help__haniel'),
-      on: 'hover',
-      position: 'bottom center',
-    });
-  $('.count__cup')
-    .popup({
-      popup: $('.pop-help__cup'),
-      on: 'hover',
-      position: 'bottom center',
-    });
-  //Высота заголовка
-  $(window).resize(function(){
-    // fun()
-  });
-  let fun = function () {
-    let height_title = $('.wrap-title').height()
-    $('.earth').css('top',height_title)
-  }
 
 
 });
