@@ -278,8 +278,12 @@ $(document).ready(function ($) {
       webm: './img/video3.webm',
       ogv: './img/video3.ogv',
       // poster: img
-    })
+    },
+      {
+
+      })
   }
+  $('.video_bg').find('video').attr('pip',false)
 
 
 
