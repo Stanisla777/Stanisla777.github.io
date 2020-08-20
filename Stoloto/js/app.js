@@ -265,14 +265,33 @@ $(document).ready(function ($) {
   paral()
 
 
+
+  function detectmob() {
+    if( navigator.userAgent.match(/Android/i)
+      || navigator.userAgent.match(/webOS/i)
+      || navigator.userAgent.match(/iPhone/i)
+      || navigator.userAgent.match(/iPad/i)
+      || navigator.userAgent.match(/iPod/i)
+      || navigator.userAgent.match(/BlackBerry/i)
+      || navigator.userAgent.match(/Windows Phone/i)
+    ){
+      return false
+    }
+    else {
+      let img = './img/fonvideo.jpg'
+      $(".video_bg").vide({
+        mp4: './img/video3.mp4',
+        webm: './img/video3.webm',
+        ogv: './img/video3.ogv',
+        // poster: img
+      })
+    }
+  }
+  detectmob()
+
+
   //Видео
-  let img = './img/fonvideo.jpg'
-  $(".video_bg").vide({
-    mp4: './img/video3.mp4',
-    webm: './img/video3.webm',
-    ogv: './img/video3.ogv',
-    // poster: img
-  })
+
 
 
 
