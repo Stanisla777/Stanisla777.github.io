@@ -1,781 +1,480 @@
-
+"use strict";
 
 $(document).ready(function ($) {
-
-    //Футер прижимаю к низу страницы с помощью js
-    function footerToBottom() {
-        var browserHeight = $(window).height(),
-            footerOuterHeight = $('footer').outerHeight(true),
-            mainHeightMarginPaddingBorder = $('.wrap').outerHeight(true) - $('.wrap').height();
-        $('.wrap').css({
-            'min-height': browserHeight - footerOuterHeight - mainHeightMarginPaddingBorder
-        });
-    }
-    footerToBottom();
-    $(window).resize(function () {
-        footerToBottom();
+    $('.confirmation-item__check input').hover(function () {
+        $(this).siblings('label').addClass('label-hover');
+    }, function () {
+        $(this).siblings('label').removeClass('label-hover');
     });
-
-
-
-
-    //Слайдер
-    $('#slider').slider({
-        min: 0,
-        max: 1000,
-        values: [0,1000],
-        range: true,
-        create: displaySliderValues,
-        slide: displaySliderValues,
-        stop: inputValue
-    });
-
-    function displaySliderValues() {
-        $('#lower').text($('#slider').slider("values", 0));
-        $('#upper').text($('#slider').slider("values", 1));
-    }
-
-    function inputValue(){
-        var price_low = $("#lower").text();
-        var price_top = $("#upper").text();
-        $(".js-input-range-low").val(price_low);
-        $(".js-input-range-top").val(price_top);
-    }
-
-    $('.name-server').click(function(){
-        var price_low = $("#lower").text();
-        var price_top = $("#upper").text();
-        $(".js-input-range-low").val(price_low);
-        $(".js-input-range-top").val(price_top);
-    });
-
-
-    //Резиновый input
-    var $input = $('.price-range input'),
-        $buffer = $('.input-buffer');
-
-    $input.on('change', function() {
-        $buffer.text($input.val());
-        $input.width($buffer.width());
-    });
-
-
-    //!!!!!!!!!!!Потом убрать,это переходы, а пока чтобы показать редирект на другую страницу!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    $('.then-remove').on('click',function(){
-        event.preventDefault();
-        location.replace("car-added.html")
-    });
-
-    $('.then-remove-2').on('click',function(){
-        event.preventDefault();
-        location.replace("create-account-step2.html")
-    });
-    $('.then-remove-3').on('click',function(){
-        event.preventDefault();
-        location.replace("code-entry.html")
-    });
-    $('.then-remove-4').on('click',function(){
-        event.preventDefault();
-        location.replace("grow-screen.html")
-    });
-
-    $('.then-remove-5').on('click',function(){
-        event.preventDefault();
-        location.replace("information-added.html")
-    });
-    $('.then-remove-6').on('click',function(){
-        event.preventDefault();
-        location.replace("profile-klient.html")
-    });
-    $('.then-remove-7').on('click',function(){
-        event.preventDefault();
-        location.replace("mane-page.html")
-    });
-
-    $('.then-remove-9').on('click',function(){
-        event.preventDefault();
-        location.replace("shares.html")
-    });
-    $('.then-remove-10').on('click',function(){
-        event.preventDefault();
-        location.replace("mane-page-subscription-end.html")
-    });
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-    /*Снять все чекбоксы по нажатию на клафишу*/
-
-    $(".js-pull-off-checbox").on("click",function () {
-            $(this).parents(".header").siblings(".main-content-brand").find(".list-filters input").prop('checked', false);
-    });
-
-
-    //Переключение между табами(вкладками) на странице, например летняя - зимняя резина
-    $(".tabs_menu li").click(function () {
-        if (!$(this).hasClass("active")) {
-            var i = $(this).index();
-            $(".tabs_menu li.active").removeClass("active");
-            $(".tabs .active-album").hide().removeClass("active-album");
-            $(this).addClass("active");
-            $($(".tabs").children(".info")[i]).fadeIn(1000).addClass("active-album");
+    $(".usual-input").focusout(function () {
+        if ($(this).val() !== "") {
+            $(this).addClass("has-content");
+        } else {
+            $(this).removeClass("has-content");
         }
-    });
-
-    $(".tabs_menu_2 li").click(function () {
-        if (!$(this).hasClass("active-type")) {
-            var i = $(this).index();
-            $(".tabs_menu_2 li.active-type").removeClass("active-type");
-            $(".tabs_2 .active-album").hide().removeClass("active-album");
-            $(this).addClass("active-type");
-            $($(".tabs_2").children(".info")[i]).fadeIn(1000).addClass("active-album");
-        }
-    });
-
-
-/*Слайдер главного экрана*/
-
-    $('.type-job-slider').slick({
-        slidesToShow: 1,
-        dots: true,
-        //variableWidth: true,/*именно благодаря этому кадров столько, сколько помещается на экране*/
+    }); //Слайдер года
+    //
+    var slide_year = $('.history-line');
+    slide_year.slick({
+        infinite: false,
+        arrows: false,
+        slidesToShow: 4,
         slidesToScroll: 1,
-        infinite: true,
-        cssEase: 'linear',
-        speed:500,
-        centerMode: true,
-        centerPadding: '30px',
-        focusOnSelect: true,
-        arrows: false
-    });
-
-    $('.slider-photos-order').slick({
-        slidesToShow: 3,
-        dots: true,
-        //variableWidth: true,/*именно благодаря этому кадров столько, сколько помещается на экране*/
-        slidesToScroll: 1,
-        infinite: true,
-        cssEase: 'linear',
-        speed:400,
-        centerMode: true,
-        centerPadding: '20px',
-        focusOnSelect: true,
-        arrows: false
-        //respondTo: 'min'
-    });
-
-
-    $('.slider-service-foto').slick({
-        slidesToShow: 1,
-        dots: true,
-        slidesToScroll: 1,
-        //fade: true,
-        infinite: true,
-        cssEase: 'linear',
-        speed:1000,
-        //centerMode: true,
-        //centerPadding: '30px',
-        focusOnSelect: true,
-        arrows: false
-    });
-
-
-
-
-
-    /*Вызов Меню*/
-    $('.menu-icon').on("click",function(e){
-        $('.wrap, footer').css('display','none');
-        $('.media-menu').css("display","block");
-        e.preventDefault();
-    });
-    $(".media-close").click(function(){
-        $('.media-menu').css("display","none");
-        $('.wrap, footer').css('display','block');
-    });
-
-
-
-    //$('.menu-icon').on("click",function(e){
-    //
-    //    $('.media-menu').css("display","block");
-    //    e.preventDefault();
-    //});
-    //$(".icon-close").click(function(){
-    //    $('.media-menu').css("display","none");
-    //});
-    //$(".main-wrap").click(function(){
-    //    $('.media-menu').css("display","none");
-    //});
-
-
-
-
-    /*Функция для добавления картинки пользователем*/
-    function readURL(input) {
-
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-
-            reader.onload = function (e) {
-                //var t = $('.upload-file-container').clone(true);
-                //$(t).appendTo('.wrapper-add-foto');
-                $('#image').attr('src', e.target.result);
-
-            };
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-
-    $("#imgInput").change(function(){
-        readURL(this);
-    });
-
-    /*Смена экранов в рамках одной страницы, например регистрации*/
-
-    var steps = $("form").children(".step"); // находим все шаги формы
-    $(steps[0]).show(); // показываем первый шаг
-    var current_step = 0; // задаем текущий шаг
-
-    $("a.next").click(function(){	// Событие клика на ссылку "Следующий шаг"
-        if (current_step == steps.length-2) { // проверяем, будет ли следующий шаг последним
-            $(this).hide(); // скрываем ссылку "Следующий шаг"
-            $(".input-hide").show(); // показываем кнопку "Регистрация"
-        }
-        $("a.back").show(); // показываем ссылку "Назад"
-        current_step++; // увеличиваем счетчик текущего слайда
-        changeStep(current_step); // меняем шаг
-    });
-
-    $("a.back").click(function(){	// Событие клика на маленькое изображение
-        if (current_step == 1) { // проверяем, будет ли предыдущий шаг первым
-            $(this).hide(); // скрываем ссылку "Назад"
-        }
-
-
-        $(".input-hide").hide(); // скрываем кнопку "Регистрация"
-        $("a.next").show(); // показываем ссылку "Следующий шаг"
-        current_step--; // уменьшаем счетчик текущего слайда
-        changeStep(current_step);// меняем шаг
-    });
-
-    function changeStep(i) { // функция смены шага
-        $(steps).hide(); // скрываем все шаги
-        $(steps[i]).show(); // показываем текущий
-
-        if($(".step-11").is(":visible") != true){
-            $(".footer-call-to-action").show();
-        }else{
-            $(".footer-call-to-action").hide();
-        }
-
-    }
-
-
-    /*Стирать данные в  поле ввода по нажатию на крестик*/
-
-    $('.js-icon-clear').on('click',function(){
-        $(this).siblings('.js-input-search').val('');
-    });
-
-    /*Выбор количества звездочек для оценок*/
-
-
-    $('.item-rating').on('click',  function() {
-        $(this).toggleClass('item-rating-fill');
-    });
-
-
-
-
-    /*Яндекс карты*/
-    ymaps.ready(init);
-
-    function init () {
-        var myMap = new ymaps.Map("map", {
-            // Центр карты, указываем коордианты
-            center:[55.752161956105276,37.61949517968746],
-            // Масштаб, тут все просто
-            zoom: 16,
-            // Отключаем все элементы управления
-            controls: []
-        });
-
-        var myGeoObjects = [];
-
-        // Наша метка, указываем коордианты
-        myGeoObjects = new ymaps.Placemark([55.800151390638646,37.61400201562497],{
-            balloonContentBody: 'Текст в балуне'
-        },{
-            iconLayout: 'default#image',
-            // Путь до нашей картинки
-            iconImageHref: 'assets/img/icon-tel.png',
-            // Размер по ширине и высоте
-            iconImageSize: [100, 100],
-            // Смещение левого верхнего угла иконки относительно
-            // её «ножки» (точки привязки).
-            iconImageOffset: [-35, -35]
-        });
-
-        var clusterer = new ymaps.Clusterer({
-            clusterDisableClickZoom: false,
-            clusterOpenBalloonOnClick: false
-        });
-
-        clusterer.add(myGeoObjects);
-        myMap.geoObjects.add(clusterer);
-        // Отлючаем возможность изменения масштаба
-        myMap.behaviors.disable('scrollZoom');
-
-    }
-    //
-    //
-    ///*Формы отправки - регулярка на ввод символов*/
-    //
-    $('.js-number, input[name="tel"]').bind("change keyup input click", function() {
-        if (this.value.match(/[^0-9\(\)\+\-\s]/g)) {
-            this.value = this.value.replace(/[^0-9\(\)\.\+\-\s]/g, '');
-        }
-    });
-
-    $('.js-number-point').bind("change keyup input click", function() {
-        if (this.value.match(/[^0-9\(\)\.\+\s]/g)) {
-            this.value = this.value.replace(/[^0-9\(\)\.\+\s]/g, '');
-        }
-    });
-
-    $('.js-word, .js-input-search, input[name="password"], textarea[name="text"]').bind("change keyup input click", function() {
-        if (this.value.match(/[^а-яА-Яa-zA-Z\s\"\'\0-9\.\,]/g)) {
-            this.value = this.value.replace(/[^а-яА-Яa-zA-Z\s\"\'\0-9\.\,]/g, '');
-        }
-    });
-
-
-    $('.js-email, input[name="e-mail"]').bind("change keyup input click", function() {
-        if (this.value.match(/[^а-яА-Яa-zA-Z\s\"\'\0-9\.\,\@]/g)) {
-            this.value = this.value.replace(/[^а-яА-Яa-zA-Z\s\"\'\0-9\.\,\@]/g, '');
-        }
-    });
-
-
-    //Запуск диаграммы
-
-    var c = $(".box input").val();
-    $(function() {
-
-        $(".dial").knob({
-
-        });
-        //$({animatedVal: 0}).animate({animatedVal: c}, {
-        //    duration: 2000,
-        //    easing: "swing",
-        //    step: function() {
-        //        $(".dial").val(Math.ceil(this.animatedVal)).trigger("change");
-        //    }
-        //});
-    });
-    //
-    //if($('.radio-2').is(':checked'))
-    //{
-    //    alert('Приавк');
-    //}
-
-    $(".radio-2").click(function(){
-        $({animatedVal: 0}).animate({animatedVal: 20}, {
-                duration: 2000,
-                easing: "swing",
-                step: function() {
-                    $(".dial").val(Math.ceil(this.animatedVal)).trigger("change");
-                }
-            });
-    });
-
-    $(".radio-1").click(function(){
-        $({animatedVal: 0}).animate({animatedVal: c}, {
-            duration: 2000,
-            easing: "swing",
-            step: function() {
-                $(".dial").val(Math.ceil(this.animatedVal)).trigger("change");
+        // adaptiveHeight:true,
+        dots: false,
+        prevArrow: '<button type="button" class="slide-arrow slide-arrow-left"></button>',
+        nextArrow: '<button type="button" class="slide-arrow slide-arrow-right"></button>',
+        responsive: [{
+            breakpoint: 890,
+            settings: {
+                arrows: true,
+                slidesToShow: 3
             }
-        });
-    });
+        }, {
+            breakpoint: 600,
+            settings: {
+                arrows: true,
+                slidesToShow: 2
+            }
+        }, {
+            breakpoint: 450,
+            settings: {
+                arrows: true,
+                slidesToShow: 1,
+                initialSlide: 3
+            }
+        }]
+    }); //Слайдер площадки
 
 
 
+    var slide_platform = $('.event-location');
+    slide_platform.slick({
+        infinite: false,
+        arrows: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: false,
+        responsive: [{
+            breakpoint: 693,
+            settings: {
+                arrows: false,
+                // centerPadding: '10px',
+                slidesToShow: 3
+            }
+        }]
+    }); //Дополнение к слайдеру
 
+    slide_platform.on('afterChange', function (event, slick, currentSlide, nextSlide) {
+        if ($(window).width() <= 490) {
+            var count_slide = $(this).find('.slick-track .slick-slide').length;
+            var attr = $(this).find(".slick-slide[data-local=\"".concat(count_slide, "\"]")).attr('aria-hidden');
 
-    /*Модальные окна*/
-
-    var text;
-
-    //Получаю текущий год
-    Data = new Date();
-    var year = Data.getFullYear();
-
-
-
-    /*Настройка Шаблона пользователя*/
-
-        $(".checkbox").change(function(){
-            if ($(this).prop('checked')) {
-                $('.wrapper-call-template').show();
-                $('.input-template').hide();
-
+            if (attr === "false") {
+                $(this).animate({
+                    left: -44 + "px"
+                }, 1000);
             } else {
-                $('.wrapper-call-template').hide();
-                $('.input-template').fadeIn().show();
+                $(this).animate({
+                    left: 0
+                }, 1000);
+            }
+        }
+    }); //Слайдер Заявка на участие
+
+    var request = $('.container-application');
+    request.slick({
+        draggable: false,
+        infinite: false,
+        arrows: false,
+        dots: true,
+        slidesToShow: 1,
+        fade: true,
+        adaptiveHeight: true
+    }); //Переключение в слайдере
+    //
+    $('.container-application button').on('click', function () {
+        var ind = $(this).attr('data-button');
+        $(this).parents('.container-application').find('.slick-dots li').eq(ind).click();
+
+        if (ind === 0) {
+            $(this).parents('.container-application').find('.slick-dots li').eq(ind + 1).click();
+        } else {
+            $(this).parents('.container-application').find('.slick-dots li').eq(ind - 1).click();
+        }
+    }); //Слайдер года и техники
+    //
+    var slide_teh = $('.industrial-slider');
+    var slide_date = $('.event-location-date');
+    var tab = 1;
+
+    function slider() {
+        slide_date.slick({
+            infinite: false,
+            edgeFriction: true,
+            arrows: true,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            dots: false,
+            prevArrow: '<button type="button" class="slide-arrow slide-arrow-left"></button>',
+            nextArrow: '<button type="button" class="slide-arrow slide-arrow-right"></button>',
+            responsive: [{
+                breakpoint: 1180,
+                settings: {
+                    slidesToShow: 4
+                }
+            }, {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 3
+                }
+            }]
+        }); //Слайдер техники
+
+        slide_teh.slick({
+            lazyLoad: 'ondemand',
+            infinite: true,
+            edgeFriction: true,
+            arrows: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            dots: true,
+            prevArrow: '<button type="button" class="slide-arrow slide-arrow-left"></button>',
+            nextArrow: '<button type="button" class="slide-arrow slide-arrow-right"></button>',
+            responsive: [{
+                breakpoint: 1150,
+                settings: {
+                    slidesToShow: 3
+                }
+            }, {
+                breakpoint: 870,
+                settings: {
+                    slidesToShow: 2
+                }
+            }, {
+                breakpoint: 450,
+                settings: {
+                    slidesToShow: 1
+                }
+            }]
+        });
+    };
+    //
+    slider(); //Поправляю слайдер
+
+    if ($(window).width() <= 490) {
+        slide_date.on('afterChange', function (event, slick, currentSlide, nextSlide) {
+            var count_slide = $(this).find('.slick-track .slick-slide').length;
+            var attrb = $(this).find(".slick-track .slick-slide[data-slick-index=\"".concat(count_slide - 1, "\"]")).attr('aria-hidden');
+            console.log(attrb);
+
+            if (attrb === "false") {
+                $(this).animate({
+                    left: -10 + "%"
+                }, 1000);
+            } else {
+                $(this).animate({
+                    left: 0
+                }, 1000);
             }
         });
+    } //Табы площадок и мероприятий
 
 
+    var loc_item = $('.event-location__item');
+    loc_item.on('click', function () {
+        slide_date.slick('unslick');
+        slide_teh.slick('unslick');
+        tab = $(this).attr('data-local');
+        $(".event-location-desc[data-local=".concat(tab, "]")).show().siblings('.event-location-desc').hide();
+        slider(); // let count = $(this).parents('.event-location').siblings(`.event-location-desc[data-local=${tab}]`).find('ymaps')
+        // if(count.length===0){
+        //     // Подставляю в яндекс карту нужнуые координаты
+        //     map(`map${tab}`,yanadress[tab-1].adress)
+        // }
+    }); //Открыть меню
 
-/*Бутстраповские окна*/
-
-    /*Открытие окна с фильтром*/
-    $('.js-filtr-icon').click(function(){
-        $('.main-page-window, .wrap, .footer').css('display','none');
-        $('.window-filtr').css('display','block');
+    var paje_nav = $('.page-navigation');
+    $('.menu-icon').on('click', function () {
+        //Открываю медиа-меню по клику
+        if ($(this).hasClass('menu-active')) {
+            paje_nav.css('display', 'none');
+            $('#lean_overlay').hide();
+            $(this).removeClass('menu-active');
+        } else {
+            paje_nav.css('display', 'flex');
+            $('#lean_overlay').show();
+            $(this).addClass('menu-active');
+            pni_hide();
+        }
     });
 
-    $('.js-close').on('click',function(){
-        $('.window-filtr').css('display','none');
-        $('.main-page-window,.wrap, .footer').css('display','block');
-    });
-
-    /*Открытие окна с подписками*/
-    $(".go-to-subscription").click(function(){
-        $("#modal-subscription").modal('show');
-    });
-
-    $('.wrapper-subscription').on('click',function(){
-        var price = $(this).find(".js-sub-price").text();
-        $("#modal-subscription").modal('hide');
-        $('.js-substitute-price').text(price);
-
-    });
-
-    //Вызов поп-ап Заказ опубликован наверное вызывется в AJAX
-
-    $("#js-call-published").on("click",function(){
-
-        //event.preventDefault(); /*Это убрать, так как окощко о том, что задание выполнено будет вызываться через ajax*/
-        //$(".wrapper-order-published").css("display","block")
-
-        event.preventDefault(); /*Это убрать, так как окощко о том, что задание выполнено будет вызываться через ajax*/
-        $("#modal-order-published").modal('show');
-        setTimeout('location.replace("orders.html")',2000);
-
-
-    });
-    //$(".pop-up-order-published").on("click",function(){
-    //    $(".wrapper-order-published").css("display","none")
-    //});
-
-    //Вызов поп ап Отклик отправлен у исполнителя наверное вызывется в AJAX
-    $("#js-call-response-sent").on("click",function(){
-        event.preventDefault(); /*Это убрать, так как окощко о том, что задание выполнено будет вызываться через ajax*/
-        $("#modal-response-sent").modal('show');
-        setTimeout('location.replace("mane-page-notification.html")',2000);
-
-    });
-
-    //Вызов поп ап Другие шаблоны
-    //$(".select-another-template").on("click",function(){
-    //    event.preventDefault(); /*Это убрать, так как окощко о том, что задание выполнено будет вызываться через ajax*/
-    //    $("#another-template").modal('show');
-    //});
-
-    //Вызов поп ап Вы выполнили задание?
-    $(".js-question-about-task").on("click",function(){
-        event.preventDefault(); /*Это убрать, так как окощко о том, что задание выполнено будет вызываться через ajax*/
-        $("#modal-question-about-task").modal('show');
-    });
-
-    //Вызов поп ап Да, выполнили задание?
-    $(".yes-perform").on("click",function(){
-        event.preventDefault(); /*Это убрать, так как окощко о том, что задание выполнено будет вызываться через ajax*/
-        $("#modal-order-published-q").modal('show');
-        $("#modal-question-about-task").modal('hide');
-        setTimeout('location.replace("orders.html")',2000);
-    });
-
-    /*По клику на кнопку "Добавить услугу" на странице "Создание заказа" делать клон поля вид услуги*/
-
-    $(".tabssss").on('click','.js-perform-action',function(e){
-
-        var elem = $(this).siblings('.wrapper-inp').find('.wrapper-input-choice').last().clone(true);
-        $(elem).find('input').val("");
-        $(elem).appendTo(".wrapper-inp");
-
-    });
-
-    //Аккордеон на странице Услуги
-    ! function(i) {
-        var o, n;
-        i(".title_block").on("click", function() {
-            o = i(this).parents(".accordion_item"), n = o.find(".info"),
-                o.hasClass("active_block") ? (o.removeClass("active_block"),
-                    n.slideUp()) : (o.addClass("active_block"), n.stop(!0, !0).slideDown(),
-                    o.siblings(".active_block").removeClass("active_block").children(
-                        ".info").stop(!0, !0).slideUp())
-
-
-
-        })
-
-    }(jQuery);
-
-
-    //Снимаю все метки на чекбоксов
-    $(".js-reset").on("click",function () {
-        $("li.active_block input[type='checkbox']").prop('checked', false);
-    });
-
-
-    //Задаю циклом id инпутам и for лэйблам для стилизованных чекбоксов id="box1" for="box1"
-
-    $('.checkbox-green').each(function(i) {
-        $(this).attr('id', 'box'+(i+1))
-    });
-
-    $('.stylized-checkbox').each(function(i) {
-        $(this).attr('for', 'box'+(i+1))
-    });
-
-//Подписка - подсчет платежа в месяц
-
-    $('.wrapper-subscription-price').each(function(i) {
-       var price = $(this).find(".subscription-price-price").text();
-        var month = $(this).find(".subscription-price-time").text();
-        var price_month = price/month;
-        price = parseInt(price);
-        month = parseInt(month);
-        var price_month = price/month;
-        price_month = price_month.toFixed();
-        $(this).find(".price-month").text(price_month + " p")
-    });
-
-    var month;
-    var price;
-
-    $('.wrapper-subscription-price').on('click',function(){
-        $(this).siblings('.wrapper-subscription-price').removeClass('border-green-2')
-        $(this).addClass('border-green-2');
-        month = $(this).find('.subscription-price-time').text();
-        price = $(this).find('.subscription-price-price').text();
-        $('.formed-price .tariff-plan').text(month+' / '+price);
-    });
-
-
-
-    //Инфа для модальных окон
-
-    var title= {
-        title_marka: "Марка",
-        title_model: "Модель",
-        title_engine: "Двигатель",
-        title_year: "Год выпуска",
-        title_transmission: "Коробка передач",
-        title_type_service: "Тип сервиса",
-        title_wishes_spare: "Пожелания по запчастям",
-        title_weekend: "Выходные",
-        title_category: "Категория",
-        title_kind_service: "Вид услуги",
-        title_templates: "Выберите шаблон"
-
+    var pni_hide = function pni_hide() {
+        $('.page-navigation__item').on('click', function () {
+            paje_nav.css('display', 'none');
+            $('#lean_overlay').hide();
+        });
     };
+    //
+    $('#lean_overlay').on('click', function (e) {
+        //Закрываю модальное окно по клику рабочей области
+        $(this).parents('.section-main').find('.menu-icon').removeClass('menu-active');
+        paje_nav.css('display', 'none');
+        $("#lean_overlay").hide();
+    }).on('click', '.block', function (e) {
+        //Запрещаю закрывать окно по клику на само молдальное окно
+        e.stopPropagation();
+    });
+    //Скролл в нужное место
 
-    var marka = [
-        { name: "Ford",ic_marka:"../../assets/img/icon-BMW.png"},
-        { name: "Mercedes-Benz",ic_marka:"../../assets/img/icon-BMW.png"},
-        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"},
-        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"},
-        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"},
-        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"},
-        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"},
-        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"},
-        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"},
-        { name: "Жигули",ic_marka:"../../assets/img/icon-BMW.png"}
+    $('.page-navigation__item').on('click', function () {
+        var scroll = $(this).attr('data-scroll');
+        $('html, body').animate({
+            scrollTop: $(".h2-title[data-scroll=".concat(scroll, "]")).offset().top - +30
+        }, {
+            duration: 800,
+            // тут можно контролировать скорость
+            easing: "swing"
+        });
+    }); //Скролл подать заявку
 
-    ];
+    $('.button[data-scroll="form"]').on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $(".section-application").offset().top - +30
+        }, {
+            duration: 800,
+            // тут можно контролировать скорость
+            easing: "swing"
+        });
+    }); //Скролл в начало
 
-    var model = [
-        { name: "Focus"},
-        { name: "Mercedes-Benz G"},
-        { name: "Ваз-2015"},
-        { name: "410H"}
-    ];
+    var element = $('.scroll-beginning');
+    $(window).scroll(function () {
+        element['fade' + ($(this).scrollTop() > 200 ? 'In' : 'Out')](500);
+    });
+    element.click(function () {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 500);
+    }); //Задаю id для чекбоксов
+    // $('.checkbox').each(function (ind) {
+    //     // $(this).find('input').attr('id',`checkbox_${ind}`)
+    //     // $(this).find('label').attr('for',`checkbox_${ind}`)
+    // });
+    // //Форма отправки поле select
+    //
+    $('.wrapper-select').on('click', function () {
+        $(this).find('.wrapper-select__option').slideToggle();
+    });
+    $('.wrapper-select__option li').on('click', function () {
+        var val = $(this).find('p').text();
+        $(this).parents('.wrapper-select').find('.wrapper-select__input').val(val);
+        $(this).parents('.wrapper-select__option').siblings('.wrapper-select__wrapper-input').find('.wrapper-select__input').addClass('has-content');
+        $(this).find('.wrapper-select__option').slideUp();
+    }); //Форма отправки input
 
-    var engine = [
-        { name: "Бензин"},
-        { name: "Электродвигатель"},
-        { name: "Дизель"}
-    ];
+    $('.wrapper-select__wrapper-input').on('click', function () {
+        $(this).find('input').focus();
+    });
+    $('.wrapper-select__wrapper-input').on('click', function () {
+        $(this).addClass('inp-bor');
+    });
+    $('.wrapper-select__input').on('blur', function () {
+        var valu = $(this).val(); // if(valu===""){
 
-    var type_service = [
-        { name: "Замена масла"},
-        { name: "Замена шин"},
-        { name: "Замена магнитолы"}
-    ];
+        $(this).parents('.wrapper-select__wrapper-input').removeClass('inp-bor'); // }
+    });
+    var phoneInput = document.querySelector('.phone');
 
-    var transmission = [
-        { name: "Механическая"},
-        { name: "Автомат"},
-        { name: "Полуавтомат"}
-    ];
-    var wishes_spare = [
-        { name: "Только оригинальные"},
-        { name: "Неоригинальные"},
-        { name: "Всё равно"}
-    ];
-    var category = [
-        { name: "Услуги"},
-        { name: "Неуслуги"},
-        { name: "Что-то ещё"}
-    ];
-    var type_of_service = [
-        { name: "Диагностика кондиционера"},
-        { name: "Диагностика мотора"},
-        { name: "Диагностика шин"}
-    ];
-
-    var anoteher_templates = [
-        { name: "Другой шаблон"},
-        { name: "Другой шаблон"},
-        { name: "Другой шаблон"}
-    ];
-
-
-
-    /*Вызов модального окна для селектов*/
-
-    //Открытие модального окна и подстановка содежимого в зависимости от окна
-    $(".js-modal").on("click",function(){
-        $(this).parents(".main-conteiner").hide();
-        $(".wrap-pop-up").show();
-        $(this).find("input").addClass("active-item-m");
-
-        if($(this).find("input").hasClass("marka")){
-            $(".wrap-pop-up .header-inner-center h1").text(title.title_marka);
-            $("#clientTemplate-2").tmpl(marka).appendTo(".main-content-brand .wrapper-services-modal" );
-        }
-
-        if($(this).find("input").hasClass("model")){
-            $(".wrap-pop-up .header-inner-center h1").text(title.title_model);
-            $("#clientTemplate").tmpl(model).appendTo(".main-content-brand .wrapper-services-modal" );
-        }
-
-        /*А это статичная инфа о годах, её не убирать*/
-        if($(this).find("input").hasClass("year")){
-            $(".wrap-pop-up .header-inner-center h1").text(title.title_year);
-            for ( i = year; i > year-50; i--) {
-                $('<li class="modal-active-item js-name-brand item-service text-center">'
-                +'<span class="modal-name-service margin-auto">'+i+'</span>'+'</li>').appendTo(".main-content-brand .wrapper-services-modal")
+    if ($('body').find(phoneInput)) {
+        phoneInput.addEventListener('keydown', function (event) {
+            if (!(event.key == 'ArrowLeft' || event.key == 'ArrowRight' || event.key == 'Backspace' || event.key == 'Tab')) {
+                event.preventDefault();
             }
-        }
-        if($(this).find("input").hasClass("weekend")){
-            $(".wrap-pop-up .header-inner-center h1").text(title.title_weekend);
-            $(".wrap-pop-up").addClass("active-modal");
-            $('<li class="modal-active-item js-name-brand item-service text-center">'
-            +'<span class="modal-name-service margin-auto">Да</span>'+'</li>'+'<li class="modal-active-item js-name-brand item-service text-center">'
-            +'<span class="modal-name-service margin-auto">Нет</span>'+'</li>').appendTo(".main-content-brand .wrapper-services-modal")
 
-        }
+            var mask = '+7 (111) 111-11-11'; // Задаем маску
 
-        if($(this).find("input").hasClass("engine")){
-            $(".wrap-pop-up .header-inner-center h1").text(title.title_engine);
-            $(".wrap-pop-up").addClass("active-modal");
-            $("#clientTemplate").tmpl(engine).appendTo(".main-content-brand .wrapper-services-modal" );
-        }
+            if (/[0-9\+\ \-\(\)]/.test(event.key)) {
+                // Здесь начинаем сравнивать this.value и mask
+                // к примеру опять же
+                var currentString = this.value;
+                var currentLength = currentString.length;
 
-        if($(this).find("input").hasClass("transmission")){
-            $(".wrap-pop-up .header-inner-center h1").text(title.title_transmission);
-            $(".wrap-pop-up").addClass("active-modal");
-            $("#clientTemplate").tmpl(transmission).appendTo(".main-content-brand .wrapper-services-modal" );
-        }
+                if (/[0-9]/.test(event.key)) {
+                    if (mask[currentLength] == '1') {
+                        this.value = currentString + event.key;
+                    } else {
+                        for (var i = currentLength; i < mask.length; i++) {
+                            if (mask[i] == '1') {
+                                this.value = currentString + event.key;
+                                break;
+                            }
 
-        if($(this).find("input").hasClass("type-of-service")){
-            $(".wrap-pop-up .header-inner-center h1").text(title.title_kind_service);
-            $("#clientTemplate").tmpl(type_service).appendTo(".main-content-brand .wrapper-services-modal" );
-        }
+                            currentString += mask[i];
+                        }
+                    }
+                }
+            }
+        });
+    } //Запускаю видео
+    //
+    //
+    var videoyou = [{
+        id: 0,
+        video: 'https://www.youtube.com/embed/FgB9RTdXzUw'
+    }, {
+        id: 1,
+        video: 'https://www.youtube.com/embed/uEVyjyTHKlw'
+    }, {
+        id: 2,
+        video: 'https://www.youtube.com/embed/kVcbQ8nTsVc'
+    }, {
+        id: 3,
+        video: 'https://www.youtube.com/embed/Om0MgAqXy6U'
+    }, {
+        id: 4,
+        video: 'https://www.youtube.com/embed/0fK8_fFkDko'
+    }];
+    $('.video-item').on('click', function () {
+        var dataYoutobe = $(this).attr('data-video');
+        $(this).find('img').hide();
+        $(this).find('.thumb-wrap').append("<iframe allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\"  src=\"".concat(videoyou[dataYoutobe].video, "?autoplay=1\" frameborder='0' allowfullscreen ></iframe><br/>"));
+    });
+    var text; //Подмена текста
 
-        if($(this).find("input").hasClass("wishes-spare")){
-            $(".wrap-pop-up .header-inner-center h1").text(title.title_wishes_spare);
-            $(".wrap-pop-up").addClass("active-modal");
-            $("#clientTemplate").tmpl(wishes_spare).appendTo(".main-content-brand .wrapper-services-modal" );
-        }
-
-        if($(this).find("input").hasClass("category")){
-            $(".wrap-pop-up .header-inner-center h1").text(title.title_category);
-            $("#clientTemplate").tmpl(category).appendTo(".main-content-brand .wrapper-services-modal" );
-        }
-
-        if($(this).hasClass("select-another-template")){
-            $(".wrap-pop-up .header-inner-center h1").text(title.title_templates);
-            $(".wrap-pop-up").addClass("active-modal");
-            $("#clientTemplate").tmpl(anoteher_templates).appendTo(".main-content-brand .wrapper-services-modal" );
-        }
-
-        ret()
+    $('.event-location-date__item:not(.event-location-date__current-date)').hover(function () {
+        text = $(this).find('p').text();
+        $(this).addClass('another-text').find('p').text('Скачать отчёт');
+    }, function () {
+        $(this).removeClass('another-text').find('p').text(text);
+    }); //Яндекс карта
+    //
+    // var map = function map(id, coor) {
+    //     ymaps.ready(function () {
+    //         var myMap = new ymaps.Map(id, {
+    //                 center: coor,
+    //                 zoom: 15
+    //             }, {
+    //                 searchControlProvider: 'yandex#search'
+    //             }),
+    //             myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+    //                 hintContent: 'Собственный значок метки',
+    //                 balloonContent: 'Это красивая метка',
+    //                 iconCaption: 'подсказка'
+    //             }, {
+    //                 // Опции.
+    //                 // Необходимо указать данный тип макета.
+    //                 iconLayout: 'default#image',
+    //                 // Своё изображение иконки метки.
+    //                 iconImageHref: './img/metka.png',
+    //                 // Размеры метки.
+    //                 iconImageSize: [50, 75],
+    //                 // Смещение левого верхнего угла иконки относительно
+    //                 // её "ножки" (точки привязки).
+    //                 iconImageOffset: [-3, -42]
+    //             }); // Добавляем круг на карту.
+    //
+    //         myMap.geoObjects.add(myPlacemark);
+    //     });
+    // };
+    //
+    // var yanadress = [{
+    //     id: 1,
+    //     adress: [45.619363, 40.353814]
+    // }, {
+    //     id: 2,
+    //     adress: [52.793491, 39.033371]
+    // }, {
+    //     id: 3,
+    //     adress: [51.20995, 36.26744]
+    // }, {
+    //     id: 4,
+    //     adress: [52.632739, 32.928025]
+    // }]; //Координаты областей
+    // // map('map1',[45.619363,40.353814])
+    // //Полоска меню
+    //
+    $('.navigation-item:not(.event-location__item)').hover(function () {
+        $(this).addClass('active');
+    }, function () {
+        $(this).removeClass('active');
+        $(this).addClass('non-active');
+    });
+    loc_item.on('click', function () {
+        if (!$(this).hasClass('active-dobble')) {
+            $(this).addClass('active-dobble');
+            $(this).siblings('.event-location__item.active-dobble').removeClass('active-dobble active').addClass('non-active');
+        } // else{
+        //     $(this).removeClass('active-dobble')
+        //
+        // }
 
     });
-    //Закрытие модального окна при нажатии на крестик
-    $(".close-icom").on("click",function(){
-        $(this).parents(".wrap-pop-up").hide();
-        $(this).parents(".wrap-pop-up").siblings(".main-conteiner").show();
-        $(this).parents(".wrap-pop-up").find(".wrapper-services-modal").html("");
-        $(".js-modal").find("input").removeClass("active-item-m");
-        $(".wrap-pop-up").removeClass("active-modal");
+    loc_item.hover(function (e) {
+        if ($(this).hasClass('active-dobble')) {
+            e.preventDefault();
+        } else {
+            $(this).addClass('active');
+        }
+    }, function () {
+        if ($(this).hasClass('active-dobble')) {
+            e.preventDefault();
+        } else {
+            $(this).removeClass('active');
+            $(this).addClass('non-active');
+        }
+    }); //    Модальное окно
+
+    var pop_up = $('.modal-container');
+    $('.js-modal').on('click', function (e) {
+        e.stopPropagation();
+        scroll();
+        OffScroll();
+        $('.modal-parent').css('display', 'flex');
+        $('#lean_overlay').show(); //фон затемнение
+    });
+    $('.close-menu').on('click', function () {
+        $('.modal-parent').css('display', 'none');
+        pop_up.getNiceScroll().hide();
+        $('#lean_overlay').hide();
+        $(window).unbind('scroll');
+    });
+    $('.modal-parent').on('click', function (e) {
+        $('.modal-parent').css('display', 'none');
+        pop_up.getNiceScroll().hide();
+        $("#lean_overlay").hide();
+        $(window).unbind('scroll');
+    }).on('click', '.modal-container', function (e) {
+        //Запрещаю закрывать окно по клику на само молдальное окно
+        e.stopPropagation();
     });
 
-    //Функция при клике на пункт окна, записываем в переменную, подставляем в поле и закрываем окно
-    function ret(){
-
-        $(".modal-active-item").on("click",function(){
-            $(this).removeClass("active-item-modal");
-            $(this).find(".modal-name-service").addClass("active-item-modal");
-            var tex = $(this).find(".modal-name-service").text();
-            $(this).parents(".wrap-pop-up").hide();
-            $(this).parents(".wrap-pop-up").siblings(".main-conteiner").show();
-            $(this).parents(".wrap-pop-up").find(".wrapper-services-modal").html("");
-
-            $(".active-item-m").val(tex);
-            $(".js-modal").find("input").removeClass("active-item-m");
-            tex = "";
+    function OffScroll() {
+        var winScrollTop = $(window).scrollTop();
+        $(window).bind('scroll', function () {
+            $(window).scrollTop(winScrollTop);
+        });
+    } //Красивый скролл в модалке
 
 
-            $(".wrap-pop-up").removeClass("active-modal");
-        })
+    function scroll() {
+        pop_up.scrollTop(0); //при вызове ползунок помещаю вверх
+
+        pop_up.getNiceScroll().show(); // показываю скролл
+
+        pop_up.getNiceScroll().resize(); //разрушаю скролл
+
+        pop_up.niceScroll({
+            cursorcolor: "#fff",
+            //цвет ползунка
+            autohidemode: false,
+            cursorwidth: 10,
+            //ширина ползунка
+            cursorborderradius: 4,
+            //радиус ползунка
+            background: "#a4a4a4" //цвет линии сролла
+
+        });
     }
-
-
-    //Закрываю банер
-    $(".banner-card-close").on("click",function(){
-        $(this).parents(".banner-card").hide()
-    });
-
-
-    //Убираю класс у футера
-
-    //$(window).scroll(function(){
-    //    $("footer").removeClass("footer-abs")
-    //});
-
-
-
-    //Резиновый textarea
-    var textarea= $('#textarea');
-
-    textarea.height(textarea.get(0).scrollHeight);
-
-    textarea.on('keyup input', function(){
-        var $this = $(this);
-        $this.height(1);
-        $this.height(this.scrollHeight);
-    });
-
-
 });
-
-
