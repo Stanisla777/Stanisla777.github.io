@@ -152,7 +152,7 @@ div[id*="ascrail"] div {
 /*Модальное окно*/
 .modal-parent {
   width: 100%;
-  height: 97vh;
+  height: 98vh;
   max-height: 100%;
   position: fixed;
   left: 50%;
@@ -162,39 +162,13 @@ div[id*="ascrail"] div {
   align-items: center;
   align-content: center;
   justify-content: center;
-  overflow: auto;
   display:none;
-  overflow-x: hidden;
+  overflow: auto;
+  cursor: pointer;
 }
-
-/*шрина окна*/
-.modal-container {
-  position: relative;
-  background-color: #fff;
-  max-width: 780px;
-  width: 95%;
-  height: 90%;
-  overflow-y: auto;
-  overflow-x: hidden;
-  box-shadow: 0 0 4px 0 #0c0c0c;
-  //padding: 20px 20px 30px;
-  border-radius: 9px;
-}
-.modal-body{
-  overflow: hidden;
-  img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-
-
-
 #lean_overlay {
   position: fixed;
-  z-index: 100;
+  z-index: 103;
   top: 0;
   left: 0;
   height: 100%;
@@ -203,18 +177,51 @@ div[id*="ascrail"] div {
   display: none;
 }
 .close-menu {
+  text-shadow: 0 0px 8px #000;
   position: absolute;
   left: 50%;
-  top: -25px;
+  top: -20px;
   font-weight: 400;
-  font-size: 80px;
+  font-size: 9vh;
   line-height: 84px;
   color: #FFFFFF;
   cursor: pointer;
   z-index: 10;
   transform: translate(-50%, 0);
 }
+body.overflow-hidden {
+  overflow: hidden;
+}
+.modal-container {
 
+  //height: 90%;
+  //width: 25%;
+  text-align: left;
+  //overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background-size: contain;
+  margin-top: auto;
+  margin-bottom: 20px;
+  img{
+    z-index: 1;
+  }
+  &.non-active{
+    img{
+      width: auto;
+      height: 88vh;
+      cursor: zoom-in;
+    }
+  }
+  &.active{
+    img{
+      width: auto;
+      height: auto;
+      cursor: zoom-out;
+    }
+  }
+
+}
 
 //Начало
 .logo {
@@ -251,6 +258,8 @@ div[id*="ascrail"] div {
     font-weight: 500;
     letter-spacing: 1px;
     cursor: pointer;
+    position: relative;
+    z-index: 102;
 
 
   }
@@ -328,9 +337,12 @@ width: 32px;
   //padding-bottom: 30px;
 }
 .wrap-situation-description{
-  max-width: 580px;
+  max-width: 670px;
   margin: 0 auto;
   p{
+    &:not(:last-child){
+      margin-bottom: 15px;
+    }
     font-weight: 400;
     font-size: 18px;
     line-height: 32px;
@@ -379,15 +391,22 @@ width: 32px;
   display: flex;
   align-items: center;
   &__col-left{
+    position: relative;
+    z-index: 102;
     margin-right: 10px;
     width: 26%;
     max-width: 295px;
     margin-bottom: 70px;
-    p{
+    p.percent{
       color: #5DA700;
-      line-height: 32px;
+      line-height: normal;
       font-family: 'CormorantGaramond', sans-serif;
       font-size: 80px;
+    }
+    p.subject{
+      color: #5DA700;
+      font-size: 18px;
+      line-height: 32px;
     }
   }
 }
@@ -399,6 +418,10 @@ width: 32px;
 .pharmacy-indicators{
   &__item{
     margin-bottom: 70px;
+    &:nth-child(even){
+      position: relative;
+      z-index: 102;
+    }
   }
   &__num{
     font-size: 50px;
@@ -414,6 +437,7 @@ width: 32px;
   }
 }
 .statistics-data__col-right{
+
   width: calc(100% - 28px - 42% - 26%);
   margin-bottom: 70px;
   border-left: 1px solid #E6E6E6;
@@ -428,19 +452,14 @@ width: 32px;
   font-weight: 400;
 }
 .col-right__link{
-  font-size: 18px;
-  line-height: 32px;
-  color: #00A3FF;
+  position: relative;
+  z-index: 102;
+  font-size: 15px;
+  line-height: 22px;
+  color: #000000;
   margin-top: 16px;
   display: block;
-  width: max-content;
-  &:after{
-    content: "";
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color:  #00A3FF;
-  }
+
 }
 
 .row-3-col-mar-10{
@@ -575,6 +594,8 @@ width: 32px;
     line-height: 32px;
   }
   &__position-link{
+    position: relative;
+    z-index: 102;
     color: #00A3FF;
     font-size: 18px;
     line-height: 32px;
@@ -627,6 +648,8 @@ width: 32px;
     max-width: 350px;
   }
   &__button{
+    position: relative;
+    z-index: 102;
     width: 200px;
     height: 50px;
     background: #00A3FF;
@@ -798,27 +821,28 @@ width: 32px;
 }
 
 .gallary {
-  &:after {
-    content: "";
-    display: block;
-    height: 100%;
-    width: 8%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    background: linear-gradient(270deg, #ffffff 74.58%, rgba(249, 255, 255, 0) 100%);
-  }
+  z-index: 102;
+  //&:after {
+  //  content: "";
+  //  display: block;
+  //  height: 100%;
+  //  width: 8%;
+  //  position: absolute;
+  //  right: 0;
+  //  top: 0;
+  //  background: linear-gradient(270deg, #ffffff 74.58%, rgba(249, 255, 255, 0) 100%);
+  //}
 }
 
 .slide-arrow-right {
-  background: url("../img/ArrowLeft.svg") center no-repeat;
+  background: url("../img/ArrowRight.svg") center no-repeat;
   right: 0;
 
 }
 
 .slide-arrow-left {
-  background: url("../img/ArrowRight.svg") center no-repeat;
-  left: -40px;
+  background: url("../img/ArrowLeftt.svg") center no-repeat;
+  left: -21px;
 }
 
 .slide-arrow {
@@ -846,9 +870,17 @@ width: 32px;
   margin: 0 auto;
 }
 .form-page-form{
+  position: relative;
+  z-index: 102;
   width: 100%;
   margin: 54px auto 0;
   max-width: 780px;
+  .error{
+    border-color: #ff0000;
+  }
+  .error_phone {
+    border-color: #ff0000;
+  }
 }
 .page-form{
   &__item{
@@ -915,63 +947,44 @@ width: 32px;
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-.col-right__link{
-
-&:after{
-  content: "";
-  display: block;
-  width: 173px;
-  height: 1px;
-  background-color:  #00A3FF;
-}
-}
-}
-
 @keyframes rotation {
-0% {
-transform:rotate(0deg);
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-100% {
-transform:rotate(360deg);
-}
-}
-.gallary__item-img-100{
+
+.gallary__item-img-100 {
   width: 100%;
   height: 100%;
 
 }
-
 
 .space {
   display: inline-block;
   width: 100px;
   z-index: 100;
 }
+
 .box-pointer {
   position: absolute;
   z-index: 100;
 }
+
 .box-pointer-hidden {
   //display: none;
   //z-index: 100;
 }
+
 .box-pointer2 {
   z-index: 100;
   left: 0;
   right: 0;
   transition: 0ms cubic-bezier(0.1, 0.57, 0.1, 1);
 }
+
 .cursor {
   z-index: 1000;
   cursor: url('../img/Virus.png'), auto;
@@ -981,11 +994,76 @@ transform:rotate(360deg);
   position: relative;
   left: 111px;
   top: 111px;
-  z-index: 1000;
+  z-index: 101;
   transition: all 0.2s ease !important;
   -moz-transition: all 0.2s ease !important;
   -o-transition: all 0.2s ease !important;
   -webkit-transition: all 0.2s ease !important;
   will-change: transform;
 }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .col-right__link {
+    &:after {
+      content: "";
+      display: block;
+      width: 173px;
+      height: 1px;
+      background-color: #00A3FF;
+    }
+  }
+  .statistics-data__col-center{
+    max-width: 490px;
+  }
+  .gallary__item-img img{
+    height: auto;
+  }
+}
+
+[class*="row-"] {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.row-2-col-mar-10 {
+  margin-left: -10px;
+  margin-right: -10px;margin-bottom: -20px;
+}
+.row-2-col-mar-10 > .col-flex {
+  position: relative;
+  width: calc(100%/2 - 10px*2);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.row-2-col-mar-10.mar-bottom > .col-flex {
+  margin-bottom: 20px;
+}
+
+.row-3-col-mar-10 {
+  margin-left: -10px;
+  margin-right: -10px;margin-bottom: -20px;
+}
+.row-3-col-mar-10 > .col-flex {
+  position: relative;
+  width: calc(100%/3 - 10px*2);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.row-3-col-mar-20 {
+  margin-left: -20px;
+  margin-right: -20px;margin-bottom: -40px;
+}
+.row-3-col-mar-20 > .col-flex {
+  position: relative;
+  width: calc(100%/3 - 20px*2);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.row-3-col-mar-20.mar-bottom > .col-flex {
+  margin-bottom: 40px;
+}
+
+
 

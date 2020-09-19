@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 5 version
+*/
+
 @media screen and (max-width: 1440px){
     .section-main__virus-2{
         left: 0;
@@ -13,8 +20,26 @@
         left: -9px;
     }
 }
+@media screen and (max-width: 992px) {
+    [class*="mar-"].row-2-col-lg-mar-10 {
+        margin-left: -10px;
+        margin-right: -10px;margin-bottom: -20px;
+    }
+    [class*="mar-"].row-2-col-lg-mar-10 > [class*='col-flex'] {
+        width: calc(100% / 2 - 10px * 2);
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    [class*="mar-"].row-2-col-lg-mar-10.mar-bottom > [class*='col-flex']:not(:nth-last-child(-n+2)) {
+        margin-bottom: 20px;
+    }
+
+}
 @media screen and (max-width: 980px){
     .wrapper-who-we{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
     .wrapper-who-we__col-left{
@@ -29,6 +54,8 @@
         margin: 0 auto;
     }
     .wrapper-who-we__num{
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
     }
     .wrapper-who-we__num-item:nth-child(1) {
@@ -44,7 +71,10 @@
 
 @media screen and (max-width: 900px){
     .statistics-data{
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
     }
     .statistics-data__col-left{
@@ -79,8 +109,12 @@
 
 @media screen and (max-width: 658px){
     .clientage__item{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         width: 100%;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
     }
     .clientage__img:nth-child(2) {
@@ -112,8 +146,15 @@
         margin-right: 0;
     }
     .pharmacy-indicators__item{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
     .statistics-data__col-right{
@@ -148,14 +189,34 @@
         margin-bottom: 20px!important;
     }
 }
+@media screen and (max-width: 576px) {
 
+    [class*="mar-"].row-1-col-sm-mar-0 {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    [class*="mar-"].row-1-col-sm-mar-0 > [class*='col-flex'] {
+        width: calc(100% / 1);
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+    [class*="mar-"].row-1-col-sm-mar-0.mar-bottom > [class*='col-flex'] {
+        margin-bottom: 0;
+    }
+}
 @media screen and (max-width: 560px){
     .section-submit-application{
         padding-bottom: 65px;
     }
     .clientage__item{
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         margin-bottom: 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
     .clientage__item:not(:last-child){
@@ -173,6 +234,7 @@
     .wrapper-who-we__arrow{
         width: 56px;
         min-height: 238px;
+        -ms-flex-negative: 0;
         flex-shrink: 0;
     }
     .wrapper-who-we{
@@ -200,6 +262,9 @@
 
 @media screen and (max-width: 530px){
     .wrapper-who-we__progress{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
     .wrapper-who-we__progress-item:nth-child(1) {
@@ -228,8 +293,6 @@
         display: none;
     }
 }
-
-
 @media screen and (max-width: 410px){
     .wrap-situation-description p{
         text-align: left;
@@ -253,5 +316,4 @@
     .pharmacy-indicators__item {
         margin-bottom: 35px;
     }
-
 }
