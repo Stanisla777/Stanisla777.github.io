@@ -14,7 +14,6 @@ $(document).ready(function () {
     $('.modal-city-confirm').css('left', coor.left);
   }
 
-  coorModal();
   $('.header__selected-city').on('mouseenter click', function () {
     if ($(window).width() <= 870) {
       if ($('body').find('#lean_overlay').length === 0) {
@@ -22,10 +21,10 @@ $(document).ready(function () {
       }
 
       $('#lean_overlay').show();
-    } else {
-      $(window).resize(function () {
-        coorModal();
-      });
+    }
+
+    if ($(window).width() > 870) {
+      coorModal();
     }
 
     $(this).find('p.header__selected-city-name').removeClass('not-active-hover').addClass('active-hover');
@@ -51,7 +50,6 @@ $(document).ready(function () {
 
   function closeModal() {
     $('.parent-modal').css('display', 'none');
-    $('#lean_overlay').hide();
     $('.modal-city-confirm').css('z-index', 1001);
   }
 
@@ -61,6 +59,7 @@ $(document).ready(function () {
     setTimeout(function () {
       elem.parents('.modal-city-confirm').hide();
     }, 400);
+    $('#lean_overlay').hide();
   }
 
   $('.close-menu').on('click', function () {
@@ -81,7 +80,6 @@ $(document).ready(function () {
     var name_town = $(this).text();
     changeTown(name_town);
     closeModal();
-    $('.modal-city-confirm').css('z-index', 1001);
   });
 
   function changeTown(town) {
@@ -93,7 +91,6 @@ $(document).ready(function () {
     var elem = $(this);
     closeMenuConfirm(elem);
     AddCity(name_town);
-    $('#lean_overlay').hide();
     $('p.header__selected-city-name').removeClass('active-hover').addClass('not-active-hover');
     $('.moda-city-confirm').css('z-index', 1001);
   });
