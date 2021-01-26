@@ -1,180 +1,180 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
- <meta charset="utf-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
- <meta name="google" value="notranslate">
- <meta name="theme-color" content="#ffffff">
- <title></title>
- <meta name="description" content="">
- <meta name="keywords" content="">
- <link href="css/style.css" rel="stylesheet">
- <link href="css/media.css" rel="stylesheet">
- <!--[if lt IE 9]>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="google" value="notranslate">
+<meta name="theme-color" content="#ffffff">
+<title></title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/media.css" rel="stylesheet">
+<!--[if lt IE 9]>
  <script src="js/css3-mediaqueries.js"></script>
  <![endif]-->
 </head>
 <body>
 <div class="wrap">
- <div class="content">
-  <header class="header">
-   <div class="modal-city-confirm modal-close">
-    <div class="modal-city-confirm__close modal-close">
-     <img src="./img/svgicon/sprite.svg#close" alt="">
-    </div>
-    <p class="modal-city-confirm__title">
-     Информация о доставке будет отображаться для региона:
-    </p>
-    <p class="modal-city-confirm__select-city">Владивосток</p>
-    <button type="button" class="modal-city-confirm__button">Да, выбрать</button>
-    <p data-modal="changetown" class="modal-city-confirm__choose-another">Нет, выбрать другой город</p>
-   </div>
-   <div class="container">
-    <div class="header__top-part">
-     <div class="header__burger"></div>
-     <div class="header__wrap-logo-menu">
-      <a href="#" class="header__logo">
-       <img src="./img/logo.svg" alt="Монастырёв">
-      </a>
-      <div class="header__selected-city-wrap">
-       <div class="header__selected-city hover">
-        <div class="header__icon-geo"></div>
-        <div class="header__wrap-town">
-         <p class="header__selected-city-name">Владивосток</p>
-         <p class="header__count media-display">15 товаров</p>
-        </div>
-        <div class="header__icon">
-         <img src="./img/svgicon/sprite.svg#arrow" alt="">
-        </div>
-       </div>
-      </div>
-     </div>
-     <ul class="header__information-menu">
-      <li class="header__information-menu-item hover active"><a class="hover-item" href="#">Адреса аптек</a></li>
-      <li class="header__information-menu-item hover"><a class="hover-item" href="#">Доставка</a></li>
-      <li class="header__information-menu-item hover"><a class="hover-item" href="#">О нас</a></li>
-      <li class="header__information-menu-item hover"><a class="hover-item" href="#">Акции</a></li>
-     </ul>
-     <div class="header__wrap-blind-tel">
-      <div class="header__version-blind">
-       <p>Версия для слабовидящих</p>
-       <i class="sprite sprite-blind"></i>
-      </div>
-      <div class="header__tel">
-       <div class="header__container-tel">
-        <i class="sprite sprite-number"></i>
-        <div class="header__tel-wrap">
-         <a href="tel:+78007077733">8 800 707 77 33</a>
-         <p class="header__count media-display">Позвонить бесплатно</p>
-        </div>
-       </div>
-       <div class="header__apps">
-        <a href="#" class="header__apps-item">
-         <img src="./img/app1.png" alt="">
-        </a>
-        <a href="#" class="header__apps-item">
-         <img src="./img/app2.png" alt="">
-        </a>
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="header__bottom-part">
-     <div class="header__bottom-part-close modal-close">
-      <img src="./img/svgicon/sprite.svg#close" alt="">
-     </div>
-     <div class="header__catalog">
-      <div class="header__icon-catalog">
-       <!--<img src="./img/svgicon/sprite.svg#burger" alt="">-->
-      </div>
-      <p>Каталог <span>товаров</span></p>
-      <div class="header__icon">
-       <img src="./img/svgicon/sprite.svg#arrow" alt="">
-      </div>
-     </div>
-     <div class="header__search">
-      <input placeholder="Средство,  действующее вещество, проблема" type="text">
-      <div class="header__icon-searh">
-       <i class="sprite sprite-search"></i>
-      </div>
-     </div>
-     <div class="header__wrap-profile-busket">
-      <div class="header__profile">
-       <i class="sprite sprite-user"></i>
-       <div class="header__profile-info">
-        <p class="header__profile-name">Константин</p>
-        <p class="header__profile-invitation">Ваш профиль</p>
-       </div>
-      </div>
-      <div class="header__wrap-busket">
-       <div class="header__star">
-        <img src="./img/svgicon/sprite.svg#star" alt="">
-        <div class="header-wrap-des media-display">
-         <p class="header__favorites">Избранное</p>
-         <p class="header__count">15 товаров</p>
-        </div>
-       </div>
-       <div class="header__busket">
-        <i class="sprite sprite-busket"></i>
-        <div class="header__order-quantity">
-         13
-        </div>
-       </div>
-      </div>
-     </div>
-    </div>
-   </div>
-  </header>
-  <div data-modal="changetown" class="parent-modal modal-city-selection">
-   <div class="modal-city-selection__body">
-    <div class="modal-city-selection__close modal-close">
-     <img src="./img/svgicon/sprite.svg#close" alt="">
-    </div>
-    <p class="modal-city-selection__title">Выберите город</p>
-    <div class="modal-city-selection__wrap-town">
-     <div class="col-flex modal-city-selection__col-town active hover">
-      <p class="modal-city-selection__name-town hover-item">Владивосток</p>
-      <p class="modal-city-selection__number-pharmacies"><span>12</span> аптек</p>
-     </div>
-     <div class="col-flex modal-city-selection__col-town hover">
-      <p class="modal-city-selection__name-town hover-item">Дальнегорск</p>
-      <p class="modal-city-selection__number-pharmacies"><span>12</span> аптек</p>
-     </div>
-     <div class="col-flex modal-city-selection__col-town hover">
-      <p class="modal-city-selection__name-town hover-item">Москва</p>
-      <p class="modal-city-selection__number-pharmacies"><span>12</span> аптек</p>
-     </div>
-     <div class="col-flex modal-city-selection__col-town hover">
-      <p class="modal-city-selection__name-town hover-item">Вольно-Надеждинское</p>
-      <p class="modal-city-selection__number-pharmacies"><span>12</span> аптек</p>
-     </div>
-     <div class="col-flex modal-city-selection__col-town hover">
-      <p class="modal-city-selection__name-town hover-item">Уссурийск</p>
-      <p class="modal-city-selection__number-pharmacies"><span>12</span> аптек</p>
-     </div>
-     <div class="col-flex modal-city-selection__col-town hover">
-      <p class="modal-city-selection__name-town hover-item">Новосибирск</p>
-      <p class="modal-city-selection__number-pharmacies"><span>12</span> аптек</p>
-     </div>
-     <div class="col-flex modal-city-selection__col-town hover">
-      <p class="modal-city-selection__name-town hover-item">Артем</p>
-      <p class="modal-city-selection__number-pharmacies"><span>12</span> аптек</p>
-     </div>
-     <div class="col-flex modal-city-selection__col-town hover">
-      <p class="modal-city-selection__name-town hover-item">Славянка</p>
-      <p class="modal-city-selection__number-pharmacies"><span>12</span> аптек</p>
-     </div>
-     <div class="col-flex modal-city-selection__col-town hover">
-      <p class="modal-city-selection__name-town hover-item">Врангель</p>
-      <p class="modal-city-selection__number-pharmacies"><span>12</span> аптек</p>
-     </div>
-    </div>
-   </div>
-  </div>
- </div>
- <footer class="footer">
- </footer>
+<div class="content">
+<header class="header">
+<div class="modal-city-confirm modal-close">
+<div class="modal-city-confirm__close modal-close">
+<img src="./img/svgicon/sprite.svg#close" alt="">
+</div>
+<p class="modal-city-confirm__title">
+Информация о доставке будет отображаться для региона:
+</p>
+<p class="modal-city-confirm__select-city">Владивосток</p>
+<button type="button" class="modal-city-confirm__button">Да, выбрать</button>
+<p data-modal="changetown" class="modal-city-confirm__choose-another">Нет, выбрать другой город</p>
+</div>
+<div class="container">
+<div class="header__top-part">
+<div class="header__burger"></div>
+<div class="header__wrap-logo-menu">
+<a href="#" class="header__logo">
+<img src="./img/logo.svg" alt="Монастырёв">
+</a>
+<div class="header__selected-city-wrap">
+<div class="header__selected-city hover">
+<div class="header__icon-geo"></div>
+<div class="header__wrap-town">
+<p class="header__selected-city-name">Владивосток</p>
+<p class="header__count media-display">15 товаров</p>
+</div>
+<div class="header__icon">
+<img src="./img/svgicon/sprite.svg#arrow" alt="">
+</div>
+</div>
+</div>
+</div>
+<ul class="header__information-menu">
+<li class="header__information-menu-item hover active"><a class="hover-item" href="#">Адреса аптек</a></li>
+<li class="header__information-menu-item hover"><a class="hover-item" href="#">Доставка</a></li>
+<li class="header__information-menu-item hover"><a class="hover-item" href="#">О нас</a></li>
+<li class="header__information-menu-item hover"><a class="hover-item" href="#">Акции</a></li>
+</ul>
+<div class="header__wrap-blind-tel">
+<div class="header__version-blind">
+<p>Версия для слабовидящих</p>
+<i class="sprite sprite-blind"></i>
+</div>
+<div class="header__tel">
+<div class="header__container-tel">
+<i class="sprite sprite-number"></i>
+<div class="header__tel-wrap">
+<a href="tel:+78007077733">8 800 707 77 33</a>
+<p class="header__count media-display">Позвонить бесплатно</p>
+</div>
+</div>
+<div class="header__apps">
+<a href="#" class="header__apps-item">
+<img src="./img/app1.png" alt="">
+</a>
+<a href="#" class="header__apps-item">
+<img src="./img/app2.png" alt="">
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="header__bottom-part">
+<div class="header__bottom-part-close modal-close">
+<img src="./img/svgicon/sprite.svg#close" alt="">
+</div>
+<div class="header__catalog">
+<div class="header__icon-catalog">
+<!--<img src="./img/svgicon/sprite.svg#burger" alt="">-->
+</div>
+<p>Каталог <span>товаров</span></p>
+<div class="header__icon">
+<img src="./img/svgicon/sprite.svg#arrow" alt="">
+</div>
+</div>
+<div class="header__search">
+<input placeholder="Средство,  действующее вещество, проблема" type="text">
+<div class="header__icon-searh">
+<i class="sprite sprite-search"></i>
+</div>
+</div>
+<div class="header__wrap-profile-busket">
+<div class="header__profile">
+<i class="sprite sprite-user"></i>
+<div class="header__profile-info">
+<p class="header__profile-name">Константин</p>
+<p class="header__profile-invitation">Ваш профиль</p>
+</div>
+</div>
+<div class="header__wrap-busket">
+<div class="header__star">
+<img src="./img/svgicon/sprite.svg#star" alt="">
+<div class="header-wrap-des media-display">
+<p class="header__favorites">Избранное</p>
+<p class="header__count">15 товаров</p>
+</div>
+</div>
+<div class="header__busket">
+<i class="sprite sprite-busket"></i>
+<div class="header__order-quantity">
+13
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div data-modal="changetown" class="parent-modal modal-city-selection">
+<div class="modal-city-selection__body">
+<div class="modal-city-selection__close modal-close">
+<img src="./img/svgicon/sprite.svg#close" alt="">
+</div>
+<p class="modal-city-selection__title">Выберите город</p>
+<div class="modal-city-selection__wrap-town">
+<div class="col-flex modal-city-selection__col-town active hover">
+<p class="modal-city-selection__name-town hover-item">Владивосток</p>
+<p class="modal-city-selection__number-pharmacies"><span>12</span> аптек</p>
+</div>
+<div class="col-flex modal-city-selection__col-town hover">
+<p class="modal-city-selection__name-town hover-item">Дальнегорск</p>
+<p class="modal-city-selection__number-pharmacies"><span>12</span> аптек</p>
+</div>
+<div class="col-flex modal-city-selection__col-town hover">
+<p class="modal-city-selection__name-town hover-item">Москва</p>
+<p class="modal-city-selection__number-pharmacies"><span>12</span> аптек</p>
+</div>
+<div class="col-flex modal-city-selection__col-town hover">
+<p class="modal-city-selection__name-town hover-item">Вольно-Надеждинское</p>
+<p class="modal-city-selection__number-pharmacies"><span>12</span> аптек</p>
+</div>
+<div class="col-flex modal-city-selection__col-town hover">
+<p class="modal-city-selection__name-town hover-item">Уссурийск</p>
+<p class="modal-city-selection__number-pharmacies"><span>12</span> аптек</p>
+</div>
+<div class="col-flex modal-city-selection__col-town hover">
+<p class="modal-city-selection__name-town hover-item">Новосибирск</p>
+<p class="modal-city-selection__number-pharmacies"><span>12</span> аптек</p>
+</div>
+<div class="col-flex modal-city-selection__col-town hover">
+<p class="modal-city-selection__name-town hover-item">Артем</p>
+<p class="modal-city-selection__number-pharmacies"><span>12</span> аптек</p>
+</div>
+<div class="col-flex modal-city-selection__col-town hover">
+<p class="modal-city-selection__name-town hover-item">Славянка</p>
+<p class="modal-city-selection__number-pharmacies"><span>12</span> аптек</p>
+</div>
+<div class="col-flex modal-city-selection__col-town hover">
+<p class="modal-city-selection__name-town hover-item">Врангель</p>
+<p class="modal-city-selection__number-pharmacies"><span>12</span> аптек</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="footer">
+</footer>
 </div>
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/app.js"></script>

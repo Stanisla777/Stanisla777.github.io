@@ -4,10 +4,14 @@
   }
 
   .header__wrap-blind-tel{
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
     max-width: max-content;
     margin-left: auto;
   }
   .header__top-part{
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
   }
 }
@@ -15,24 +19,37 @@
 @media screen and (max-width: 870px){
   .header{
     padding-bottom: 0;
+    -webkit-box-shadow:none;
     box-shadow:none;
     border-radius: 0;
 }
   .header__bottom-part{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     width: 74%;
     min-width: 287px;
+    -webkit-box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.08);
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.08);
     border-radius: 0 0 0 20px;
     border-bottom-right-radius: 20px;
+    -webkit-transform: translateX(-120%);
+    -ms-transform: translateX(-120%);
     transform: translateX(-120%);
+    -webkit-transition-duration: 1s;
+    -o-transition-duration: 1s;
     transition-duration: 1s;
   }
   .header__wrap-busket{
     margin-top: 25px;
   }
   .header__container-tel{
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin-top: 40px;
   }
@@ -43,11 +60,17 @@
     display: block;
   }
   .header__apps{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   .header__search{
     border: none;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     padding-left: 0;
   }
@@ -56,25 +79,41 @@
   }
   .header__icon-searh{
     background-color: transparent;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
   }
   .header__wrap-logo-menu{
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
     max-width: max-content;
   }
   .header__burger{
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
     order: 1;
   }
   .header__search{
+    -webkit-box-ordinal-group:3;
+    -ms-flex-order:2;
     order:2
   }
   .header__wrap-logo-menu{
+    -webkit-box-ordinal-group:4;
+    -ms-flex-order:3;
     order:3;
   }
   .header__busket{
+    -webkit-box-ordinal-group: 5;
+    -ms-flex-order: 4;
     order: 4;
   }
   .header__top-part{
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
   .header__top-part:after{
@@ -89,7 +128,11 @@
     bottom: -22px;
     height: 15px;
     left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
+    -webkit-transition-duration: 1s;
+    -o-transition-duration: 1s;
     transition-duration: 1s;
   }
   .header__top-part.active:after{
@@ -107,6 +150,11 @@
     background-size: cover;
   }
 
+  .modal-city-confirm{
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
 
 
 
@@ -114,6 +162,9 @@
 
 
   .header__information-menu{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 
@@ -152,6 +203,8 @@
     margin-bottom: 10px;
   }
   .header__tel{
+    -webkit-transform: translateX(-2px);
+    -ms-transform: translateX(-2px);
     transform: translateX(-2px);
   }
   .media-display{
@@ -163,6 +216,8 @@
   .header__catalog{
     width: 100%;
     background: transparent;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
     padding: 0;
     position: relative;
@@ -189,8 +244,15 @@
     display: none;
   }
   .header__wrap-profile-busket{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     margin-top: 20px;
   }
@@ -226,12 +288,16 @@
     z-index: 1001;
     width: 100vw;
     left: 0;
+    -webkit-transform: translate(0);
+    -ms-transform: translate(0);
     transform: translate(0);
     top: auto;
     bottom: 0;
   }
   .moda-city-confirm__close{
     right: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     top: -25px;
   }
