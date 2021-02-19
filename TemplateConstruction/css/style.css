@@ -174,13 +174,11 @@ textarea:focus {
   width: 100%;
   max-width: 440px;
   min-width: 320px;
-  height: 50%;
-  min-width: 300px;
   border: 1px solid #7b7a7a;
   background: #fff;
   -webkit-box-shadow: 0 0 4px 0 #7b7a7a;
   box-shadow: 0 0 4px 0 #7b7a7a;
-  padding: 20px;
+  padding: 40px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
