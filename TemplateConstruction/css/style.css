@@ -782,7 +782,7 @@ textarea:focus {
 .reviews {
   margin-top: 63px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-gap: 30px;
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -818,6 +818,9 @@ textarea:focus {
   font-weight: 500;
   font-size: 21px;
   display: inline;
+}
+.reviews__author p span {
+  color: #F7654A;
 }
 .reviews__position {
   color: #F7654A;
