@@ -171,8 +171,11 @@ textarea:focus {
 }
 .modal__container {
   position: relative;
-  width: 40%;
+  width: 100%;
+  max-width: 440px;
+  min-width: 320px;
   height: 50%;
+  min-width: 300px;
   border: 1px solid #7b7a7a;
   background: #fff;
   -webkit-box-shadow: 0 0 4px 0 #7b7a7a;
@@ -195,7 +198,8 @@ textarea:focus {
 }
 .modal__form {
   margin-top: 30px;
-  width: 50%;
+  width: 100%;
+  max-width: 450px;
 }
 .modal__form form {
   width: 100%;
@@ -203,7 +207,6 @@ textarea:focus {
 .modal__form input {
   height: 50px;
   width: 100%;
-  min-width: 320px;
   font-size: 18px;
 }
 .modal__form input:not(:last-child) {
@@ -218,7 +221,6 @@ textarea:focus {
 .modal__form textarea {
   font-family: 'OpenSans', sans-serif;
   width: 100%;
-  min-width: 320px;
   height: 100px;
   padding: 15px;
   font-size: 18px;
