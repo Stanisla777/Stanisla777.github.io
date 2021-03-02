@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+ <meta name="google" value="notranslate">
+ <meta name="theme-color" content="#ffffff">
+ <title></title>
+ <meta name="description" content="">
+ <meta name="keywords" content="">
+ <link href="css/style.css" rel="stylesheet">
+ <link href="css/media.css" rel="stylesheet">
+ <!--[if lt IE 9]>
+ <script src="js/css3-mediaqueries.js"></script>
+ <![endif]-->
+ <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+</head>
+<body>
+<div class="wrap">
+ <div class="sidebar">
+  <i class="sprite sprite-3close sidebar__close"></i>
+  <div class="sidebar__container">
+   <ul class="sidebar__nav">
+    <li class="sidebar__nav-item"><a href="#">Какие преимущества</a></li>
+    <li class="sidebar__nav-item"><a href="#">Что вы получаете</a></li>
+    <li class="sidebar__nav-item"><a href="#">Еще сюрпризы</a></li>
+    <li data-modal="modanimate__fadeIn" class="sidebar__nav-item sidebar__modal js-modal"><p>Оформить карту</p></li>
+   </ul>
+   <div class="contacts-communication sidebar__contact">
+    <div class="contacts-communication__wrap">
+     <p>По России</p>
+     <a href="tel:88009506570">8 800 950 6570</a>
+    </div>
+    <div class="contacts-communication__wrap">
+     <p>По Миру</p>
+     <a href="tel:88009506570">8 800 950 6570</a>
+    </div>
+   </div>
+  </div>
+ </div>
+ <div class="content">
+  <div class="body-page">
+   <section class="first-section">
+    <div class="container">
+     <div class="header">
+      <div class="header__burger">
+       <span></span>
+       <span></span>
+       <span></span>
+      </div>
+      <a href="#" class="header__logo">
+       <img src="./img/logoHeader.png" alt="">
+      </a>
+     </div>
+    </div>
+    <div class="best-card">
+     <div class="container">
+      <div class="wrap-h1-title">
+       <h1 class="h1-title">Твоя премиум карта</h1>
+       <p class="h1-subtitle">Лучшая карта для любителей путешествий</p>
+      </div>
+      <div class="best-card__figure">
+       <div class="best-card__figure-item">
+        <p class="best-card__figure-value">11%</p>
+        <p class="best-card__figure-des">Вернем за&#160;покупки милями</p>
+       </div>
+       <div class="best-card__figure-item">
+        <p class="best-card__figure-value">0%</p>
+        <p class="best-card__figure-des">Бесплатное снятие наличных по&#160;всему миру</p>
+       </div>
+       <div class="best-card__figure-item">
+        <p class="best-card__figure-value">7%</p>
+        <p class="best-card__figure-des">До 7% на&#160;остаток по&#160;счету</p>
+       </div>
+       <div class="best-card__figure-item">
+        <p class="best-card__figure-value">0р</p>
+        <p class="best-card__figure-des">Бесплатное годовое обслуживание</p>
+       </div>
+      </div>
+      <button data-modal="modanimate__fadeIn" type="button" class="button js-modal">Заказать сейчас</button>
+     </div>
+     <div class="bank-card-background">
+      <img src="./img/bankCard.png" alt="">
+     </div>
+    </div>
+    <div class="wrap-lightning">
+     <svg width="1920" height="251" viewBox="0 0 1920 251" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path class="lightning"
+            d="M1947.31 3.2975L1942.47 4.89545L1927.6 2L1914.66 8.20121L1900.89 9.66801L1886.47 7.79812L1874.96 19.795L1861.12 20.4486L1850.57 30.5088L1836.03 30.4707L1824.43 37.7236L1812.07 43.1425L1800.49 51.4903L1785.86 48.404L1773.95 58.6026L1759.87 53.1503L1746.22 54.9678L1732.63 57.5079L1719.01 60.0503L1706 64.427L1694.73 74.3966L1680.65 73.5856L1667.64 77.2563L1654.99 78.3153L1642.96 84.7382L1629.52 79.9204L1618.3 88.3564L1607.13 94.3549L1593.93 95.0966L1583.22 102.421L1573 110.573L1558.8 111.1L1548.89 121.743L1536.96 128.96L1521.92 125.859L1511.16 137.663L1498.67 142.922L1485.11 144.334L1472.13 148.129L1460.17 154.692L1446.8 159.742L1440.89 175.939L1430.84 186.528L1419.93 196.763L1409.83 208.462L1395.01 211.562L1381.55 218.586L1367.23 210.63L1352.64 209.27L1337.41 211.052L1323.26 207.999L1309.49 210.081L1295.72 202.969L1281.87 209.251L1268.12 206.675L1254.45 204.982L1240.6 204.223L1227.07 201.099L1215.37 191.814L1200.41 192.751L1188.76 184.403L1176.25 178.121L1164.82 169.864L1151.19 165.416L1142.29 152.746L1129.42 146.624L1116.58 140.446L1106.65 129.628L1096.34 119.36L1085.36 110.042L1070.03 108.329L1058.98 99.2419L1046.14 93.6131L1034.66 84.8408L1021.37 85.3703L1010.41 75.3315L997.617 73.5141L984.847 72.4551L972.101 72.2953L959.331 75.9468L946.8 71.8731L934.388 70.3181L921.284 72.5076L908.705 63.523L897.152 53.3602L885.457 42.842L869.966 40.4951L859.392 47.5883L848.006 52.8474L838.244 61.5648L824.137 64.3888L814.733 73.7764L805.973 85.7948L790.602 88.1418L783.25 101.961L769.239 106.6L761.84 120.047L749.022 126.506L741.599 139.564L727.588 145.016L718.852 156.465L708.254 165.96L700.091 177.942L692.668 190.469L686.223 202.647L679.253 214.522L665.887 219.8L659.92 233.352L649.179 241.788L635.335 242.981L623.257 249.017L611.036 241.18L596.763 246.792L586.8 235.408L572.156 237.369L563.916 223.535L550.266 222.402L537.484 219.454L526.505 211.779L515.171 203.804L501.411 205.921L489.584 197.433L475.814 204.033L463.078 202.02L450.559 195.773L437.698 194.58L424.551 196.25L411.647 194.75L398.93 192.033L386.184 185.064L372.681 182.095L359.133 178.994L345.39 176.592L331.324 176.609L317.571 176.327L304.006 169.323L290.451 174.918L276.779 171.068L263.274 174.846L249.628 175.562L236.044 173.516L222.677 170.692L208.292 171.839L196.885 162.186L185.189 154.9L172.08 150.433L158.714 146.287L149.93 132.716L135.303 131.956L122.283 128.445L109.279 124.917L96.8479 118.07L83.7629 121.597L70.9668 124.44L58.2209 126.451L45.451 128.409L32.1798 120.3L19.5294 127.748L6.46588 129.418L-6.37791 125.482L-20.3722 125.924L-33.0895 118.628L-45.74 112.822L-58.4336 107.668L-73.3469 109.452L-85.2144 101.441L-98.0225 96.3059L-111.389 92.9358L-124.161 87.6409L-136.592 80.5453L-151.63 84.7287L-164.368 78.8686L-176.363 70.082L-189.311 65.8293L-204.449 68.6342L-215.391 58.3116L-229.518 57.868L-237.634 46.911L-246 38.2746"
+            stroke="#232323" stroke-width="2">
+      </path>
+     </svg>
+     <svg width="1920" height="450" viewBox="0 0 1920 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path class="lightning"
+            d="M2092.34 200.817L2084.92 200.46L2059.57 196.293L2033.86 196.107L2008.75 191.298L1983.83 185.555L1957.93 185.894L1932.61 182.524L1908.64 172.533L1882.25 174.512L1856.85 171.636L1832.45 163.927L1808.37 159.1L1783.38 155.63L1764.62 138.793L1742.99 128.664L1718.07 123.55L1697.83 110.814L1677.02 98.9579L1654.32 90.052L1634.68 75.9801L1605.29 71.9827L1576.6 68.138L1548.77 60.1432L1525.19 50.5051L1507.26 34.0266L1486.26 21.493L1465.4 8.45389L1441.12 1.96649L1415.87 1.28906L1391.6 8.58746L1367.51 13.2121L1342.62 14.6694L1317.87 17.4623L1295.19 27.9137L1270.99 33.2801L1246.83 39.5815L1221.39 44.8286L1197.11 52.8568L1173.2 61.8843L1148.32 69.6931L1121.26 69.643L1101.83 53.3648L1078.41 62.4281L1055.81 72.808L1032.18 81.3632L1007.07 85.4178L982.34 87.3665L956.753 90.5147L931.738 82.644L905.387 81.69L879.609 78.2865L853.902 73.3422L829.389 76.4237L804.995 76.0182L780.815 79.3574L756.589 81.814L731.669 80.8146L707.657 85.1674L682.929 84.9146L659.514 93.7895L634.619 89.234L610.463 90.0115L586.05 92.5015L561.773 92.4848L539.394 81.9166L514.742 85.4727L491.384 88.3014L465.811 92.833L446.537 109.025L422.386 117.9L403.305 133.515L383.186 148.214L360.272 159.446L335.04 165.814L309.262 167.961L282.051 172.311L254.602 168.297L227.189 171.5L199.792 170.737L171.877 170.431L148.178 180.714L122.569 182.948L96.8646 185.438L74.3777 198.394L49.0767 202.339L-3.5 196"
+            stroke="#232323" stroke-width="2"/>
+      <path class="lightning"
+            d="M2336.61 257.233L2315.97 253.179L2300.91 240.173L2279.09 233.888L2257.27 227.532L2240.42 216.446L2222.95 205.887L2204.31 196.347L2178.34 194.592L2159.58 185.263L2137.83 179.484L2118.33 170.483L2095.78 171.027L2077.18 160.702L2055.51 158.856L2033.84 157.768L2012.21 157.604L1990.54 161.336L1969.32 157.172L1948.24 155.579L1926.04 157.823L1904.66 148.605L1885.09 138.173L1865.25 127.359L1838.97 124.974L1821.05 132.255L1801.71 137.653L1785.15 146.58L1761.23 149.497L1745.26 159.133L1730.44 171.466L1704.35 173.875L1691.89 188.056L1668.12 192.827L1655.56 206.61L1633.79 213.257L1621.19 226.659L1597.47 232.238L1582.62 244.01L1564.62 253.753L1550.8 266.053L1538.25 278.913L1527.29 291.409L1515.48 303.597L1492.8 308.996L1482.68 322.906L1464.47 331.564L1440.96 332.811L1420.45 339.013L1399.78 330.956L1375.53 336.716L1358.63 325.029L1333.81 327.039L1319.82 312.841L1296.65 311.663L1274.97 308.636L1256.36 300.765L1237.12 292.561L1213.77 294.753L1193.7 286.023L1170.36 292.816L1148.75 290.751L1127.51 284.34L1105.69 283.125L1083.4 284.845L1061.51 283.307L1039.94 280.516L1018.31 273.361L995.444 270.299L972.435 267.131L949.139 264.667L925.27 264.687L901.95 264.396L878.941 257.188L855.955 262.945L832.754 258.998L809.84 262.874L786.687 263.618L763.654 261.517L740.978 258.616L716.584 259.795L697.251 249.887L677.415 242.408L655.17 237.823L632.518 233.568L617.624 219.642L592.8 218.862L570.712 215.258L548.648 211.635L527.569 204.59L505.371 208.229L483.65 211.149L462.032 213.212L440.369 215.222L417.86 206.891L396.378 214.552L374.226 216.272L352.438 212.217L328.701 212.694L307.099 205.176L285.617 199.214L264.088 193.926L238.787 195.753L218.655 187.529L196.935 182.258L174.259 178.8L160 175.5"
+            stroke="#232323" stroke-width="2"/>
+     </svg>
+    </div>
+   </section>
+   <section class="advantages-section">
+    <div class="container">
+     <h2 class="h2-title">Путешествие мечты начинается с CARD PLUS</h2>
+     <p class="h2-subtitle">
+      Мы продумали каждую мелочь. Владельцы CARD PLUS получают особый пакет привилегий, необходимый для любого
+      путешествия
+     </p>
+     <div class="advantages">
+      <div class="advantages__item">
+       <div class="advantages__icon">
+        <img src="./img/svgicon/sprite.svg#advIcon1" alt="">
+       </div>
+       <p class="advantages__title">Билеты любых авиакомпаний</p>
+       <p class="advantages__des">
+        Предложения от 300+ авиакомпаний, 185+ lowcost перевозчиков, чартеры от 60 крупных российскихтуроператоров
+       </p>
+      </div>
+      <div class="advantages__item">
+       <div class="advantages__icon">
+        <img src="./img/svgicon/sprite.svg#advIcon2" alt="">
+       </div>
+       <p class="advantages__title">Мили больше не сгорают
+       </p>
+       <p class="advantages__des">
+        Мили, накопленные при оплате картой AlfaTravel, не сгорают и остаются на вашем счете, пока вы не решите их
+        потратить
+       </p>
+      </div>
+      <div class="advantages__item">
+       <div class="advantages__icon">
+        <img src="./img/svgicon/sprite.svg#advIcon3" alt="">
+       </div>
+       <p class="advantages__title">Продвинутая страховка – бесплатно</p>
+       <p class="advantages__des">
+        Расширенная страховка для всей семьи с учетом экстремальных видов спорта и алкоголя
+       </p>
+      </div>
+      <div class="advantages__item">
+       <div class="advantages__icon">
+        <img src="./img/svgicon/sprite.svg#advIcon4" alt="">
+       </div>
+       <p class="advantages__title">Доступ к счетам в разных валютах</p>
+       <p class="advantages__des">
+        Текущие счета в рублях, долларах США, евро, английских фунтах стерлингов и швейцарских франках открываются в
+        любой момент
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="benefit-section">
+    <div class="container">
+     <h2 class="h2-title">Мы позаботились, чтобы вы получили</h2>
+     <div class="benefit">
+      <div class="benefit__item">
+       <div class="benefit__img">
+        <img src="./img/benifitImg1.jpg" alt="">
+       </div>
+       <p class="benefit__title">
+        Бесплатный безлимитный интернет в роуминге
+       </p>
+       <div class="benefit__brand">
+        <div class="benefit__brand-item">
+         <img src="./img/brandImg1.png" alt="">
+        </div>
+        <div class="benefit__brand-item">
+         <img src="./img/brandImg2.png" alt="">
+        </div>
+        <div class="benefit__brand-item">
+         <img src="./img/brandImg3.png" alt="">
+        </div>
+        <div class="benefit__brand-item">
+         <img src="./img/brandImg4.png" alt="">
+        </div>
+       </div>
+      </div>
+      <div class="benefit__item">
+       <div class="benefit__img">
+        <img src="./img/benifitImg2.jpg" alt="">
+       </div>
+       <p class="benefit__title">
+        Бесплатная упаковка багажа
+       </p>
+       <div class="benefit__des">
+        <p>
+         Держатели карт Visa Signature могут упаковать багаж в крупных аэропортах России
+        </p>
+       </div>
+      </div>
+      <div class="benefit__item">
+       <div class="benefit__img">
+        <img src="./img/benifitImg3.jpg" alt="">
+       </div>
+       <p class="benefit__title">
+        Бесплатный доступ в приложении App&#160;In&#160;The&#160;Air
+       </p>
+       <div class="benefit__des">
+        <p>
+         Бесплатная премиум подписка при покупке авиабилетов на <a
+         href="mailto:travel.alfabank.ru">travel.alfabank.ru</a>
+        </p>
+       </div>
+      </div>
+      <div class="benefit__item">
+       <div class="benefit__img">
+        <img src="./img/benifitImg4.jpg" alt="">
+       </div>
+       <p class="benefit__title">
+        Такси бизнес-класса со &#160;скидкой 20%
+       </p>
+       <div class="benefit__brand benefit__brand-taxi">
+        <div class="benefit__brand-item">
+         <img src="./img/brandImg5.png" alt="">
+        </div>
+        <div class="benefit__brand-item">
+         <img src="./img/brandImg6.png" alt="">
+        </div>
+       </div>
+      </div>
+      <div class="benefit__item">
+       <div class="benefit__img">
+        <img src="./img/benifitImg5.jpg" alt="">
+       </div>
+       <p class="benefit__title">
+        Скидка в ресторанах Novikov Group в&#160;аэропорту Шереметьево
+       </p>
+      </div>
+      <div class="benefit__item">
+       <div class="benefit__img">
+        <img src="./img/benifitImg6.jpg" alt="">
+       </div>
+       <p class="benefit__title">
+        Доступ в бизнес-залы Priority Pass по всему миру
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="personal-assistant-section">
+    <div style="position: relative;width: 100%;" class=""></div>
+    <div class="personal-assistant-lightning">
+     <svg width="1920" height="343" viewBox="0 0 1920 343" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+       d="M1920.5 1L1889 11L1842.6 10L1829.66 16.2012L1815.89 17.668L1801.47 15.7981L1789.96 27.795L1776.12 28.4486L1765.57 38.5088L1751.03 38.4707L1739.43 45.7236L1727.07 51.1425L1715.49 59.4903L1700.86 56.404L1688.95 66.6026L1674.87 61.1503L1661.22 62.9678L1647.63 65.5079L1634.01 68.0503L1621 72.427L1609.73 82.3966L1595.65 81.5856L1582.64 85.2563L1569.99 86.3153L1557.96 92.7382L1544.52 87.9204L1533.3 96.3564L1522.13 102.355L1508.93 103.097L1498.22 110.421L1488 118.573L1473.8 119.1L1463.89 129.743L1451.96 136.96L1436.92 133.859L1426.16 145.663L1413.67 150.922L1400.11 152.334L1387.13 156.129L1375.17 162.692L1361.8 167.742L1355.89 183.939L1345.84 194.528L1334.93 204.763L1324.83 216.462L1310.01 219.562L1296.55 226.586L1282.23 218.63L1267.64 217.27L1252.41 219.052L1238.26 215.999L1224.49 218.081L1210.72 210.969L1196.87 217.251L1183.12 214.675L1169.45 212.982L1155.6 212.223L1142.07 209.099L1130.37 199.814L1115.41 200.751L1103.76 192.403L1091.25 186.121L1079.82 177.864L1066.19 173.416L1057.29 160.746L1044.42 154.624L1031.58 148.446L1021.65 137.628L1011.34 127.36L1000.36 118.042L985.035 116.329L973.983 107.242L961.142 101.613L949.661 92.8408L936.366 93.3703L925.41 83.3315L912.617 81.5141L899.847 80.4551L887.101 80.2953L874.331 83.9468L861.8 79.8731L849.388 78.3181L836.284 80.5076L823.705 71.523L812.152 61.3602L800.457 50.842L784.966 48.4951L774.392 55.5883L763.006 60.8474L753.244 69.5648L739.137 72.3888L729.733 81.7764L720.973 93.7948L705.602 96.1418L698.25 109.961L684.239 114.6L676.84 128.047L664.022 134.506L656.599 147.564L642.588 153.016L633.852 164.465L623.254 173.96L615.091 185.942L607.668 198.469L601.223 210.647L594.253 222.522L580.887 227.8L574.92 241.352L564.179 249.788L550.335 250.981L538.257 257.017L526.036 249.18L511.763 254.792L501.8 243.408L487.156 245.369L478.916 231.535L465.266 230.402L452.484 227.454L441.505 219.779L430.171 211.804L416.411 213.921L404.584 205.433L390.814 212.033L378.078 210.02L365.559 203.773L352.698 202.58L339.551 204.25L326.647 202.75L313.93 200.033L301.184 193.064L287.681 190.095L274.133 186.994L260.39 184.592L246.324 184.609L232.571 184.327L219.006 177.323L205.451 182.918L191.779 179.068L178.274 182.846L164.628 183.562L151.044 181.516L137.677 178.692L123.292 179.839L111.885 170.186L100.189 162.9L87.0801 158.433L73.7136 154.287L64.9299 140.716L50.3031 139.956L37.2826 136.445L24.2788 132.917L11.8479 126.07L-1.23706 129.597L-14.0332 132.44L-26.7791 134.451L-39.549 136.409L-52.8202 128.3L-65.4706 135.748L-78.5341 137.418L-91.3779 133.482L-105.372 133.924L-118.09 126.628L-130.74 120.822L-143.434 115.668L-158.347 117.452L-170.214 109.441L-183.023 104.306L-196.389 100.936L-209.161 95.6409L-221.592 88.5453L-236.63 92.7287L-249.368 86.8686L-261.363 78.082L-274.311 73.8293L-289.449 76.6342L-300.391 66.3116L-314.518 65.868L-322.634 54.911L-331 46.2746"
+       stroke="#1E1E1E" stroke-width="2">
+       <animate attributeName="opacity" dur="2s" values="0.2;1;0.5" repeatCount="indefinite"/>
+      </path>
+      <path
+       d="M2007.34 336.817L1999.92 336.46L1974.57 332.293L1948.86 332.107L1923.75 327.298L1898.83 321.555L1872.93 321.894L1847.61 318.524L1823.64 308.533L1797.25 310.512L1771.85 307.636L1747.45 299.927L1723.37 295.1L1698.38 291.63L1679.62 274.793L1657.99 264.664L1633.07 259.55L1612.83 246.814L1592.02 234.958L1569.32 226.052L1549.68 211.98L1520.29 207.983L1491.6 204.138L1463.77 196.143L1440.19 186.505L1422.26 170.027L1401.26 157.493L1380.4 144.454L1356.12 137.966L1330.87 137.289L1306.6 144.587L1282.51 149.212L1257.62 150.669L1232.87 153.462L1210.19 163.914L1185.99 169.28L1161.83 175.581L1136.39 180.829L1112.11 188.857L1088.2 197.884L1063.32 205.693L1036.26 205.643L1016.83 189.365L993.413 198.428L970.809 208.808L947.179 217.363L922.069 221.418L897.34 223.366L871.753 226.515L846.738 218.644L820.387 217.69L794.609 214.286L768.902 209.342L744.389 212.424L719.995 212.018L695.815 215.357L671.589 217.814L646.669 216.815L622.657 221.167L597.929 220.915L574.514 229.789L549.619 225.234L525.463 226.011L501.05 228.501L476.773 228.485L454.394 217.917L429.742 221.473L406.384 224.301L380.811 228.833L361.537 245.025L337.386 253.9L318.305 269.515L298.186 284.214L275.272 295.446L250.04 301.814L224.262 303.961L197.051 308.311L169.602 304.297L142.189 307.5L114.792 306.737L86.8773 306.431L63.1779 316.714L37.5689 318.948L11.8646 321.438L-10.6223 334.394L-35.9233 338.339L-48.5739 341.137"
+       stroke="#1E1E1E" stroke-width="2">
+       <animate attributeName="opacity" dur="1s" values="0.8;1;0.4" repeatCount="indefinite"/>
+      </path>
+     </svg>
+     <svg width="1847" height="316" viewBox="0 0 1847 316" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+       d="M2178.61 134.233L2157.97 130.179L2142.91 117.173L2121.09 110.888L2099.27 104.532L2082.42 93.4461L2064.95 82.8873L2046.31 73.347L2020.34 71.5916L2001.58 62.2635L1979.83 56.4845L1960.33 47.4833L1937.78 48.027L1919.18 37.7021L1897.51 35.856L1875.84 34.7684L1854.21 34.6038L1832.54 38.3365L1811.32 34.1721L1790.24 32.5789L1768.04 34.8233L1746.66 25.605L1727.09 15.1726L1707.25 4.35871L1680.97 1.97363L1663.05 9.25529L1643.71 14.6527L1627.15 23.5801L1603.23 26.497L1587.26 36.1327L1572.44 48.4659L1546.35 50.8749L1533.89 65.0565L1510.12 69.8266L1497.56 83.61L1475.79 90.2571L1463.19 103.659L1439.47 109.238L1424.62 121.01L1406.62 130.753L1392.8 143.053L1380.25 155.913L1369.29 168.409L1357.48 180.597L1334.8 185.997L1324.68 199.906L1306.47 208.564L1282.96 209.811L1262.45 216.013L1241.78 207.956L1217.53 213.716L1200.63 202.029L1175.81 204.039L1161.82 189.841L1138.65 188.663L1116.97 185.636L1098.36 177.766L1079.12 169.561L1055.77 171.753L1035.7 163.023L1012.36 169.816L990.754 167.751L969.511 161.34L947.695 160.126L925.401 161.845L903.514 160.307L881.936 157.516L860.311 150.361L837.444 147.299L814.435 144.131L791.139 141.667L767.27 141.687L743.95 141.396L720.941 134.188L697.955 139.945L674.754 135.998L651.84 139.874L628.687 140.618L605.654 138.517L582.978 135.617L558.584 136.795L539.251 126.887L519.415 119.408L497.17 114.824L474.518 110.569L459.624 96.642L434.8 95.8621L412.712 92.2583L390.648 88.6353L369.569 81.5898L347.371 85.2295L325.65 88.1488L304.032 90.2119L282.369 92.2225L259.86 83.8913L238.378 91.5523L216.226 93.272L194.438 89.2173L170.701 89.6943L149.099 82.1765L127.617 76.2138L106.088 70.9261L80.7866 72.7531L60.6555 64.5294L38.9349 59.2584L16.2594 55.8001L1 51.5"
+       stroke="#1E1E1E" stroke-width="2">
+       <animate attributeName="opacity" dur="1s" values="0.5;1;0.9" repeatCount="indefinite"/>
+      </path>
+      <path
+       d="M2157.97 130.179L2178.61 134.233L2020.34 147.299L1768.04 95.8621L1572.44 185.636L1262.45 315.5L711.807 251.5L16.2594 199.906L2 52L16.2594 55.8001L38.9349 59.2584L60.6555 64.5294L80.7866 72.7531L106.088 70.9261L127.617 76.2138L149.099 82.1765L170.701 89.6943L194.438 89.2173L216.226 93.272L238.378 91.5523L259.86 83.8913L282.369 92.2225L304.032 90.2119L325.65 88.1488L347.371 85.2295L369.569 81.5898L390.648 88.6353L412.712 92.2583L434.8 95.8621L459.624 96.642L474.518 110.569L497.17 114.824L519.415 119.408L539.251 126.887L558.584 136.795L582.978 135.617L605.654 138.517L628.687 140.618L651.84 139.874L674.754 135.998L697.955 139.945L720.941 134.188L743.95 141.396L767.27 141.687L791.139 141.667L814.435 144.131L837.444 147.299L860.311 150.361L881.936 157.516L903.514 160.307L925.401 161.845L947.695 160.126L969.511 161.34L990.754 167.751L1012.36 169.816L1035.7 163.023L1055.77 171.753L1079.12 169.561L1098.36 177.766L1116.97 185.636L1138.65 188.663L1161.82 189.841L1175.81 204.039L1200.63 202.029L1217.53 213.716L1241.78 207.956L1262.45 216.013L1282.96 209.811L1306.47 208.564L1324.68 199.906L1334.8 185.997L1357.48 180.597L1369.29 168.409L1380.25 155.913L1392.8 143.053L1406.62 130.753L1424.62 121.01L1439.47 109.238L1463.19 103.659L1475.79 90.2571L1497.56 83.61L1510.12 69.8266L1533.89 65.0565L1546.35 50.8749L1572.44 48.4659L1587.26 36.1327L1603.23 26.497L1627.15 23.5801L1643.71 14.6527L1663.05 9.25529L1680.97 1.97363L1707.25 4.35871L1727.09 15.1726L1746.66 25.605L1768.04 34.8233L1790.24 32.5789L1811.32 34.1721L1832.54 38.3365L1854.21 34.6038L1875.84 34.7684L1897.51 35.856L1919.18 37.7021L1937.78 48.027L1960.33 47.4833L1979.83 56.4845L2001.58 62.2635L2020.34 71.5916L2046.31 73.347L2064.95 82.8873L2082.42 93.4461L2099.27 104.532L2121.09 110.888L2142.91 117.173L2157.97 130.179Z"
+       fill="#0E0E0E"/>
+     </svg>
+     <!--<img src="./img/lightning3.svg" alt="">-->
+     <!--<img src="./img/lightning4.svg" alt="">-->
+    </div>
+    <div class="container">
+     <h2 class="h2-title">Персональный помощник</h2>
+     <div class="h2-subtitle">Бесплатно для владельцев <span>CARD PLUS</span></div>
+     <div class="personal-assistant">
+      <div class="personal-assistant__img">
+       <img src="./img/womenImg.png" alt="">
+      </div>
+      <div class="personal-assistant__list">
+       <div class="personal-assistant__list-item">
+        <div class="personal-assistant__icon">
+         <img src="./img/svgicon/sprite.svg#assistantIcon1" alt="">
+        </div>
+        <p class="personal-assistant__services">
+         Организует встречи, найдет гидов и&#160;переводчиков
+        </p>
+       </div>
+       <div class="personal-assistant__list-item">
+        <div class="personal-assistant__icon">
+         <img src="./img/svgicon/sprite.svg#assistantIcon2" alt="">
+        </div>
+        <p class="personal-assistant__services">
+         Спланирует поездку по&#160;самым интересным местам вашего отдыха
+        </p>
+       </div>
+       <div class="personal-assistant__list-item">
+        <div class="personal-assistant__icon">
+         <img src="./img/svgicon/sprite.svg#assistantIcon3" alt="">
+        </div>
+        <p class="personal-assistant__services">
+         Достанет билеты на&#160;мероприятия, даже если&#160;их уже нет в продаже
+        </p>
+       </div>
+       <div class="personal-assistant__list-item">
+        <div class="personal-assistant__icon">
+         <img src="./img/svgicon/sprite.svg#assistantIcon4" alt="">
+        </div>
+        <p class="personal-assistant__services">
+         Закажет столик в ресторане, клубе или&#160;кафе
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="issue-card-section">
+    <div class="container">
+     <h2 class="h2-title">Оформите свою новую карту для путешествий</h2>
+     <div class="travel-benefits">
+      <div class="travel-benefits__item">
+       <p class="travel-benefits__number"><span>до</span> 11%</p>
+       <p class="travel-benefits__des">
+        Милями за услуги, оплаченные на <a href="mailto:travel.ru">travel.ru</a>
+       </p>
+      </div>
+      <div class="travel-benefits__item">
+       <p class="travel-benefits__number"><span>до</span> 11%</p>
+       <p class="travel-benefits__des">
+        Милями за любые покупки по карте
+       </p>
+      </div>
+      <div class="travel-benefits__item">
+       <p class="travel-benefits__number">1 = 1</p>
+       <p class="travel-benefits__des">
+        Оплата милями билетов любых авиакомпаний по курсу 1 миля = 1 Р
+       </p>
+      </div>
+     </div>
+     <div class="make-request">
+      <div class="make-request__img">
+       <img src="./img/applicationCards.png" alt="">
+      </div>
+      <div class="application">
+       <div class="application__card-type">
+        <div data-type="credit" class="application__type active single-tab">
+         <p>Кредитная карта</p>
+        </div>
+        <div data-type="debit" class="application__type single-tab">
+         <p>Дебетовая карта</p>
+        </div>
+       </div>
+       <button data-modal="modanimate__slideInDown" class="button js-modal">Отправить заявку</button>
+       <div class="application__conditions">
+        <div data-type="debit" class="wrapper-tab-content active">
+         <div class="application__conditions-item">
+          <div class="application__conditions-key">
+           <p>Стоимость карты в год (руб.)</p>
+          </div>
+          <div class="application__conditions-val">
+           <p>6 490 (без пакета услуг),</p>
+           <p>4 490 (c пакета услуг),</p>
+          </div>
+         </div>
+         <div class="application__conditions-item">
+          <div class="application__conditions-key">
+           <p>Приветственные мили (шт.)</p>
+          </div>
+          <div class="application__conditions-val">
+           <p>1000</p>
+          </div>
+         </div>
+         <div class="application__conditions-item">
+          <div class="application__conditions-key">
+           <p>Мили за покупки</p>
+          </div>
+          <div class="application__conditions-val">
+           <p>5%</p>
+          </div>
+         </div>
+        </div>
+        <div data-type="credid" class="wrapper-tab-content">
+         <div class="application__conditions-item">
+          <div class="application__conditions-key">
+           <p>Стоимость карты в год (руб.)</p>
+          </div>
+          <div class="application__conditions-val">
+           <p>8 490 (без пакета услуг),</p>
+           <p>6 490 (c пакета услуг),</p>
+          </div>
+         </div>
+         <div class="application__conditions-item">
+          <div class="application__conditions-key">
+           <p>Приветственные мили (шт.)</p>
+          </div>
+          <div class="application__conditions-val">
+           <p>1500</p>
+          </div>
+         </div>
+         <div class="application__conditions-item">
+          <div class="application__conditions-key">
+           <p>Мили за покупки</p>
+          </div>
+          <div class="application__conditions-val">
+           <p>7%</p>
+          </div>
+         </div>
+        </div>
+       </div>
+       <a href="#" class="application__details">Все подробности</a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </div>
+  <footer class="footer">
+   <div class="footer__lightning">
+    <img src="./img/lightning5.svg" alt="">
+   </div>
+   <div class="container">
+    <div class="footer__wrap">
+     <a href="#" class="footer__logo">
+      <img src="./img/logoFooter.png" alt="">
+     </a>
+     <div class="footer__nav">
+      <div class="footer__list">
+       <div class="footer__list-item"><a href="#">О банке</a></div>
+       <div class="footer__list-item"><a href="#">Офисы и банкоматы</a></div>
+       <div class="footer__list-item"><a href="#">Новости</a></div>
+       <div class="footer__list-item"><a href="#">Вакансии</a></div>
+       <div class="footer__list-item"><a href="#">Реализуемое имущество</a></div>
+      </div>
+      <div class="footer__list">
+       <div class="footer__list-item"><a href="#">Раскрытие информации</a></div>
+       <div class="footer__list-item"><a href="#">Ставки по вкладам</a></div>
+       <div class="footer__list-item"><a href="#">Условия и тарифы</a></div>
+       <div class="footer__list-item"><a href="#">Корпоративное управление</a></div>
+       <div class="footer__list-item"><a href="#">Карта сайта</a></div>
+      </div>
+     </div>
+     <div class="contacts-communication">
+      <div class="contacts-communication__wrap">
+       <p>По России</p>
+       <a href="tel:88009506570">8 800 950 6570</a>
+      </div>
+      <div class="contacts-communication__wrap">
+       <p>По Миру</p>
+       <a href="tel:88009506570">8 800 950 6570</a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </footer>
+ </div>
+ <div data-modal="modal" id="vue" class="dispatch">
+  <div class="modal__container center">
+   <div class="modal">
+    <div @click="closeMenu" class="close-modal">
+     <i class="sprite sprite-1close"></i>
+    </div>
+    <div class="modal__title">Заявка на карту</div>
+    <div class="modal__form">
+     <form action="#">
+      <div @focusout="focusOut" @click="focusInput" class="modal__wrapper-input">
+       <input @input="validateName" name="name" class="wrapper-select__input usual-input effect-23" type="text">
+       <label>ФИО</label>
+       <i :class="{active:val_name}" class="sprite sprite-4agreementIcon"></i>
+      </div>
+      <div @focusout="focusOut" @click="focusInput" class="modal__wrapper-input">
+       <input @input="validateEmail" name="mail" class="wrapper-select__input usual-input effect-23" placeholder=""
+              type="text">
+       <label>Электронный адрес</label>
+       <i :class="{active:val_mail}" class="sprite sprite-4agreementIcon"></i>
+      </div>
+      <div @focusout="focusOut" @click="focusInput" class="modal__wrapper-input">
+       <input @input="validateTel" name="phone" class="wrapper-select__input usual-input effect-23" placeholder=""
+              type="text">
+       <label>Номер телефона</label>
+       <i :class="{active:val_tel}" class="sprite sprite-4agreementIcon"></i>
+      </div>
+      <div @mouseleave="listCitiesleave" class="modal__select">
+       <div @mouseenter="listCitiesenter" class="modal__wrapper-input">
+        <input name="citizenship" readonly="readonly" class="wrapper-select__input usual-input"
+               value="Российская федерация" type="text">
+        <label>Гражданство</label>
+        <div class="modal__select-arrow">
+         <i class="sprite sprite-2arrowdown"></i>
+        </div>
+       </div>
+       <ul class="modal__select-list"><!--раскрывающийся список-->
+        <li @click="citySelect" v-for="item in town">
+         <p>{{item}}</p>
+        </li>
+       </ul>
+      </div>
+      <div class="modal__agreement checkbox">
+       <input v-model="checkbox" value="agree" name="agree" type="checkbox" id="checkbox_1">
+       <label for="checkbox_1">Я соглашаюсь на <span>обработку</span> моих персональных данных</label>
+      </div>
+      <button @click="disabledBut"
+              :class="[val_name===true&&val_tel===true&&val_mail===true&&checkbox.length>0 ? 'active':'']"
+              class="modal__button" type="button">Заказать сейчас
+      </button>
+     </form>
+    </div>
+   </div>
+  </div>
+  <div class="welcome-window">
+   <div class="welcome-window__des">
+    <i class="sprite sprite-4agreementIcon"></i>
+    <p class="welcome-window__title">{{result}}</p>
+    <p class="welcome-window__subtitle">В ближайшее время с вами свяжется наш менеджер</p>
+    <p class="post-data">Отправленные данные:</p>
+    <ul class="sent-data">
+     <li v-for="elem in sending">
+      <p>{{elem}}</p>
+     </li>
+    </ul>
+    <!--<p>{{error}}</p>-->
+   </div>
+  </div>
+  <!--<div id="lean_overlay"></div>-->
+ </div>
+</div>
+<script src="js/vue.js"></script>
+<script src="js/mask.js"></script>
+<script src="js/axios.min.js"></script>
+<script src="js/app.js"></script>
+<script>
+  new Vue({
+    el: '#vue',
+    data() {
+      return {
+        town: ['Белорусь', 'Украина', 'Казахстан'],
+        sending: [],
+        checkbox: [],
+        result: '',
+        val_mail: false,
+        val_name: false,
+        val_tel: false,
+        button: false
+      };
+    },
+    methods: {
+      removeDataAttribute(){
+        const modal = document.querySelector('.dispatch')
+        const data = modal.getAttribute('data-animat')
+        modal.classList.remove(data)
+        document.querySelector('.modal__select-list').classList.remove('animate__slideInUp')
+        document.querySelector('.content').classList.remove('active')
+        document.querySelector('.header').classList.remove('active')
+      },
+      closeMenu(){
+        this.removeDataAttribute()
+        document.querySelector('.dispatch').setAttribute('style', 'display:none')
+      },
+      focusInput(el){
+        const elem = el.currentTarget
+        const find_input = elem.children
+        for (let el of find_input) {
+          if (el.classList.contains('wrapper-select__input')) {
+            el.focus()
+          }
+        }
+      },
+      focusOut(el){
+        const elem = el.currentTarget
+        const find_input = elem.children
+        for (let el of find_input) {
+          if (el.classList.contains('wrapper-select__input')) {
+            if (el.value !== "") {
+              elem.classList.add('filled')
+            }
+            else {
+              elem.classList.remove('filled')
+            }
+          }
+        }
+      },
+      listCitiesleave(el){
+        console.log("Привет");
+        const elem = el.currentTarget
+        const find_wrap = elem.children
+
+        for (let el of find_wrap) {//
+          if (el.classList.contains('modal__wrapper-input')) {
+            const find_arrow = el.children
+            for (let el of find_arrow) {
+              if (el.classList.contains('modal__select-arrow')) {
+                el.classList.remove('active')
+              }
+            }
+          }
+
+          else if (el.classList.contains('modal__select-list')) {
+            el.classList.remove('animate__slideInDown')
+            el.classList.add('animate__slideInUp')
+
+          }
+
+
+          if (el.classList.contains('modal__select-list')) {
+            el.classList.remove('animate__slideInDown')
+            el.classList.add('animate__slideInUp')
+          }
+        }
+      },
+      listCitiesenter(el){
+        console.log("Привет");
+        const elem = el.currentTarget
+        const find_wrap = elem.children
+        const find_arrow = elem.children
+        for (let el of find_arrow) {
+          if (el.classList.contains('modal__select-arrow')) {
+            el.classList.add('active')
+          }
+        }
+
+        const parent = elem.closest('.modal__select')
+        const child = parent.children
+        for (let el of child) {
+          if (el.classList.contains('modal__select-list')) {
+            el.classList.add('animate__slideInDown')
+            el.classList.remove('animate__slideInUp')
+          }
+        }
+      },
+      citySelect(el){
+        const elem = el.currentTarget
+        const text = elem.textContent
+        const parent = elem.closest('.modal__select')
+        const child = parent.children
+        for (let el of child) {
+          if (el.classList.contains('modal__wrapper-input')) {
+            const find_input = el.children
+            for (let el of find_input) {
+              if (el.classList.contains('wrapper-select__input')) {
+                let current_val = el.value
+                el.value = text
+                const find_p = elem.children
+                for (el of find_p) {
+                  if (el.tagName === 'P') {
+                    el.textContent = current_val
+                  }
+                }
+              }
+            }
+          }
+        }
+        document.querySelector('.modal__select-list').classList.remove('animate__slideInDown')
+        document.querySelector('.modal__select-list').classList.add('animate__slideInUp')
+      },
+      disabledBut(el){
+        const elem = el.currentTarget
+        if (this.val_name === true && this.val_tel === true && this.val_mail === true && this.checkbox.length > 0) {
+          this.sendInformation(elem)
+        }
+      },
+      sentData(param){
+        this.sending = param
+      },
+      successfulSend(){
+        this.removeDataAttribute()
+        document.querySelector('.dispatch').setAttribute('style', 'display:none')
+        document.querySelector('.welcome-window').setAttribute('style', 'display:flex;')
+
+        setTimeout(function () {
+          document.querySelector('.welcome-window').setAttribute('style', 'display:none;')
+        }, 5000)
+      },
+      sendInformation (elem) {
+        const name = document.querySelector(".wrapper-select__input[name='name']").value;
+        const mail = document.querySelector(".wrapper-select__input[name='mail']").value;
+        const phone = document.querySelector(".wrapper-select__input[name='phone']").value;
+        const citizenship = document.querySelector(".wrapper-select__input[name='citizenship']").value;
+        const agree = this.checkbox
+        const that = this
+        axios({
+          method: 'post',
+          url: 'https://jsonplaceholder.typicode.com/posts',
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Credentials": "true",
+            "Access-Control-Allow-Methods": "GET,HEAD,OPTIONS,POST,PUT",
+            "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+          },
+          data: JSON.stringify({
+            name: name,
+            mail: mail,
+            phone: phone,
+            citizenship: citizenship,
+            agree: agree
+          }),
+        })
+          .then(function (response) {
+            that.sentData(response.data)
+            console.log(response.data);
+
+            that.successfulSend(elem)
+            that.result = 'Ваша заявка принята'
+          })
+          .catch(function (error) {
+            that.result = 'Произошла ошибка с отправкой, попробуйте ещё раз'
+          });
+      },
+      validateEmail(el){
+        const elem = el.currentTarget
+        const val = elem.value;
+        const reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        if (reg.test(val) == false) {
+          this.val_mail = false
+          return false;
+        }
+        else {
+          this.val_mail = true
+        }
+      },
+      validateName(el){
+        const elem = el.currentTarget
+        const val = elem.value;
+        if (val.length === 0) {
+          this.val_name = false
+          return false;
+        }
+        else {
+          this.val_name = true
+        }
+      },
+      validateTel(el){
+        const elem = el.currentTarget
+        const val = elem.value;
+        const reg = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+        if (val.length < 18) {
+          this.val_tel = false
+          return false;
+        }
+        else {
+          this.val_tel = true
+        }
+      },
+    },
+  });
+</script>
+</body>
+</html>

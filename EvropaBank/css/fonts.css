@@ -1,0 +1,45 @@
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('../fonts/Geometria/Geometria-Heavy.eot');
+  src: url('../fonts/Geometria/Geometria-Heavy.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Geometria/Geometria-Heavy.woff') format('woff'),
+  url('../fonts/Geometria/Geometria-Heavy.woff2') format('woff2'),
+  url('../fonts/Geometria/Geometria-Heavy.ttf') format('truetype'),
+  url('../fonts/Geometria/Geometria-Heavy.svg#Geometria-Heavy') format('svg');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+    font-family: 'Geometria';
+    src: url('../fonts/Geometria/Geometria-ExtraBold.eot');
+    src: url('../fonts/Geometria/Geometria-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Geometria/Geometria-ExtraBold.woff') format('woff'),
+    url('../fonts/Geometria/Geometria-ExtraBold.woff2') format('woff2'),
+    url('../fonts/Geometria/Geometria-ExtraBold.ttf') format('truetype'),
+    url('../fonts/Geometria/Geometria-ExtraBold.svg#Geometria-ExtraBold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Geometria';
+    src: url('../fonts/Geometria/Geometria-Bold.eot');
+    src: url('../fonts/Geometria/Geometria-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Geometria/Geometria-Bold.woff') format('woff'),
+    url('../fonts/Geometria/Geometria-Bold.woff2') format('woff2'),
+    url('../fonts/Geometria/Geometria-Bold.ttf') format('truetype'),
+    url('../fonts/Geometria/Geometria-Bold.svg#Geometria-Bold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'Geometria';
+  src: url('../fonts/Geometria/Geometria-Medium.eot');
+  src: url('../fonts/Geometria/Geometria-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Geometria/Geometria-Medium.woff') format('woff'),
+  url('../fonts/Geometria/Geometria-Medium.woff2') format('woff2'),
+  url('../fonts/Geometria/Geometria-Medium.ttf') format('truetype'),
+  url('../fonts/Geometria/Geometria-Medium.svg#Geometria-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}

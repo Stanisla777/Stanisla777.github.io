@@ -1,0 +1,213 @@
+
+@media screen and (max-width: 1000px){
+  .footer__wrap{
+    grid-template-columns: 300px  max-content;
+  }
+  .footer__nav{
+    grid-row: 2;
+  }
+  .footer__wrap{
+    justify-content: space-evenly;
+  }
+}
+@media screen and (max-width: 960px){
+  .advantages{
+    grid-template-columns: repeat(2, minmax(0, auto));
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 910px){
+  .bank-card-background{
+    opacity: .2;
+  }
+}
+@media screen and (max-width: 830px){
+  .modal__wrapper-input .sprite-4agreementIcon{
+    right: 4px;
+    top: -15px;
+  }
+}
+@media screen and (max-width: 750px){
+  .make-request{
+    grid-template-columns: 1fr;
+  }
+  .make-request__img{
+    margin: 0 auto;
+  }
+  .application{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 720px){
+  .h1-title{
+    font-size: 66px;
+  }
+  .personal-assistant{
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+  .personal-assistant__services{
+    max-width: 100%;
+  }
+  .personal-assistant-lightning{
+    bottom: 90px;
+  }
+  .personal-assistant__list{
+    top: 30px;
+  }
+  .sidebar__close{
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 650px){
+  .h1-subtitle{
+    position: relative;
+    right: 0;
+    max-width: 100%;
+    margin-top: 27px;
+  }
+  .h1-title {
+    font-size: 37px;
+    line-height: 55px;
+  }
+  .travel-benefits{
+    grid-template-columns: repeat(2,1fr);
+  }
+  .travel-benefits__item{
+    margin-bottom: 20px;
+  }
+  .travel-benefits__item:nth-child(3){
+    grid-column: 1/ span 2;
+    grid-row: 2;
+
+  }
+
+  .footer__wrap {
+    grid-template-columns: 1fr;
+  }
+  .footer__nav{
+    grid-row: 3;
+    justify-content: start;
+  }
+  .benefit__item:not(:first-child){
+    margin-bottom: 50px;
+  }
+  .benefit__item:first-child{
+    margin-bottom: 20px;
+  }
+  .modal__agreement.checkbox label{
+    width: 88%;
+  }
+
+  @keyframes slideInDown {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -20px, 0);
+      visibility: visible;
+    }
+
+    to {
+      opacity: 1;
+      transform: translate3d(0, -15px, 0);
+    }
+  }
+  .modal__button{
+    margin-bottom: 60px;
+  }
+
+
+}
+@media screen and (max-width: 580px){
+  .modal__agreement.checkbox label::before{
+    top:1px;
+  }
+  .modal__agreement.checkbox label::after{
+    top:11px;
+  }
+}
+@media screen and (max-width: 530px){
+  .advantages{
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    justify-content: center;
+  }
+
+  .application__conditions{
+    max-width: 100%;
+  }
+  .application__conditions-item{
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .application__conditions-key{
+    width: 100%;
+  }
+  .application__conditions-key p{
+    font-size: 18px;
+  }
+  .application__conditions-val p {
+    font-size: 16px;
+  }
+
+  .footer__nav{
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 440px){
+  .header__burger{
+    margin-right: 20px;
+  }
+  .application .button{
+    width: 280px;
+  }
+  .personal-assistant-lightning {
+    bottom: 167px;
+    left: -69px;
+  }
+  .close-modal {
+    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -60px;
+  }
+  .best-card {
+    margin-top: 60px;
+    padding-bottom: 20px;
+  }
+  .benefit-section {
+    padding-top: 50px;
+  }
+  .personal-assistant-section {
+    padding-top: 50px;
+  }
+  .issue-card-section {
+    padding-top: 80px;
+  }
+  .advantages{
+    margin-top: 55px;
+  }
+}
+@media screen and (max-width: 390px){
+  .header__logo{
+    width: 80%;
+  }
+  .travel-benefits{
+    grid-template-columns: repeat(1,1fr);
+  }
+  .travel-benefits__item:nth-child(3){
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .application__card-type{
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 350px){
+  .best-card__figure-item{
+    max-width: 100%;
+  }
+  .best-card__figure-item:nth-child(3) p{
+    max-width: 100%;
+  }
+}
