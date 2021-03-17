@@ -10,7 +10,6 @@
  <meta name="description" content="">
  <meta name="keywords" content="">
  <link href="css/style.css" rel="stylesheet">
- 
 </head>
 <body>
 <div class="section-diagram">
@@ -135,103 +134,93 @@
  </div>
 </div>
 <script>
+  const data = document.querySelectorAll('.donut-segment')
+  data.forEach(function (item, i, arr) {
+    let data_line = item.getAttribute('data-val')
+    data_line = parseFloat(data_line)
+    if (data_line > 4) {
+      data_line = parseFloat(data_line) - 3.3
+    }
+    let data_space = 100 - data_line
+    item.setAttribute('style', `stroke-dasharray:${data_line} ${data_space}`)
 
-  window.onload=function() {
-    
-    const data = document.querySelectorAll('.donut-segment')
-    data.forEach(function (item, i, arr) {
-      let data_line = item.getAttribute('data-val')
-      data_line = parseFloat(data_line)
+    let sum = 0
+    if (i !== 0) {
+      const parent = item.closest('.donut')
+      const child = parent.children
+      const el = item.previousElementSibling
+      let prev_dash = el.getAttribute('stroke-dashoffset')
+      for (let ind = 2; ind < child.length; ind++) {
+        let d = 1
+        while (d < ind) {
+          let data_line = parseFloat(child[d].getAttribute('data-val'))
 
-      if (data_line > 4) {
-        data_line = parseFloat(data_line) - 3.3
-      }
-      let data_space = 100 - data_line
-      item.setAttribute('style', `stroke-dasharray:${data_line} ${data_space}`)
-
-      let sum = 0
-      if (i !== 0) {
-        const parent = item.closest('.donut')
-        const child = parent.children
-        const el = item.previousElementSibling
-        let prev_dash = el.getAttribute('stroke-dashoffset')
-        for (let ind = 2; ind < child.length; ind++) {
-          let d = 1
-          while (d < ind) {
-            let data_line = parseFloat(child[d].getAttribute('data-val'))
-
-            if (data_line > 4) {
-              data_line = parseFloat(data_line) - 3.3
-            }
-            sum = data_line + sum;
-            d++;
+          if (data_line > 4) {
+            data_line = parseFloat(data_line) - 3.3
           }
-          let strok = 100 - sum + 20
-          child[ind].setAttribute('stroke-dashoffset', strok)
-          sum = 0
+          sum = data_line + sum;
+          d++;
         }
-      }
-    })
-
-    const char_val = document.querySelectorAll('.charts-text tspan');
-    for (let item of char_val) {
-      let charts_text = item.textContent
-      charts_text = parseFloat(charts_text)
-      const parent = item.closest('.indicators__svg')
-      if (parent.classList.contains('plus')) {
-        const par_child = parent.children
-        console.log(par_child);
-        for (item of par_child) {
-          if (item.classList.contains('svg_plus')) {
-            let wid = 30 + charts_text
-            item.setAttribute('width', wid + '%')
-          }
-          else if (item.classList.contains('svg_minus')) {
-            let wid = 30 - charts_text
-            item.setAttribute('width', wid + '%')
-          }
-          else if (item.classList.contains('charts-text')) {
-
-          }
-        }
-        charts_text = '+' + charts_text
-        item.textContent = charts_text
-      }
-      else {
-        const par_child = parent.children
-        for (item of par_child) {
-          if (item.classList.contains('svg_plus')) {
-            let wid = 30 - charts_text
-            item.setAttribute('width', wid + '%')
-          }
-          else if (item.classList.contains('svg_minus')) {
-            let wid = 30 + charts_text
-            item.setAttribute('width', wid + '%')
-          }
-        }
-        charts_text = '-' + charts_text
-        item.textContent = charts_text
+        let strok = 100 - sum + 20
+        child[ind].setAttribute('stroke-dashoffset', strok)
+        sum = 0
       }
     }
-
-    function fractionAsInt(value) {
-      const str = ("" + value).split(".")[1];
-
-      let integ = value.toFixed()
-      document.querySelector('.summary-inform__total-percentage p').textContent = integ
-
-      const span = document.createElement('span');
-
-      document.querySelector('.summary-inform__total-percentage p').append(span)
-      document.querySelector('.summary-inform__total-percentage p span').prepend('.' + str)
-
+  })
+  
+  const char_val = document.querySelectorAll('.charts-text tspan');
+  for (let item of char_val) {
+    let charts_text = item.textContent
+    charts_text = parseFloat(charts_text)
+    const parent = item.closest('.indicators__svg')
+    if (parent.classList.contains('plus')) {
+      const par_child = parent.children
+      console.log(par_child);
+      for (item of par_child) {
+        if (item.classList.contains('svg_plus')) {
+          let wid = 30 + charts_text
+          item.setAttribute('width', wid + '%')
+        }
+        else if (item.classList.contains('svg_minus')) {
+          let wid = 30 - charts_text
+          item.setAttribute('width', wid + '%')
+        }
+        else if (item.classList.contains('charts-text')) {
+        }
+      }
+      charts_text = '+' + charts_text
+      item.textContent = charts_text
     }
-
-    let numeral = document.querySelector('.summary-inform__total-percentage p').textContent
-    numeral = parseFloat(numeral)
-
-    fractionAsInt(numeral)
+    else {
+      const par_child = parent.children
+      for (item of par_child) {
+        if (item.classList.contains('svg_plus')) {
+          let wid = 30 - charts_text
+          item.setAttribute('width', wid + '%')
+        }
+        else if (item.classList.contains('svg_minus')) {
+          let wid = 30 + charts_text
+          item.setAttribute('width', wid + '%')
+        }
+      }
+      charts_text = '-' + charts_text
+      item.textContent = charts_text
+    }
   }
+
+  function fractionAsInt(value) {
+    const str = ("" + value).split(".")[1];
+    let integ = Math.floor(value * 1) / 1;
+    document.querySelector('.summary-inform__total-percentage p').textContent = integ
+    const span = document.createElement('span');
+    document.querySelector('.summary-inform__total-percentage p').append(span)
+    document.querySelector('.summary-inform__total-percentage p span').prepend('.' + str)
+  }
+
+  let numeral = document.querySelector('.summary-inform__total-percentage p').textContent
+  numeral = parseFloat(numeral)
+
+  fractionAsInt(numeral)
 </script>
 </body>
 </html>
