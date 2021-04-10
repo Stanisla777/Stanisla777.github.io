@@ -7,6 +7,7 @@ window.onload = function () {
 
   for (var el = 0; el < but.length; el++) {
     but[el].onclick = function () {
+      document.body.classList.add('body-overflow');
       page_overlay.setAttribute('style', 'display:block');
       modal.setAttribute('style', 'display:flex');
     };
@@ -15,6 +16,7 @@ window.onload = function () {
   document.querySelector('.close-modal').onclick = function () {
     page_overlay.setAttribute('style', 'display:none');
     modal.setAttribute('style', 'display:none');
+    document.body.classList.remove('body-overflow');
   };
 
   var price = document.querySelectorAll('.price');

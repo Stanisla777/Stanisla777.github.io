@@ -1,20 +1,8 @@
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .flat__layout-item{
-    margin-bottom: 18px;
-  }
-  .flat__wrap-button{
-    margin-top:0;
-  }
-  .close-modal::after,.close-modal::before{
-    margin-top: -8px;
-    margin-left: -1px;
-  }
-
   img {
     max-width: 100%;
     height: auto;
   }
-
   .flat {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -91,18 +79,6 @@
     max-width: 450px;
   }
 
-  .flat__info-col:nth-child(3) {
-    max-width: 0;
-  }
-
-  .flat__info-col:nth-child(4) {
-    max-width: 0;
-  }
-
-  .flat__info-col:nth-child(5) {
-    max-width: 0;
-  }
-
   .flat__layout {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -124,12 +100,19 @@
     margin-right: 10px;
     margin-left: 10px;
   }
+  .flat__layout-item{
+    margin-bottom: 18px;
+  }
+  .flat__wrap-button{
+    margin-top:0;
+  }
+  .close-modal::after,.close-modal::before{
+    margin-top: -8px;
+    margin-left: -1px;
+  }
 }
 @media screen and (max-width: 980px){
   .flat__wrap-button{
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
   }
   .flat__button:not(:first-child){
@@ -154,9 +137,6 @@
     grid-template-columns: 1fr;
   }
   .flat__wrap-button{
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
     flex-direction: row;
   }
   .flat__button:not(:first-child) {
@@ -171,8 +151,8 @@
     margin-top: 19px;
     width: 100%;
   }
-  .flat__col-left,.flat__col-right{
-    /*padding-left: 0;*/
+ .flat__col-right{
+    padding-left: 0;
   }
 }
 @media screen and (max-width: 640px){
@@ -188,9 +168,6 @@
 }
 @media screen and (max-width: 520px){
   .flat__wrap-button{
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
   }
   .flat__button:not(:first-child){
