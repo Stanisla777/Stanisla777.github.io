@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="google" value="notranslate">
+<meta name="theme-color" content="#ffffff">
+<title></title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" href="./css/style.min.css">
+<link rel="stylesheet" href="./css/media.min.css"><!--[if lt IE 9]>
+ <script src="js/css3-mediaqueries.js"></script>
+ <![endif]-->
+</head>
+<body>
+<div class="wrap">
+<div class="content">
+<div class="body-page">
+<div class="section-ftl">
+<div class="container">
+<h1 class="h1-title">FTL: Прямая машина</h1>
+<form action="#" class="ftl-form">
+<div class="ftl-form__list">
+<div class="ftl-form__step">
+<div class="ftl-form__step-number">1</div>
+<p class="ftl-form__step-val">Маршрут</p>
+</div>
+<div class="ftl-form__full-width">
+<label class="ftl-form__label ftl-form__label-size" for="from">Откуда</label>
+<input class="ftl-form__input" name="" id="from" type="text">
+<label class="ftl-form__label ftl-form__label-size" for="where">Куда</label>
+<input class="ftl-form__input" name="" id="where" type="text">
+</div>
+</div>
+<div class="ftl-form__list">
+<div class="ftl-form__step">
+<div class="ftl-form__step-number">2</div>
+<p class="ftl-form__step-val">Транспорт</p>
+</div>
+<div class="ftl-form__small-width">
+<div class="ftl-form__columns">
+<div class="ftl-form__col wrap-dropdown">
+<label class="ftl-form__label ftl-form__label-size">Грузоподъёмность</label>
+<input type="hidden" readonly="readonly" class="ftl-form__input-hidden">
+<div class="ftl-form__dropdown-field dropdown-button">
+<p class="ftl-form__val">Не выбрана</p>
+<div class="check-mark"></div>
+</div>
+<ul class="dropdown-list">
+<li class="dropdown-list__item active">
+<p>Вариант 1</p>
+</li>
+<li class="dropdown-list__item active">
+<p>Вариант 2</p>
+</li>
+<li class="dropdown-list__item active">
+<p>Вариант 3</p>
+</li>
+<li class="dropdown-list__item active">
+<p>Вариант 4</p>
+</li>
+<li class="dropdown-list__item active">
+<p>Вариант 5</p>
+</li>
+</ul>
+</div>
+<div class="ftl-form__col wrap-dropdown">
+<label class="ftl-form__label ftl-form__label-size">Способ погрузки</label>
+<input type="hidden" readonly="readonly" class="ftl-form__input-hidden">
+<div class="ftl-form__dropdown-field dropdown-button">
+<p class="ftl-form__val">Не выбрана</p>
+<div class="check-mark"></div>
+</div>
+<ul class="dropdown-list">
+<li class="dropdown-list__item active">
+<p>Задняя</p>
+</li>
+<li class="dropdown-list__item active">
+<p>Передняя</p>
+</li>
+</ul>
+<!--<input class="ftl-form__input" id="carrying" type="text">-->
+</div>
+</div>
+</div>
+</div>
+<div class="ftl-form__list">
+<div class="ftl-form__step">
+<div class="ftl-form__step-number">3</div>
+<p class="ftl-form__step-val">Груз</p>
+</div>
+<div class="ftl-form__small-width">
+<div class="ftl-form__columns">
+<div class="ftl-form__col ftl-form__type-good wrap-dropdown">
+<label class="ftl-form__label ftl-form__label-size">Тип груза</label>
+<input type="hidden" readonly="readonly" class="ftl-form__input-hidden">
+<div class="ftl-form__dropdown-field dropdown-button">
+<p class="ftl-form__val">Не выбрана</p>
+<div class="check-mark"></div>
+</div>
+<ul class="dropdown-list">
+<li class="dropdown-list__item active">
+<p>негабаритные</p>
+</li>
+<li class="dropdown-list__item active">
+<p>тяжеловесные</p>
+</li>
+<li class="dropdown-list__item active">
+<p>навалочные</p>
+</li>
+</ul>
+</div>
+<div class="ftl-form__col wrap-dropdown mobile-hide">
+<label class="ftl-form__label ftl-form__label-size">Класс опасности</label>
+<input type="hidden" readonly="readonly" class="ftl-form__input-hidden">
+<div class="ftl-form__dropdown-field dropdown-button">
+<p class="ftl-form__val">Не выбрана</p>
+<div class="check-mark"></div>
+</div>
+<ul class="dropdown-list">
+<li class="dropdown-list__item active">
+<p>Класс 5 — Окисляющие вещества и органические перекиси</p>
+</li>
+<li class="dropdown-list__item active">
+<p>Класс 4 — Окисляющие вещества и органические перекиси</p>
+</li>
+<li class="dropdown-list__item active">
+<p>Класс 3 — Окисляющие вещества и органические перекиси</p>
+</li>
+</ul>
+<!--<input class="ftl-form__input" id="carrying" type="text">-->
+</div>
+<div class="ftl-form__col wrap-dropdown">
+<label class="ftl-form__label ftl-form__label-size">Объявленная ценность, ₽</label>
+<input class="ftl-form__input" placeholder="≥ 1" name="" type="text">
+</div>
+<div class="ftl-form__col checkbox">
+<input type="checkbox" id="checkbox">
+<label for="checkbox">Требуется температурный режим</label>
+</div>
+</div>
+</div>
+</div>
+<div class="ftl-form__list temperature-regime">
+<div class="ftl-form__small-width">
+<div class="ftl-form__columns">
+<div class="ftl-form__col">
+<label class="ftl-form__label ftl-form__label-size">От, °C</label>
+<input class="ftl-form__input" name="" type="text">
+</div>
+<div class="ftl-form__col">
+<label class="ftl-form__label ftl-form__label-size">До, °C</label>
+<input class="ftl-form__input" name="" type="text">
+</div>
+</div>
+</div>
+</div>
+<div class="ftl-form__list">
+<div class="ftl-form__step">
+<div class="ftl-form__step-number">4</div>
+<p class="ftl-form__step-val">Время</p>
+</div>
+<div class="ftl-form__full-width">
+<div class="ftl-form__arrival-time">
+<p class="ftl-form__label-size">Когда прибыть на точку</p>
+<p class="ftl-form__label-size">700 км в день</p>
+</div>
+<div class="adress active">
+<p class="adress__mark">Адрес не указан</p>
+<div class="adress__status">
+<p>НЕ ВЫБРАНО</p>
+</div>
+</div>
+<div class="adress">
+<p class="adress__mark">Адрес не указан</p>
+<div class="adress__status">
+<p>НЕ ВЫБРАНО</p>
+</div>
+</div>
+<label class="ftl-form__label ftl-form__label-size">Комментарий к заказу</label>
+<textarea placeholder="Укажите особенности въезда на территорию склада или подъезда к адресу" class="ftl-form__textarea"></textarea>
+</div>
+</div>
+<div class="information">
+<div class="information__body">
+<p>
+Для расчета стоимости необходимо ввести параметры груза, пункты отправки и прибытия.
+</p>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="./js/app.min.js"></script>
+</body>
+</html>
