@@ -307,7 +307,7 @@ div[id*="ascrail"] div {
     float: left;
 }
 .navigation-item:hover > p {
-    /*font-family: 'HelveticaNeueCyr-LightItalic', Helvetica, Tahoma, Arial, sans-serif;*/
+
 }
 .active-dobble .navigation__item-underline {
     background: #D30F4B;
