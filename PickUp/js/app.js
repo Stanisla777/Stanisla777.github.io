@@ -37,6 +37,7 @@ window.onload = function () {
     });
   }
 
+  //-------------------------------------------------------------
 
   var input = document.querySelector('.point__search input');
   var point = document.querySelectorAll('.pick-up-point');
@@ -113,10 +114,15 @@ window.onload = function () {
         textSubstitution();
       }
     });
-    setTimeout(function () {
-      myMap.destroy();
-      init()
-    },500)
+    var map = document.querySelector('#map');
+    var elems = map.children;
+    console.log(elems);
+    var element = document.querySelector('#map');
+    while (element.firstChild) {
+      element.removeChild(element.firstChild);
+    }
+    myMap.destroy();
+    init();
   };
   function findChildren(item) {
     var children = activePoint(item).querySelectorAll('.pick-up-point');
@@ -134,6 +140,10 @@ window.onload = function () {
       }
     } else {
       parent.classList.remove('active');
+      input.value = '';
+      point.forEach(function (item) {
+        item.classList.add('active');
+      });
       for (var _i = 0; _i <= point.length - 1; _i++) {
         if (!point[_i].classList.contains('show_des')) {
           point[_i].setAttribute('style', 'display:block');
