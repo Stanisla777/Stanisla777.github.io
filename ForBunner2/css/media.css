@@ -30,11 +30,11 @@ only screen and (min-resolution: 1.5dppx){
   }
 }
 @media screen and (max-width: 480px){
-  .modal__container{
+  .modal{
     overflow-y: auto;
   }
   .modal__title{
-    font-size: 27px;
+    font-size: 32px;
   }
   .icon-round{
     height: 2rem;
@@ -54,11 +54,10 @@ only screen and (min-resolution: 1.5dppx){
   }
   .button_form{
     margin-top: 15px;
+    margin-bottom: 20px;
   }
   .close-modal{
-    right: 50%;
-    -webkit-transform: translateX(50%);
-    -ms-transform: translateX(50%);
-    transform: translateX(50%);
+    /*right: 50%;*/
+    /*transform: translateX(50%);*/
   }
 }
