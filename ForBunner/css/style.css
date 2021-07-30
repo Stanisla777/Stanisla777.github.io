@@ -288,7 +288,6 @@ textarea:focus {
   transform: translate(-50%, -50%);
   /*transform: translate(-50%, 0);*/
   z-index: 1100;
-  overflow-y: auto;
   border-radius: 8px;
 }
 

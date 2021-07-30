@@ -33,6 +33,7 @@ only screen and (min-resolution: 1.5dppx){
 
   .modal__container{
     padding: 40px 10px 30px;
+    overflow-y: auto;
   }
   .modal__title{
     font-size: 24px;

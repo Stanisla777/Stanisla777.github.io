@@ -146,7 +146,7 @@
        </svg>
       </button>
       <div class="modal__form">
-       <p class="modal__title">Звоните по телефону</p>
+       <p class="modal__title">Звоните по&nbsp;телефону</p>
        <a class="modal__main-link" href="tel:+78007751122">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
          <circle cx="16" cy="16" r="16" fill="#8BC540"></circle>
@@ -156,13 +156,13 @@
         </svg>
         <span>8 800 775-11-22</span></a>
        <p class="paragraph-font modal__order-call">Или закажите обратный звонок</p>
-       <form class="modal-form disabled" action="" method="POST">
+       <form class="modal-form disabled" action="send.php" method="POST">
         <div class="modal-form__wrap-input">
          <input  name="name" class="modal-form__input js--call-name" placeholder="Имя" type="text">
          <span class="input__error">Это поле обязательно для заполнения</span>
         </div>
         <div class="modal-form__wrap-input">
-         <input  name="number" class="modal-form__input js--call-phone" placeholder="Номер телефона" type="text">
+         <input  name="number" class="modal-form__input js--call-phone" placeholder="Номер телефона" type="tel" inputmode="numeric">
          <span class="input__error">Это поле обязательно для заполнения</span>
         </div>
      
@@ -190,7 +190,7 @@
       </button>
       <div class="modal__form">
        <p class="modal__title">Остались вопросы? Задавайте!</p>
-       <form class="modal-form disabled" action="" method="POST">
+       <form class="modal-form disabled" action="send.php" method="POST">
         <div class="language wrap-dropdown">
          <div class="dropdown-button modal__choice-options">
           <p>Популярные</p>
@@ -260,7 +260,7 @@
         </div>
      
         <div class="modal-form__wrap-input">
-         <input  name="email" class="modal-form__input js--call-name" placeholder="E-mail" type="text">
+         <input  name="email" class="modal-form__input js--call-name" placeholder="E-mail" inputmode="email" type="email">
          <span class="input__error">Это поле обязательно для заполнения</span>
         </div>
         <div class="modal-form__wrap-input">
@@ -273,7 +273,7 @@
           <input name="check" type="checkbox" id="checkbox_2">
           <label for="checkbox_2">Я даю согласие на обработку <a href="https://xn--h1alcedd.xn--d1aqf.xn--p1ai/user-agreement/">персональных данных</a></label>
          </div>
-         <div class="button_form">
+         <div class="button_form button_form-send">
           <button type="submit" class="modal__btn disabled">Отправить</button>
          </div>
      
