@@ -277,7 +277,6 @@ textarea:focus {
 
 .modal {
   display: none;
-  overflow-y: auto;
   width: 62%;
   height: 89vh;
   max-height: 100%;
