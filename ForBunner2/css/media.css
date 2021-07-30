@@ -30,7 +30,9 @@ only screen and (min-resolution: 1.5dppx){
   }
 }
 @media screen and (max-width: 480px){
-
+  .modal__container{
+    overflow-y: auto;
+  }
   .modal__title{
     font-size: 27px;
   }
