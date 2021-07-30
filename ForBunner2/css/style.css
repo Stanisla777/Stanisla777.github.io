@@ -279,7 +279,7 @@ textarea:focus {
   display: none;
   overflow-y: auto;
   width: 62%;
-  height: 97vh;
+  height: 86vh;
   max-height: 100%;
   position: fixed;
   left: 50%;
