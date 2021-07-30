@@ -1,0 +1,57 @@
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+}
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-resolution: 1.5dppx){
+  .section {
+    background-image: url('../img');
+  }
+}
+
+
+
+@media screen and (max-width: 790px){
+  .modal {
+    width: 98%;
+  }
+  .modal__container{
+    max-width: 100%;
+  }
+  .modal__title{
+    font-size: 34px;
+  }
+  .icon-round{
+    height: 2rem;
+    width: 2rem;
+  }
+}
+@media screen and (max-width: 480px){
+
+  .modal__title{
+    font-size: 27px;
+  }
+  .icon-round{
+    height: 2rem;
+    width: 2rem;
+  }
+  .modal__main-link span{
+    font-size: 22px;
+  }
+  .modal__order-call{
+    font-size: 17px;
+  }
+  .agree-to-hand{
+    flex-direction: column;
+  }
+  .button_form{
+    margin-top: 15px;
+  }
+  .close-modal{
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
