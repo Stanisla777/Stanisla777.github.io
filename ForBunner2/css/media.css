@@ -30,21 +30,50 @@ only screen and (min-resolution: 1.5dppx){
   }
 }
 @media screen and (max-width: 480px){
-  .modal{
-    overflow-y: auto;
+
+  .modal__container{
+    padding: 40px 10px 30px;
   }
   .modal__title{
-    font-size: 32px;
+    font-size: 24px;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  .modal__main-link{
+    margin-top: 15px;
+    height: 2.75rem;
+  }
+  .modal-form{
+    margin-top: 15px;
+  }
+  .modal-form__input{
+    height: 2.75rem;
+  }
+  .modal-form__wrap-input:not(:first-child) {
+    margin-top: 17px;
+  }
+  .input-text__error, .input__error{
+    font-size: 11px;
+    margin-top: 1px;
   }
   .icon-round{
     height: 2rem;
     width: 2rem;
   }
   .modal__main-link span{
-    font-size: 22px;
+    font-size: 16px;
   }
   .modal__order-call{
     font-size: 17px;
+  }
+  .modal__main-link svg{
+    width: 23px;
+    height: 23px;
+  }
+  .modal__form {
+    width: 100%;
+    max-width: 265px;
+    margin: 0 auto;
   }
   .agree-to-hand{
     -webkit-box-orient: vertical;
