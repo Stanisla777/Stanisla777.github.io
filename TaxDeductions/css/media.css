@@ -45,6 +45,9 @@ only screen and (min-resolution: 1.5dppx){
     max-width: 100%;
     text-align: center;
   }
+  .advantage-deductions__sub-title{
+    text-align: center;
+  }
   .advantage-deductions__benefits-item{
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -143,6 +146,12 @@ only screen and (min-resolution: 1.5dppx){
   }
 }
 @media screen and (max-width: 480px){
+  .section-questions{
+    padding-top: 35px;
+  }
+  .section-advantage-deductions{
+    padding-top: 75px;
+  }
 
   .modal__container{
     padding: 40px 10px 30px;
