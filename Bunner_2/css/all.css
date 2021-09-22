@@ -382,6 +382,7 @@ img {
 }
 
 .banner__lik-dom {
+  text-align: right;
   margin-left: auto;
   margin-right: 10px;
   font-family: Gilroy-Medium, sans-serif;
