@@ -1,0 +1,324 @@
+@font-face {
+  font-family: Gilroy-Regular;
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/Gilroy-Regular.woff) format("woff");
+  font-display: swap
+}
+
+@font-face {
+  font-family: Gilroy-Medium;
+  font-style: normal;
+  font-weight: 500;
+  src: url(fonts/Gilroy-Medium.woff) format("woff");
+  font-display: swap
+}
+
+@font-face {
+  font-family: Gilroy-SemiBold;
+  font-style: normal;
+  font-weight: 600;
+  src: url(fonts/Gilroy-SemiBold.woff) format("woff");
+  font-display: swap
+}
+
+@font-face {
+  font-family: Gilroy-Bold;
+  font-style: normal;
+  font-weight: 700;
+  src: url(fonts/Gilroy-Bold.woff) format("woff");
+  font-display: swap
+}
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+*, :after, :before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit
+}
+
+body {
+  line-height: 1
+}
+img {
+  height: auto;
+  max-width: 100%
+}
+.banner {
+  position: relative;
+  overflow: hidden;
+  height: 100%
+}
+
+.banner > a {
+  text-decoration: none;
+  color: #1c1b28
+}
+
+.banner__border {
+  border: 1px solid #000
+}
+
+.banner__body {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column
+}
+
+.banner__flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.banner__footnote-additional p, .banner__footnote p {
+  letter-spacing: -.015em;
+  color: #686d82;
+  font-family: Gilroy-Medium, sans-serif
+}
+
+.banner__title {
+  position: relative;
+  z-index: 1;
+  font-family: Gilroy-Bold, sans-serif;
+  color: #1c1b28;
+  letter-spacing: -.015em
+}
+
+.banner__title span {
+  color: #6659b1
+}
+
+.banner__description {
+  color: #1c1b28;
+  font-family: Gilroy-Medium, sans-serif;
+  letter-spacing: -.015em
+}
+
+.banner__container-img {
+  position: absolute;
+  border-radius: 50%;
+  background: url("img/gradient.png") center no-repeat;
+  background-size: cover;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg)
+}
+
+.banner__img {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  position: absolute
+}
+
+/**/
+
+.banner__mail-1920_250 {
+  max-width: 1920px;
+  width: 100%;
+  height: 250px
+}
+
+.banner__body-mail-1920_250 {
+  padding: 81px 15px 16px 56px
+}
+
+.banner__body-mail-1920_250 .banner__title {
+  font-size: 60px;
+  line-height: 56px
+}
+
+.banner__body-mail-1920_250 .banner__description {
+  margin-left: auto;
+  width: 100%;
+  max-width: 787px;
+  font-size: 42px;
+  line-height: 44px;
+  margin-right: 82px
+}
+
+.banner__body-mail-1920_250 .banner__footnote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  margin-top: auto;
+  margin-right: 6px
+}
+
+.banner__body-mail-1920_250 .banner__footnote p {
+  text-align: right;
+  font-size: 16px;
+  line-height: 19px
+}
+
+.banner__body-mail-1920_250 .banner__footnote p:not(:last-child) {
+  margin-right: 16px
+}
+
+.banner__body-mail-1920_250 .banner__footnote p:nth-child(2) span {
+  text-transform: uppercase
+}
+
+.banner__body-mail-1920_250 .banner__container-img {
+  width: 300px;
+  height: 300px;
+  top: 4px;
+  left: 50%;
+  -webkit-transform: translateX(-103%) rotate(-90deg);
+  -ms-transform: translateX(-103%) rotate(-90deg);
+  transform: translateX(-103%) rotate(-90deg)
+}
+
+.banner__body-mail-1920_250 .banner__img {
+  width: 360px;
+  top: -33px;
+  left: -2px
+}
+
+@media screen and (max-width: 1860px){
+  .banner__body-mail-1920_250 .banner__title {
+    font-size: 45px;
+    line-height: 45px;
+  }
+  .banner__body-mail-1920_250 .banner__description {
+    margin-left: auto;
+    width: 100%;
+    max-width: 549px;
+    font-size: 27px;
+    line-height: 36px;
+    margin-right: 82px;
+  }
+}
+@media screen and (max-width: 1280px){
+  .banner__body-mail-1920_250 .banner__description {
+    margin-left: 0;
+    width: 100%;
+    max-width: 549px;
+    font-size: 27px;
+    line-height: 36px;
+    margin-right: 0;
+    margin-top: 20px;
+  }
+  .banner__body-mail-1920_250 .banner__footnote{
+    flex-direction: column;
+  }
+  .banner__body-mail-1920_250 .banner__flex-row{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .banner__body-mail-1920_250 {
+    padding: 28px 15px 16px 56px;
+  }
+  .banner__body-mail-1920_250 .banner__container-img{
+    transform: translateX(-12%) rotate(-90deg);
+    width: 250px;
+    height: 250px;
+  }
+  .banner__body-mail-1920_250 .banner__img {
+    width: 254px;
+    top: 18px;
+    left: 34px;
+  }
+  .banner__body-mail-1920_250 .banner__footnote p:not(:last-child) {
+    margin-right: 0;
+  }
+
+}
+@media screen and (max-width: 1080px){
+  .banner__body-mail-1920_250 .banner__description {
+    margin-left: 0;
+    width: 100%;
+    max-width: 390px;
+    font-size: 22px;
+    line-height: 27px;
+    margin-right: 0;
+    margin-top: 20px;
+  }
+  .banner__body-mail-1920_250 .banner__footnote p {
+    text-align: right;
+    font-size: 11px;
+    line-height: 16px;
+  }
+}
+@media screen and (max-width: 800px){
+  .banner__body-mail-1920_250 .banner__title {
+    font-size: 34px;
+    line-height: 34px;
+  }
+  .banner__body-mail-1920_250 .banner__description{
+    max-width: 290px;
+    font-size: 16px;
+    line-height: 23px;
+  }
+}
+@media screen and (max-width: 650px){
+  .banner__body-mail-1920_250 {
+    padding: 28px 15px 16px 20px;
+  }
+  .banner__body-mail-1920_250 .banner__container-img {
+    width: 200px;
+    height: 200px;
+  }
+  .banner__body-mail-1920_250 .banner__img {
+    width: 195px;
+    top: 18px;
+    left: 9px;
+  }
+  .banner__body-mail-1920_250 .banner__description {
+    max-width: 210px;
+    font-size: 16px;
+    line-height: 23px;
+  }
+  .banner__body-mail-1920_250 .banner__title {
+    font-size: 27px;
+    line-height: 34px;
+  }
+}
+@media screen and (max-width: 400px){
+  .banner__body-mail-1920_250 .banner__title {
+    font-size: 23px;
+    line-height: 34px;
+  }
+  .banner__body-mail-1920_250 .banner__description {
+    max-width: 154px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .banner__body-mail-1920_250 .banner__container-img{
+    transform: translateX(14%) rotate(-90deg);
+    width: 195px;
+    top: 0;
+    left: 9px;
+  }
+}
