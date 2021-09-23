@@ -171,8 +171,7 @@ img {
 .banner__container-img {
   position: absolute;
   border-radius: 50%;
-  background: -o-linear-gradient(38.89deg, rgba(123, 97, 255, 0) 3.41%, rgba(123, 97, 255, .055) 29.89%, rgba(109, 82, 245, .55) 102.04%);
-  background: linear-gradient(51.11deg, rgba(123, 97, 255, 0) 3.41%, rgba(123, 97, 255, .055) 29.89%, rgba(109, 82, 245, .55) 102.04%);
+  background: url("../img/gradient.png") center no-repeat;
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg)
